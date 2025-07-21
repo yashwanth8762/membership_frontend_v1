@@ -104,6 +104,11 @@ export default function UserMembership() {
         {loading && <div>Loading form...</div>}
         {error && <div style={{ color: '#e11d48', marginBottom: 12 }}>{error}</div>}
         {!membershipId && form && (
+        
+   
+
+
+
           <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '0 auto' }}>
             {form.fields.map((field, idx) => (
               <div key={idx} style={{ marginBottom: 18 }}>

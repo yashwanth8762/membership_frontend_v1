@@ -14,6 +14,10 @@ import Membership from './pages/Admin/Membership';
 import AddMembershipForm from './pages/Admin/AddMembershipForm';
 import UserMembership from './pages/UserMembership';
 import UserDetailsPage from './pages/UserDetailsPage.jsx';
+import React from 'react';
+import ActivityDashboard from './pages/Admin/ActivityDashboard.jsx';
+import EditActivity from './pages/Admin/EditActivity.jsx';
+import AddActivity from './pages/Admin/AddActivity.jsx';
 
 
 export default function App() {
@@ -53,13 +57,14 @@ export default function App() {
             <Route index element={<AdminHome />} />
             <Route path="membership/create" element={<AddMembershipForm />} />
             <Route path="membership" element={<Membership />} />
+
             
-            {/* <Route path="membership" element={<DefaultOutlet />}>
-              <Route index element={<Navigate to="/dashboard/users/list" />} />
-              <Route path="list" element={<Users />} />
-              <Route path="create" element={<AddUser />} />
-              <Route path="edit/:id" element={<EditUser />} />
-            </Route> */}
+            <Route path="activity" element={<DefaultOutlet />}>
+              <Route index element={<Navigate to="/dashboard/activity/list" />} />
+              <Route path="list" element={<ActivityDashboard />} />
+              <Route path="create" element={<AddActivity />} />
+              <Route path="edit/:id" element={<EditActivity />} />
+            </Route>
           </Route>
         </>
       ) : (

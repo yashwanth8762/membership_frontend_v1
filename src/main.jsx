@@ -9,7 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { BrowserRouter } from 'react-router-dom';
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 const reducers = combineReducers({
   user: userReducer,
 });
