@@ -9,6 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './components/ScrolltoTop.jsx';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 const reducers = combineReducers({
   user: userReducer,
@@ -39,6 +40,7 @@ root.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
+        <ScrollToTop />
           <App />
         </BrowserRouter>
       </PersistGate>

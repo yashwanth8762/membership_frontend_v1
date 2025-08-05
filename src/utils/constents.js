@@ -1,429 +1,474 @@
-export const monthsData = [
-    {
-        id: 20,
-        name: "All Months"
-    },
-    {
-        id: 1,
-        name: "January"
-    },
-    {
-        id: 2,
-        name: "February"
-    },
-    {
-        id: 3,
-        name: "March"
-    },
-    {
-        id: 4,
-        name: "April"
-    },
-    {
-        id: 5,
-        name: "May"
-    },
-    {
-        id: 6,
-        name: "June"
-    },
-    {
-        id: 7,
-        name: "July"
-    },
-    {
-        id: 8,
-        name: "August"
-    },
-    {
-        id: 9,
-        name: "September"
-    },
-    {
-        id: 10,
-        name: "October"
-    },
-    {
-        id: 11,
-        name: "November"
-    },
-    {
-        id: 12,
-        name: "December"
-    }
-];
-export const HostalSubChecklist= [
-    {
-        id:1,
-        ka:'ಪರಿವೀಕ್ಷಣೆ ನಡೆಸಿದ ಅಧಿಕಾರಿ ಹೆಸರು ಮತ್ತು ಹುದ್ದೆ',
-        en:'Name and designation of the officer who conducted the inspection'
-    },
-    {
-        id:2,
-        ka:'ಭೇಟಿ ನೀಡಿದ ವಸತಿ ನಿಲಯ ಹೆಸರು, ಸ್ಥಳ ಮತ್ತು ವರ್ಗ ಮಂಜೂರಾದ ವರ್ಷ',
-        en:'Name of Hostel visited, Location and Category, Year sanctioned'
-    },
-    {
-        id:3,
-        ka:'ವಸತಿ ನಿಲಯದ ಮೇಲ್ವಿಚಾರಕರ ಹೆಸರು, ಹುದ್ದೆ (ಪಾಯಂ/ಪ್ರಭಾರ) ಹಾಗು ದೂರವಾಣಿ ಸಂಖ್ಯೆ',
-        en:'Hostel Supervisor Name, Designation (Permanent/Incharge) and Telephone Number'
-    },
-    {
-        id:4,
-        ka:'ಬಾಡಿಗೆ ಕಟ್ಟಡ/ಸ್ವಂತ ಕಟ್ಟಡ (ಬಾಡಿಗೆ ಕಟ್ಟಡದಲ್ಲಿ ಇದ್ದರೆ ಸರ್ಕಾರಿ ಜಮೀನು/ನಿವೇಶನ ಮಂಜೂರಾತಿಗಾಗಿ ಕೈಗೊಂಡಿರುವ ಕ್ರಮಗಳು)',
-        en:'Rented Building/Own Building (If rented, Procedures taken for sanctioning of Government land/plot)'
-    },
-    {
-        id:5,
-        ka:'ಮಂಜೂರಾದ ವಿದ್ಯಾರ್ಥಿಗಳ ಸಂಖ್ಯೆಯ ವಿವರ ಮತ್ತು ವಾಸ್ತವ್ಯವಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳ ವಿವರ (ಎಸ್.ಸಿ/ಎಸ್.ಟಿ/ಓ.ಬಿ.ಸಿ/ಇತರೆ)',
-        en:'Details of number of students sanctioned and details of students with accommodation (SC/ST/OBC/Other)'
-    },{
-        id:6,
-        ka:'ಹೊರಗಿನ ವ್ಯಕ್ತಿಗಳು ಉಳಿದುಕೊಂಡಿರುವ ಬಗ್ಗೆ',
-        en:'Details of outsiders resided'
-    },{
-        id:7,
-        ka:'ಕಡ್ಡಾಯವಾಗಿ ಒದಗಿಸಬೇಕಾಗಿರುವ ಮೂಲಭೂತ ಸೌಕರ್ಯಗಳ ವಿವರ (ಕಾಟ್, ಬೆಡ್, ತಲೆದಿಂಬು, ಬೆಡ್ ಶೀಟ್, ರಗ್ಗು ಮತ್ತು ಇತ್ಯಾದಿ ಕೊರತೆ ಇದ್ದಲ್ಲಿ ಸಂಪೂರ್ಣ ವಿವರ',
-        en:'Details of basic amenities to be provided compulsorily (Cot, bed, pillow, bed sheet, rug etc. complete details in case of shortage)'
-    },{
-        id:8,
-        ka:'ವಸತಿ ನಿಲಯದ ಮಕ್ಕಳಿಗೆ ವಿಶೇಷ ತರಗತಿಗಳನ್ನು ಹಮ್ಮಿಕೊಂಡಿರುವ ವಿವರ',
-        en:'Details of special classes held for hostel students'
-    },{
-        id:9,
-        ka:'ಗ್ರಂಥಾಲಯದ ಲಭ್ಯತೆಯ ವಿವರ',
-        en:'Availability of Library details'
-    },{
-        id:10,
-        ka:'ಬಿಸಿ ನೀರಿನ ಸೌಲಭ್ಯದ ವಿವರ ಹಾಗೂ ಸೋಲಾರ ಸೌಲಭ್ಯದ ಲಭ್ಯತೆಯ ವಿವರ',
-        en:'Details of hot water facility and availability of solar facility'
-    },{
-        id:11,
-        ka:'ಅಡುಗೆ ತಯಾರಿಸುವ ಕೊಠಡಿಯ ಸ್ವಚ್ಛತೆ, ಅವಶ್ಯಕ ಸಾಮಾಗ್ರಿಗಳ ವಿವರ ಕೊರತೆ ಇದ್ದಲ್ಲಿ ಅಂತಹ ಸಾಮಾಗ್ರಿಗಳ ವಿವರ',
-        en:'Cleanliness of kitchen, details of necessary materials, in case of shortage of such materials'
-    },{
-        id:12,
-        ka:'ಆಹಾರದ ಗುಣಮಟ್ಟ ಮತ್ತು ಮೆನು ಕಾರ್ಡ್',
-        en:'Quality of food and menu card'
-    },{
-        id:13,
-        ka:'ಸ್ಟೋರ್ ನಿರ್ವಹಣೆ ಮತ್ತು ಸ್ಟಾಕ್ ರಿಜಿಸ್ಟರ್',
-        en:'Store management and stock register'
-    },{
-        id:14,
-        ka:'ಕುಡಿಯುವ ನೀರಿನ ಮೂಲದ ವಿವರ, ಸಂಗ್ರಹಾರಗಳನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿದ ವಿವರ',
-        en:'Details of source of drinking water, details of cleaning of reservoirs'
-    },{
-        id:15,
-        ka:'ವಿವಿಧ ರೀತಿಯ ಕಿಟ್ ವಿತರಣೆಯ ಕುರಿತು ಮಹಿತಿ',
-        en:'Information on different types of kit distributed'
-    },{
-        id:16,
-        ka:'ವಸತಿ ನಿಲಯದಲ್ಲಿ ಲಭ್ಯವಿರುವ ತುರ್ತು ಚಿಕಿತ್ಸಾ ಸಲಕರಣೆಗಳು ಹಾಗೂ ಔಷಧಿಗಳ ವಿವರ ಹಾಗೂ ಲಭ್ಯವಿರುವ ಫಸ್ಟ್-ಎಡ್ ಸಲಕರಣೆಗಳ ವಿವರ',
-        en:'Details of emergency equipment and medicines available in the hostel and details of first-aid materials available'
-    },{
-        id:17,
-        ka:'ವಸತಿ ನಿಲಯದ ಮಕ್ಕಳ ಮಾಸಿಕ ಆರೋಗ್ಯ ತಪಾಸಣೆಯ ವಿವರ, ಗಂಭೀರ ಕಾಯಿಲೆಗಳು ಗುರುತಿಸಿದ್ದಲ್ಲಿ ಕೈಗೊಂಡಿರುವ ಕ್ರಮಗಳು',
-        en:'Details of monthly health check-up of hostel students, measures taken if serious diseases are detected'
-    },{
-        id:18,
-        ka:'ಕ್ರೀಡಾ ಮೈದಾನದ ಸಲಕರಣೆಗಳ ಮತ್ತು ವ್ಯಾಯಾಮ ಸಲಕರಣೆಗಳ ಲಭ್ಯತೆ ವಿತರಣೆ ಇತ್ಯಾದಿ.',
-        en:'Availability and distribution of sports ground materials and exercise materials etc'
-    },{
-        id:19,
-        ka:'ವಸತಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಅವಶ್ಯಕವಿರುವ ಶೌಚಾಲಯಗಳ ಸಂಖ್ಯೆ, ಲಭ್ಯತೆ, ಕೊರತೆ ಹಾಗೂ ಕೈಗೊಳ್ಳಲಾಗುತ್ತಿರುವ ಸ್ವಚ್ಛತೆ ಕುರಿತು ಸಂಪೂರ್ಣ ವಿವರ',
-        en:'Complete details of number of toilets, its availability and shortage. Action taken for cleanliness of toilets.'
-    },{
-        id:20,
-        ka:'ವಸತಿ ನಿಲಯದ ಅಂತಿಮ ಶ್ರೇಣಿ ತರಗತಿಯಲ್ಲಿನ ಕಳೆದ 3 ವರ್ಷದ ಫಲಿತಾಂಶದ ವಿವರ',
-        en:'Last 3 years result details of hostel final grade classes'
-    },
-    {
-        id:21,
-        ka:'ಸಿ.ಸಿ.ಟಿವಿಗಳ, ಬಯೋಮೆಟ್ರಿಕ್ ಹಾಜರಾತಿ ಸಾಧನಗಳ ಹಾಗೂ ಸುರಕ್ಷತಾ ಕ್ರಮಗಳು ಅಳವಡಿಕೆ ',
-        en:'Installation of CCTVs, biometric attendance devices and security measures.'
-    },{
-        id:22,
-        ka:'ಮಕ್ಕಳ ಜೊತೆ ಸಂವಾದದ ಸಾರಂಶ',
-        en:'Summary of interactions with students'
-    },{
-        id:23,
-        ka:'ವಸತಿ ನಿಲಯದ ಪರಿವೀಕ್ಷಣೆಯ ಸಮಯದಲ್ಲಿ ಕಂಡು ಬಂದಿರುವ ನ್ಯೂನ್ಯತೆಗಳ',
-        en:'Issues found during inspection of the hostel'
-    },{
-        id:24,
-        ka:'ಶಿಫಾರಸ್ಸುಗಳು ಮತ್ತು ಇತರೆ ವಿಷಯಗಳು ಯಾವುದಾದರು ಇದ್ದಲ್ಲಿ',
-        en:'Recommendations and other matters if any'
-    },{
-        id:25,
-        ka:'ಭೇಟಿ ನೀಡಿದ ಸಮಯದಲ್ಲಿ ತೆಗೆಯಲಾದ ಭಾವಚಿತ್ರಗಳು',
-        en:'Photographs taken during the visit'
-    }
-]
-export const MainCheckList = [
-    {
-        id:1,
-        ka:'ಸರ್ಕಾರವು ನೂತನವಾಗಿ ಘೋಷಣೆ ಮಾಡಿರುವ ಐದು ಗ್ಯಾರಂಟಿ ಯೋಜನೆಗಳ (ಗೃಹಲಕ್ಷ್ಮಿ. ಗೃಹಜ್ಯೋತಿ, ಅನ್ನಭಾಗ್ಯ, ಶಕ್ತಿ ಯೋಜನೆ, ಯುವನಿಧಿ) ಅನುಷ್ಠಾನದ ಬಗ್ಗೆ ಪರಿಶೀಲನೆ ನಡೆಸುವುದು.',
-        en:'To review the implementation of the five guarantee schemes (Grihalakshmi, Grihajyoti, Annabhagya Shakti Yojana, Yuvanidhi) announced by the government.',
-        category:"Other"
-    },
-    {
-        id:2,
-        ka:' ಪರಿಶಿಷ್ಟ ಜಾತಿ, ಪರಿಶಿಷ್ಟ ಪಂಗಡ, ಹಿಂದುಳಿದ ವರ್ಗಗಳ ಹಾಗೂ ಅಲ್ಪಸಂಖ್ಯಾತರ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯಗಳಿಗೆ ಹಾಗೂ ವಸತಿ ನಿಲಯಗಳಿಗೆ ಅನಿರೀಕ್ಷಿತ ಭೇಟಿ ನೀಡಿ ಪರಿಶೀಲಿಸಿ, ನ್ಯೂನತೆಗಳನ್ನು ಸರಿಪಡಿಸಲು ಕ್ರಮವಹಿಸುವುದು.',
-        en:'',
-        category:"Hostel"
-    },{
-        id:3,
-        ka:'ಶಿಕ್ಷಣದ ಗುಣಮಟ್ಟವನ್ನು ಸುಧಾರಿಸಲು ಶಾಲೆ, ಕಾಲೇಜು ಹಾಗೂ ಐಟಿಐ ಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ ಸಮಸ್ಯೆಗಳನ್ನು ಅಧ್ಯಯಿಸಿ, ಸೂಕ್ತ ಪರಿಹಾರ ಕಂಡುಕೊಳ್ಳುವುದು ಹಾಗೂ ಶಾಲಾ ಕಟ್ಟಡ ದುರಸ್ತಿ, ಹೊಸ ಕಟ್ಟಡಗಳ ನಿರ್ಮಾಣ ಇತ್ಯಾದಿ ಕಾಮಗಾರಿಗಳ ಪರಿಶೀಲನೆ ನಡೆಸುವುದು.',
-        en:'',
-        category:"School"
-    },{
-        id:4,
-        ka:'ಸ್ವಂತ ಕಟ್ಟಡ ಇಲ್ಲದಿರುವ ಅಂಗನವಾಡಿಗಳಿಗೆ ನಿವೇಶನವನ್ನು ಒದಗಿಸುವ ಬಗ್ಗೆ ಪರಿಶೀಲನೆ ಹಾಗೂ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿರುವ ಅಂಗನವಾಡಿ ಕಟ್ಟಡಗಳ ಕಾಮಗಾರಿಗಳನ್ನು ಪರಿಶೀಲಿಸುವುದು ಹಾಗೂ ತಾಲ್ಲೂಕಿನಲ್ಲಿರುವ ಅಪೌಷ್ಟಿಕ ಮಕ್ಕಳ ವಿವರ ಪಡೆದು, ನಿರಂತರವಾಗಿ ಸರ್ಕಾರದ ಅಪೌಷ್ಟಿಕತೆ ನಿವಾರಣೆ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಅನುಷ್ಠಾನ ಮಾಡಲು ಕ್ರಮವಹಿಸುವುದು.',
-        en:'',
-        category:"School"
-    },{
-        id:5,
-        ka:'ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ನಗರಾಭಿವೃದ್ಧಿ, ಇಂಧನ, ಜಲಸಂಪನ್ಮೂಲ, ಲೋಕೋಪಯೋಗಿ, ಕೃಷಿ, ತೋಟಗಾರಿಕೆ ಇಲಾಖೆಗಳಲ್ಲಿನ ಪ್ರಮುಖ ಕಾರ್ಯಕ್ರಮಗಳಾದ ಕುಡಿಯುವ ನೀರು, ರಸ್ತೆಗಳು, ವಿದ್ಯುಚ್ಛಕ್ತಿ ಮೇವು ಲಭ್ಯತೆ, ಬೀಜ ಮತ್ತು ರಸಗೊಬ್ಬರ, ಮಧ್ಯಾಹ್ನದ ಬಿಸಿಯೂಟ, ನರೇಗಾ, ಸಾಮಾಜಿಕ ಭದ್ರತೆಯಡಿ ನೀಡುತ್ತಿರುವ ಪಿಂಚಣಿ ಕಾರ್ಯಕ್ರಮಗಳ ಆರ್ಥಿಕ ಮತ್ತು ಭೌತಿಕ ಪ್ರಗತಿ ಪರಿಶೀಲನೆ ನಡೆಸುವುದು.',
-        en:'',
-        category:"Hostel"
-    },{
-        id:6,
-        ka:'ತಾಲ್ಲೂಕಿನ ಯುವಕರಿಗೆ ಉದ್ಯೋಗಾಧಾರಿತ ತರಬೇತಿ ಕುರಿತು ಸಮನ್ವಯ ಹಾಗೂ ಸಾಲ ಮಂಜೂರಾತಿಗೆ ಬೇಕಾದ ಅವಶ್ಯ ಸಲಹೆ ನೀಡಲು ಕ್ರಮವಹಿಸುವುದು ಹಾಗೂ ತಾಲ್ಲೂಕಿನ ಯುವಕ-ಯುವತಿಯರಿಗೆ ಕೇಂದ್ರ ಮತ್ತು ರಾಜ್ಯ ಸರ್ಕಾರದ ವಿವಿಧ ಯೋಜನೆಗಳಡಿಯಲ್ಲಿ ಅವರ ವೃತ್ತಿನೈಪುಣ್ಯತೆ (skill) ಹೆಚ್ಚಿಸಿ ಅವರ ಜೀವನೋಪಾಯವನ್ನು ಸಧೃಡಗೊಳಿಸಲು ಕ್ರಮವಹಿಸುವುದು.',
-        en:'',
-        category:"School"
-    },{
-        id:7,
-        ka:'ತಾಲ್ಲೂಕಿನಲ್ಲಿ ಗೃಹ ಮತ್ತು ಸಣ್ಣ ಕೈಗಾರಿಕೆಗಳನ್ನು ಗುರುತಿಸಿ, ಅವರಿಗೆ ಸರ್ಕಾರದ ಸವಲತ್ತುಗಳ ಬಗ್ಗೆ ಅರಿವು ಮೂಡಿಸುವುದು ಹಾಗೂ ಉದ್ಯೋಗಾವಕಾಶ ಕಲ್ಪಿಸುವ ಬಗ್ಗೆ, ಕ್ರಮವಹಿಸುವುದು.',
-        en:'',
-        category:"School"
-    },{
-        id:8,
-        ka:'ಖಾಸಗಿ ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿ (Corporate Social Responsibility) ಯೋಜನೆಯಡಿಯಲ್ಲಿ ವಿವಿಧ ಕಂಪನಿಗಳಿಂದ ಶಾಸನಬದ್ಧವಾದ ಆರ್ಥಿಕ ಸಹಾಯ ಪಡೆದು ತಾಲ್ಲೂಕಿನ, ಶೈಕ್ಷಣಿಕ, ಆರೋಗ್ಯ, ಸ್ವಚ್ಛತೆ ಹಾಗೂ ನೈಸರ್ಗಿಕ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಕ್ರಮವಹಿಸುವುದು. ಉದಾಹರಣೆಗೆ: ತಾಲ್ಲೂಕಿನ ಜಲಮೂಲಗಳ ಜೀರ್ಣೋದ್ದಾರ ಮಾಡುವ ಬಗ ಕ್ರಮವಹಿಸುವುದು.',
-        en:'Other',
-        category:"Hostel"
-
-    },{
-        id:9,
-        ka:'ಪ್ರತಿ ಗ್ರಾಮ ಪಂಚಾಯತಿವಾರು ಕುಡಿಯುವ ನೀರಿನ ವ್ಯವಸ್ಥೆ, ಓವರ್‌ಹೆಡ್ ಟ್ಯಾಂಕ್‌ಗಳ ಸ್ವಚ್ಛತೆ ಮತ್ತು impounding reservoirs ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ವರದಿ ಸಲ್ಲಿಸುವುದು ಹಾಗೂ ಅತಿವೃಷ್ಟಿ ಮತ್ತು ಅನಾವೃಷ್ಟಿಗಳಂತಹ ಸಂದರ್ಭದಲ್ಲಿ ತಾಲ್ಲೂಕಿನ ವಿವಿಧ ಅಧಿಕಾರಿಗಳೊಂದಿಗೆ ಸಮನ್ವಯ ಸಾಧಿಸಿ ಪ್ರಕೃತಿ ವಿಕೋಪಕ್ಕೀಡಾದ ಪ್ರದೇಶಗಳಲ್ಲಿ ತುರ್ತು ಕ್ರಮವಹಿಸುವುದು.',
-        en:''
-    },{
-        id:10,
-        ka:'ತಾಲ್ಲೂಕಿನಲ್ಲಿ ದೌರ್ಜನ್ಯ ಪ್ರಕರಣಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಕ್ರಮವಹಿಸಲು ಸಂಬಂಧಪಟ್ಟ ಅಧಿಕಾರಿಗಳೊಂದಿಗೆ ಚರ್ಚಿಸಿ ಕ್ರಮ ವಹಿಸುವುದು.',
-        en:'Other',
-        category:"Hospital"
-    },{
-        id:11,
-        ka:'ಪ್ರತಿ ತಾಲ್ಲೂಕಿಗೆ ಸಂಬಂಧಪಟ್ಟಂತೆ ನಿಯೋಜಿಸಲ್ಪಟ್ಟ ಕೆ.ಎ.ಎಸ್. ಅಧಿಕಾರಿಯು ಪ್ರತಿ ಮಾಹೆ ಕನಿಷ್ಠ ಎರಡು ಬಾರಿ ಭೇಟಿ ನೀಡುವುದು. ಸದರಿ ಭೇಟಿ ಸಮಯದಲ್ಲಿ ಇಲಾಖೆಗಳ ಕಾರ್ಯ ಪರಿಶೀಲನೆ, ಇಲಾಖೆಗಳು ಕೈಗೊಂಡಿರುವ ವಿವಿಧ ಯೋಜನೆಗಳಡಿ ಅಭಿವೃದ್ಧಿ ಯೋಜನೆಗಳು ಸ್ಥಳಪರಿಶೀಲನೆ ಮಾಡುವುದರೊಂದಿಗೆ ನಗರ ಸ್ಥಳೀಯ ಸಂಸ್ಥೆ, ಗ್ರಾಮೀಣ ಸ್ಥಳೀಯ ಸಂಸ್ಥೆಗಳು(ಪಂಚಾಯತ್) ತಯಾರಿಸುವ ಕ್ರಿಯಾಯೋಜನೆಗಳ ಪರಿಶೀಲನೆ ಮಾಡುವುದು ಹಾಗೂ ಸದರಿ ಕಾರ್ಯ ಯೋಜನೆಗಳನ್ನು ನಾಗರೀಕ ಸ್ನೇಹಮಯ ಮಾಡಲು ಸೂಕ್ತ ಸಲಹೆಗಳನ್ನು ನೀಡುವುದು, ಸರ್ಕಾರದ ಹಿತದೃಷ್ಠಿಗೆ ಧಕ್ಕೆಯಾಗದಂತಹ ರೀತಿಯಲ್ಲಿ ತಮ್ಮ ಮಟ್ಟದಲ್ಲಿ ಹೊಸ ಉಪಕ್ರಮಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುವುದು.',
-        en:'',
-        category:"Hospital"
-    },{
-        id:12,
-        ka:'ತಾಲ್ಲೂಕು ಉಸ್ತುವಾರಿ ಅಧಿಕಾರಿಗಳು ಮೇಲ್ಕಂಡ ಕಾರ್ಯಗಳನ್ನು ಅತ್ಯಂತ ಬದ್ಧತೆಯಿಂದ ನಿರ್ವಹಿಸಲು ಸೂಚಿಸಿದೆ ಹಾಗೂ ಪ್ರತಿಮಾಹೆ ತಾವು ನಿರ್ವಹಿಸಿದ ಕಾರ್ಯವರದಿಯನ್ನು ಸರ್ಕಾರಕ್ಕೆ, ಜಿಲ್ಲಾ ಉಸ್ತುವಾರಿ ಕಾರ್ಯದರ್ಶಿಯವರಿಗೆ ಹಾಗೂ ಜಿಲ್ಲಾಧಿಕಾರಿಯವರಿಗೆ ಸಲ್ಲಿಸುವುದು.',
-        en:'',
-        category:"Hospital"
-    },{
-        id:13,
-        ka:'ತಾಲ್ಲೂಕು ಉಸ್ತುವಾರಿ ಅಧಿಕಾರಿಗಳು ಜಿಲ್ಲಾ ಉಸ್ತುವಾರಿ ಕಾರ್ಯದರ್ಶಿಗಳ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದು ಮತ್ತು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲಾ ಉಸ್ತುವಾರಿ ಕಾರ್ಯದರ್ಶಿಗಳು ವಹಿಸುವ ಹೆಚ್ಚುವರಿ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸುವುದು.',
-        en:'',
-        category:"Hostel"
-    },
-]
-export const Priorities = ['HIGH','MEDIUM','LOW']
-export const yearsData = [
-    // {
-    //     id: 2023,
-    //     name: 2023
-    // },
-    // {
-    //     id: 2024,
-    //     name: 2024
-    // },
-    {
-        id: 2025,
-        name: 2025
-    },
-    // {
-    //     id: 2026,
-    //     name: 2026
-    // }
+export const NavLinks = [
+  {
+    about_en: "About Us",
+    about_kn: "ನಮ್ಮ ಬಗ್ಗೆ",
+    href: "#about-trust",
+  },
+  {
+    community_en: "History & Culture",
+    community_kn: "ಇತಿಹಾಸ ಮತ್ತು ಸಂಸ್ಕೃತಿ",
+    href: "#community-and-its-history",
+  },
+  {
+    organization_en: "Organization",
+    organization_kn: "ಸಂಸ್ಥೆ",
+    href: "#organization",
+  },
+  {
+    upcoming_en: "Notifications/Programs",
+    upcoming_kn: "ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು",
+    href: "#upcoming-programs",
+  },
+  {
+    activities_en: "Documents",
+    activities_kn: "ದಾಖಲೆಗಳು",
+    href: "#documents",
+  },
+  {
+    gallery_en: "Gallery",
+    gallery_kn: "ಗ್ಯಾಲರಿ",
+    href: "#gallery",
+  },
+  {
+    contact_en: "Contact Us",
+    contact_kn: "ಸಂಪರ್ಕಿಸಿ",
+    href: "#contact-us",
+  },
 ];
 
-export const lables = {
-    brand: {
-        name: {
-            en: "TNO Portal",
-            kn: "ಟಿಎನ್ಒ ಪೋರ್ಟಲ್"
-        }
+export const AboutTrustContent = {
+  title_en: "About Us",
+  title_kn: "ನಮ್ಮ ಬಗ್ಗೆ",
+  short_description_en:
+    "Madara is the name of one of India's most ancient ethnic groups, the name of the first ethnic group born and raised in India. It is the name of the ethnic group belonging to the first royal dynasty that ruled India. It is the name of the powerful warrior ethnic group that first introduced monarchy and democracy to ancient India. During the time when Madigas ruled, the people of the land used to respectfully call them Mahadore, Mahadore. They used to say Mahadevaru, Mahadevaru with devotion. The word Mahadore itself became Mahadevaru, Madore, Madevaru, Maderu, Madaru, Madara. Thus, through these historical names, the Madara ethnic group has earned their own senior position in India's history. The Madara ethnic group is India's first political ethnic group, and though they are Madiga ethnic group, in the modern era, they are gods, worshipped and revered with fear and devotion by all castes and all ethnic groups, Male Mahadeshwara, Marulasiddha and others are proper evidence and strong proof of ethnic superiority.",
+  short_description_kn:
+    "ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿದ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಪ್ರಭುತ್ವವನ್ನು, ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ,ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಅದುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ , ಎಲ್ಲ ಜಾತಿ ಎಲ್ಲ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೇಮಹದೇಶ್ವರ ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
+  objectives_title_en: "Objectives of Karnataka Madara Mahasabha",
+  objectives_title_kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ಉದ್ದೇಶಗಳು",
+  objectives_en: [
+    "Since the Madara and Madiga communities of Karnataka have made significant contributions in the economic, social, political, and educational fields, it is necessary to implement programs that further their development in these areas.",
+    "In order to ensure the development of the Madara community, it is essential to systematically provide all possible assistance, facilities, and welfare schemes offered by the State and Central governments as well as other institutions, and to collaborate with other communities to bring this community into the mainstream of society.",
+    "To promote mutual friendship, harmony, and trust with other backward communities, efforts will be made to implement supportive and collaborative programs within the Madara society.",
+    "For the educational development of the Madara and other backward communities in the state, schools, colleges, and educational institutions will be established, and an environment conducive to community development will be created. In addition, efforts will be made to construct hostels, training centers, and community halls for Madara students across the state.",
+    "To provide opportunities for higher education to Madara and other backward community students, scholarships, accommodation, and local facilities will be provided.",
+    "To spread the objectives of the Madara Mahasabha, media and communication centers will be established and made available for public awareness and outreach.",
+    "For the economic development of the Madara and other backward communities, cooperative societies and banks will be established to provide all necessary financial and infrastructural support.",
+    "In the interest of society, timely and need-based programs will be formulated and implemented through general body meetings held periodically.",
+  ],
+  objectives_kn: [
+    "ಕರ್ನಾಟಕ ರಾಜ್ಯ ದ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜ್ರ್ನಾಂಗದವರು ಆರ್ಥಾಕ, ಸ್ಥಮಾಜಿಕ, ರಾಜ್ಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷ ೀತ್ರ ಗಳಲ್ಲಿ ಹಾಂದ್ದಳಿದವರಾಗಿರುವ ಕಾರಣ ಈ ಕ್ಷ ೀತ್ರ ಗಳಲ್ಲಿ ಅವರುಮಾಂದ್ದವರೆದ್ದ ಅಭಿವೃದಿಿ ಹಾಂದಲು ಅಗತ್ಯ ವಾದ ಎಲ್ಲಿ ಕರ ಮಗಳನ್ನು ಕ್ೈಗೊಳ್ಳು ವುದ್ದ.",
+    "ಮಾದರ ಜ್ರ್ನಾಂಗದವರ ಅಭಿವೃದಿಿ ಗಾಗಿ ರಾಜ್ಯ ಮತ್ತು ಕ್ೀಾಂದರ ಸಕಾಾರ ಹಾಗೂ ಇತ್ರ ಸಾಂಸಾ ಗಳ್ಳ ಕೊಡಬಹುದಾದ ಎಲ್ಲಿ ವಿಧವಾದ ಸಹಾಯ ಸೌಲ್ಭ್ಯ ಗಳನ್ನು, ಸೌಕಯಾಗಳನ್ನು ಸಮರ್ಾಕವಾಗಿ ದೊರಕಸಿಕೊಡಲುಹಾಗೂಇತ್ರೆ ಜ್ರ್ನಾಂಗದೊಡನೆ ಕಲೆತ್ತ ರ್ರಸಪ ರ ಅಭಿವೃದಿಿ ಗೆ ಸಹಕರಿಸುವುದ್ದ ಈ ಸಮದಾಯವನ್ನು ಸಮಾಜ್ದಮಖ್ಯ ವಾಹನಿಗೆ ತ್ರಲು ಶರ ಮಿಸುವುದ್ದ ಆಗಿರುತ್ು ದ್.",
+    "ಮಾದರ ಸಮಾಜ್ಕ್ೆ ಒಳರ್ಡುವ ಎಲ್ಲಿ ರ್ರ್ಯಾಯ ಜಾತಿಗಳೊಡನೆ ರ್ರಸಪ ರ ಮೈತಿರ ಹಾಗೂ ಸಹೃದಯ, ವಿಶಾಾ ಸಗಳ್ಳ ಬಳಯುವಾಂತೆ ಪೂರಕ ಕಾಯಾಕರ ಮಗಳನ್ನು ಹಮಿಿ ಕೊಳ್ಳು ವುದ್ದ.",
+    "ರಾಜ್ಯ ದಲ್ಲಿ ಮಾದರ ಮತ್ತು ರ್ರ್ಯಾಯ ಜ್ರ್ನಾಂಗದ ಅಭಿವೃದಿಿ ಗಾಗಿ ಶಾಲ್ಲ ಕಾಲೆೀಜುಗಳ್ಳ, ಶೈಕ್ಷಣಿಕ ವಿದಾಯ ಸಾಂಸಾ ಗಳನ್ನು ಸ್ಥಾ ಪಿಸಿ ಸಮಾಜ್ದ ಅಭಿವೃದಿಿ ಗೆಪೂರಕವಾದವಾತ್ತವರಣವನ್ನು ಕಲ್ಲಪ ಸುವುದ್ದ ಹಾಗೂ ಮಾದರ ವಿದಾಯ ರ್ಥಾಗಳಿಗೆ ರಾಜ್ಯ ದ ಎಲೆಿ ಡೆ ವಸತಿ ನಿಲ್ಯಗಳನ್ನು,ತ್ರಬೀತಿ ಕ್ೀಾಂದರ ಗಳನ್ನು ಹಾಗೂ ಸಮದಾಯ ಭ್ವನಗಳನ್ನು ನಿಮಿಾಸಲು ವಯ ವಸಾ ಮಾಡುವುದ್ದ.",
+    "ಮಾದರ ಮತ್ತು ರ್ರ್ಯಾಯ ಜ್ರ್ನಾಂಗದ ವಿದಾಯ ರ್ಥಾಗಳ್ಳ ಉನು ತ್ ವಾಯ ಸಾಂಗ ಮಾಡಲು ವಿದಾಯ ರ್ಥಾ ವೆೀತ್ನ, ವಸತಿ ಹಾಗೂ ಸ್ಥಲ್ ಸೌಲ್ಭ್ಯ ಗಳನ್ನು ಒದಗಿಸುವುದ್ದ.",
+    "ಮಾದರ ಮಹಾಸಭಾದ ಉದ್ು ೀಶಗಳನ್ನು ರ್ರ ಚಾರ ಮಾಡಲು ಸುದಿು ವಾಹನಿ ಹಾಗೂ ರ್ತಿರ ಕ್ಗಳನ್ನು ಸ್ಥಾಪಿಸಿ ಅವುಗಳಮೂಲ್ಕ ರ್ರ ಚಾರಮಾಡಲು ಸೂಕು ವಯ ವಸಾ ಮಾಡುವುದ್ದ.",
+    "ಮಾದರ ಮತ್ತು ರ್ರ್ಯಾಯ ಜ್ರ್ನಾಂಗದ ಆರ್ಥಾಕ ಅಭಿವೃದಿಿ ಗಾಗಿ ಸಹಕಾರ ಸಾಂಘಗಳನ್ನು ಹಾಗೂ ಬ್ಯ ಾಂಕ ಗಳನ್ನು ಸ್ಥಾ ಪಿಸಿ ಜ್ರ್ನಾಂಗದ ಅಭಿವೃದಿಿ ಗಾಗಿ ಸಕಲ್ ರಿೀತಿಯ ಸ್ಥಲ್ ಸೌಲ್ಭ್ಯ ಗಳನ್ನು ಒದಗಿಸಲು ರ್ರ ಯತಿು ಸುವುದ್ದ.",
+    "ಸಮಾಜ್ದ ಒಳಿತಿಗಾಗಿ ಕಾಲ್ಕಾಲ್ಕ್ೆ ಸವಾಸದಸಯ ರ ಸಭೆಯಲ್ಲಿ ಅನ್ನಮೀದಿಸಲ್ಪ ಡುವ ಕಾಲೀಚಿತ್ವಾದ ಕಾಯಾಕರ ಮಗಳನ್ನು ರೂಪಿಸಿ ಕಾಯಾರೂರ್ಕ್ೆ ತ್ರುವುದ್ದ.",
+  ],
+  commitee_title_en: "Composition of the Executive Committee of the Sabha",
+  commitee_title_kn: "ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ರಚನೆ",
+  commitee_description_en:
+    "A working committee has been formed with the vision of formulating and implementing the programs of the Mahasabha. The details of the first working committee members are as follows.",
+  commitee_description_kn:
+    "ಮಹಾಸಭಾದ ಕಾಯಾಚಟುವಟ್ಟಕ್ಗಳನ್ನು ರೂಪಿಸಿ ಜಾರಿಗೆ ತ್ರುವ ದೃಷ್ಟಿ ಯಾಂದ ಕಾಯಾಕಾರಿ ಸಮಿತಿಯನ್ನು ರಚಿಸಲ್ಲಗಿದ್.ಮದಲ್ ಕಾಯಾಕಾರಿ ಸಮಿತಿ ಸದಸಯ ರ ವಿವರ ಈ ಕ್ಳಕಾಂಡಾಂತಿದ್.",
+  commitee_list: [
+    {
+      designation: {
+        title_en: "Designation",
+        title_kn: "ಹುದ್ದೆ",
+        commitee_members_designation: {
+          President_en: "President",
+          President_kn: "ಅಧ್ಯಕ್ಷ",
+          Vice_President_en: "Vice President",
+          Vice_President_kn: "ಉಪಾಧ್ಯಕ್ಷ",
+          Chief_Executive_Members_en: "Chief Executive Members",
+          Chief_Executive_Members_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು",
+          Organizational_Executives_en: "Organizational Executives",
+          Organizational_Executives_kn: "ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿಗಳು",
+          Treasurer_en: "Treasurer",
+          Treasurer_kn: "ಖಜಾಂಚಿ",
+          Executive_Committee_Members_en: "Executive Committee Members",
+          Executive_Committee_Members_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
+        },
+      },
+
+      members: {
+        title_en: "Name",
+        title_kn: "ಹೆಸರು",
+        commitee_members_name: {
+          President_en: "Dr|| K.H. Muniyappa",
+          President_kn: "ಡಾ|| ಕೆ.ಹೆಚ್‌.ಮುನಿಯಪ್ಪ",
+
+          Vice_President_en: [
+            "Sri. A. Narayanaswamy",
+            "Sri. K.M. Thimmarayappa",
+          ],
+          Vice_President_kn: [
+            "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ",
+            "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ",
+          ],
+
+          Chief_Executive_Members_en: [
+            "Dr. L. Hanumantayya",
+            "Shri Anand K.M.",
+          ],
+          Chief_Executive_Members_kn: [
+            "ಡಾ|| ಎಲ್. ಹನುಮಂತಯ್ಯ",
+            "ಶ್ರೀ ಆನಂದ್ ಕೆ.ಎಂ.",
+          ],
+
+          Organizational_Executives_en: "Sri. Pillamuniswamyappa",
+          Organizational_Executives_kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ",
+
+          Treasurer_en: "Dr|| Sujatha",
+          Treasurer_kn: "ಡಾ|| ಸುಜಾತ",
+
+          Executive_Committee_Members_en: [
+            "Sri. H. Anjaneya",
+            "Sri.Govinda Karajol",
+          ],
+          Executive_Committee_Members_kn: [
+            "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ",
+            "ಗೋವಿಂದ ಕಾರಜೋಳ",
+          ],
+        },
+      },
     },
-    navbar: {
-        main: {
-            heading: {
-                en: "Main",
-                kn: "ಮುಖ್ಯವಾದದ್ದು"
-            },
-            home: {
-                en: "Home",
-                kn: "ಮುಖಪುಟ"
-            },
-            change_password: {
-                en: "Change Password",
-                kn: "ಪಾಸ್‌ವಾರ್ಡ್‌ ಬದಲಾವಣೆ"
-            }
-        },
-        reports: {
-            heading: {
-                en: "Reports",
-                kn: "ವರದಿಗಳು"
-            },
-            individual_dept_issues: {
-                en: "individual dept. issues",
-                kn: "ಇಲಾಖಾವಾರು  ಅಂಕಿಅಂಶಗಳು"
-            },
-            individual_dist_issues: {
-                en: "individual Taluk issues",
-                kn: "ತಾಲ್ಲೂಕುವಾರು ಅಂಕಿಅಂಶಗಳು"
-            },
-            dept_wise_overall: {
-                en: "dept. wise overall",
-                kn: "ಇಲಾಖೆಗಳ ಸಮಗ್ರ ವರದಿಗಳು"
-            },
-            dept_wise_pending: {
-                en: "dept. wise pending",
-                kn: "ಇಲಾಖಾವಾರು ಬಾಕಿ ಇರುವ ಸಮಸ್ಯೆಗಳು"
-            },
-            district_wise_pending: {
-                en: "Taluk wise pending",
-                kn: "ತಾಲ್ಲೂಕುವಾರು ಬಾಕಿ ಇರುವ ಸಮಸ್ಯೆಗಳು"
-            },
-            district_wise_overall: {
-                en: "Taluk wise overall",
-                kn: "ತಾಲ್ಲೂಕುವಾರು ಸಮಗ್ರ ವರದಿಗಳು"
-            },
-            dis_visit_report: {
-                en: "TNO visit report",
-                kn: "ಟಿಎನ್ಒ - ಭೇಟಿ ವರದಿಗಳು"
-            }
-        },
+  ],
+  commitee_members_description_en:
+    "Executive committee members will be elected through a voting process. To contest in the election, a member must be at least 25 years old on the date of nomination submission. Members who wish to contest must have completed a minimum of 12 months as members of the Sabha. Membership of the Mahasabha can be disqualified for reasons specified in the organization's constitution and rules.",
+  commitee_members_description_kn:
+    "ಕಾಯಾಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಚುನಾವಣೆ ಮೂಲಕ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು, ಚುನಾವಣೆಗೆ ಸ್ಪರ್ಧಿಸಲು ನಾಮಪತ್ರ ಸಲ್ಲಿಸುವ ದಿನಾಂಕದಂದು 25 ವರ್ಷಗಳಾಗಿರಬೇಕು. ಚುನಾವಣೆಗೆ ಸ್ಪರ್ಧಿಸಲು ಇಚ್ಛಿಸುವ ಸದಸ್ಯರು ಕನಿಷ್ಠ 12 ತಿಂಗಳು ಸಭೆಯ ಸದಸ್ಯರಾಗಿದ್ದು ಪೂರ್ಣಗೊಳಿಸಿರಬೇಕು. ಮಹಾಸಭೆಯ ಸದಸ್ಯತ್ವವನ್ನು ಸಂಘದ ಜೋಷಣೆ ಹಾಗೂ ನಿಯಮ ನಿಬಂಧನೆಗಳಲ್ಲಿ ನಮೂದಿಸಿರುವ ಕಾರಣಗಳಿಗಾಗಿ ಅನರ್ಹಗೊಳಿಸಬಹುದಾಗಿದೆ.",
+  Members_General_Assembly: [
+    {
+      tite: {
+        en: "Members of the General Assembly",
+        kn: "ಸಾಮಾನ್ಯ ಸಭೆಯ ಸದಸ್ಯರು",
+      },
+      description: {
+        en: "Residents of taluk and district who wish to become members of the Sabha — men and women of the Madara community aged 18 years or older — must submit a membership application form to the General Secretaries of the Mahasabha in the prescribed format set by the executive committee. They can also visit the Mahasabha's website and register online for membership.At the time of application submission, the applicant must obtain a recommendation from two members — either life members of the Sabha or members of the executive committee — and pay the membership fee as per the rules to obtain an official receipt from the Mahasabha.",
+        kn: "ಸಭೆಯ ಸದಸ್ಯರಾಗಲು ಇಚ್ಛಿಸುವ ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು, 18 ವರ್ಷ ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ ಸಮುದಾಯದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು, ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ನಿಗದಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ಮಹಾಸಭೆಯ ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳಿಗೆ ಸದಸ್ಯತ್ವದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು. ಮಹಾಸಭೆಯ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಿ ಆನ್‌ಲೈನ್ ಮೂಲಕವೂ ಸದಸ್ಯತ್ವ ನೋಂದಾಯಿಸಬಹುದಾಗಿದೆ.ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವೇಳೆ, ಸಭೆಯ ಜೀವಿತ ಸದಸ್ಯರು ಅಥವಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಇಬ್ಬರು ಸದಸ್ಯರಿಂದ ಶಿಫಾರಸು ಮಾಡಿಕೊಂಡು, ನಿಯಮಾನುಸಾರ ಸದಸ್ಯತ್ವ ಶುಲ್ಕವನ್ನು ಪಾವತಿಸಿ ಮಹಾಸಭೆಯ ರಸೀದಿ ಪಡೆದುಕೊಂಡಿರಬೇಕು.",
+      },
     },
-    layout: {
-        heading: {
-            en: "Welcome to Taluk Nodal Officer portal.",
-            kn: "ಜಿಲ್ಲಾ ಉಸ್ತುವಾರಿ ಕಾರ್ಯದರ್ಶಿಗಳ ಪೋರ್ಟಲ್‌ಗೆ ಸುಸ್ವಾಗತ"
+  ],
+};
+
+export const HistoryCultureContent = {
+  title_en: "History & Culture",
+  title_kn: "ಇತಿಹಾಸ ಮತ್ತು ಸಂಸ್ಕೃತಿ",
+  short_description_en:
+    "The Madaras were the first kings and warriors of India. 'Madara' is the name of one of India's most ancient ethnic groups — considered the earliest people born and raised in this land. They belonged to the first ruling royal dynasties of India. They were the powerful warrior community that first introduced governance and democracy to ancient India. During their rule, the people respectfully called them Mahadore and Mahadevaru. The names Mahadevaru, Madivaru, Madar, and Madara all evolved from this. With such historic titles, they established a unique position in Indian history. The Madara community is India's first political community, and they are today known as the Madiga community. In the modern era, this community gave birth to great spiritual figures like Male Mahadeshwara and Marulasiddha, who are still worshipped and revered with fear and devotion by lower castes. They are symbols of ethnic superiority, strength, and mythological heritage.",
+  short_description_kn:
+    "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು, ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು. ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿರುವ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಕೀಯ ಮತ್ತು ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು. ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೀವರು ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೀವರು, ಮಾದೀವರು, ಮಾದರು, ಮಾದರ ಎಂಬ ಪದಗಳು ಅದರಿಂದ ಉದ್ಭವಿಸಿದವು. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಸ್ಥಾನವನ್ನು ಪಡೆದಿದ್ದಾರೆ. ಮಾದರ ಜನಾಂಗವು ಭಾರತದ ಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಇವರು ಈಗ ಮಾದಿಗ ಸಮುದಾಯದವರಾಗಿದ್ದಾರೆ. ಇವರು ಆಧುನಿಕ ಯುಗದಲ್ಲಿ ಎಳಿಜಾತಿಯವರಿಂದ ಭಯ, ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಲ್ಪಡುವ, ಆರಾಧಿಸಲ್ಪಡುವ ಮಲೀ ಮಹಾದೇಶ್ವರ, ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರನ್ನು ಜನ್ಮ ನೀಡಿದ ಜನಾಂಗವಾಗಿದ್ದಾರೆ. ಇವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆ, ಶಕ್ತಿ, ಪೌರಾಣಿಕ ಪುರಾವೆಯ ಸಂಕೇತ.",
+  content: {
+    title: [
+      {
+        en: "Madara – The First Rulers and Warriors of India",
+        kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು / ಯೋಧರು",
+      },
+      {
+        en: "Madigas in Myth & Folklore",
+        kn: "ಪೌರಾಣಿಕ ಮತ್ತು ಜನಪದ ಮಾದಿಗ",
+      },
+      {
+        en: "Establishment of the Mahasabha",
+        kn: "ಮಹಾಸಭೆ ಸ್ಥಾಪನೆ",
+      },
+    ],
+    description: [
+      {
+        en: " 'Madara' is the name of one of India's most ancient ethnic communities — considered among the earliest peoples born and raised in the country. This community belonged to the very first royal dynasties that held political power in early India. They were the first to introduce governance and democratic systems in ancient Bharat, and were known as mighty warrior clans. During their reign, the people of the land used to respectfully address them as 'Mahadore' (Great Kings). They were also worshipped as Mahadevaru, Madore, Madivaru, Madaru, and Madara, showing their reverence. Through these historical titles, the Madara community earned a distinct and honorable place in Indian history. They are recognized as India's first political community, and in the modern era, they are known as the Madiga community. Even today, the descendants of this community such as Male Mahadeshwara and Marulasiddha are worshipped and revered by people of other castes with fear and devotion. These figures are seen as symbols of cultural strength, spiritual energy, and ancestral pride.However, due to internal conspiracies brought by the first foreign migrants — especially Brahmins — the Madigas lost their royal authority. As institutional development was lost, economic progress declined. Economic downfall led to social regression. This in turn caused a loss in education, which finally led to the collapse of industrial growth. Thus, the Madigas were labeled untouchables and became slaves to the foreign Brahminical religion and systems. In this degraded state, the Brahmins took over the Madigas' knowledge, wisdom, and cultural legacy, claiming it as their own heritage. They brought dishonor to the Madiga name. Their rich traditions and history were polluted, leading to the loss of their mental, physical, and intellectual strengths. Over time, the community was pushed to the margins — socially, economically, and educationally.",
+        kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು, ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು. ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿರುವ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಕೀಯ ಮತ್ತು ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು. ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೀವರು ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೀವರು, ಮಾದೀವರು, ಮಾದರು, ಮಾದರ ಎಂಬ ಪದಗಳು ಅದರಿಂದ ಉದ್ಭವಿಸಿದವು. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಸ್ಥಾನವನ್ನು ಪಡೆದಿದ್ದಾರೆ. ಮಾದರ ಜನಾಂಗವು ಭಾರತದ ಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಇವರು ಈಗ ಮಾದಿಗ ಸಮುದಾಯದವರಾಗಿದ್ದಾರೆ. ಇವರು ಆಧುನಿಕ ಯುಗದಲ್ಲಿ ಎಳಿಜಾತಿಯವರಿಂದ ಭಯ, ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಲ್ಪಡುವ, ಆರಾಧಿಸಲ್ಪಡುವ ಮಲೀ ಮಹಾದೇಶ್ವರ, ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರನ್ನು ಜನ್ಮ ನೀಡಿದ ಜನಾಂಗವಾಗಿದ್ದಾರೆ. ಇವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆ, ಶಕ್ತಿ, ಪೌರಾಣಿಕ ಪುರಾವೆಯ ಸಂಕೇತ. ಆದರೆ ಭಾರತಕ್ಕೆ ವಲಸೆ ಬಂದ ಮೊದಲ ವಿದೇಶಿಯರಾದ ಆಯಾ ಬ್ರಾಹ್ಮಣರ ಒಳಸಂಚಿನಿಂದಾಗಿ ಮಾದಿಗರ ರಾಜಾಧಿಕಾರ ನಷ್ಟವಾಯಿತು. ಸಂಸ್ಥಾಪಕ ಉನ್ನತಿ ನಷ್ಟವಾದರಿಂದ ಆರ್ಥಿಕ ಉನ್ನತಿ ನಷ್ಟವಾಯಿತು. ಆರ್ಥಿಕ ಉನ್ನತಿ ನಷ್ಟವಾದರಿಂದ ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಷ್ಟವಾಯಿತು. ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಷ್ಟವಾದರಿಂದ ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಷ್ಟವಾಯಿತು. ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಷ್ಟವಾದರಿಂದ ಕೈಗಾರಿಕಾ ಉನ್ನತಿ ನಷ್ಟವಾಯಿತು. ಕೈಗಾರಿಕಾ ಉನ್ನತಿ ನಷ್ಟವಾದರಿಂದ ಮಾದಿಗರು ಅಸ್ಪೃಶರಾಗಿದರು. ವಿದೇಶಿ ಬ್ರಾಹ್ಮಣರ ಧರ್ಮ ಮತ್ತು ಸಂಸ್ಥೆಗೆ ಗುಲಾಮರಾದರು. ಈ ಹೀನ ಪ್ರಸ್ಥಿತಿಯಲ್ಲಿ ಅವರ ವಿದ್ಯೆ, ಬುದ್ಧಿಮತ್ತೆ, ಪರಂಪರೆ ಎಲ್ಲವನ್ನು ಬ್ರಾಹ್ಮಣರು ವಶಪಡಿಸಿಕೊಂಡು ತಮ್ಮ ವಂಶಪಾರಂಪರ್ಯದ ಭಾಗವನ್ನಾಗಿ ಮಾಡಿಕೊಂಡರು. ಮಾದಿಗರ ಹೆಸರಿಗೆ ಕಲಂಕ ಬಡಿದರು. ಅವರ ಶ್ರೇಷ್ಠ ಪರಂಪರೆ, ಇತಿಹಾಸಕ್ಕೆ ತಾರತಮ್ಯ ಮತ್ತು ಕೊಳಕು ನೀಡಿ ಅವರ ಮಾನಸಿಕ, ದೈಹಿಕ, ಬೌದ್ಧಿಕ ಶಕ್ತಿಗಳನ್ನು ಕುಗ್ಗಿಸಿ ಸಮಾಜದಲ್ಲಿ ಕುಳಿತು ಬಿಟ್ಟರು. ಈ ಕಾರಣಗಳಿಂದಾಗಿ ಮಾದಿಗ ಸಮುದಾಯ ನಿರಂತರವಾಗಿ ಶೋಷಣೆಗೆ ಒಳಗಾಗಿ ಸಾಮಾಜಿಕ, ಆರ್ಥಿಕ ಮತ್ತು ಶೈಕ್ಷಣಿಕವಾಗಿ ಅತ್ಯಂತ ಹಿಂದುಳಿದವರಾಗಿದ್ದಾರೆ.",
+      },
+      {
+        en: "In South India, the Madigas are recognized as a major traditional community, historically engaged in leather work and rural services. Their origins are described in various mythological and folk tales. Some scholars believe the word 'Madiga' is derived from the callings of divine forms like 'Maha-Digambara'. In mythology, Jambavantha, a prominent figure in the Ramayana, is considered the original ancestor of the Madigas. Gods in distress would seek his help. He is said to have been the first artisan to work with leather. In another legend, when Shiva's beloved divine cow Kamadhenu died, Jambavantha performed her last rites by cutting the body. But by violating divine law, Shiva cursed Jambavantha — and his descendants became the Madiga and Maala communities. Another story describes Madigas as children of Goddess Matangi, leading to the phrase 'Matangi Makkalu' (children of Matangi). Through these stories, the Madiga community continues to honor and celebrate these divine and mythological connections as an integral part of their culture.",
+        kn: "ಮಾದಿಗರು ದಕ್ಷಿಣ ಭಾರತದ ಪ್ರಮುಖ ಸಮುದಾಯಗಳಲ್ಲಿ ಒಬ್ಬರಾಗಿದ್ದು, ಪರಂಪರागतವಾಗಿ ಚರ್ಮದ ಕೆಲಸ ಮತ್ತು ಗ್ರಾಮೀಣ ಸೇವೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡವರಾಗಿದ್ದರು. ಅವರ ಮೂಲ ಹಲವಾರು ಪೌರಾಣಿಕ ಕಥೆಗಳು ಮತ್ತು ಜನಪದ ಕತೆಗಳಲ್ಲಿ ಕಾಣಸಿಗುತ್ತದೆ. ಕೆಲ ಪಂಡಿತರು 'ಮಹಾ-ದಿಗಂಬರ' ಎಂಬ ದೇವತೆಗಳ ಕರೆಯುಗಳಿಂದ 'ಮಡಿಗ' ಎಂಬ ಪದ ಉಗಮಗೊಂಡಿತು ಎನ್ನುತ್ತಾರೆ. ಪುರಾಣಗಳಲ್ಲಿ ಬರುವ ಜಾಂಬವಂತನು ರಾಮಾಯಣದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ವ್ಯಕ್ತಿ ಮತ್ತು ಮಾದಿಗರ ಮೂಲ ಪಿತಾಮಹ ಎಂದು ನಂಬಲಾಗುತ್ತದೆ. ದೇವತೆಗಳು ಸಂಕಟದಲ್ಲಿ ಜಾಂಬವಂತನಿಗೆ ಸಹಾಯ ಕೋರುತ್ತಿದ್ದರು. ಅವನು ಚರ್ಮ ಕತ್ತರಿಸಿ ಉಪಯೋಗಿಸುವುದರ ಮೊದಲ ಶಿಲ್ಪಿಯಾಗಿದ್ದ ಎನ್ನಲಾಗಿದೆ. ಇನ್ನೊಂದು ಕಥೆಯಲ್ಲಿ, ಶಿವನ ಪ್ರೀತಿಯ ಹಸು ಕಾಮಧೇನು ಸಾವಿಗೊಂಡಾಗ, ಜಾಂಬವಂತನು ಅವಳ ಅಂತ್ಯಕ್ರಿಯೆಗಾಗಿ ಅವಳ ದೇಹವನ್ನು ಕತ್ತರಿಸುತ್ತಾನೆ. ಆದರೆ ದೇವವಿಧಾನ ಉಲ್ಲಂಘಿಸಿದ್ದರಿಂದ ಶಿವನು ಜಾಂಬವಂತನಿಗೆ ಶಾಪ ನೀಡುತ್ತಾನೆ. ಆತನ ಸಂತತಿಯೇ ಮಾದಿಗರು ಮತ್ತು ಮಾಳಾ ಸಮುದಾಯಗಳು ಎನಿಸಿಕೊಂಡವು. ಮತ್ತೊಂದು ಪುರಾಣದ ಪ್ರಕಾರ, ಮಾದಿಗರು ಮಾತಂಗಿ ದೇವಿಯ ಮಕ್ಕಳಾಗಿದ್ದಾರೆ. ಅದರಿಂದ 'ಮಾತಂಗಿ ಮಕ್ಕಳು' ಎಂಬ ಪದ ಬಳಕೆ ಸಿಕ್ಕಿತು. ಈ ಕಥೆಗಳ ಜತೆಗೆ ಮಾದಿಗ ಸಮುದಾಯವು ತನ್ನ ಪವಿತ್ರ ಮೂಲಗಳೊಂದಿಗೆ ಶಾಪದ ಕಥೆಗಳ ಸಂಕೇತವನ್ನು ತಮ್ಮ ಸಂಸ್ಕೃತಿಯ ಭಾಗವಾಗಿ ಇಂದಿಗೂ ಗೌರವದಿಂದ ಆಚರಿಸುತ್ತಾರೆ.",
+      },
+      {
+        en: "To restore the dignity of the Madara community and bring them into the mainstream of society, senior community leaders — especially Shri K.H. Muniyappa, a 7-time Member of Parliament and former Union Minister — along with various MLAs and Ministers from the state, resolved to launch a unified front. In 2015, they formally established the Karnataka Madiga Mahasabha with a vision to unite and empower the community.",
+        kn: "ಮಾದರ ಸಮುದಾಯದ ಹತಾಶತೆಯನ್ನು ಪರಿಹರಿಸಿ, ಸಮಾಜದ ಮುಖ್ಯವಾಹನಿಗೆ ತರುವ ದೃಷ್ಟಿಕೋನದಿಂದ, ಸಮಾಜದ ಹಿರಿಯ ಮುಖಂಡರು ಮತ್ತು ನಾಯಕರು ವಿಶೇಷವಾಗಿ ಶ್ರೀ ಕ್ಕೆ.ಹೆಚ್. ಮುನಿಯಪ್ಪ, ಸತತ 7 ಬಾರಿ ಲೋಕಸಭಾ ಸದಸ್ಯರಾಗಿದ್ದು, ಕೇಂದ್ರ ಸಚಿವರಾಗಿರುವವರು ಮತ್ತು ಹಲವಾರು ರಾಜ್ಯದ ಶಾಸಕರು, ಸಚಿವರುಗಳು ಒಂದು ದೃಢ ನಿರ್ಣಯದೊಂದಿಗೆ 2015ರಲ್ಲಿ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭೆ' ಯನ್ನು ಆರಂಭಿಸಿದರು.",
+      },
+    ],
+  },
+};
+
+export const OrganizationContent = {
+  table: {
+    kn: [
+      { district: "ಬೆಂಗಳೂರು ನಗರ", members: 4 },
+      { district: "ಬೀದರ್", members: 1 },
+      { district: "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ", members: 2 },
+      { district: "ಕೊಡಗು", members: 1 },
+      { district: "ಧಾರವಾಡ", members: 2 },
+      { district: "ಉತ್ತರ ಕನ್ನಡ", members: 1 },
+      { district: "ಬಿಜಾಪುರ", members: 2 },
+      { district: "ಮಂಗಳೂರು", members: 1 },
+      { district: "ಮೈಸೂರು", members: 2 },
+      { district: "ಚಾಮರಾಜನಗರ", members: 1 },
+      { district: "ರಾಯಚೂರು", members: 1 },
+      { district: "ದಾವಣಗೆರೆ", members: 2 },
+      { district: "ಬೆಳಗಾಂ", members: 1 },
+      { district: "ಹಾವೇರಿ", members: 1 },
+      { district: "ಗುಲ್ಬರ್ಗಾ (ಒಂದು ಮಹಿಳೆ)", members: 2 },
+      { district: "ಬಾಗಲಕೋಟೆ", members: 1 },
+      { district: "ಬಳ್ಳಾರಿ", members: 1 },
+      { district: "ಗದಗ", members: 1 },
+      { district: "ತುಮಕೂರು (ಒಂದು ಮಹಿಳೆ)", members: 2 },
+      { district: "ಕೊಪ್ಪಳ", members: 1 },
+      { district: "ಚಿತ್ರದುರ್ಗ", members: 2 },
+      { district: "ಉಡುಪಿ", members: 1 },
+      { district: "ಹಾಸನ", members: 1 },
+      { district: "ಚಿಕ್ಕಬಳ್ಳಾಪುರ", members: 2 },
+      { district: "ಮಂಡ್ಯ", members: 1 },
+      { district: "ಯಾದಗಿರಿ", members: 1 },
+      { district: "ಕೋಲಾರ", members: 2 },
+      { district: "ರಾಮನಗರ", members: 1 },
+      { district: "ಚಿಕ್ಕಮಗಳೂರು", members: 1 },
+      { district: "ಶಿವಮೊಗ್ಗ", members: 1 },
+      { district: "ನಾಮ ನಿರ್ದೇಶನ", members: 1 },
+      { district: "ನಾಮ ನಿರ್ದೇಶಿತ ವಕೀಲರು", members: 1 },
+    ],
+    en: [
+      { district: "Bangalore Urban", members: 4 },
+      { district: "Bidar", members: 1 },
+      { district: "Bangalore Rural", members: 2 },
+      { district: "Kodagu", members: 1 },
+      { district: "Dharwad", members: 2 },
+      { district: "Uttara Kannada", members: 1 },
+      { district: "Bijapur", members: 2 },
+      { district: "Mangalore", members: 1 },
+      { district: "Mysore", members: 2 },
+      { district: "Chamarajanagar", members: 1 },
+      { district: "Raichur", members: 1 },
+      { district: "Davangere", members: 2 },
+      { district: "Belgaum", members: 1 },
+      { district: "Haveri", members: 1 },
+      { district: "Gulbarga (1 woman)", members: 2 },
+      { district: "Bagalkote", members: 1 },
+      { district: "Bellary", members: 1 },
+      { district: "Gadag", members: 1 },
+      { district: "Tumkur (1 woman)", members: 2 },
+      { district: "Koppal", members: 1 },
+      { district: "Chitradurga", members: 2 },
+      { district: "Udupi", members: 1 },
+      { district: "Hassan", members: 1 },
+      { district: "Chikkaballapur", members: 2 },
+      { district: "Mandya", members: 1 },
+      { district: "Yadgir", members: 1 },
+      { district: "Kolar", members: 2 },
+      { district: "Ramanagara", members: 1 },
+      { district: "Chikkamagaluru", members: 1 },
+      { district: "Shivamogga", members: 1 },
+      { district: "Nominated", members: 1 },
+      { district: "Nominated Lawyer", members: 1 },
+    ],
+  },
+  first: {
+    kn: [
+      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅದರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಸದಸ್ಯರನ್ನು ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು.  ಪರ್ಯಾಯ ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು ಮಾದಿಗ ಸಮಾಜದ ವರ್ಗದಿಂದ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ಜಾತಿಗಳಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ. ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
+      "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲ್ಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
+      "ಒಂದು ಸಾಲಿನಲ್ಲಿ ಚುನಾವಣೆಯಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ 3 ವರ್ಷದ ಅವಧಿಯದಾಗಿದ್ದು, ಮುಂದಿನ ಚುನಾವಣೆಯಾಗುವವರೆಗೂ ಅಧಿಕಾರದಲ್ಲಿರುತ್ತದೆ. ಕಾರಣಾಂತರಗಳಿಂದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸ್ಥಾನ ಅಥವಾ ಸ್ಥಾನಗಳು ಖಾಲಿ ಬಿದ್ದಾಗ ಸದರಿ ಸ್ಥಾನಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿಕೊಳ್ಳದಿದ್ದರೂ ಸಹ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ನಿರ್ಣಯಗಳು ಸಿಂಧುವಾಗತಕ್ಕವಾಗಿರುತ್ತದೆ.",
+      "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಯನ್ನು ನಡೆಸುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50%, ಹೆಚ್ಚು ಸದಸ್ಯರುಗಳಾದರೂ (ಕೋರಂ) ಹಾಜರಿರಲೇಬೇಕು.",
+    ],
+    en: [
+      "The number of Central Executive Members, including all districts and Bangalore Urban, will be a total of 45. Out of these, the Executive Committee has the authority to nominate 3 members. Among the nominated members, one must compulsorily be a lawyer, recognized for contributions in social service, and must possess good character. The remaining two positions will be filled by nominating individuals from castes within the Madiga community that are not already represented. The members of the Executive Committee will be elected directly from time to time through voting by members of the Central, District, and Taluk Committees. Currently, the Executive Member positions have been determined based on the population of the Madiga community in each district.",
+
+      "In case of any vacancies, the Executive Committee shall appoint new members from the respective district, taluk, or related branch jurisdiction in the next scheduled Executive Committee meeting.",
+
+      "An elected Executive Committee shall have a term of 3 years and will remain in power until the next election. Even if some positions remain vacant due to unforeseen reasons, the decisions of the Executive Committee shall still be considered valid.",
+
+      "To conduct a meeting of the Executive Committee, at least 50% of the members (quorum) must be present.",
+    ],
+  },
+  second: {
+    "5": {
+      "title_en": "District Branch Executive Committee",
+      "title_kn": "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      "items": [
+        {
+          "en": "The district branch office is located at the district headquarters. The District Executive Committee consists of 8 members, with at least one additional member from each taluk included in the committee.",
+          "kn": "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಛೇರಿ ಜಿಲ್ಲಾ ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ. ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ 8 ಸದಸ್ಯರುಗಳಿದ್ದು ಮತ್ತು ಹೆಚ್ಚುವರಿಯಾಗಿ ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ ಕನಿಷ್ಠ ಒಬ್ಬ ಸದಸ್ಯರನ್ನು ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಲಾಗುವುದು."
         },
-        tagline: {
-            en: "Manage Everything About TNO Portal In One Dashboard!",
-            kn: "ಟಿಎನ್ಒ ಪೋರ್ಟಲ್ ಬಗ್ಗೆ ಎಲ್ಲವನ್ನೂ ಒಂದೇ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಲ್ಲಿ ನಿರ್ವಹಿಸಿ!"
+        {
+          "en": "The District Executive Committee shall have at least 8 members. District office-bearers are elected from among the committee members elected by the District General Body as follows:",
+          "kn": "ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 ಜನ ಸದಸ್ಯರಿರುತ್ತಾರೆ. ಜಿಲ್ಲಾ ಸಭಾದ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಿಂದ ಚುನಾಯಿತರಾದ ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಜಿಲ್ಲಾ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಕೆಳಕಂಡಂತೆ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು."
+        },
+        {
+          "en": "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 2\n7. One from each taluk – 1",
+          "kn": "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1"
+        },
+        {
+          "en": "The executive committee meeting must be held once every month.",
+          "kn": "ಪ್ರತಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆ ಸೇರತಕ್ಕದ್ದು."
+        },
+        {
+          "en": "More than 50% of the executive committee members must be present for the meeting.",
+          "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಗೆ ಕನಿಷ್ಠ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಭಾಗದ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
         }
+      ]
     },
-    reports: {
-        general: {
-            year: {
-                en: "year",
-                kn: "ವರ್ಷ"
-            },
-            month: {
-                en: "month",
-                kn: "ತಿಂಗಳು"
-            },
-            all_months: {
-                en: "All Months",
-                kn: "ಎಲ್ಲಾ ತಿಂಗಳುಗಳು"
-            },
-            select_year: {
-                en: "please select the year",
-                kn: "ವರ್ಷವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
-            },
-            select_month: {
-                en: "please select the month",
-                kn: "ತಿಂಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
-            },
-            total_issues_instructions: {
-                en: "total issues & instructions",
-                kn: "ಒಟ್ಟು ಸಮಸ್ಯೆಗಳು ಮತ್ತು ಸೂಚನೆಗಳು"
-            },
-            total_issues: {
-                en: "total issues",
-                kn: "ಒಟ್ಟು ಸಮಸ್ಯೆಗಳು"
-            }
+    "6": {
+      "title_en": "Taluk Branch Executive Committee",
+      "title_kn": "ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      "items": [
+        {
+          "en": "The taluk branch office is located at the respective taluk headquarters.",
+          "kn": "ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲ್ಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ."
         },
-        titles: {
-            dis_visit_report: {
-                visited: {
-                    en: "TNO - Visit Report (Visited)",
-                    kn: "ಟಿಎನ್ಒ - ಭೇಟಿ ವರದಿಗಳು (ಭೇಟಿ ಮಾಡಿರುವುದು)"
-                },
-                not_visited: {
-                    en: "TNO - Visit Report (Not Visited)",
-                    kn: "ಟಿಎನ್ಒ - ಭೇಟಿ ವರದಿಗಳು (ಭೇಟಿ ಮಾಡಿಲ್ಲದಿರುವುದು)"
-                },
-                points_covered: {
-                    en: "TNO - Checklist Points Covered Report",
-                    kn: "ಟಿಎನ್ಒ - ಚೆಕ್‌ಲಿಸ್ಟ್ ಪಾಯಿಂಟ್‌ಗಳ ಒಳಗೊಂಡಿರುವ ವರದಿಗಳು"
-                }
-            },
-            district_wise_overall: {
-                abstract: {
-                    en: "Taluk Wise Abstract Report",
-                    kn: "ತಾಲ್ಲೂಕುವಾರು ಸಮಗ್ರ ವರದಿಗಳು"
-                },
-                detailed: {
-                    en: "Taluk Wise Detailed Report",
-                    kn: "ತಾಲ್ಲೂಕುವಾರು ವಿವರವಾದ ವರದಿಗಳು"
-                }
-            },
-            dept_wise_overall: {
-                abstract: {
-                    en: "Department Wise Abstract Report",
-                    kn: "ಇಲಾಖೆಗಳ ಸಮಗ್ರ ವರದಿಗಳು"
-                },
-                detailed: {
-                    en: "Department Wise Detailed Report",
-                    kn: "ಇಲಾಖೆಗಳ ವಿವರವಾದ ವರದಿಗಳು"
-                }
-            },
-            dept_wise_pending: {
-                en: "Department Wise Pending Issues",
-                kn: "ಇಲಾಖಾವಾರು ಬಾಕಿ ಇರುವ ಸಮಸ್ಯೆಗಳ ವರದಿಗಳು"
-            },
-            district_wise_pending: {
-                en: "Taluk Wise Pending Issues",
-                kn: "ತಾಲ್ಲೂಕುವಾರು ಬಾಕಿ ಇರುವ ಸಮಸ್ಯೆಗಳ ವರದಿಗಳು"
-            },
-            individual_dept_issues: {
-                en: "Individual Department Wise Issues",
-                kn: "ಇಲಾಖಾವಾರು ಸಮಸ್ಯೆಗಳ ವರದಿಗಳು"
-            },
-            individual_district_issues: {
-                en: "Individual Taluk Wise Issues",
-                kn: "ತಾಲ್ಲೂಕುವಾರು ಸಮಸ್ಯೆಗಳ ವರದಿಗಳು"
-            }
+        {
+          "en": "The Taluk Executive Committee must have at least 4 members.",
+          "kn": "ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 4(ನಾಲ್ಕು) ಜನ ಸದಸ್ಯರಿರಬೇಕು."
+        },
+        {
+          "en": "From among the members elected by the Taluk General Body, the office-bearers are selected as follows:",
+          "kn": "ಆಯಾ ತಾಲ್ಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲ್ಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು."
+        },
+        {
+          "en": "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 3",
+          "kn": "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3"
+        },
+        {
+          "en": "The executive committee must meet once every month.",
+          "kn": "ಪ್ರತಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆ ಸೇರಬೇಕು."
+        },
+        {
+          "en": "At least more than 50% of the executive committee members must be present for the meeting.",
+          "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಗೆ ಕನಿಷ್ಟ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
         }
+      ]
     },
-    roles: {
-        admin: {
-            en: "admin",
-            kn: "ನಿರ್ವಾಹಕ"
+    "7": {
+      "title_en": "General Body Meetings: Conferences",
+      "title_kn": "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಗಳು : ಸಮ್ಮೇಳನಗಳು",
+      "items": [
+        {
+          "en": "General Body Meeting: The general body meeting consists of executive committee members and all other members, and will be referred to as the General Body Meeting.",
+          "kn": "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ: ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು."
         },
-        dc: {
-            en: "DC",
-            kn: "ಜಿಲ್ಲಾಧಿಕಾರಿ"
-        },
-        ceo: {
-            en: "CEO",
-            kn: "ಮುಖ್ಯ ಕಾರ್ಯನಿರ್ವಾಹಕ ಅಧಿಕಾರಿ"
-        },
-        dis: {
-            en: "DIS",
-            kn: "ಜಿಲ್ಲಾ ಉಸ್ತುವಾರಿ ಕಾರ್ಯದರ್ಶಿ"
-        },
-        cs: {
-            en: "CS",
-            kn: "ಮುಖ್ಯ ಕಾರ್ಯದರ್ಶಿ"
-        },
-        cm: {
-            en: "CM",
-            kn: "ಮುಖ್ಯಮಂತ್ರಿ"
+        {
+          "en": "Ordinary Meeting: Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
+          "kn": "ಸಾಮಾನ್ಯ ಸಭೆ: ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟೀನ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿಲ್ಲದಂತೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
         }
+      ]
+    },
+    "8": {
+      "title_en": "Special Meeting",
+      "title_kn": "ವಿಶೇಷ ಸಭೆ",
+      "items": [
+        {
+          "en": "Special or important matters of the association can be decided in a special general body meeting called by the president and general secretary with the approval of the executive committee. At least more than 50% of the members must be present for a special meeting. Notice of such a meeting mentioning the subjects to be discussed must be given at least 21 days in advance.",
+          "kn": "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು ಮತ್ತು ವಿಶೇಷ ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಮಂದಿ ಅಥವಾ 50% ಗಿಂತ ಕಡಿಮೆಯಿಲ್ಲದೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು. ಇಂತಹ ಸಭೆ ಕೂಡುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 21 ದಿನ ಮುಂಚಿತವಾಗಿ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ಮೀಟಿಂಗ್‌ ನೋಟೀಸ್‌ ಕೊಡಲಾಗುವುದು."
+        }
+      ]
     }
-}
+  },
+};
+
+// CommitteeMembers.js or in OrganizationContent
+export const CommitteeMembers = [
+  {
+    name: {
+      en: "Dr. K.H. Muniyappa\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
+      kn: "ಡಾ|| ಕೆ.ಹೆಚ್‌. ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು."
+    },
+    position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  },
+  {
+    name: {
+      en: "Sri. A. Narayanaswamy\nNo. 691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru.",
+      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ\nನಂ.691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ, 2ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌. ಲೇಔಟ್‌, ಬೆಂಗಳೂರು."
+    },
+    position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  },
+  {
+    name: {
+      en: "Sri. K.M. Timmarayappa\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲ್ಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ."
+    },
+    position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  },
+  {
+    name: {
+      en: "Dr. L. Hanumanthayya\n30. 207/A, 'D' Cross, 2nd Block, Basaveshwaranagar, Bengaluru.",
+      kn: "ಡಾ|| ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ , ʼಡಿʼಕ್ರಾಸ್‌, 2ನೇ  ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು."
+    },
+    position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  },
+  {
+    name: {
+      en: "A. Muniyappa\nNo.2, IT Township, Dooravani Nagar, Bengaluru-16.",
+      kn: "ಎ.ಮುನಿಯಪ್ಪ, ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16."
+    },
+    position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: "8884445838"
+  },
+  {
+    name: {
+      en: "Sri Pillamuniswamyappa\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
+      kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು."
+    },
+    position: { en: "State Organizing Secretary", kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  },
+  {
+    name: {
+      en: "Dr. Sujata\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
+      kn: "ಡಾ|| ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ  ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096."
+    },
+    position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  },
+  {
+    name: {
+      en: "Sri. H. Anjaneya\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
+      kn: "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ, 2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು."
+    },
+    position: { en: "Executive Committee Member", kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: "9448455881"
+  },
+  {
+    name: {
+      en: "Govind Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
+      kn: "ಗೋವಿಂದ ಕಾರಜೋಳ, 199/ಎ, 4ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು."
+    },
+    position: { en: "Executive Committee Member", kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು" },
+    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
+    mobile: ""
+  }
+];
+
+
+export const AboutTrustPageContent = {
+  firstHeading: {
+    en: "Madaras - The First Kings of India",
+    kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು",
+  },
+  secondHeading: {
+    en: "Madaras - The First Warriors of India",
+    kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು",
+  },
+  paragraph: {
+    en: "Madara is the name of one of India's most ancient ethnic groups, the name of the first ethnic group born and raised in India. It is the name of the ethnic group belonging to the first royal dynasty that ruled India. It is the name of the powerful warrior ethnic group that first introduced monarchy and democracy to ancient India. During the time when Madigas ruled, the people of the land used to respectfully call them Mahadore, Mahadore. They used to say Mahadevaru, Mahadevaru with devotion. The word Mahadore itself became Mahadevaru, Madore, Madevaru, Maderu, Madaru, Madara. Thus, through these historical names, the Madara ethnic group has earned their own senior position in India's history. The Madara ethnic group is India's first political ethnic group, and though they are Madiga ethnic group, in the modern era, they are gods, worshipped and revered with fear and devotion by all castes and all ethnic groups, Male Mahadeshwara, Marulasiddha and others are proper evidence and strong proof of ethnic superiority.",
+    kn: "ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿದ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಪ್ರಭುತ್ವವನ್ನು, ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ,ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಅದುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ , ಎಲ್ಲ ಜಾತಿ ಎಲ್ಲ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೇಮಹದೇಶ್ವರ ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
+  },
+  secondParagraph: {
+    en: "However, due to the conspiracy of the first foreign migrants to India, the Arya Brahmins, the Madigas' royal authority was destroyed. Since cultural elevation was destroyed, economic elevation was destroyed. Since economic elevation was destroyed, social elevation was destroyed. Since social elevation was destroyed, educational elevation was destroyed. Since educational elevation was destroyed, industrial elevation was destroyed. Since industrial elevation was destroyed, Madigas became untouchables and became slaves to foreign Brahmin religion and culture. In such a deplorable situation, the Arya Brahmins, who took possession of the Madigas' education and intelligence through many tricks and conspiracies, made them their hereditary property and applied indelible ink to the Madigas' name and breath. By giving derogatory and dirty meanings to the Madigas' supreme tradition and history, they reduced and reduced their mental, intellectual, and physical strength, making them dwarfs. Due to these reasons, the Madiga community has been continuously exploited by upper castes and has become extremely backward socially, economically, and educationally.",
+    kn: "ಆದರೆ ಭಾರತಕ್ಕೆ ವಲಸೆ ಬಂದ ಮೊದಲ ವಿದೇಶಿಯರಾದ ಆರ್ಯ ಬ್ರಾಹ್ಮಣರ ಒಳಸಂಚಿನಿಂದಾಗಿ ಮಾದಿಗರ ರಾಜ್ಯಾಧಿಕಾರ ನಾಶವಾಯಿತು. ಸಾಂಸ್ಕೃತಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಆರ್ಥಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಆರ್ಥಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಔದ್ಯೋಗಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಔದ್ಯೋಗಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಮಾದಿಗರು ಅಸ್ಪೃಶರಾದರು, ವಿದೇಶಿ ಬ್ರಾಹ್ಮಣರ ಧರ್ಮ ಮತ್ತು ಸಂಸ್ಕೃತಿಗೆ ಗುಲಾಮರಾದರು. ಇಂತಹ ಹೀನಾಯ ಪರಿಸ್ಥಿತಿಯಲ್ಲಿ ಮಾದಿಗರ ವಿದ್ಯಾವಂತಿಕೆಯನ್ನು, ಬುದ್ದಿವಂತಿಕೆಯನ್ನು ಅನೇಕ ತಂತ್ರಕುತಂತ್ರಗಳಿಂದ ವಶಪಡಿಸಿಕೊಂಡ ಆರ್ಯ ಬ್ರಾಹ್ಮಣರು ಅವುಗಳನ್ನು ತಮ್ಮ ವಂಶಪಾರಂಪರ್ಯ ಗುತ್ತಿಗೆಯ ವಸ್ತುಗಳನ್ನಾಗಿ ಮಾಡಿಕೊಂಡು ಮಾದಿಗರ ಹೆಸರಿಗೆ ಮತ್ತು ಉಸಿರಿಗೆ ಅಳಿಸಲಾರದಂತಹ ಮಸಿ ಬಳಿದರು. ಮಾದಿಗರ ಅತ್ಯುನ್ನತ ಪರಂಪರೆಗೆ, ಇತಿಹಾಸಕ್ಕೆ ಕೀಳಾರ್ಥವನ್ನು, ಕೊಳಕಾರ್ಥವನ್ನು ನೀಡುವ ಮೂಲಕ ಅವರ ಮಾನಸಿಕ , ಬೌದ್ಧಿಕ, ಮತ್ತು ದೈಹಿಕ ಬಲವನ್ನು ಕುಗ್ಗಿಸಿ ಕುಗ್ಗಿಸಿ ಕುಬ್ಜರನ್ನಾಗಿ ಮಾಡಿದರು. ಈ ಕಾರಣಗಳಿಂದ ಮಾದಿಗ ಸಮುದಾಯದವರು ನಿರಂತರವಾಗಿ ಮೇಲ್ಜಾತಿಗಳ ಶೋಷಣೆಗೆ ಒಳಪಟ್ಟು ಸಾಮಾಜಿಕವಾಗಿ, ಆರ್ಥಿಕವಾಗಿ ಮತ್ತು ಶೈಕ್ಷಣಿಕವಾಗಿ ಅತ್ಯಂತ ಹಿಂದುಳಿದಿದ್ದಾರೆ.",
+  },
+  thirdParagraph: {
+    en: "In order to protect the interests of the Madara community and bring them into the mainstream of society, the senior leaders of the society, especially the Honorable Shri K.H. Muniyappa, who has served as a Member of Parliament from Kolar Lok Sabha for 7 consecutive terms, as a Union Minister, and currently as a Member of Legislative Assembly from Devanahalli constituency and as a Minister in the State Government Cabinet, took interest and planned to start 'Karnataka Madiga Mahasabha' with the aim of filling the Madiga community with organizational strength, keeping in mind the development of future generations, and registered the Mahasabha in 2015 with the trust of all community leaders. The first executive committee of the Mahasabha was constituted as follows.",
+    kn: "ಮಾದರ ಸಮುದಾಯದ ಹಿತಾಸಕ್ತಿಯನ್ನು ಕಾಪಾಡಿ ಸಮಾಜದ ಮುಖ್ಯವಾಹಿನಿಗೆ ತರುವ ನಿಟ್ಟಿನಲ್ಲಿ ಸಮಾಜದ ಹಿರಿಯ ಮತ್ಸದ್ದಿಗಳು / ಮುಖಂಡರು ವಿಶೇಷವಾಗಿ ಸತತ 7 ಬಾರಿಗೆ ಕೋಲಾರ ಲೋಕಸಭಾದ ಸಂಸದರಾಗಿ, ಕೇಂದ್ರ ಮಂತ್ರಿಗಳಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸಿರುವ ಮತ್ತು ಹಾಲಿ ದೇವನಹಳ್ಳಿ ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರದ ಶಾಸಕರು ಮತ್ತು ರಾಜ್ಯಸರ್ಕಾರದ ಮಂತ್ರಿಮಂಡಲದಲ್ಲಿ ಸಚಿವರಾಗಿರುವ ಸನ್ಮಾನ್ಯ ಶ್ರೀ ಕೆ.ಹೆಚ್. ಮುನಿಯಪ್ಪನವರು ಆಸಕ್ತಿ ವಹಿಸಿ ಮುಂದಿನ ಪೀಳಿಗೆಯ ಅಭಿವೃದ್ಧಿಯನ್ನು ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡು ಹಾಗೂ ಮಾದಿಗ ಸಮುದಾಯಕ್ಕೆ ಸಂಘಟನಾ ಶಕ್ತಿ ತುಂಬುವ ಉದ್ದೇಶದಿಂದ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭಾ' ವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಯೋಜಿಸಿ ಸಮಾಜದ ಎಲ್ಲಾ ಮುಖಂಡರುಗಳ ವಿಶ್ವಾಸದೊಂದಿಗೆ 2015 ರಲ್ಲಿ ಮಹಾಸಭಾವನ್ನು ನೊಂದಣಿ ಮಾಡಿಸಿದರು. ಮಹಾಸಭಾದ ಮೊದಲ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯನ್ನು ಕೆಳಕಂಡಂತೆ ರಚಿಸಲಾಯಿತು.",
+  },
+};

@@ -18,6 +18,7 @@ export default function AddMembershipForm() {
   const [newField, setNewField] = useState({
     inputType: 'text',
     label: '',
+    label_kn: '',
     options: '', // comma separated for dropdown/radio/checkbox
     required: false,
     order: fields.length + 1,
@@ -44,7 +45,7 @@ export default function AddMembershipForm() {
       order: fields.length + 1,
     };
     setFields([...fields, fieldToAdd]);
-    setNewField({ inputType: 'text', label: '', options: '', required: false, order: fields.length + 2 });
+    setNewField({ inputType: 'text', label: '', label_kn: '', options: '', required: false, order: fields.length + 2 });
   };
 
   const removeField = (idx) => {
@@ -116,6 +117,10 @@ export default function AddMembershipForm() {
             <label style={{ color: '#1e293b', fontWeight: 500, fontSize: 15 }}>Label</label>
             <input name="label" value={newField.label} onChange={handleFieldChange} required style={{ width: '100%', padding: 9, borderRadius: 8, border: '1px solid #cbd5e1', fontSize: 15, color: '#1e293b', background: '#f8fafc' }} />
           </div>
+          <div style={{ flex: 2, minWidth: 150 }}>
+            <label style={{ color: '#1e293b', fontWeight: 500, fontSize: 15 }}>Kannada Label</label>
+            <input name="label_kn" value={newField.label_kn} onChange={handleFieldChange} style={{ width: '100%', padding: 9, borderRadius: 8, border: '1px solid #cbd5e1', fontSize: 15, color: '#1e293b', background: '#f8fafc' }} />
+          </div>
           {['dropdown', 'checkbox', 'radio'].includes(newField.inputType) && (
             <div style={{ flex: 2, minWidth: 150 }}>
               <label style={{ color: '#1e293b', fontWeight: 500, fontSize: 15 }}>Options (comma separated)</label>
@@ -134,7 +139,7 @@ export default function AddMembershipForm() {
           {fields.map((field, idx) => (
             <li key={idx} style={{ marginBottom: 10, padding: 13, background: '#f8fafc', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#1e293b', fontSize: 16 }}>
               <span>
-                <b>{field.label}</b> <span style={{ color: '#6366f1' }}>({field.inputType})</span>
+                <b>{field.label}</b> {field.label_kn && <span style={{ color: '#6366f1', marginLeft: 8 }}>{field.label_kn}</span>} <span style={{ color: '#6366f1' }}>({field.inputType})</span>
                 {field.required && <span style={{ color: '#e11d48', marginLeft: 6 }}>*</span>}
                 {field.options && <span style={{ color: '#64748b', marginLeft: 10 }}>Options: {field.options.join(', ')}</span>}
               </span>

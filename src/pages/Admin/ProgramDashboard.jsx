@@ -1,34 +1,33 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import AdminLayout from './AdminLayout';
 import { useNavigate } from 'react-router-dom';
 import { API_BASE_URL } from '../../../config';
+import AdminLayout from './AdminLayout';
 
-export default function ActivityDashboard() {
+export default function ProgramDashboard() {
   const navigate = useNavigate();
-  const [activities, setActivities] = useState([]);
+  const [programs, setPrograms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const fetchActivities = async () => {
+    const fetchPrograms = async () => {
       setLoading(true);
       setError('');
       try {
-        const res = await fetch(`${API_BASE_URL}activity`);
+        const res = await fetch(`${API_BASE_URL}upcommingprograms`);
         const data = await res.json();
         if (res.ok && data.data) {
-          setActivities(data.data);
+          setPrograms(data.data);
         } else {
-          setError(data.message || 'Failed to fetch activities');
+          setError(data.message || 'Failed to fetch programs');
         }
       } catch (err) {
-        setError('Failed to fetch activities');
+        setError('Failed to fetch programs');
       } finally {
         setLoading(false);
       }
     };
-    fetchActivities();
+    fetchPrograms();
   }, []);
 
   return (
@@ -60,14 +59,14 @@ export default function ActivityDashboard() {
             cursor: 'pointer',
             boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)'
           }}
-          onClick={() => navigate('/dashboard/activity/create')}
+          onClick={() => navigate('/dashboard/program/create')}
         >
-          Add Activity
+          Add Program
         </button>
         <div style={{ fontWeight: 700, fontSize: 32, textAlign: 'center', marginBottom: 24 }}>
-          Activity Dashboard
+          Program Dashboard
         </div>
-        {loading && <div style={{ marginBottom: 16 }}>Loading activities...</div>}
+        {loading && <div style={{ marginBottom: 16 }}>Loading programs...</div>}
         {error && <div style={{ color: 'red', marginBottom: 16 }}>{error}</div>}
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 600 }}>
@@ -76,33 +75,32 @@ export default function ActivityDashboard() {
                 <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>S.No</th>
                 <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Title</th>
                 <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>About</th>
+                <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Date</th>
+                <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Time</th>
+                <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Media</th>
                 <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Title (Kannada)</th>
                 <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>About (Kannada)</th>
-                <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Created At</th>
-                <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Media</th>
-                {/* <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Link</th> */}
+                <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Location (Kannada)</th>
                 <th style={{ padding: '12px 8px', borderBottom: '2px solid #e5e7eb' }}>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {!loading && !error && activities.length === 0 && (
+              {!loading && !error && programs.length === 0 && (
                 <tr>
-                  <td colSpan={4} style={{ textAlign: 'center', padding: 24, color: '#64748b' }}>No activities found.</td>
+                  <td colSpan={7} style={{ textAlign: 'center', padding: 24, color: '#64748b' }}>No programs found.</td>
                 </tr>
               )}
-              {!loading && !error && activities.map((activity, idx) => (
-                <tr key={activity.id} style={{ borderBottom: '1px solid #e5e7eb' }}>
+              {!loading && !error && programs.map((program, idx) => (
+                <tr key={program.id} style={{ borderBottom: '1px solid #e5e7eb' }}>
                   <td style={{ padding: '10px 8px', textAlign: 'center' }}>{idx + 1}</td>
-                  <td style={{ padding: '10px 8px', fontWeight: 500 }}>{activity.title}</td>
-                  <td style={{ padding: '10px 8px', color: '#334155' }}>{activity.about}</td>
-                  <td style={{ padding: '10px 8px', fontWeight: 500 }}>{activity.k_title}</td>
-                  <td style={{ padding: '10px 8px', color: '#334155' }}>{activity.k_about}</td>
-                  <td style={{ padding: '10px 8px', color: '#64748b' }}>{new Date(activity.createdAt).toLocaleString()}</td>
+                  <td style={{ padding: '10px 8px', fontWeight: 500 }}>{program.title}</td>
+                  <td style={{ padding: '10px 8px', color: '#334155' }}>{program.about}</td>
+                  <td style={{ padding: '10px 8px', color: '#64748b' }}>{new Date(program.program_date).toLocaleDateString()}</td>
+                  <td style={{ padding: '10px 8px', color: '#64748b' }}>{program.program_time || '-'}</td>
                   <td style={{ padding: '10px 8px', minWidth: 120 }}>
-                    {Array.isArray(activity.media_file) && activity.media_file.length > 0 ? (
+                    {Array.isArray(program.media_file) && program.media_file.length > 0 ? (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                        {activity.media_file.map((media, i) => {
-                          // Image
+                        {program.media_file.map((media, i) => {
                           if (media.image_url && media.image_url.thumbnail && media.image_url.thumbnail.high_res) {
                             return (
                               <a key={i} href={`${API_BASE_URL}${media.image_url.full.high_res}`} target="_blank" rel="noopener noreferrer">
@@ -110,7 +108,6 @@ export default function ActivityDashboard() {
                               </a>
                             );
                           }
-                          // PDF/Document
                           if (media.doc_url) {
                             return (
                               <a key={i} href={`${API_BASE_URL}${media.doc_url}`} target="_blank" rel="noopener noreferrer" style={{ color: '#6366f1', fontWeight: 500 }}>
@@ -118,13 +115,11 @@ export default function ActivityDashboard() {
                               </a>
                             );
                           }
-                          // Video (show label)
                           if (media.video_url && (media.video_url.video?.high_res || media.video_url.video?.low_res)) {
                             return (
                               <span key={i} style={{ color: '#06b6d4', fontWeight: 500 }}>Video</span>
                             );
                           }
-                          // Fallback
                           return <span key={i}>Media</span>;
                         })}
                       </div>
@@ -132,24 +127,13 @@ export default function ActivityDashboard() {
                       <span style={{ color: '#64748b' }}>-</span>
                     )}
                   </td>
-                  {/* <td style={{ padding: '10px 8px', minWidth: 80 }}>
+                  <td style={{ padding: '10px 8px', fontWeight: 500 }}>{program.k_title}</td>
+                  <td style={{ padding: '10px 8px', color: '#334155' }}>{program.k_about}</td>
+                  <td style={{ padding: '10px 8px', color: '#334155' }}>{program.k_location}</td>
+                  <td style={{ padding: '10px 8px', minWidth: 120 }}>
+                    {/* Actions: Edit/Delete can be added here */}
                     <a
-                      href={`/dashboard/activity/${activity.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        color: '#2563eb',
-                        textDecoration: 'underline',
-                        fontWeight: 600,
-                        cursor: 'pointer',
-                      }}
-                    >
-                      View
-                    </a>
-                  </td> */}
-                  <td style={{ padding: '10px 8px', minWidth: 120, display: 'flex', gap: 8 }}>
-                    <a
-                      href={`/dashboard/activity/edit/${activity.id}`}
+                      href={`/dashboard/program/edit/${program.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
@@ -157,18 +141,19 @@ export default function ActivityDashboard() {
                         textDecoration: 'underline',
                         fontWeight: 600,
                         cursor: 'pointer',
+                        marginRight: 12
                       }}
                     >
                       Edit
                     </a>
                     <button
                       onClick={async () => {
-                        if (!window.confirm('Are you sure you want to delete this activity?')) return;
+                        if (!window.confirm('Are you sure you want to delete this program?')) return;
                         try {
-                          const res = await fetch(`${API_BASE_URL}activity/${activity.id}`, { method: 'DELETE' });
+                          const res = await fetch(`${API_BASE_URL}upcommingprograms/${program.id}`, { method: 'DELETE' });
                           if (res.ok) {
-                            setActivities((prev) => prev.filter((a) => a.id !== activity.id));
-                            window.toastify && window.toastify.notifySuccess ? window.toastify.notifySuccess('Activity deleted!') : alert('Activity deleted!');
+                            setPrograms((prev) => prev.filter((p) => p.id !== program.id));
+                            window.toastify && window.toastify.notifySuccess ? window.toastify.notifySuccess('Program deleted!') : alert('Program deleted!');
                           } else {
                             const data = await res.json();
                             window.toastify && window.toastify.notifyError ? window.toastify.notifyError(data.message || 'Failed to delete') : alert(data.message || 'Failed to delete');
