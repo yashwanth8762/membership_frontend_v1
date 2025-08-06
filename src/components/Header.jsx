@@ -84,7 +84,7 @@ export default function Header({ theme = "transparent" }) {
             {/* Avatar */}
             <a href="/" className="flex items-center group">
               <img
-                src="/assets/avatar.jpeg"
+                src="/assets/matangi.jpeg"
                 alt="Matanga Muni"
                 className="h-14 w-14 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-cover"
                 draggable="false"
@@ -117,7 +117,7 @@ export default function Header({ theme = "transparent" }) {
               <div className="flex-shrink-0">
                 <a href="/" className="flex items-center group">
                   <img
-                    src="/assets/avatar.jpeg"
+                    src="/assets/matangi.jpeg"
                     alt="Matanga Muni"
                     className="w-24 h-24 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-cover"
                     draggable="false"
