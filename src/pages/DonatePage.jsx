@@ -207,7 +207,7 @@ const DonatePage = () => {
                 htmlFor="donationAmount"
                 className="block mb-1 font-semibold text-gray-700"
               >
-                {isEnglish ? "Donation Amount (₹)" : "ದುರಡು ಮೊತ್ತ (₹)"} *
+                {isEnglish ? "Donation Amount (₹)" : "ದೇಣಿಗೆ ಮೊತ್ತ (₹)"} *
               </label>
               <input
                 id="donationAmount"

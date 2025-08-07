@@ -23,6 +23,7 @@ export default function UserMembership() {
   const [fetchedMembershipData, setFetchedMembershipData] = useState(null);
   const [fetchingMembershipData, setFetchingMembershipData] = useState(false);
   const cardRef = useRef();
+  const cardOnlyRef = useRef();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
@@ -305,9 +306,9 @@ export default function UserMembership() {
 
   // Download card as image
   const handleDownload = async () => {
-    if (!cardRef.current) return;
+    if (!cardOnlyRef.current) return;
     const html2canvas = (await import('html2canvas')).default;
-    html2canvas(cardRef.current).then(canvas => {
+    html2canvas(cardOnlyRef.current).then(canvas => {
       const link = document.createElement('a');
       link.download = `membership_card_${membershipId}.png`;
       link.href = canvas.toDataURL();
@@ -646,10 +647,12 @@ export default function UserMembership() {
             )}
             {membershipId && fetchedMembershipData && !fetchingMembershipData && (
               <div ref={cardRef} style={{ margin: '2rem auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <MembershipCard 
-                  membershipData={fetchedMembershipData}
-                  showColorPicker={true} 
-                />
+                <div ref={cardOnlyRef}>
+                  <MembershipCard 
+                    membershipData={fetchedMembershipData}
+                    showColorPicker={true} 
+                  />
+                </div>
                 <button
                   onClick={handleDownload}
                   style={{

@@ -60,40 +60,45 @@ const MembershipCard = ({
   colorIdx: colorIdxProp,
   onColorChange,
   showColorPicker = true,
+  onImageLoad,
 }) => {
   const [colorIdx, setColorIdx] = useState(colorIdxProp ?? 0);
   const color = COLOR_SCHEMES[colorIdx];
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Extract data directly from the API response
   const getValue = (label) => {
     if (!membershipData || !membershipData.values) return '';
     const field = membershipData.values.find((v) => 
-      v.label?.trim()?.toLowerCase() === label?.trim()?.toLowerCase() ||
-      v.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase())
+      (v.label?.trim()?.toLowerCase() === label?.trim()?.toLowerCase() ||
+       v.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase())) ||
+      (v._doc?.label?.trim()?.toLowerCase() === label?.trim()?.toLowerCase() ||
+       v._doc?.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase()))
     );
-    return field ? field.value : '';
+    if (!field) return '';
+    if (field.value !== undefined) return field.value;
+    if (field._doc && field._doc.value !== undefined) return field._doc.value;
+    return '';
   };
 
   // Extract photo from populated media
   const getPhoto = () => {
     if (!membershipData || !membershipData.values) return undefined;
     
-    console.log('membershipData',membershipData);
+    // Only use _doc for image check
     const photoField = membershipData.values.find((v) => 
-      v?._doc?.label?.toLowerCase().includes('upload image') || 
-      v?._doc?.label?.toLowerCase().includes('photo') ||
-      v?._doc?.label?.toLowerCase().includes('image')
+      v._doc?.label?.toLowerCase().includes('upload image') || 
+      v._doc?.label?.toLowerCase().includes('photo') ||
+      v._doc?.label?.toLowerCase().includes('image') ||
+      v.label?.toLowerCase().includes('upload image') ||
+      v.label?.toLowerCase().includes('photo') ||
+      v.label?.toLowerCase().includes('image')
     );
-    
-    console.log('photoField found:', photoField);
     
     if (photoField && photoField.media && photoField.media.length > 0) {
       const mediaItem = photoField.media[0];
-      console.log('mediaItem:', mediaItem);
-      
       if (mediaItem && mediaItem.image_url && mediaItem.image_url.full && mediaItem.image_url.full.high_res) {
         const photoUrl = `${API_BASE_URL}${mediaItem.image_url.full.high_res}`;
-        console.log('Photo URL constructed:', photoUrl);
         return photoUrl;
       }
     }
@@ -206,7 +211,7 @@ const MembershipCard = ({
             {/* Left side - Details */}
             <div className="flex-1 pr-2 flex flex-col justify-center items-start">
               <div className="mb-0.5 text-sm font-medium">
-                <span className="font-semibold">ಕ್ರಿಮ ಸಂಖ್ಯೆ: </span>
+                <span className="font-semibold">ಕ್ರಮ ಸಂಖ್ಯೆ: </span>
                 <span>{serialNumber}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
@@ -243,6 +248,10 @@ const MembershipCard = ({
                       src={photo}
                       alt="ID Photo"
                       className="w-full h-full object-cover"
+                      onLoad={() => {
+                        setImageLoaded(true);
+                        if (onImageLoad) onImageLoad();
+                      }}
                     />
                   ) : (
                     <span className="text-xs font-semibold tracking-wide text-gray-500">ಪದವೀಧರ ಪ್ರಮುಖ ಚಿತ್ರ ಇಲ್ಲ</span>
