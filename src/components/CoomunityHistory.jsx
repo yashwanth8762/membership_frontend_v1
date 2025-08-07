@@ -54,7 +54,7 @@ const CoomunityHistory = () => {
           <div className="lg:col-span-7 flex justify-center items-center">
           <img
   className="rounded-xl shadow-lg object-cover w-full max-h-[600px]"
-  src="assets/orgpage.jpeg" // Change this path to your image
+  src="assets/org.jpeg" // Change this path to your image
   alt={isEnglish ? "Community History" : "ಸಮುದಾಯದ ಇತಿಹಾಸ"}
   style={{ height: '70%', maxHeight: '600px' , width: '70%' }}
 />

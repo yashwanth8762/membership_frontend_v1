@@ -7,7 +7,7 @@ const HeroSection = () => {
     "/assets/slider4.jpeg",
     "/assets/slider2.jpeg",
     "/assets/slider1.jpeg",
-    "/assets/slider3.jpeg",
+    "/assets/mainslider.jpeg",
     "/assets/hill.jpeg"
   ];
   const user = useSelector((state) => state.user.value);

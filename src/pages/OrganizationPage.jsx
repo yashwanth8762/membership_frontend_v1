@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setLanguage } from "../reducers/user";
 import { OrganizationContent } from "../utils/constents";
 import { CommitteeMembers } from "../utils/constents";
+import { organizationTalukMembers, organizationDistrictMembers } from "../utils/constents";
 
 const OrganizationPage = () => {
   const dispatch = useDispatch();
@@ -200,6 +201,51 @@ const OrganizationPage = () => {
     </table>
   </div>
 </div>
+        {/* Taluk Members Table */}
+        <div className="w-full max-w-6xl mx-auto mb-14">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+          {isEnglish ? "District Coordinators" : "ಜಿಲ್ಲಾ ಸಂಚಾಲಕರು"}
+            
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
+              <thead>
+                <tr className="bg-blue-600 text-white">
+                  {organizationTalukMembers.heading[isEnglish ? "tableHeading_en" : "tableHeading_kn"].map((heading, idx) => (
+                    <th key={idx} className="px-4 py-3 text-left font-semibold text-md border-b border-blue-700">
+                      {heading}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {/* Data rows to be added here */}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {/* District Members Table */}
+        <div className="w-full max-w-6xl mx-auto mb-14">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+          {isEnglish ? "Taluk Coordinators" : "ತಾಲ್ಲೂಕು ಸಂಚಾಲಕರು"}
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
+              <thead>
+                <tr className="bg-blue-600 text-white">
+                  {organizationDistrictMembers.heading[isEnglish ? "tableHeading_en" : "tableHeading_kn"].map((heading, idx) => (
+                    <th key={idx} className="px-4 py-3 text-left font-semibold text-md border-b border-blue-700">
+                      {heading}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {/* Data rows to be added here */}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         </div>
       </section>

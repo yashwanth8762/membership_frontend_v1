@@ -115,7 +115,7 @@ const DonatePage = () => {
 
           {/* Heading */}
           <h1 className="text-4xl font-bold text-center mb-10">
-            {isEnglish ? "Make a Donation" : "ದುಕರುಡು ನೀಡುವುದು"}
+            {isEnglish ? "Make a Donation" : "ದೇಣಿಗೆ ನೀಡಿ"}
           </h1>
 
           {/* Donation Form */}

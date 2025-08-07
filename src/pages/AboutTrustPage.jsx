@@ -197,7 +197,6 @@ const AboutTrustPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
              
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/com1.jpeg" alt="Officer 1" className="w-24 h-24 object-cover rounded-full mb-4 border-4 border-blue-200" />
                 <div className="text-lg font-semibold mb-1">Shri Anand K.M.</div>
                 <div className="text-blue-700 font-medium text-sm text-center">{isEnglish ? 'Chief Executive Member' : 'ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ'}</div>
               </div>

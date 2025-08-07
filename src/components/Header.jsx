@@ -62,13 +62,13 @@ export default function Header({ theme = "transparent" }) {
         {/* Mobile: 3 images spaced, Desktop: original layout */}
         <div className="flex items-center justify-between w-full">
           {/* Mobile: 3 images in a row with space-between, Desktop: original */}
-          <div className="flex w-full items-center justify-between lg:hidden">
+          <div className="flex w-full items-center justify-between lg:hidden gap-2">
             {/* Logo 1 */}
             <a href="/" className="flex items-center group">
               <img
                 src="/assets/logo1.png"
                 alt="Logo 1"
-                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
                 draggable="false"
               />
             </a>
@@ -77,16 +77,25 @@ export default function Header({ theme = "transparent" }) {
               <img
                 src="/assets/logo-banner.png"
                 alt="Logo 2"
-                className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
                 draggable="false"
               />
             </a>
-            {/* Avatar */}
+            {/* Avatar: Matangi */}
             <a href="/" className="flex items-center group">
               <img
                 src="/assets/matangi.jpeg"
                 alt="Matanga Muni"
-                className="h-14 w-14 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-cover"
+                className="h-12 w-12 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-cover"
+                draggable="false"
+              />
+            </a>
+            {/* Avatar: Jambava */}
+            <a href="/" className="flex items-center group">
+              <img
+                src="/assets/jambava.jpeg"
+                alt="Jambava"
+                className="h-12 w-12 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-cover"
                 draggable="false"
               />
             </a>
@@ -114,12 +123,20 @@ export default function Header({ theme = "transparent" }) {
               </a>
             </div>
             <div className="hidden lg:flex items-center space-x-4 lg:space-x-6">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 flex items-center gap-4 mt-6">
                 <a href="/" className="flex items-center group">
                   <img
                     src="/assets/matangi.jpeg"
                     alt="Matanga Muni"
-                    className="w-24 h-24 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-cover"
+                    className="w-20 h-20 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-contain"
+                    draggable="false"
+                  />
+                </a>
+                <a href="/" className="flex items-center group">
+                  <img
+                    src="/assets/jambava.jpeg"
+                    alt="Jambava"
+                    className="w-20 h-20 rounded-full border-4 border-red-500 transition-transform duration-300 group-hover:scale-105 object-contain"
                     draggable="false"
                   />
                 </a>

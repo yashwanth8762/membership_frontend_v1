@@ -20,6 +20,8 @@ export default function UserMembership() {
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
   const [membershipId, setMembershipId] = useState('');
+  const [fetchedMembershipData, setFetchedMembershipData] = useState(null);
+  const [fetchingMembershipData, setFetchingMembershipData] = useState(false);
   const cardRef = useRef();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.value);
@@ -30,56 +32,23 @@ export default function UserMembership() {
   };
   const [showForm, setShowForm] = useState(false);
 
-  function getCardPropsFromApiData(apiData) {
-    const getValue = (label) =>
-      apiData.values.find((v) => v.label.trim() === label.trim())?.value || '';
-  
-    // Membership number: last 4 digits of membershipId
-    const membershipNumber = apiData.membershipId
-      ? apiData.membershipId.slice(-4)
-      : '';
-  
-    // Serial number: static for now
-    const serialNumber = '1';
-  
-    // Name
-    const name = getValue('Enter your Name');
-  
-    // Parent/Guardian
-    const parentName = getValue('Name of Father/Mother/Husband/Guardian ');
-  
-    // DOB
-    const dob = getValue('Date of Birth');
-  
-    // Address
-    const address = getValue('Enter Permanent Address');
-  
-    // Photo (if you have a URL, otherwise use a placeholder)
-    let photo = '/assets/logo.png';
-    const photoField = apiData.values.find((v) => v.label.includes('Photo'));
-    if (photoField && photoField.media && photoField.media[0]) {
-      photo = photoField.media[0]; // Adjust if your API returns a URL
+  // Fetch membership data after submission
+  const fetchMembershipData = async (membershipId) => {
+    console.log('Fetching membership data for ID:', membershipId);
+    
+    try {
+      setFetchingMembershipData(true);
+      console.log('Fetching membership data for ID:', membershipId);
+      const res = await axios.get(`${API_BASE_URL}membership/submission/${membershipId}`);
+      console.log('Fetched membership data:', res.data);
+      setFetchedMembershipData(res.data);
+    } catch (err) {
+      console.error('Failed to fetch membership data:', err);
+      setError('Failed to fetch membership details.');
+    } finally {
+      setFetchingMembershipData(false);
     }
-  
-    // Card ID (use membership number or any unique value)
-    const cardId = membershipNumber;
-  
-    // QR code value: encode the URL to the user details page
-    const qrValue = `http://172.20.10.5:5173/membership/user/${membershipId}`;
-  
-    return {
-      serialNumber,
-      membershipNumber,
-      name,
-      parentName,
-      dob,
-      address,
-      photo,
-      cardId,
-      qrValue,
-      showColorPicker: true,
-    };
-  }
+  };
 
   // Fetch form on mount
   useEffect(() => {
@@ -157,25 +126,41 @@ export default function UserMembership() {
       const formData = new FormData();
       formData.append('media', fileObj.file);
 
+      console.log('Uploading media file:', fileObj.name);
+      
       // Note: No headers object here - let axios detect and set automatically
       const res = await axios.post(`${API_BASE_URL}media`, formData);
 
-      if (res.status === 200 && res.data.data) {
-        updateMediaDetails(label, index, {
-          status: 'saved',
-          id: res.data.data,
-        });
-        setSuccess(`'${fileObj.name}' uploaded successfully!`);
-        setError('');
+      console.log('Media upload response:', res.data);
+
+      if (res.status === 200 || res.status === 201) {
+        // Check if we have a valid media ID
+        const mediaId = res.data.data || res.data.id;
+        if (mediaId) {
+          updateMediaDetails(label, index, {
+            status: 'saved',
+            id: mediaId,
+          });
+          setSuccess(`'${fileObj.name}' uploaded successfully!`);
+          setError('');
+          console.log(`Media saved with ID: ${mediaId}`);
+        } else {
+          updateMediaStatus(label, index, 'pending');
+          setError(`Invalid response from server for ${fileObj.name}`);
+          setSuccess('');
+          console.error('No media ID in response:', res.data);
+        }
       } else {
         updateMediaStatus(label, index, 'pending');
         setError(res.data.message || `Failed to upload ${fileObj.name}`);
         setSuccess('');
+        console.error('Upload failed with status:', res.status);
       }
     } catch (err) {
       updateMediaStatus(label, index, 'pending');
-      setError(`Failed to upload ${fileObj.name}`);
+      setError(`Failed to upload ${fileObj.name}: ${err.message}`);
       setSuccess('');
+      console.error('Upload error:', err);
     }
   };
 
@@ -214,9 +199,37 @@ export default function UserMembership() {
 
   // Check if all media files (for all media fields) are uploaded/saved
   const allMediaSaved = () => {
-    return Object.values(mediaFiles).every(filesArray =>
-      filesArray.length > 0 && filesArray.every(f => f.status === 'saved')
-    );
+    const result = Object.entries(mediaFiles).every(([label, filesArray]) => {
+      // If no files are uploaded for this field, consider it "saved"
+      if (filesArray.length === 0) {
+        return true;
+      }
+      // If files are uploaded, check if all are saved
+      return filesArray.every(f => f.status === 'saved');
+    });
+    
+    console.log('Media files check:', Object.entries(mediaFiles).map(([label, filesArray]) => ({
+      label,
+      files: filesArray.map(f => ({ name: f.name, status: f.status, id: f.id }))
+    })));
+    console.log('All media saved result:', result);
+    
+    return result;
+  };
+
+  // Debug function to check media status
+  const debugMediaStatus = () => {
+    console.log('=== MEDIA STATUS DEBUG ===');
+    Object.entries(mediaFiles).forEach(([label, filesArray]) => {
+      console.log(`${label}:`, filesArray.map(f => ({
+        name: f.name,
+        status: f.status,
+        id: f.id,
+        hasFile: !!f.file
+      })));
+    });
+    console.log('All saved check:', allMediaSaved());
+    console.log('========================');
   };
 
   // Form submit handler
@@ -225,28 +238,48 @@ export default function UserMembership() {
     setSuccess('');
     setError('');
 
-    // if (!allMediaSaved()) {
-    //   alert('Submitting membership form...');
-    //   setError('Please save all selected media files before submitting.');
-    //   return;
-    // }
+    // Debug: Log media files status
+    console.log('Media files status:', mediaFiles);
+    console.log('All media saved check:', allMediaSaved());
+
+    // Check if all media files are saved before submission
+    if (!allMediaSaved()) {
+      const unsavedMedia = Object.entries(mediaFiles)
+        .filter(([label, filesArray]) => 
+          filesArray.length > 0 && filesArray.some(f => f.status !== 'saved')
+        )
+        .map(([label, filesArray]) => 
+          `${label}: ${filesArray.filter(f => f.status !== 'saved').map(f => f.name).join(', ')}`
+        );
+      
+      setError(`Please save all selected media files before submitting. Unsaved files: ${unsavedMedia.join('; ')}`);
+      return;
+    }
 
     try {
-      const submissionValues = [
-        { label: 'Membership Amount', value: values['Membership Amount'] },
-        ...form.fields.map(field => {
-          if (field.inputType === 'media') {
-            const savedMedia = mediaFiles[field.label];
-            if (!savedMedia || savedMedia.length === 0) {
-              return { label: field.label, value: [] };
-            }
-            const mediaIds = savedMedia.map(f => f.id);
-            return { label: field.label, value: mediaIds };
-          } else {
-            return { label: field.label, value: values[field.label] ?? '' };
+      const submissionValues = form.fields.map(field => {
+        if (field.inputType === 'media') {
+          const savedMedia = mediaFiles[field.label];
+          if (!savedMedia || savedMedia.length === 0) {
+            return { label: field.label, value: [], media: [] };
           }
-        })
-      ];
+          const mediaIds = savedMedia.map(f => f.id).filter(id => id !== null);
+          return { label: field.label, value: mediaIds, media: mediaIds };
+        } else {
+          return { 
+            label: field.label, 
+            value: values[field.label] ?? '', 
+            media: [] 
+          };
+        }
+      });
+
+      // Add membership amount as the first item
+      submissionValues.unshift({
+        label: 'Membership Amount',
+        value: values['Membership Amount'],
+        media: []
+      });
 
       setLoading(true);
       const res = await axios.post(`${API_BASE_URL}membership/submit`, {
@@ -254,6 +287,10 @@ export default function UserMembership() {
         values: submissionValues,
       });
       setMembershipId(res.data.membershipId);
+      
+      // Fetch the complete membership data after submission
+      await fetchMembershipData(res.data.membershipId);
+      
       setSuccess('Membership card created successfully!');
       setError('');
     } catch (err) {
@@ -570,38 +607,49 @@ export default function UserMembership() {
                   })}
                 </div>
                 {success && <div style={{ color: '#16a34a', marginBottom: 12 }}>{success}</div>}
-                <button
-                  type="submit"
-                  style={{
-                    padding: '12px 32px',
-                    background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
-                    color: '#fff',
-                    fontWeight: 700,
-                    fontSize: 18,
-                    border: 'none',
-                    borderRadius: 10,
-                    cursor: 'pointer',
-                    boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
-                    marginTop: 24,
-                  }}
-                  disabled={loading}
-                >
-                  {loading ? 'Submitting...' : 'Create Membership Card'}
-                </button>
+                <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: 24 }}>
+                  <button
+                    type="button"
+                    onClick={debugMediaStatus}
+                    style={{
+                      padding: '8px 16px',
+                      background: '#6b7280',
+                      color: '#fff',
+                      fontWeight: 600,
+                      fontSize: 14,
+                      border: 'none',
+                      borderRadius: 8,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Debug Media Status
+                  </button>
+                  <button
+                    type="submit"
+                    style={{
+                      padding: '12px 32px',
+                      background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
+                      color: '#fff',
+                      fontWeight: 700,
+                      fontSize: 18,
+                      border: 'none',
+                      borderRadius: 10,
+                      cursor: 'pointer',
+                      boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
+                    }}
+                    disabled={loading}
+                  >
+                    {loading ? 'Submitting...' : 'Create Membership Card'}
+                  </button>
+                </div>
               </form>
             )}
-            {membershipId && form && (
+            {membershipId && fetchedMembershipData && !fetchingMembershipData && (
               <div ref={cardRef} style={{ margin: '2rem auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <MembershipCard {...getCardPropsFromApiData({
-                  membershipId,
-                  values: form.fields.map(field => ({
-                    label: field.label,
-                    value: values[field.label],
-                    media: mediaFiles[field.label] && mediaFiles[field.label][0] && mediaFiles[field.label][0].preview
-                      ? [mediaFiles[field.label][0].preview]
-                      : []
-                  }))
-                })} showColorPicker={true} />
+                <MembershipCard 
+                  membershipData={fetchedMembershipData}
+                  showColorPicker={true} 
+                />
                 <button
                   onClick={handleDownload}
                   style={{
@@ -620,6 +668,12 @@ export default function UserMembership() {
                 >
                   {isEnglish ? 'Download Card' : 'ಸದಸ್ಯತ್ವ ಕಾರ್ಡ್ ಡೌನ್ಲೋಡ್ ಮಾಡಿ'}
                 </button>
+              </div>
+            )}
+            
+            {fetchingMembershipData && (
+              <div style={{ textAlign: 'center', margin: '2rem auto' }}>
+                <div>Loading membership card...</div>
               </div>
             )}
           </div>

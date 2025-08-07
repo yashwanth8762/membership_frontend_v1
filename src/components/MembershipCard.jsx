@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import QRCode from 'react-qr-code';
+import { API_BASE_URL } from "../../config";
 
 const COLOR_SCHEMES = [
   {
@@ -55,21 +56,70 @@ const COLOR_SCHEMES = [
 ];
 
 const MembershipCard = ({
-  serialNumber = "1",
-  membershipNumber = "8191",
-  name = "ಜಗದೀಶ್ ಕುಮಾರ್ ಕೆ.ಎನ್",
-  parentName = "ಬಿ.ನಾರಾಯಣನಾಯ್ಡು",
-  dob = "11-04-1977",
-  address = "#530- 4ನೇ ಅಡ್ಡಿರಸ್ತೆ ಕೊಡಿಗೇಹಳ್ಳಿ, ಸಪ್ಪಾಲಪುರಗರ ಉಪ, ಬೆಂಗಳೂರು.",
-  photo = "/assets/logo.png",
-  cardId = "60105",
-  qrValue,
+  membershipData,
   colorIdx: colorIdxProp,
   onColorChange,
   showColorPicker = true,
 }) => {
   const [colorIdx, setColorIdx] = useState(colorIdxProp ?? 0);
   const color = COLOR_SCHEMES[colorIdx];
+
+  // Extract data directly from the API response
+  const getValue = (label) => {
+    if (!membershipData || !membershipData.values) return '';
+    const field = membershipData.values.find((v) => 
+      v.label?.trim()?.toLowerCase() === label?.trim()?.toLowerCase() ||
+      v.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase())
+    );
+    return field ? field.value : '';
+  };
+
+  // Extract photo from populated media
+  const getPhoto = () => {
+    if (!membershipData || !membershipData.values) return undefined;
+    
+    console.log('membershipData',membershipData);
+    const photoField = membershipData.values.find((v) => 
+      v?._doc?.label?.toLowerCase().includes('upload image') || 
+      v?._doc?.label?.toLowerCase().includes('photo') ||
+      v?._doc?.label?.toLowerCase().includes('image')
+    );
+    
+    console.log('photoField found:', photoField);
+    
+    if (photoField && photoField.media && photoField.media.length > 0) {
+      const mediaItem = photoField.media[0];
+      console.log('mediaItem:', mediaItem);
+      
+      if (mediaItem && mediaItem.image_url && mediaItem.image_url.full && mediaItem.image_url.full.high_res) {
+        const photoUrl = `${API_BASE_URL}${mediaItem.image_url.full.high_res}`;
+        console.log('Photo URL constructed:', photoUrl);
+        return photoUrl;
+      }
+    }
+    return undefined;
+  };
+
+  // Extract all the data
+  const membershipNumber = membershipData?.membershipId ? membershipData.membershipId.slice(-4) : '0000';
+  const serialNumber = '1';
+  const name = getValue('Enter Your Name') || getValue('Name') || getValue('Your Name') || 'N/A';
+  const parentName = getValue('Father/Mother/Husband/Name') || getValue('Father') || getValue('Parent') || 'N/A';
+  const dob = getValue('Date of Birth') || getValue('DOB') || getValue('Birth') || 'N/A';
+  const address = getValue('Permanent adress') || getValue('Permanent Address') || getValue('Address') || 'N/A';
+  const photo = getPhoto();
+  const cardId = membershipNumber;
+  const qrValue = `http://172.20.10.5:5173/membership/user/${membershipData?.membershipId}`;
+
+  console.log('MembershipCard data extracted:', {
+    membershipNumber,
+    name,
+    parentName,
+    dob,
+    address,
+    photo,
+    cardId
+  });
 
   // Allow parent to control color if desired
   const handleColorChange = idx => {
@@ -188,11 +238,15 @@ const MembershipCard = ({
                   className="w-20 h-24 rounded border-2 bg-gray-100 overflow-hidden flex items-center justify-center"
                   style={{ borderColor: color.border }}
                 >
-                  <img
-                    src={photo}
-                    alt="ID Photo"
-                    className="w-full h-full object-cover"
-                  />
+                  {photo ? (
+                    <img
+                      src={photo}
+                      alt="ID Photo"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-xs font-semibold tracking-wide text-gray-500">ಪದವೀಧರ ಪ್ರಮುಖ ಚಿತ್ರ ಇಲ್ಲ</span>
+                  )}
                 </div>
               </div>
               <div className="text-center mt-1">
