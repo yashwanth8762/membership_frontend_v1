@@ -22,6 +22,13 @@ export default function UserMembership() {
   const [membershipId, setMembershipId] = useState('');
   const [fetchedMembershipData, setFetchedMembershipData] = useState(null);
   const [fetchingMembershipData, setFetchingMembershipData] = useState(false);
+  // District and Taluk states
+  const [districts, setDistricts] = useState([]);
+  const [taluks, setTaluks] = useState([]);
+  const [selectedDistrict, setSelectedDistrict] = useState('');
+  const [selectedTaluk, setSelectedTaluk] = useState('');
+  const [loadingDistricts, setLoadingDistricts] = useState(false);
+  const [loadingTaluks, setLoadingTaluks] = useState(false);
   const cardRef = useRef();
   const cardOnlyRef = useRef();
   const navigate = useNavigate();
@@ -48,6 +55,51 @@ export default function UserMembership() {
       setError('Failed to fetch membership details.');
     } finally {
       setFetchingMembershipData(false);
+    }
+  };
+
+  // Fetch districts
+  const fetchDistricts = async () => {
+    try {
+      setLoadingDistricts(true);
+      const res = await axios.get(`${API_BASE_URL}district/public/active`);
+      setDistricts(res.data);
+    } catch (err) {
+      console.error('Failed to fetch districts:', err);
+      setError('Failed to load districts.');
+    } finally {
+      setLoadingDistricts(false);
+    }
+  };
+
+  // Fetch taluks by district
+  const fetchTaluksByDistrict = async (districtId) => {
+    if (!districtId) {
+      setTaluks([]);
+      return;
+    }
+    
+    try {
+      setLoadingTaluks(true);
+      const res = await axios.get(`${API_BASE_URL}taluk/public/get-taluk-by-district/${districtId}`);
+      setTaluks(res.data.data.taluks || []);
+    } catch (err) {
+      console.error('Failed to fetch taluks:', err);
+      setError('Failed to load taluks for selected district.');
+      setTaluks([]);
+    } finally {
+      setLoadingTaluks(false);
+    }
+  };
+
+  // Handle district selection
+  const handleDistrictChange = (districtId) => {
+    setSelectedDistrict(districtId);
+    setSelectedTaluk(''); // Reset taluk selection
+    if (districtId) {
+      fetchTaluksByDistrict(districtId);
+    } else {
+      setTaluks([]);
     }
   };
 
@@ -79,6 +131,9 @@ export default function UserMembership() {
           }
         });
         setMediaFiles(initialMedia);
+
+        // Fetch districts
+        await fetchDistricts();
 
       } catch (err) {
         setError('Failed to load form.');
@@ -239,6 +294,17 @@ export default function UserMembership() {
     setSuccess('');
     setError('');
 
+    // Validate district and taluk selection
+    if (!selectedDistrict) {
+      setError(isEnglish ? 'Please select a district.' : 'ದಯವಿಟ್ಟು ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.');
+      return;
+    }
+
+    if (!selectedTaluk) {
+      setError(isEnglish ? 'Please select a taluk.' : 'ದಯವಿಟ್ಟು ತಾಲ್ಲೂಕನ್ನು ಆಯ್ಕೆಮಾಡಿ.');
+      return;
+    }
+
     // Debug: Log media files status
     console.log('Media files status:', mediaFiles);
     console.log('All media saved check:', allMediaSaved());
@@ -285,6 +351,8 @@ export default function UserMembership() {
       setLoading(true);
       const res = await axios.post(`${API_BASE_URL}membership/submit`, {
         formId: form.id,
+        district: selectedDistrict,
+        taluk: selectedTaluk,
         values: submissionValues,
       });
       setMembershipId(res.data.membershipId);
@@ -482,6 +550,62 @@ export default function UserMembership() {
                   </select>
                 </div>
                 {/* End Membership Amount Selection */}
+                
+                {/* District and Taluk Selection */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-4">
+                  {/* District Dropdown */}
+                  <div className="col-span-1">
+                    <label className="block font-medium text-gray-700 mb-2">
+                      {isEnglish ? 'Select District' : 'ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ'} <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                    </label>
+                    <select
+                      value={selectedDistrict}
+                      onChange={e => handleDistrictChange(e.target.value)}
+                      required
+                      className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      disabled={loadingDistricts}
+                    >
+                      <option value="">{isEnglish ? 'Select district...' : 'ಜಿಲ್ಲೆ ಆಯ್ಕೆಮಾಡಿ...'}</option>
+                      {districts.map((district) => (
+                        <option key={district.id} value={district.id}>
+                          {isEnglish ? district.name : (district.k_name || district.name)}
+                        </option>
+                      ))}
+                    </select>
+                    {loadingDistricts && (
+                      <div className="text-sm text-gray-500 mt-1">{isEnglish ? 'Loading districts...' : 'ಜಿಲ್ಲೆಗಳನ್ನು ಲೋಡ್ ಮಾಡುತ್ತಿದೆ...'}</div>
+                    )}
+                  </div>
+
+                  {/* Taluk Dropdown */}
+                  <div className="col-span-1">
+                    <label className="block font-medium text-gray-700 mb-2">
+                      {isEnglish ? 'Select Taluk' : 'ತಾಲ್ಲೂಕನ್ನು ಆಯ್ಕೆಮಾಡಿ'} <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                    </label>
+                    <select
+                      value={selectedTaluk}
+                      onChange={e => setSelectedTaluk(e.target.value)}
+                      required
+                      className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      disabled={!selectedDistrict || loadingTaluks}
+                    >
+                      <option value="">{isEnglish ? 'Select taluk...' : 'ತಾಲ್ಲೂಕು ಆಯ್ಕೆಮಾಡಿ...'}</option>
+                      {taluks.map((taluk) => (
+                        <option key={taluk.id} value={taluk.id}>
+                          {isEnglish ? taluk.name : (taluk.k_name || taluk.name)}
+                        </option>
+                      ))}
+                    </select>
+                    {loadingTaluks && (
+                      <div className="text-sm text-gray-500 mt-1">{isEnglish ? 'Loading taluks...' : 'ತಾಲ್ಲೂಕುಗಳನ್ನು ಲೋಡ್ ಮಾಡುತ್ತಿದೆ...'}</div>
+                    )}
+                    {!selectedDistrict && (
+                      <div className="text-sm text-gray-500 mt-1">{isEnglish ? 'Please select a district first' : 'ಮೊದಲು ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ'}</div>
+                    )}
+                  </div>
+                </div>
+                {/* End District and Taluk Selection */}
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                   {form.fields.map((field, idx) => {
                     const fieldMediaFiles = mediaFiles[field.label] || [];
