@@ -28,9 +28,9 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 5,
-      name: isEnglish ? "Sri. A. Muniyappa" : "ಎ.ಮುನಿಯಪ್ಪ",
+      name: isEnglish ? "Mr.Anand" : "ಶ್ರೀ ಆನಂದ್",
       position: isEnglish ? 'Principal Secretary' : 'ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ',
-      image: "/assets/AMuniyappageneralSecretary.jpeg"
+      image: ""
     },
     {
       id: 6,
@@ -67,7 +67,75 @@ const Leaders = ({ isEnglish = false }) => {
     
     
   ];
-  const [startIdx, setStartIdx] = useState(0);
+//   const [startIdx, setStartIdx] = useState(0);
+//   const cardsPerView = 3;
+//   const canGoLeft = startIdx > 0;
+//   const canGoRight = startIdx + cardsPerView < leaders.length;
+
+//   const handlePrev = () => {
+//     setStartIdx((prev) => Math.max(prev - cardsPerView, 0));
+//   };
+//   const handleNext = () => {
+//     setStartIdx((prev) => Math.min(prev + cardsPerView, leaders.length - cardsPerView));
+//   };
+
+//   return (
+//     <div className="w-full max-w-7xl mx-auto mb-12 overflow-hidden">
+//       <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+//         {isEnglish ? 'Founders and First Executive Committee Members' : 'ಸ್ಥಾಪಕರು ಮತ್ತು ಮೊದಲ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು'}
+//       </h2>
+//       {/* Custom Carousel Container */}
+//       <div className="py-6 flex items-center justify-center relative">
+//         <button
+//           onClick={handlePrev}
+//           disabled={!canGoLeft}
+//           className={`absolute left-0 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md transition hover:bg-blue-100 disabled:opacity-30 disabled:cursor-not-allowed`}
+//           aria-label="Previous"
+//         >
+//           {'<'}
+//         </button>
+//         <div className="flex justify-center gap-6 w-full">
+//           {leaders.slice(startIdx, startIdx + cardsPerView).map((leader) => (
+//             <div key={leader.id} className="mb-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl flex flex-col items-center p-8 w-80 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100">
+//               {/* Profile Image with enhanced styling */}
+//               <div className="relative mb-6">
+//                 <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-blue-200 hover:border-blue-400 transition-all duration-300 shadow-lg">
+//                   <img 
+//                     src={leader.image} 
+//                     alt={`Leader ${leader.id}`} 
+//                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" 
+//                   />
+//                 </div>
+//                 {/* Decorative ring */}
+//                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-20 blur-sm"></div>
+//               </div>
+//               {/* Leader Info */}
+//               <div className="text-center">
+//                 <h3 className="text-xl font-bold mb-2 text-gray-800 leading-tight">{leader.name}</h3>
+//                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200">
+//                   <span className="text-blue-700 font-semibold text-sm">{leader.position}</span>
+//                 </div>
+//               </div>
+//               {/* Decorative element */}
+//               <div className="mt-4 w-12 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-60"></div>
+//             </div>
+//           ))}
+//         </div>
+//         <button
+//           onClick={handleNext}
+//           disabled={!canGoRight}
+//           className={`absolute right-0 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md transition hover:bg-blue-100 disabled:opacity-30 disabled:cursor-not-allowed`}
+//           aria-label="Next"
+//         >
+//           {'>'}
+//         </button>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Leaders
+const [startIdx, setStartIdx] = useState(0);
   const cardsPerView = 3;
   const canGoLeft = startIdx > 0;
   const canGoRight = startIdx + cardsPerView < leaders.length;
@@ -84,54 +152,55 @@ const Leaders = ({ isEnglish = false }) => {
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
         {isEnglish ? 'Founders and First Executive Committee Members' : 'ಸ್ಥಾಪಕರು ಮತ್ತು ಮೊದಲ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು'}
       </h2>
-      {/* Custom Carousel Container */}
       <div className="py-6 flex items-center justify-center relative">
         <button
           onClick={handlePrev}
           disabled={!canGoLeft}
-          className={`absolute left-0 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md transition hover:bg-blue-100 disabled:opacity-30 disabled:cursor-not-allowed`}
+          className="absolute left-0 z-10 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md transition hover:bg-blue-100 disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Previous"
         >
           {'<'}
         </button>
         <div className="flex justify-center gap-6 w-full">
           {leaders.slice(startIdx, startIdx + cardsPerView).map((leader) => (
-            <div key={leader.id} className="mb-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl flex flex-col items-center p-8 w-80 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100">
-              {/* Profile Image with enhanced styling */}
-              <div className="relative mb-6">
-                <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-blue-200 hover:border-blue-400 transition-all duration-300 shadow-lg">
-                  <img 
-                    src={leader.image} 
-                    alt={`Leader ${leader.id}`} 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" 
-                  />
-                </div>
-                {/* Decorative ring */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-20 blur-sm"></div>
+            <div
+              key={leader.id}
+              className="
+                mb-6 bg-white rounded-xl shadow-lg hover:shadow-2xl
+                flex flex-col md:flex-row items-center
+                p-4 sm:p-6 w-full max-w-md md:max-w-[28rem]
+                transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100"
+            >
+              {/* Responsive and borderless image on left */}
+              <div className="flex-shrink-0 w-32 h-32 sm:w-36 sm:h-36">
+                <img
+                  src={leader.image}
+                  alt={`Leader ${leader.id}`}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              {/* Leader Info */}
-              <div className="text-center">
-                <h3 className="text-xl font-bold mb-2 text-gray-800 leading-tight">{leader.name}</h3>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200">
-                  <span className="text-blue-700 font-semibold text-sm">{leader.position}</span>
+              {/* Leader Info on right */}
+              <div className="mt-4 md:mt-0 md:ml-8 flex flex-col justify-center items-center md:items-start text-center md:text-left w-full">
+                <h3 className="text-xl font-bold text-gray-800 mb-1">{leader.name}</h3>
+                <div className="inline-flex items-center px-3 py-1 rounded bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 mb-2">
+                  <span className="text-blue-700 font-semibold text-base">{leader.position}</span>
                 </div>
+                <div className="w-12 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-60 mt-1"></div>
               </div>
-              {/* Decorative element */}
-              <div className="mt-4 w-12 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-60"></div>
             </div>
           ))}
         </div>
         <button
           onClick={handleNext}
           disabled={!canGoRight}
-          className={`absolute right-0 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md transition hover:bg-blue-100 disabled:opacity-30 disabled:cursor-not-allowed`}
+          className="absolute right-0 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-md transition hover:bg-blue-100 disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Next"
         >
           {'>'}
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Leaders
+export default Leaders;

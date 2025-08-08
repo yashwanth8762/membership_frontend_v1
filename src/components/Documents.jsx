@@ -12,11 +12,11 @@ const documents = [
     nameKn: "ನೋಂದಣಿ ಡಾಕ್ಯುಮೆಂಟ್ (PDF)",
     file: "/assets/doc/MAdaramahasabharigistrationDocument.pdf",
   },
-  {
-    name: "Registration (Kannada DOCX)",
-    nameKn: "ನೋಂದಣಿ (DOCX, ಕನ್ನಡ)",
-    file: "/assets/doc/ಮಾದರಮಾಹಾಸಭಾದRegistrationಕನ್ನಡ.docx",
-  },
+  // {
+  //   name: "Registration (Kannada DOCX)",
+  //   nameKn: "ನೋಂದಣಿ (DOCX, ಕನ್ನಡ)",
+  //   file: "/assets/doc/ಮಾದರಮಾಹಾಸಭಾದRegistrationಕನ್ನಡ.docx",
+  // },
 ];
 
 const Documents = () => {

@@ -11,6 +11,7 @@ import Documents from '../components/Documents';
 const HeroSection = React.lazy(() => import('../components/HeroSection'));
 const AboutTrust = React.lazy(() => import('../components/AboutTrust'));
 const CoomunityHistory = React.lazy(() => import('../components/CoomunityHistory'));
+const Opportunities = React.lazy(() => import('../components/Opportunities'));
 const Activities = React.lazy(() => import('../components/Activities'));
 const UpcomingActivities = React.lazy(() => import('../components/UpcomingActivities'));
 const Gallery = React.lazy(() => import('../components/Gallery'));
@@ -50,6 +51,9 @@ export default function Home() {
         </Section>
         <Section id="organization">
           <Organization />
+        </Section>
+        <Section id="opportunities">
+          <Opportunities />
         </Section>
         {/* <Section id="activities"> */}
           {/* <Activities /> */}

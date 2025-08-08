@@ -125,10 +125,10 @@ const CommunityPage = () => {
       <img src="/assets/b-krishnappa.jpg" alt="Leader 9" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
       <div className="text-lg font-semibold mb-1">{isEnglish ? "Prof. B. Krishnappa" : "ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ"}</div>
     </div>
-    <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+    {/* <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
       <img src="/assets/Basavaiah.jpeg" alt="Leader 10" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
       <div className="text-lg font-semibold mb-1">{isEnglish ? "Basavaiah Rachaiah" : "ಬಸವಯ್ಯ ರಾಚಯ್ಯ"}</div>
-    </div>
+    </div> */}
   </div>
 </div>
 
