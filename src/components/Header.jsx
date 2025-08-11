@@ -460,17 +460,16 @@ export default function Header({ theme = "transparent" }) {
       }`}
     >
       {/* First Row - Logo1, Logo2, Language Toggle */}
-      <div className="w-full px-6 lg:px-8 py-2 lg:py-3">
-        {/* Mobile: 3 images spaced, Desktop: original layout */}
-        <div className="flex items-center justify-between w-full">
-          {/* Mobile: 3 images in a row with space-between, Desktop: original */}
+      <div className="w-full px-4 lg:px-6 xl:px-8 py-2 lg:py-3">
+        <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
+          {/* Mobile Layout */}
           <div className="flex w-full items-center justify-between lg:hidden gap-2">
             {/* Logo 1 */}
             <a href="/" className="flex items-center group">
               <img
                 src="/assets/logo1.png"
                 alt="Logo 1"
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
                 draggable="false"
               />
             </a>
@@ -479,20 +478,20 @@ export default function Header({ theme = "transparent" }) {
               <img
                 src="/assets/logo-banner.png"
                 alt="Logo 2"
-                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
                 draggable="false"
               />
             </a>
-
           </div>
-          {/* Desktop: original layout */}
+
+          {/* Desktop Layout */}
           <>
             <div className="hidden lg:flex flex-shrink-0">
               <a href="/" className="flex items-center group">
                 <img
                   src="/assets/logo1.png"
                   alt="Logo 1"
-                  className="ml-32 h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+                  className="h-16 xl:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
                   draggable="false"
                 />
               </a>
@@ -502,19 +501,16 @@ export default function Header({ theme = "transparent" }) {
                 <img
                   src="/assets/logo-banner.png"
                   alt="Logo 2"
-                  className="w-auto h-24 transition-transform duration-300 group-hover:scale-105"
+                  className="w-auto h-20 xl:h-24 transition-transform duration-300 group-hover:scale-105"
                   draggable="false"
                 />
               </a>
             </div>
-            <div className="hidden lg:flex items-center space-x-4 lg:space-x-6">
-              <div className="flex-shrink-0 flex items-center gap-4 mt-6">
-                
-              </div>
+            <div className="hidden lg:flex items-center space-x-3 xl:space-x-6">
               {/* Language Toggle */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
                 <span
-                  className={`text-sm font-medium transition-colors duration-200 ${
+                  className={`text-xs xl:text-sm font-medium transition-colors duration-200 ${
                     scrolled
                       ? !user.language
                         ? "text-gray-900"
@@ -526,20 +522,20 @@ export default function Header({ theme = "transparent" }) {
                 </span>
                 <button
                   onClick={toggleLanguage}
-                  className="relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:shadow-md"
+                  className="relative inline-flex h-5 xl:h-6 w-9 xl:w-11 items-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:shadow-md"
                   style={{
                     backgroundColor: user.language ? "#3b82f6" : "#6b7280",
                   }}
                 >
                   <span className="sr-only">Toggle language</span>
                   <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-all duration-300 shadow-sm ${
-                      user.language ? "translate-x-6" : "translate-x-1"
+                    className={`inline-block h-3 xl:h-4 w-3 xl:w-4 transform rounded-full bg-white transition-all duration-300 shadow-sm ${
+                      user.language ? "translate-x-5 xl:translate-x-6" : "translate-x-1"
                     }`}
                   />
                 </button>
                 <span
-                  className={`text-sm font-medium transition-colors duration-200 ${
+                  className={`text-xs xl:text-sm font-medium transition-colors duration-200 ${
                     scrolled
                       ? user.language
                         ? "text-gray-900"
@@ -556,89 +552,74 @@ export default function Header({ theme = "transparent" }) {
       </div>
 
       {/* Second Row - Navigation Menu */}
-      <div className="w-full px-6 lg:px-8 py-2 lg:py-3 border-t border-gray-200/20">
-        <div className="flex items-center justify-between">
-          {/* Desktop Navigation - Center */}
-          <div className="hidden lg:flex flex-1 justify-center">
-            <ul className="flex items-center space-x-8 lg:space-x-10">
-              {NavLinks.map((link, index) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className={`font-medium text-sm lg:text-base transition-all duration-300 relative group ${
-                      scrolled
-                        ? "text-gray-700 hover:text-blue-600"
-                        : "text-white hover:text-blue-200"
-                    }`}
-                  >
-                    {getLinkText(link)}
-                    <span
-                      className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full ${
-                        scrolled ? "bg-blue-600" : "bg-white"
+      <div className="w-full px-4 lg:px-6 xl:px-8 py-2 lg:py-3 border-t border-gray-200/20">
+        <div className="flex items-center justify-between w-full">
+          {/* Desktop Navigation - Full width layout */}
+          <div className="hidden lg:flex items-center justify-between w-full">
+            {/* Left spacer */}
+            <div className="flex-shrink-0 w-20"></div>
+            
+            {/* Navigation Links - Center */}
+            <div className="flex-1 flex justify-center">
+              <ul className="flex items-center space-x-2 lg:space-x-3 xl:space-x-4 2xl:space-x-6">
+                {NavLinks.map((link, index) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className={`font-medium text-xs lg:text-sm xl:text-sm 2xl:text-base transition-all duration-300 relative group whitespace-nowrap ${
+                        scrolled
+                          ? "text-gray-700 hover:text-blue-600"
+                          : "text-white hover:text-blue-200"
                       }`}
-                    ></span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+                    >
+                      {getLinkText(link)}
+                      <span
+                        className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full ${
+                          scrolled ? "bg-blue-600" : "bg-white"
+                        }`}
+                      ></span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Desktop Action Buttons - Right */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Membership Button */}
-            
-            <button
-              onClick={() => navigate("/userMembership")}
-              className={`px-4 py-2 rounded-full font-bold text-sm transition-all duration-200 transform hover:scale-110 active:scale-95 relative overflow-hidden animate-bounce ${
-                scrolled
-                  ? "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white shadow-2xl"
-                  : "bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white shadow-2xl"
-              }`}
-              style={{
-                // boxShadow: scrolled
-                //   ? "0 0 30px rgba(236, 72, 153, 1), 0 0 60px rgba(239, 68, 68, 0.8), 0 0 90px rgba(245, 158, 11, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.3)"
-                //   : "0 0 30px rgba(34, 211, 238, 1), 0 0 60px rgba(59, 130, 246, 0.8), 0 0 90px rgba(147, 51, 234, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.3)",
-                animation:
-                  "flash 0.5s infinite alternate, rainbow 2s linear infinite",
-              }}
-            >
-              <span className="relative z-10 drop-shadow-lg animate-pulse">
-                {user.language ? "GET MEMBERSHIP" : "ಸದಸ್ಯತ್ವ ಪಡೆಯಿಕೆ"}
-              </span>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 opacity-50 animate-ping"></div>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-400 via-blue-400 to-green-400 opacity-30 animate-spin"></div>
-            </button>
-            {/* Donation Button */}
-            
-            <button
-              onClick={() => navigate("/donate")}
-              className={`px-4 py-2 rounded-full font-bold text-sm transition-all duration-300 transform hover:scale-110 active:scale-95 relative overflow-hidden animate-pulse ${
-                scrolled
-                  ? "bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white shadow-2xl"
-                  : "bg-gradient-to-r from-lime-400 via-green-500 to-emerald-600 text-white shadow-2xl"
-              }`}
-              style={{
-                // boxShadow: scrolled
-                //   ? "0 0 25px rgba(34, 197, 94, 1), 0 0 50px rgba(16, 185, 129, 0.9), 0 0 75px rgba(20, 184, 166, 0.7), 0 0 100px rgba(34, 197, 94, 0.5)"
-                //   : "0 0 25px rgba(132, 204, 22, 1), 0 0 50px rgba(34, 197, 94, 0.9), 0 0 75px rgba(16, 185, 129, 0.7), 0 0 100px rgba(132, 204, 22, 0.5)",
-                animation:
-                  "neonGlow 1s ease-in-out infinite alternate, shake 0.3s ease-in-out infinite",
-              }}
-            >
-              <span className="relative z-10 drop-shadow-xl animate-bounce text-shadow">
-                {user.language ? "DONATE NOW" : "ದಾನ ಮಾಡಿ"}
-              </span>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-300 via-lime-400 to-emerald-300 opacity-60 animate-pulse"></div>
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-green-400 to-teal-400 opacity-20 animate-ping"></div>
-              <div
-                className="absolute inset-0 rounded-full border-2 border-green-300 animate-spin"
+            {/* Action Buttons - Right side */}
+            <div className="flex items-center space-x-2 lg:space-x-3 flex-shrink-0">
+              {/* Membership Button */}
+              <button
+                onClick={() => navigate("/userMembership")}
+                className={`px-2 lg:px-3 xl:px-4 py-2 rounded-full font-bold text-xs lg:text-xs xl:text-sm transition-all duration-200 transform hover:scale-105 active:scale-95 relative overflow-hidden whitespace-nowrap ${
+                  scrolled
+                    ? "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white shadow-lg"
+                    : "bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white shadow-lg"
+                }`}
                 style={{
-                  borderImage:
-                    "linear-gradient(45deg, #10b981, #84cc16, #22c55e, #059669) 1",
-                  animation: "borderSpin 2s linear infinite",
+                  animation: "flash 1s infinite alternate",
                 }}
-              ></div>
-            </button>
+              >
+                <span className="relative z-10 drop-shadow-sm">
+                  {user.language ? "MEMBERSHIP" : "ಸದಸ್ಯತ್ವ"}
+                </span>
+              </button>
+
+              {/* Donation Button */}
+              <button
+                onClick={() => navigate("/donate")}
+                className={`px-2 lg:px-3 xl:px-4 py-2 rounded-full font-bold text-xs lg:text-xs xl:text-sm transition-all duration-300 transform hover:scale-105 active:scale-95 relative overflow-hidden whitespace-nowrap ${
+                  scrolled
+                    ? "bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white shadow-lg"
+                    : "bg-gradient-to-r from-lime-400 via-green-500 to-emerald-600 text-white shadow-lg"
+                }`}
+                style={{
+                  animation: "neonGlow 1.5s ease-in-out infinite alternate",
+                }}
+              >
+                <span className="relative z-10 drop-shadow-sm">
+                  {user.language ? "DONATE" : "ದಾನ"}
+                </span>
+              </button>
+            </div>
           </div>
 
           {/* Hamburger Button (Mobile) */}
@@ -682,7 +663,7 @@ export default function Header({ theme = "transparent" }) {
           menuOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
         style={{
-          backgroundColor: "#ffffff", // Force white background
+          backgroundColor: "#ffffff",
           boxShadow: menuOpen
             ? "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
             : undefined,
@@ -690,6 +671,14 @@ export default function Header({ theme = "transparent" }) {
       >
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
+          <div className="flex items-center space-x-2">
+            <img
+              src="/assets/logo1.png"
+              alt="Logo"
+              className="h-8 w-auto"
+              draggable="false"
+            />
+          </div>
           <button
             onClick={() => setMenuOpen(false)}
             aria-label="Close Menu"
@@ -713,12 +702,12 @@ export default function Header({ theme = "transparent" }) {
 
         {/* Mobile Navigation Links */}
         <div className="flex-1 overflow-y-auto bg-white">
-          <ul className="flex flex-col py-6 space-y-2 px-6">
+          <ul className="flex flex-col py-4 space-y-1 px-4">
             {NavLinks.map((link, index) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block text-gray-700 text-lg font-medium py-3 px-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
+                  className="block text-gray-700 text-base font-medium py-3 px-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
                   onClick={() => setMenuOpen(false)}
                 >
                   {getLinkText(link)}
@@ -728,26 +717,17 @@ export default function Header({ theme = "transparent" }) {
           </ul>
 
           {/* Mobile Action Buttons */}
-          <div className="px-6 py-4 space-y-3 bg-white">
-            
+          <div className="px-4 py-4 space-y-3 bg-white">
             <button
               onClick={() => {
                 navigate("/userMembership");
                 setMenuOpen(false);
               }}
-              className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-lg font-bold hover:from-yellow-400 hover:via-pink-500 hover:to-red-500 transition-all duration-200 shadow-2xl relative overflow-hidden animate-bounce"
-              style={{
-                boxShadow:
-                  "0 0 40px rgba(236, 72, 153, 1), 0 0 80px rgba(239, 68, 68, 0.8), 0 0 120px rgba(245, 158, 11, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.3)",
-                animation:
-                  "flash 0.5s infinite alternate, rainbow 2s linear infinite",
-              }}
+              className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-lg font-bold hover:from-yellow-400 hover:via-pink-500 hover:to-red-500 transition-all duration-200 shadow-lg"
             >
-              <span className="relative z-10 drop-shadow-lg animate-pulse text-lg">
+              <span className="text-sm">
                 {user.language ? "GET MEMBERSHIP" : "ಸದಸ್ಯತ್ವ ಪಡೆಯಿಕೆ"}
               </span>
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 opacity-50 animate-ping"></div>
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-400 via-blue-400 to-green-400 opacity-30 animate-spin"></div>
             </button>
             
             <button
@@ -755,25 +735,11 @@ export default function Header({ theme = "transparent" }) {
                 navigate("/donation");
                 setMenuOpen(false);
               }}
-              className="w-full px-4 py-3 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white rounded-lg font-bold hover:from-lime-400 hover:via-green-500 hover:to-emerald-500 transition-all duration-300 shadow-2xl relative overflow-hidden animate-pulse"
-              style={{
-                // boxShadow:
-                //   "0 0 30px rgba(34, 197, 94, 1), 0 0 60px rgba(16, 185, 129, 0.9), 0 0 90px rgba(20, 184, 166, 0.7), 0 0 120px rgba(34, 197, 94, 0.5)",
-                animation:
-                  "neonGlow 1s ease-in-out infinite alternate, shake 0.3s ease-in-out infinite",
-              }}
+              className="w-full px-4 py-3 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white rounded-lg font-bold hover:from-lime-400 hover:via-green-500 hover:to-emerald-500 transition-all duration-300 shadow-lg"
             >
-              <span className="relative z-10 drop-shadow-xl animate-bounce text-lg">
-                💰 {user.language ? "🔥 DONATE NOW 🔥" : "🔥 ದಾನ ಮಾಡಿ 🔥"} 💸
+              <span className="text-sm">
+                {user.language ? "DONATE NOW" : "ದಾನ ಮಾಡಿ"}
               </span>
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-300 via-lime-400 to-emerald-300 opacity-60 animate-pulse"></div>
-              <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-green-400 to-teal-400 opacity-20 animate-ping"></div>
-              <div
-                className="absolute inset-0 rounded-lg border-2 border-green-300"
-                style={{
-                  animation: "borderSpin 2s linear infinite",
-                }}
-              ></div>
             </button>
           </div>
         </div>
@@ -784,13 +750,13 @@ export default function Header({ theme = "transparent" }) {
             <span className="text-sm font-medium text-gray-600">ಕನ್ನಡ</span>
             <button
               onClick={toggleLanguage}
-              className="relative inline-flex h-7 w-12 items-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="relative inline-flex h-6 w-10 items-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               style={{ backgroundColor: user.language ? "#3b82f6" : "#6b7280" }}
             >
               <span className="sr-only">Toggle language</span>
               <span
-                className={`inline-block h-5 w-5 transform rounded-full bg-white transition-all duration-300 shadow-sm ${
-                  user.language ? "translate-x-6" : "translate-x-1"
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-all duration-300 shadow-sm ${
+                  user.language ? "translate-x-5" : "translate-x-1"
                 }`}
               />
             </button>
@@ -806,103 +772,27 @@ export default function Header({ theme = "transparent" }) {
           onClick={() => setMenuOpen(false)}
         />
       )}
+
+      {/* Custom Animations */}
       <style jsx>{`
         @keyframes flash {
           0% {
             filter: brightness(1) saturate(1);
           }
           100% {
-            filter: brightness(2) saturate(2);
+            filter: brightness(1.3) saturate(1.3);
           }
         }
 
-        @keyframes rainbow {
-          0% {
-            filter: hue-rotate(0deg);
+        @keyframes neonGlow {
+          0% { 
+            filter: brightness(1) saturate(1.2); 
           }
-          25% {
-            filter: hue-rotate(90deg);
-          }
-          50% {
-            filter: hue-rotate(180deg);
-          }
-          75% {
-            filter: hue-rotate(270deg);
-          }
-          100% {
-            filter: hue-rotate(360deg);
+          100% { 
+            filter: brightness(1.4) saturate(1.6); 
           }
         }
       `}</style>
-      <style jsx>{`
-        @keyframes flash {
-          0% {
-            filter: brightness(1) saturate(1);
-          }
-          100% {
-            filter: brightness(2) saturate(2);
-          }
-        }
-
-        @keyframes rainbow {
-          0% {
-            filter: hue-rotate(0deg);
-          }
-          25% {
-            filter: hue-rotate(90deg);
-          }
-          50% {
-            filter: hue-rotate(180deg);
-          }
-          75% {
-            filter: hue-rotate(270deg);
-          }
-          100% {
-            filter: hue-rotate(360deg);
-          }
-        }
-      `}</style>
-      <style>
-        {`
-  @keyframes neonGlow {
-    0% { 
-      filter: brightness(1) saturate(1.5) drop-shadow(0 0 10px rgba(34, 197, 94, 0.8)); 
-    }
-    100% { 
-      filter: brightness(1.8) saturate(2.5) drop-shadow(0 0 20px rgba(34, 197, 94, 1)); 
-    }
-  }
-  
-  @keyframes shake {
-    0%, 100% { transform: translateX(0) rotate(0deg); }
-    25% { transform: translateX(-1px) rotate(-0.5deg); }
-    75% { transform: translateX(1px) rotate(0.5deg); }
-  }
-  
-  @keyframes borderSpin {
-    0% { 
-      border-color: #10b981; 
-      transform: rotate(0deg); 
-    }
-    25% { 
-      border-color: #84cc16; 
-      transform: rotate(90deg); 
-    }
-    50% { 
-      border-color: #22c55e; 
-      transform: rotate(180deg); 
-    }
-    75% { 
-      border-color: #059669; 
-      transform: rotate(270deg); 
-    }
-    100% { 
-      border-color: #10b981; 
-      transform: rotate(360deg); 
-    }
-  }
-`}
-      </style>
     </header>
   );
 }

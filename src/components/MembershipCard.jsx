@@ -1,57 +1,98 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QRCode from 'react-qr-code';
 import { API_BASE_URL } from "../../config";
 
 const COLOR_SCHEMES = [
+  // Blue - ₹500 (General Membership)
   {
     name: "Royal Blue",
-    headerBg: "#1e3a8a", // blue-900
-    headerText: "#fff",
-    border: "#60a5fa", // blue-400
-    detailText: "#1e3a8a",
-    accent: "#3b82f6", // blue-500
-    barcode: "#1e3a8a",
-    cardBg: "linear-gradient(135deg, #fff 60%, #dbeafe 100%)",
+    headerBg: "#1e40af", // deeper blue
+    headerText: "#ffffff",
+    border: "#3b82f6", // blue-500
+    detailText: "#1e40af",
+    accent: "#3b82f6",
+    barcode: "#1e40af",
+    cardBg: "linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)", // blue gradient
+    mainBg: "#f0f9ff", // blue-50
+    amount: 500,
   },
+  // Green - ₹5,000 (Special membership)
   {
     name: "Emerald Green",
     headerBg: "#047857", // emerald-700
-    headerText: "#fff",
-    border: "#34d399", // emerald-400
-    detailText: "#065f46",
-    accent: "#10b981", // emerald-500
+    headerText: "#ffffff",
+    border: "#10b981", // emerald-500
+    detailText: "#047857",
+    accent: "#10b981",
     barcode: "#047857",
-    cardBg: "linear-gradient(135deg, #fff 60%, #d1fae5 100%)",
+    cardBg: "linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)", // green gradient
+    mainBg: "#ecfdf5", // emerald-50
+    amount: 5000,
   },
+  // Bronze - ₹10,000 (Premium membership)
   {
-    name: "Slate & Gold",
-    headerBg: "#1e293b", // slate-800
-    headerText: "#ffd700", // gold
-    border: "#ffd700",
-    detailText: "#1e293b",
-    accent: "#ffd700",
-    barcode: "#1e293b",
-    cardBg: "linear-gradient(135deg, #fff 60%, #fef9c3 100%)",
+    name: "Bronze",
+    headerBg: "#92400e", // amber-800
+    headerText: "#ffffff",
+    border: "#d97706", // amber-600
+    detailText: "#92400e",
+    accent: "#d97706",
+    barcode: "#92400e",
+    cardBg: "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)", // bronze gradient
+    mainBg: "#fffbeb", // amber-50
+    amount: 10000,
   },
+  // Silver - ₹25,000 (Lifetime Membership)
   {
-    name: "Maroon & Cream",
-    headerBg: "#7f1d1d", // red-900
-    headerText: "#fff",
-    border: "#f87171", // red-400
-    detailText: "#7f1d1d",
-    accent: "#f87171",
-    barcode: "#7f1d1d",
-    cardBg: "linear-gradient(135deg, #fff 60%, #fef3c7 100%)",
+    name: "Silver",
+    headerBg: "#475569", // slate-600
+    headerText: "#ffffff",
+    border: "#64748b", // slate-500
+    detailText: "#475569",
+    accent: "#64748b",
+    barcode: "#475569",
+    cardBg: "linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%)", // silver gradient
+    mainBg: "#f8fafc", // slate-50
+    amount: 25000,
   },
+  // Gold - ₹50,000 (Patron Membership)
   {
-    name: "Teal & White",
-    headerBg: "#0f766e", // teal-700
-    headerText: "#fff",
-    border: "#2dd4bf", // teal-400
-    detailText: "#134e4a",
-    accent: "#14b8a6",
-    barcode: "#0f766e",
-    cardBg: "linear-gradient(135deg, #fff 60%, #ccfbf1 100%)",
+    name: "Gold",
+    headerBg: "#a16207", // yellow-700
+    headerText: "#ffffff",
+    border: "#ca8a04", // yellow-600
+    detailText: "#a16207",
+    accent: "#eab308", // yellow-500
+    barcode: "#a16207",
+    cardBg: "linear-gradient(135deg, #fef3c7 0%, #fde047 100%)", // gold gradient
+    mainBg: "#fefce8", // yellow-50
+    amount: 50000,
+  },
+  // Platinum - ₹100,000 (Chief Patron Membership)
+  {
+    name: "Platinum",
+    headerBg: "#374151", // gray-700
+    headerText: "#ffffff",
+    border: "#6b7280", // gray-500
+    detailText: "#374151",
+    accent: "#9ca3af", // gray-400
+    barcode: "#374151",
+    cardBg: "linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)", // platinum gradient
+    mainBg: "#f9fafb", // gray-50
+    amount: 100000,
+  },
+  // Premium Gold - ₹500,000 (Premium Patron Membership)
+  {
+    name: "Premium Gold",
+    headerBg: "#92400e", // amber-800
+    headerText: "#fbbf24", // golden text
+    border: "#f59e0b", // amber-500
+    detailText: "#92400e",
+    accent: "#f59e0b",
+    barcode: "#92400e",
+    cardBg: "linear-gradient(135deg, #fef3c7 0%, #f59e0b 100%)", // rich gold gradient
+    mainBg: "#fef3c7", // amber-100
+    amount: 500000,
   },
 ];
 
@@ -62,9 +103,53 @@ const MembershipCard = ({
   showColorPicker = true,
   onImageLoad,
 }) => {
-  const [colorIdx, setColorIdx] = useState(colorIdxProp ?? 0);
+  // Get membership amount from the data
+  const getMembershipAmount = () => {
+    if (!membershipData || !membershipData.values) return 500; // default to 500
+    const amountField = membershipData.values.find((v) => 
+      v.label?.toLowerCase().includes('membership amount') || 
+      v._doc?.label?.toLowerCase().includes('membership amount')
+    );
+    if (amountField) {
+      const amount = amountField.value || amountField._doc?.value;
+      console.log('Found membership amount field:', amountField);
+      console.log('Raw amount value:', amount);
+      console.log('Parsed amount:', parseInt(amount));
+      return parseInt(amount) || 500;
+    }
+    console.log('No membership amount field found, defaulting to 500');
+    return 500;
+  };
+
+  // Determine color scheme based on membership amount
+  const getColorSchemeByAmount = (amount) => {
+    console.log('Getting color scheme for amount:', amount);
+    const scheme = COLOR_SCHEMES.find(scheme => scheme.amount === amount);
+    console.log('Found scheme:', scheme);
+    const index = scheme ? COLOR_SCHEMES.indexOf(scheme) : 0;
+    console.log('Color scheme index:', index);
+    return index; // default to blue if not found
+  };
+
+  const membershipAmount = getMembershipAmount();
+  const autoColorIdx = getColorSchemeByAmount(membershipAmount);
+  console.log('Final membership amount:', membershipAmount);
+  console.log('Auto color index:', autoColorIdx);
+  const [colorIdx, setColorIdx] = useState(colorIdxProp ?? autoColorIdx);
   const color = COLOR_SCHEMES[colorIdx];
+  console.log('Selected color scheme:', color);
   const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Update color when membership data changes
+  useEffect(() => {
+    const newMembershipAmount = getMembershipAmount();
+    const newAutoColorIdx = getColorSchemeByAmount(newMembershipAmount);
+    console.log('useEffect - New membership amount:', newMembershipAmount);
+    console.log('useEffect - New color index:', newAutoColorIdx);
+    if (colorIdxProp === undefined) {
+      setColorIdx(newAutoColorIdx);
+    }
+  }, [membershipData, colorIdxProp]);
 
   // Extract data directly from the API response
   const getValue = (label) => {
@@ -134,30 +219,6 @@ const MembershipCard = ({
 
   return (
     <div className="flex flex-col items-center">
-      {/* Color Picker Boxes */}
-      {showColorPicker && (
-        <div className="flex space-x-4 mb-4">
-          {COLOR_SCHEMES.map((scheme, idx) => (
-            <button
-              key={scheme.name}
-              onClick={() => handleColorChange(idx)}
-              style={{
-                background: scheme.cardBg,
-                border: colorIdx === idx ? `3px solid ${scheme.accent}` : `2px solid #e5e7eb`,
-                width: 32,
-                height: 32,
-                borderRadius: 8,
-                cursor: "pointer",
-                boxShadow: colorIdx === idx ? "0 0 0 2px #0002" : undefined,
-                outline: "none",
-                transition: "border 0.2s, box-shadow 0.2s",
-              }}
-              aria-label={scheme.name}
-            />
-          ))}
-        </div>
-      )}
-
       {/* Card */}
       <div
         className="mx-auto"
@@ -190,7 +251,7 @@ const MembershipCard = ({
               className="text-lg font-extrabold tracking-wide mb-1"
               style={{ letterSpacing: "0.02em" }}
             >
-              ರಾಜ್ಯ ಬಕ್ಷಿ ಲೀಗರ್ ಸಂಘ
+              ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ
             </h1>
             <div className="flex justify-center">
               <div className="w-4/5 border-t" style={{ borderColor: color.headerText, opacity: 0.4, margin: "0.15rem 0" }}></div>
@@ -199,14 +260,20 @@ const MembershipCard = ({
               className="text-xs font-medium tracking-wide mt-1"
               style={{ letterSpacing: "0.01em" }}
             >
-              ಕ್ರೀಡಾರಾಜ್ಯದ ರಸ್ತೆ ವಿಶ್ವೇಶ್ವರಪುರ ಬೆಂಗಳೂರು - 560004
+              ಸದಾಸ್ಯತ್ವ ಕಾರ್ಡ್
             </p>
           </div>
 
           {/* Main Content */}
           <div
             className="flex flex-1 px-4 py-2"
-            style={{ fontFamily: 'Inter, Roboto, Segoe UI, Arial, sans-serif', color: color.detailText }}
+            style={{ 
+              fontFamily: 'Inter, Roboto, Segoe UI, Arial, sans-serif', 
+              color: color.detailText,
+              background: color.mainBg,
+              borderLeft: `4px solid ${color.accent}`,
+              borderRight: `4px solid ${color.accent}`
+            }}
           >
             {/* Left side - Details */}
             <div className="flex-1 pr-2 flex flex-col justify-center items-start">
@@ -271,11 +338,17 @@ const MembershipCard = ({
 
           {/* Bottom section */}
           <div
-            className="border-t border-dashed mt-0 pt-1 px-4 pb-1 bg-white bg-opacity-90 flex items-end justify-between"
+            className="border-t border-dashed mt-0 pt-1 px-4 pb-1 flex items-end justify-between"
             style={{
               minHeight: 50,
               fontFamily: 'Inter, Roboto, Segoe UI, Arial, sans-serif',
-              borderColor: color.border,
+              borderColor: color.accent,
+              background: color.mainBg,
+              borderLeft: `4px solid ${color.accent}`,
+              borderRight: `4px solid ${color.accent}`,
+              borderBottom: `4px solid ${color.accent}`,
+              borderBottomLeftRadius: '12px',
+              borderBottomRightRadius: '12px'
             }}
           >
             {/* QR Code and ID */}
@@ -293,13 +366,13 @@ const MembershipCard = ({
 
             {/* Signatures */}
             <div className="flex-1 flex justify-end space-x-8">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div
                   className="h-6 border-b mb-1"
                   style={{ borderColor: color.border }}
                 ></div>
                 <span className="text-xs font-medium tracking-wide">ಅಧ್ಯಕ್ಷರು</span>
-              </div>
+              </div> */}
               <div className="text-center">
                 <div
                   className="h-6 border-b mb-1"

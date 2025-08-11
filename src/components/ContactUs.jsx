@@ -42,14 +42,14 @@ const ContactUs = () => {
                     {user.language ? (
                       <>
                         Karnataka Madara Mahasabha<br />
-                        # 39/A, I Floor, near Shivananda Circle,<br />
+                        # 39/A, 1st Floor, near Shivananda Circle,<br />
                         Kumara Park East, Seshadripuram,<br />
                         Bengaluru, Karnataka 560001
                       </>
                     ) : (
                       <>
                         ಕರ್ನಾಟಕ ಮಾದಾರ ಮಹಾಸಭಾ<br />
-                        # 39/A, I ಮಹಡಿ, ಶಿವಾನಂದ ಸರ್ಕಲ್ ಹತ್ತಿರ,<br />
+                        # 39/A, 1 ನೇ ಮಹಡಿ, ಶಿವಾನಂದ ಸರ್ಕಲ್ ಹತ್ತಿರ,<br />
                         ಕುಮಾರ ಪಾರ್ಕ್ ಪೂರ್ವ, ಶೇಷಾದ್ರಿಪುರಂ,<br />
                         ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560001
                       </>

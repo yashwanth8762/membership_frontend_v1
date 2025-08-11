@@ -204,7 +204,7 @@ const OrganizationPage = () => {
         {/* Taluk Members Table */}
         <div className="w-full max-w-6xl mx-auto mb-14">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-          {isEnglish ? "District Coordinators" : "ಜಿಲ್ಲಾ ಸಂಚಾಲಕರು"}
+          {isEnglish ? "District Samithi" : "ಜಿಲ್ಲಾ ಸಮಿತಿ"}
             
           </h2>
           <div className="overflow-x-auto">
@@ -227,7 +227,7 @@ const OrganizationPage = () => {
         {/* District Members Table */}
         <div className="w-full max-w-6xl mx-auto mb-14">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-          {isEnglish ? "Taluk Coordinators" : "ತಾಲ್ಲೂಕು ಸಂಚಾಲಕರು"}
+          {isEnglish ? "Taluk Samithi" : "ತಾಲೂಕು ಸಮಿತಿ"}
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg border-collapse">

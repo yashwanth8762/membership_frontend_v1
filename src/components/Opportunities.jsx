@@ -11,7 +11,7 @@ export default function Opportunities() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {isEnglish ? "Madigara Abhirudhi Avakashagalu" : "ಮಾದಿಗರ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳು"}
+          {isEnglish ? "Samudayada Abhirudhiya Sadavakashagalu" : "ಸಮುದಾಯದ ಅಭಿರುಧಿಯ ಸಾದವಕಾಶಗಳು"}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>

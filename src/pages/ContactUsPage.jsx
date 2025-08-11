@@ -90,7 +90,7 @@ const ContactUsPage = () => {
                     </p>
                     <p className="text-gray-900 font-medium">
                       Karnataka Madara Mahasabha<br />
-                      # 39/A, I Floor, near Shivananda Circle,<br />
+                      # 39/A, 1st Floor, near Shivananda Circle,<br />
                       Kumara Park East, Seshadripuram,<br />
                       Bengaluru, Karnataka 560001
                     </p>

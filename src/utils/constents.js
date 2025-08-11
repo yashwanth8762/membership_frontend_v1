@@ -15,8 +15,8 @@ export const NavLinks = [
     href: "#organization",
   },
   {
-    opportunities_en: "Madigara Abhirudhi Avakashagalu",
-    opportunities_kn: "ಮಾದಿಗರ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳು",
+    opportunities_en: "Samudayada Abhirudhiya Sadavakashagalu",
+    opportunities_kn: "ಸಮುದಾಯದ ಅಭಿರುಧಿಯ ಸಾದವಕಾಶಗಳು",
     href: "#opportunities",
   },
   {
@@ -152,7 +152,7 @@ export const AboutTrustContent = {
       },
       description: {
         en: "Residents of taluk and district who wish to become members of the Sabha — men and women of the Madara community aged 18 years or older — must submit a membership application form to the General Secretaries of the Mahasabha in the prescribed format set by the executive committee. They can also visit the Mahasabha's website and register online for membership.At the time of application submission, the applicant must obtain a recommendation from two members — either life members of the Sabha or members of the executive committee — and pay the membership fee as per the rules to obtain an official receipt from the Mahasabha.",
-        kn: "ಸಭೆಯ ಸದಸ್ಯರಾಗಲು ಇಚ್ಛಿಸುವ ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು, 18 ವರ್ಷ ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ ಸಮುದಾಯದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು, ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ನಿಗದಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ಮಹಾಸಭೆಯ ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳಿಗೆ ಸದಸ್ಯತ್ವದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು. ಮಹಾಸಭೆಯ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಿ ಆನ್‌ಲೈನ್ ಮೂಲಕವೂ ಸದಸ್ಯತ್ವ ನೋಂದಾಯಿಸಬಹುದಾಗಿದೆ.ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವೇಳೆ, ಸಭೆಯ ಜೀವಿತ ಸದಸ್ಯರು ಅಥವಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಇಬ್ಬರು ಸದಸ್ಯರಿಂದ ಶಿಫಾರಸು ಮಾಡಿಕೊಂಡು, ನಿಯಮಾನುಸಾರ ಸದಸ್ಯತ್ವ ಶುಲ್ಕವನ್ನು ಪಾವತಿಸಿ ಮಹಾಸಭೆಯ ರಸೀದಿ ಪಡೆದುಕೊಂಡಿರಬೇಕು.",
+        kn: "ಸಭೆಯ ಸದಸ್ಯರಾಗಲು ಇಚ್ಛಿಸುವ ತಾಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು, 18 ವರ್ಷ ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ ಸಮುದಾಯದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು, ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ನಿಗದಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ಮಹಾಸಭೆಯ ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳಿಗೆ ಸದಸ್ಯತ್ವದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು. ಮಹಾಸಭೆಯ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಿ ಆನ್‌ಲೈನ್ ಮೂಲಕವೂ ಸದಸ್ಯತ್ವ ನೋಂದಾಯಿಸಬಹುದಾಗಿದೆ.ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವೇಳೆ, ಸಭೆಯ ಜೀವಿತ ಸದಸ್ಯರು ಅಥವಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಇಬ್ಬರು ಸದಸ್ಯರಿಂದ ಶಿಫಾರಸು ಮಾಡಿಕೊಂಡು, ನಿಯಮಾನುಸಾರ ಸದಸ್ಯತ್ವ ಶುಲ್ಕವನ್ನು ಪಾವತಿಸಿ ಮಹಾಸಭೆಯ ರಸೀದಿ ಪಡೆದುಕೊಂಡಿರಬೇಕು.",
       },
     },
   ],
@@ -270,8 +270,8 @@ export const OrganizationContent = {
   },
   first: {
     kn: [
-      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅದರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಸದಸ್ಯರನ್ನು ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು.  ಪರ್ಯಾಯ ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು ಮಾದಿಗ ಸಮಾಜದ ವರ್ಗದಿಂದ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ಜಾತಿಗಳಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ. ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
-      "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲ್ಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
+      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅದರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಸದಸ್ಯರನ್ನು ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು.  ಪರ್ಯಾಯ ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು ಮಾದಿಗ ಸಮಾಜದ ವರ್ಗದಿಂದ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ಜಾತಿಗಳಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ. ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
+      "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
       "ಒಂದು ಸಾಲಿನಲ್ಲಿ ಚುನಾವಣೆಯಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ 3 ವರ್ಷದ ಅವಧಿಯದಾಗಿದ್ದು, ಮುಂದಿನ ಚುನಾವಣೆಯಾಗುವವರೆಗೂ ಅಧಿಕಾರದಲ್ಲಿರುತ್ತದೆ. ಕಾರಣಾಂತರಗಳಿಂದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸ್ಥಾನ ಅಥವಾ ಸ್ಥಾನಗಳು ಖಾಲಿ ಬಿದ್ದಾಗ ಸದರಿ ಸ್ಥಾನಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿಕೊಳ್ಳದಿದ್ದರೂ ಸಹ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ನಿರ್ಣಯಗಳು ಸಿಂಧುವಾಗತಕ್ಕವಾಗಿರುತ್ತದೆ.",
       "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಯನ್ನು ನಡೆಸುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50%, ಹೆಚ್ಚು ಸದಸ್ಯರುಗಳಾದರೂ (ಕೋರಂ) ಹಾಜರಿರಲೇಬೇಕು.",
     ],
@@ -302,44 +302,44 @@ export const OrganizationContent = {
           "en": "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 2\n7. One from each taluk – 1",
           "kn": "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1"
         },
-        {
-          "en": "The executive committee meeting must be held once every month.",
-          "kn": "ಪ್ರತಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆ ಸೇರತಕ್ಕದ್ದು."
-        },
-        {
-          "en": "More than 50% of the executive committee members must be present for the meeting.",
-          "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಗೆ ಕನಿಷ್ಠ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಭಾಗದ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
-        }
+        // {
+        //   "en": "The executive committee meeting must be held once every month.",
+        //   "kn": "ಪ್ರತಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆ ಸೇರತಕ್ಕದ್ದು."
+        // },
+        // {
+        //   "en": "More than 50% of the executive committee members must be present for the meeting.",
+        //   "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಗೆ ಕನಿಷ್ಠ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಭಾಗದ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
+        // }
       ]
     },
     "6": {
       "title_en": "Taluk Branch Executive Committee",
-      "title_kn": "ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      "title_kn": "ತಾಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
       "items": [
         {
           "en": "The taluk branch office is located at the respective taluk headquarters.",
-          "kn": "ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲ್ಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ."
+          "kn": "ತಾಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ."
         },
         {
           "en": "The Taluk Executive Committee must have at least 4 members.",
-          "kn": "ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 4(ನಾಲ್ಕು) ಜನ ಸದಸ್ಯರಿರಬೇಕು."
+          "kn": "ತಾಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 4(ನಾಲ್ಕು) ಜನ ಸದಸ್ಯರಿರಬೇಕು."
         },
         {
           "en": "From among the members elected by the Taluk General Body, the office-bearers are selected as follows:",
-          "kn": "ಆಯಾ ತಾಲ್ಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲ್ಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು."
+          "kn": "ಆಯಾ ತಾಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು."
         },
         {
           "en": "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 3",
           "kn": "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3"
         },
-        {
-          "en": "The executive committee must meet once every month.",
-          "kn": "ಪ್ರತಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆ ಸೇರಬೇಕು."
-        },
-        {
-          "en": "At least more than 50% of the executive committee members must be present for the meeting.",
-          "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಗೆ ಕನಿಷ್ಟ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
-        }
+        // {
+        //   "en": "The executive committee must meet once every month.",
+        //   "kn": "ಪ್ರತಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆ ಸೇರಬೇಕು."
+        // },
+        // {
+        //   "en": "At least more than 50% of the executive committee members must be present for the meeting.",
+        //   "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಗೆ ಕನಿಷ್ಟ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
+        // }
       ]
     },
     "7": {
@@ -392,7 +392,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri. K.M. Timmarayappa\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
-      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲ್ಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ."
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ."
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -445,8 +445,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Govind Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
-      kn: "ಗೋವಿಂದ ಕಾರಜೋಳ, 199/ಎ, 4ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು."
+      en: "Sri. Govind M Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
+      kn: "ಶ್ರೀ. ಗೋವಿಂದ್ ಎಂ ಕಾರಜೋಳ, 199/ಎ, 4ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು."
     },
     position: { en: "Executive Committee Member", kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -483,14 +483,16 @@ heading:{
   tableHeading_en:[
    "Sl No.",
    "District",
-   "Name and address of the District Coordinator",  
-   "Mobile No.",
+   "Designation",
+   "Name and address",  
+   "Contact No.",
   ],
   tableHeading_kn:[
     "ಸಂ.ಸಂಖ್ಯೆ",
     "ಜಿಲ್ಲೆ",
-    "ಜಿಲ್ಲಾ ಸಂಚಾಲಕರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
-    "ಫೋನ್ ನಂಬರ್",
+    "ಹುದ್ದೆ",
+    "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
+    "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
   ]
 },
 }
@@ -500,14 +502,16 @@ export const organizationDistrictMembers={
     tableHeading_en:[
       "Sl No.",
       "Taluk",
-      "Name and address of the Taluk Coordinator",  
-      "Mobile No.",
+      "Designation",
+      "Name and address",  
+      "Contact No.",
     ],
     tableHeading_kn:[
       "ಸಂ.ಸಂಖ್ಯೆ",
-      "ತಾಲ್ಲೂಕು",
-      "ತಾಲ್ಲೂಕು ಸಂಚಾರಕರ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
-      "ಫೋನ್ ನಂಬರ್",
+      "ತಾಲೂಕು",
+      "ಹುದ್ದೆ",
+      "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
+      "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
     ]
   }
 }

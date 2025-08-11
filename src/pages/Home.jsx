@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/pages/Home.jsx
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
@@ -43,6 +44,9 @@ export default function Home() {
         <Section>
           <HeroSection />
         </Section>
+        <Section id="upcoming-programs">
+          <UpcomingActivities />
+        </Section>
         <Section id="about-trust">
           <AboutTrust />
         </Section>
@@ -58,9 +62,7 @@ export default function Home() {
         {/* <Section id="activities"> */}
           {/* <Activities /> */}
         {/* </Section> */}
-        <Section id="upcoming-programs">
-          <UpcomingActivities />
-        </Section>
+        
         <Section id="documents">
           <Documents />
         </Section>

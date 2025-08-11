@@ -52,7 +52,7 @@ const Organization = () => {
               <p className="text-sm lg:text-base font-medium text-green-900">
                 {user.language 
                   ? 'The Executive Committee members are directly elected by voting conducted from time to time by the members of the Central, District, and Taluk Committees.'
-                  : 'ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ.'
+                  : 'ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ.'
                 }
               </p>
             </div>
