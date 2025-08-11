@@ -108,10 +108,7 @@ export const AboutTrustContent = {
             "Sri. A. Narayanaswamy",
             "Sri. K.M. Thimmarayappa",
           ],
-          Vice_President_kn: [
-            "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ",
-            "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ",
-          ],
+          Vice_President_kn: ["ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ", "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ"],
 
           Chief_Executive_Members_en: [
             "Dr. L. Hanumantayya",
@@ -168,8 +165,8 @@ export const HistoryCultureContent = {
   content: {
     title: [
       {
-        en: "Madara – The First Rulers and Warriors of India",
-        kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು / ಯೋಧರು",
+        en: "The Madras were the first kings of India./n The Madras were the first warriors of India.",
+        kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು./n ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು",
       },
       {
         en: "Madigas in Myth & Folklore",
@@ -182,8 +179,14 @@ export const HistoryCultureContent = {
     ],
     description: [
       {
-        en: " 'Madara' is the name of one of India's most ancient ethnic communities — considered among the earliest peoples born and raised in the country. This community belonged to the very first royal dynasties that held political power in early India. They were the first to introduce governance and democratic systems in ancient Bharat, and were known as mighty warrior clans. During their reign, the people of the land used to respectfully address them as 'Mahadore' (Great Kings). They were also worshipped as Mahadevaru, Madore, Madivaru, Madaru, and Madara, showing their reverence. Through these historical titles, the Madara community earned a distinct and honorable place in Indian history. They are recognized as India's first political community, and in the modern era, they are known as the Madiga community. Even today, the descendants of this community such as Male Mahadeshwara and Marulasiddha are worshipped and revered by people of other castes with fear and devotion. These figures are seen as symbols of cultural strength, spiritual energy, and ancestral pride.However, due to internal conspiracies brought by the first foreign migrants — especially Brahmins — the Madigas lost their royal authority. As institutional development was lost, economic progress declined. Economic downfall led to social regression. This in turn caused a loss in education, which finally led to the collapse of industrial growth. Thus, the Madigas were labeled untouchables and became slaves to the foreign Brahminical religion and systems. In this degraded state, the Brahmins took over the Madigas' knowledge, wisdom, and cultural legacy, claiming it as their own heritage. They brought dishonor to the Madiga name. Their rich traditions and history were polluted, leading to the loss of their mental, physical, and intellectual strengths. Over time, the community was pushed to the margins — socially, economically, and educationally.",
-        kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು, ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು. ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿರುವ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಕೀಯ ಮತ್ತು ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ,ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಅದುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ , ಎಲ್ಲ ಜಾತಿ ಎಲ್ಲ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೇಮಹದೇಶ್ವರ ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
+        en: [
+          " Madara is the name of one of India's most ancient ethnic communities — considered among the earliest peoples born and raised in the country. This community belonged to the very first royal dynasties that held political power in early India. They were the first to introduce governance and democratic systems in ancient Bharat, and were known as mighty warrior clans. During their reign, the people of the land used to respectfully address them as 'Mahadore' (Great Kings). They were also worshipped as Mahadevaru, Madore, Madivaru, Madaru, and Madara, showing their reverence. Through these historical titles, the Madara community earned a distinct and honorable place in Indian history. They are recognized as India's first political community, and in the modern era, they are known as the Madiga community. Even today, the descendants of this community such as Male Mahadeshwara and Marulasiddha are worshipped and revered by people of other castes with fear and devotion. These figures are seen as symbols of cultural strength, spiritual energy, and ancestral pride.However, due to internal conspiracies brought by the first foreign migrants — especially Brahmins — the Madigas lost their royal authority. As institutional development was lost, economic progress declined. Economic downfall led to social regression. This in turn caused a loss in education, which finally led to the collapse of industrial growth. Thus, the Madigas were labeled untouchables and became slaves to the foreign Brahminical religion and systems. In this degraded state, the Brahmins took over the Madigas' knowledge, wisdom, and cultural legacy, claiming it as their own heritage. They brought dishonor to the Madiga name. Their rich traditions and history were polluted, leading to the loss of their mental, physical, and intellectual strengths. Over time, the community was pushed to the margins — socially, economically, and educationally.",
+          "Due to the internal conspiracies of the Aryan Brahmins, the first foreigners to migrate to India, the political power of the Madigas was destroyed. The loss of cultural advancement led to the collapse of economic progress, which in turn caused social decline, followed by the deterioration of education and the downfall of industrial growth. This chain of losses rendered the Madigas untouchables and enslaved them to the religion and culture of foreign Brahmins. Through various schemes and manipulations, the Aryan Brahmins seized the Madigas’ knowledge and intelligence, treating them as hereditary possessions and permanently tarnishing their name and identity. By distorting the community’s highest traditions and history into meanings of inferiority and disgrace, they weakened their mental, intellectual, and physical strength, reducing them to a subjugated state. As a result, the Madiga community has endured continuous exploitation by the upper castes and remains extremely backward socially, economically, and educationally.",
+        ],
+        kn: [
+          "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು, ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು. ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿರುವ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಕೀಯ ಮತ್ತು ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ,ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಅದುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ , ಎಲ್ಲ ಜಾತಿ ಎಲ್ಲ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೇಮಹದೇಶ್ವರ ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
+          "ಆದರೆ ಭಾರತಕ್ಕೆ ವಲಸೆ ಬಂದ ಮೊದಲ ವಿದೇಶಿಯರಾದ ಆರ್ಯ ಬ್ರಾಹ್ಮಣರ ಒಳಸಂಚಿನಿಂದಾಗಿ ಮಾದಿಗರ ರಾಜ್ಯಾಧಿಕಾರ ನಾಶವಾಯಿತು. ಸಾಂಸ್ಕೃತಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಆರ್ಥಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಆರ್ಥಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಔದ್ಯೋಗಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಔದ್ಯೋಗಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಮಾದಿಗರು ಅಸ್ಪೃಶರಾದರು, ವಿದೇಶಿ ಬ್ರಾಹ್ಮಣರ ಧರ್ಮ ಮತ್ತು ಸಂಸ್ಕೃತಿಗೆ ಗುಲಾಮರಾದರು. ಇಂತಹ ಹೀನಾಯ ಪರಿಸ್ಥಿತಿಯಲ್ಲಿ ಮಾದಿಗರ ವಿದ್ಯಾವಂತಿಕೆಯನ್ನು, ಬುದ್ದಿವಂತಿಕೆಯನ್ನು ಅನೇಕ ತಂತ್ರಕುತಂತ್ರಗಳಿಂದ ವಶಪಡಿಸಿಕೊಂಡ ಆರ್ಯ ಬ್ರಾಹ್ಮಣರು ಅವುಗಳನ್ನು ತಮ್ಮ ವಂಶಪಾರಂಪರ್ಯ ಗುತ್ತಿಗೆಯ ವಸ್ತುಗಳನ್ನಾಗಿ ಮಾಡಿಕೊಂಡು ಮಾದಿಗರ ಹೆಸರಿಗೆ ಮತ್ತು ಉಸಿರಿಗೆ ಅಳಿಸಲಾರದಂತಹ ಮಸಿ ಬಳಿದರು. ಮಾದಿಗರ ಅತ್ಯುನ್ನತ ಪರಂಪರೆಗೆ, ಇತಿಹಾಸಕ್ಕೆ ಕೀಳಾರ್ಥವನ್ನು, ಕೊಳಕಾರ್ಥವನ್ನು ನೀಡುವ ಮೂಲಕ ಅವರ ಮಾನಸಿಕ , ಬೌದ್ಧಿಕ, ಮತ್ತು ದೈಹಿಕ ಬಲವನ್ನು ಕುಗ್ಗಿಸಿ ಕುಗ್ಗಿಸಿ ಕುಬ್ಜರನ್ನಾಗಿ ಮಾಡಿದರು.  ಈ ಕಾರಣಗಳಿಂದ ಮಾದಿಗ ಸಮುದಾಯದವರು ನಿರಂತರವಾಗಿ ಮೇಲ್ಜಾತಿಗಳ ಶೋಷಣೆಗೆ ಒಳಪಟ್ಟು ಸಾಮಾಜಿಕವಾಗಿ, ಆರ್ಥಿಕವಾಗಿ ಮತ್ತು ಶೈಕ್ಷಣಿಕವಾಗಿ ಅತ್ಯಂತ ಹಿಂದುಳಿದಿದ್ದಾರೆ.",
+        ],
       },
       {
         en: "In South India, the Madigas are recognized as a major traditional community, historically engaged in leather work and rural services. Their origins are described in various mythological and folk tales. Some scholars believe the word 'Madiga' is derived from the callings of divine forms like 'Maha-Digambara'. In mythology, Jambavantha, a prominent figure in the Ramayana, is considered the original ancestor of the Madigas. Gods in distress would seek his help. He is said to have been the first artisan to work with leather. In another legend, when Shiva's beloved divine cow Kamadhenu died, Jambavantha performed her last rites by cutting the body. But by violating divine law, Shiva cursed Jambavantha — and his descendants became the Madiga and Maala communities. Another story describes Madigas as children of Goddess Matangi, leading to the phrase 'Matangi Makkalu' (children of Matangi). Through these stories, the Madiga community continues to honor and celebrate these divine and mythological connections as an integral part of their culture.",
@@ -286,21 +289,21 @@ export const OrganizationContent = {
     ],
   },
   second: {
-    "5": {
-      "title_en": "District Branch Executive Committee",
-      "title_kn": "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
-      "items": [
+    5: {
+      title_en: "District Branch Executive Committee",
+      title_kn: "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      items: [
         {
-          "en": "The district branch office is located at the district headquarters. The District Executive Committee consists of 8 members, with at least one additional member from each taluk included in the committee.",
-          "kn": "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಛೇರಿ ಜಿಲ್ಲಾ ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ. ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ 8 ಸದಸ್ಯರುಗಳಿದ್ದು ಮತ್ತು ಹೆಚ್ಚುವರಿಯಾಗಿ ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ ಕನಿಷ್ಠ ಒಬ್ಬ ಸದಸ್ಯರನ್ನು ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಲಾಗುವುದು."
+          en: "The district branch office is located at the district headquarters. The District Executive Committee consists of 8 members, with at least one additional member from each taluk included in the committee.",
+          kn: "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಛೇರಿ ಜಿಲ್ಲಾ ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ. ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ 8 ಸದಸ್ಯರುಗಳಿದ್ದು ಮತ್ತು ಹೆಚ್ಚುವರಿಯಾಗಿ ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ ಕನಿಷ್ಠ ಒಬ್ಬ ಸದಸ್ಯರನ್ನು ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
         },
         {
-          "en": "The District Executive Committee shall have at least 8 members. District office-bearers are elected from among the committee members elected by the District General Body as follows:",
-          "kn": "ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 ಜನ ಸದಸ್ಯರಿರುತ್ತಾರೆ. ಜಿಲ್ಲಾ ಸಭಾದ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಿಂದ ಚುನಾಯಿತರಾದ ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಜಿಲ್ಲಾ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಕೆಳಕಂಡಂತೆ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು."
+          en: "The District Executive Committee shall have at least 8 members. District office-bearers are elected from among the committee members elected by the District General Body as follows:",
+          kn: "ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 ಜನ ಸದಸ್ಯರಿರುತ್ತಾರೆ. ಜಿಲ್ಲಾ ಸಭಾದ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಿಂದ ಚುನಾಯಿತರಾದ ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಜಿಲ್ಲಾ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಕೆಳಕಂಡಂತೆ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
         },
         {
-          "en": "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 2\n7. One from each taluk – 1",
-          "kn": "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1"
+          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 2\n7. One from each taluk – 1",
+          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1",
         },
         // {
         //   "en": "The executive committee meeting must be held once every month.",
@@ -310,27 +313,27 @@ export const OrganizationContent = {
         //   "en": "More than 50% of the executive committee members must be present for the meeting.",
         //   "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಗೆ ಕನಿಷ್ಠ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಭಾಗದ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
         // }
-      ]
+      ],
     },
-    "6": {
-      "title_en": "Taluk Branch Executive Committee",
-      "title_kn": "ತಾಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
-      "items": [
+    6: {
+      title_en: "Taluk Branch Executive Committee",
+      title_kn: "ತಾಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      items: [
         {
-          "en": "The taluk branch office is located at the respective taluk headquarters.",
-          "kn": "ತಾಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ."
+          en: "The taluk branch office is located at the respective taluk headquarters.",
+          kn: "ತಾಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ.",
         },
         {
-          "en": "The Taluk Executive Committee must have at least 4 members.",
-          "kn": "ತಾಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 4(ನಾಲ್ಕು) ಜನ ಸದಸ್ಯರಿರಬೇಕು."
+          en: "The Taluk Executive Committee must have at least 4 members.",
+          kn: "ತಾಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 4(ನಾಲ್ಕು) ಜನ ಸದಸ್ಯರಿರಬೇಕು.",
         },
         {
-          "en": "From among the members elected by the Taluk General Body, the office-bearers are selected as follows:",
-          "kn": "ಆಯಾ ತಾಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು."
+          en: "From among the members elected by the Taluk General Body, the office-bearers are selected as follows:",
+          kn: "ಆಯಾ ತಾಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
         },
         {
-          "en": "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 3",
-          "kn": "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3"
+          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 3",
+          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3",
         },
         // {
         //   "en": "The executive committee must meet once every month.",
@@ -340,32 +343,32 @@ export const OrganizationContent = {
         //   "en": "At least more than 50% of the executive committee members must be present for the meeting.",
         //   "kn": "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಗೆ ಕನಿಷ್ಟ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
         // }
-      ]
+      ],
     },
-    "7": {
-      "title_en": "General Body Meetings: Conferences",
-      "title_kn": "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಗಳು : ಸಮ್ಮೇಳನಗಳು",
-      "items": [
+    7: {
+      title_en: "General Body Meetings: Conferences",
+      title_kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಗಳು : ಸಮ್ಮೇಳನಗಳು",
+      items: [
         {
-          "en": "General Body Meeting: The general body meeting consists of executive committee members and all other members, and will be referred to as the General Body Meeting.",
-          "kn": "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ: ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು."
+          en: "General Body Meeting: The general body meeting consists of executive committee members and all other members, and will be referred to as the General Body Meeting.",
+          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ: ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು.",
         },
         {
-          "en": "Ordinary Meeting: Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
-          "kn": "ಸಾಮಾನ್ಯ ಸಭೆ: ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟೀನ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿಲ್ಲದಂತೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು."
-        }
-      ]
+          en: "Ordinary Meeting: Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
+          kn: "ಸಾಮಾನ್ಯ ಸಭೆ: ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟೀನ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿಲ್ಲದಂತೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು.",
+        },
+      ],
     },
-    "8": {
-      "title_en": "Special Meeting",
-      "title_kn": "ವಿಶೇಷ ಸಭೆ",
-      "items": [
+    8: {
+      title_en: "Special Meeting",
+      title_kn: "ವಿಶೇಷ ಸಭೆ",
+      items: [
         {
-          "en": "Special or important matters of the association can be decided in a special general body meeting called by the president and general secretary with the approval of the executive committee. At least more than 50% of the members must be present for a special meeting. Notice of such a meeting mentioning the subjects to be discussed must be given at least 21 days in advance.",
-          "kn": "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು ಮತ್ತು ವಿಶೇಷ ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಮಂದಿ ಅಥವಾ 50% ಗಿಂತ ಕಡಿಮೆಯಿಲ್ಲದೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು. ಇಂತಹ ಸಭೆ ಕೂಡುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 21 ದಿನ ಮುಂಚಿತವಾಗಿ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ಮೀಟಿಂಗ್‌ ನೋಟೀಸ್‌ ಕೊಡಲಾಗುವುದು."
-        }
-      ]
-    }
+          en: "Special or important matters of the association can be decided in a special general body meeting called by the president and general secretary with the approval of the executive committee. At least more than 50% of the members must be present for a special meeting. Notice of such a meeting mentioning the subjects to be discussed must be given at least 21 days in advance.",
+          kn: "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು ಮತ್ತು ವಿಶೇಷ ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಮಂದಿ ಅಥವಾ 50% ಗಿಂತ ಕಡಿಮೆಯಿಲ್ಲದೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು. ಇಂತಹ ಸಭೆ ಕೂಡುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 21 ದಿನ ಮುಂಚಿತವಾಗಿ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ಮೀಟಿಂಗ್‌ ನೋಟೀಸ್‌ ಕೊಡಲಾಗುವುದು.",
+        },
+      ],
+    },
   },
 };
 
@@ -374,86 +377,94 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Dr. K.H. Muniyappa\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
-      kn: "ಡಾ|| ಕೆ.ಹೆಚ್‌. ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು."
+      kn: "ಡಾ|| ಕೆ.ಹೆಚ್‌. ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
+    mobile: "",
   },
   {
     name: {
       en: "Sri. A. Narayanaswamy\nNo. 691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru.",
-      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ\nನಂ.691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ, 2ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌. ಲೇಔಟ್‌, ಬೆಂಗಳೂರು."
+      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ\nನಂ.691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ, 2ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌. ಲೇಔಟ್‌, ಬೆಂಗಳೂರು.",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
+    mobile: "",
   },
   {
     name: {
       en: "Sri. K.M. Timmarayappa\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
-      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ."
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ.",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
+    mobile: "",
   },
   {
     name: {
       en: "Dr. L. Hanumanthayya\n30. 207/A, 'D' Cross, 2nd Block, Basaveshwaranagar, Bengaluru.",
-      kn: "ಡಾ|| ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ , ʼಡಿʼಕ್ರಾಸ್‌, 2ನೇ  ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು."
+      kn: "ಡಾ|| ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ , ʼಡಿʼಕ್ರಾಸ್‌, 2ನೇ  ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
+    mobile: "",
   },
   {
     name: {
       en: "A. Muniyappa\nNo.2, IT Township, Dooravani Nagar, Bengaluru-16.",
-      kn: "ಎ.ಮುನಿಯಪ್ಪ, ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16."
+      kn: "ಎ.ಮುನಿಯಪ್ಪ, ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "8884445838"
+    mobile: "8884445838",
   },
   {
     name: {
       en: "Sri Pillamuniswamyappa\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
-      kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು."
+      kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
     },
-    position: { en: "State Organizing Secretary", kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ" },
+    position: {
+      en: "State Organizing Secretary",
+      kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
+    },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
+    mobile: "",
   },
   {
     name: {
       en: "Dr. Sujata\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
-      kn: "ಡಾ|| ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ  ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096."
+      kn: "ಡಾ|| ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ  ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096.",
     },
     position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
+    mobile: "",
   },
   {
     name: {
       en: "Sri. H. Anjaneya\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
-      kn: "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ, 2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು."
+      kn: "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ, 2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
     },
-    position: { en: "Executive Committee Member", kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು" },
+    position: {
+      en: "Executive Committee Member",
+      kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
+    },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9448455881"
+    mobile: "9448455881",
   },
   {
     name: {
       en: "Sri. Govind M Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
-      kn: "ಶ್ರೀ. ಗೋವಿಂದ್ ಎಂ ಕಾರಜೋಳ, 199/ಎ, 4ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು."
+      kn: "ಶ್ರೀ. ಗೋವಿಂದ್ ಎಂ ಕಾರಜೋಳ, 199/ಎ, 4ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು.",
     },
-    position: { en: "Executive Committee Member", kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು" },
+    position: {
+      en: "Executive Committee Member",
+      kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
+    },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: ""
-  }
+    mobile: "",
+  },
 ];
-
 
 export const AboutTrustPageContent = {
   firstHeading: {
@@ -478,40 +489,40 @@ export const AboutTrustPageContent = {
   },
 };
 
-export const organizationTalukMembers={
-heading:{
-  tableHeading_en:[
-   "Sl No.",
-   "District",
-   "Designation",
-   "Name and address",  
-   "Contact No.",
-  ],
-  tableHeading_kn:[
-    "ಸಂ.ಸಂಖ್ಯೆ",
-    "ಜಿಲ್ಲೆ",
-    "ಹುದ್ದೆ",
-    "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
-    "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
-  ]
-},
-}
+export const organizationTalukMembers = {
+  heading: {
+    tableHeading_en: [
+      "Sl No.",
+      "District",
+      "Designation",
+      "Name and address",
+      "Contact No.",
+    ],
+    tableHeading_kn: [
+      "ಸಂ.ಸಂಖ್ಯೆ",
+      "ಜಿಲ್ಲೆ",
+      "ಹುದ್ದೆ",
+      "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
+      "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
+    ],
+  },
+};
 
-export const organizationDistrictMembers={
-  heading:{
-    tableHeading_en:[
+export const organizationDistrictMembers = {
+  heading: {
+    tableHeading_en: [
       "Sl No.",
       "Taluk",
       "Designation",
-      "Name and address",  
+      "Name and address",
       "Contact No.",
     ],
-    tableHeading_kn:[
+    tableHeading_kn: [
       "ಸಂ.ಸಂಖ್ಯೆ",
       "ತಾಲೂಕು",
       "ಹುದ್ದೆ",
       "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
       "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
-    ]
-  }
-}
+    ],
+  },
+};
