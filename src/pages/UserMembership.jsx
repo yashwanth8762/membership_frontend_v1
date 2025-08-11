@@ -857,6 +857,7 @@ export default function UserMembership() {
                   <MembershipCard 
                     membershipData={fetchedMembershipData}
                     showColorPicker={true} 
+                    cardType={getMembershipTypeInfo(parseInt(values['Membership Amount']))}
                   />
                 </div>
                 <button

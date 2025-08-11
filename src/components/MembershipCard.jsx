@@ -102,7 +102,10 @@ const MembershipCard = ({
   onColorChange,
   showColorPicker = true,
   onImageLoad,
+  cardType
 }) => {
+  console.log('cardType', cardType);
+  
   // Get membership amount from the data
   const getMembershipAmount = () => {
     if (!membershipData || !membershipData.values) return 500; // default to 500
@@ -199,7 +202,7 @@ const MembershipCard = ({
   const address = getValue('Permanent adress') || getValue('Permanent Address') || getValue('Address') || 'N/A';
   const photo = getPhoto();
   const cardId = membershipNumber;
-  const qrValue = `http://172.20.10.5:5173/membership/user/${membershipData?.membershipId}`;
+  const qrValue = `${API_BASE_URL}/membership/user/${membershipData?.membershipId}`;
 
   console.log('MembershipCard data extracted:', {
     membershipNumber,
@@ -277,10 +280,7 @@ const MembershipCard = ({
           >
             {/* Left side - Details */}
             <div className="flex-1 pr-2 flex flex-col justify-center items-start">
-              <div className="mb-0.5 text-sm font-medium">
-                <span className="font-semibold">ಕ್ರಮ ಸಂಖ್ಯೆ: </span>
-                <span>{serialNumber}</span>
-              </div>
+              
               <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ಸದಸ್ಯತ್ವ ಸಂಖ್ಯೆ: </span>
                 <span className="font-bold" style={{ color: color.accent }}>{membershipNumber}</span>
@@ -300,6 +300,10 @@ const MembershipCard = ({
               <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ವಿಳಾಸ: </span>
                 <span className="break-words">{address}</span>
+              </div>
+              <div className="mb-0.5 text-sm font-medium">
+                <span className="font-semibold">ಕಾರ್ಡ್ ಪ್ರಕಾರ: </span>
+                <span>{cardType.name}</span>
               </div>
             </div>
 
