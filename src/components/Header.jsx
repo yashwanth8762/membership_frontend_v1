@@ -732,7 +732,7 @@ export default function Header({ theme = "transparent" }) {
             
             <button
               onClick={() => {
-                navigate("/donation");
+                navigate("/donate");
                 setMenuOpen(false);
               }}
               className="w-full px-4 py-3 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 text-white rounded-lg font-bold hover:from-lime-400 hover:via-green-500 hover:to-emerald-500 transition-all duration-300 shadow-lg"
