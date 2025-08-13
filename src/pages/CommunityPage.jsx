@@ -271,7 +271,7 @@ const CommunityPage = () => {
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Buddha" : "ಬುದ್ಧ"}</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/basavanna.jpg" alt="Leader 9" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+                <img src="/assets/Basavanna.jpg" alt="Leader 9" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Basavanna" : "ಬಸವಣ್ಣ"}</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
@@ -299,20 +299,20 @@ const CommunityPage = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/b-krishnappa.jpg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Prof. B. Krishnappa" : "ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ"}</div>
+                <img src="/assets/rchanni.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. R Channigaramaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಆರ್. ಚನ್ನಿಗರಾಮಯ್ಯ"}</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/nrachayya.jpg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "N Rachayya" : "ಎನ್ ರಾಚಯ್ಯ"}</div>
+                <img src="/assets/nrachayya.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. N Rachaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಎನ್ ರಾಚಯ್ಯ"}</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/prabhakar.jpg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Prabhakar" : "ಪ್ರಭಾಕರ್"}</div>
+                <img src="/assets/prabakar.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. K. Prabhakar" : "ದಿವಂಗತ. ಶ್ರೀ. ಕೆ. ಪ್ರಭಾಕರ್"}</div>
               </div>
               <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/dmanjunath.jpg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "D Manjunath" : "ಡಿ ಮಂಜುನಾಥ್"}</div>
+                <img src="/assets/dmanjunath.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. D Manjunath" : "ದಿವಂಗತ. ಶ್ರೀ. ಡಿ ಮಂಜುನಾಥ್"}</div>
               </div>
             </div>
           </div>
