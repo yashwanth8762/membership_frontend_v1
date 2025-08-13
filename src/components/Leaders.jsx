@@ -4,7 +4,7 @@ const Leaders = ({ isEnglish = false }) => {
   const leaders = [
     {
       id: 1,
-      name: isEnglish ? "Dr. K.H. Muniyappa" : "ಡಾ.ಕೆ.ಹೆಚ್‌.ಮುನಿಯಪ್ಪ",
+      name: isEnglish ? "Dr. K.H. Muniyappa" : "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ",
       position: isEnglish ? 'President' : 'ಅಧ್ಯಕ್ಷರು',
       image: "/assets/DrKHMuniyappa.jpg"
     },

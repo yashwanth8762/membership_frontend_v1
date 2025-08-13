@@ -102,7 +102,7 @@ export const AboutTrustContent = {
         title_kn: "ಹೆಸರು",
         commitee_members_name: {
           President_en: "Dr|| K.H. Muniyappa",
-          President_kn: "ಡಾ|| ಕೆ.ಹೆಚ್‌.ಮುನಿಯಪ್ಪ",
+          President_kn: "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ",
 
           Vice_President_en: [
             "Sri. A. Narayanaswamy",
@@ -194,7 +194,7 @@ export const HistoryCultureContent = {
       },
       {
         en: "To restore the dignity of the Madara community and bring them into the mainstream of society, senior community leaders — especially Shri K.H. Muniyappa, a 7-time Member of Parliament and former Union Minister — along with various MLAs and Ministers from the state, resolved to launch a unified front. In 2015, they formally established the Karnataka Madiga Mahasabha with a vision to unite and empower the community.",
-        kn: "ಮಾದರ ಸಮುದಾಯದ ಹತಾಶತೆಯನ್ನು ಪರಿಹರಿಸಿ, ಸಮಾಜದ ಮುಖ್ಯವಾಹನಿಗೆ ತರುವ ದೃಷ್ಟಿಕೋನದಿಂದ, ಸಮಾಜದ ಹಿರಿಯ ಮುಖಂಡರು ಮತ್ತು ನಾಯಕರು ವಿಶೇಷವಾಗಿ ಶ್ರೀ ಕ್ಕೆ.ಹೆಚ್. ಮುನಿಯಪ್ಪ, ಸತತ 7 ಬಾರಿ ಲೋಕಸಭಾ ಸದಸ್ಯರಾಗಿದ್ದು, ಕೇಂದ್ರ ಸಚಿವರಾಗಿರುವವರು ಮತ್ತು ಹಲವಾರು ರಾಜ್ಯದ ಶಾಸಕರು, ಸಚಿವರುಗಳು ಒಂದು ದೃಢ ನಿರ್ಣಯದೊಂದಿಗೆ 2015ರಲ್ಲಿ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭೆ' ಯನ್ನು ಆರಂಭಿಸಿದರು.",
+        kn: "ಮಾದರ ಸಮುದಾಯದ ಹತಾಶತೆಯನ್ನು ಪರಿಹರಿಸಿ, ಸಮಾಜದ ಮುಖ್ಯವಾಹನಿಗೆ ತರುವ ದೃಷ್ಟಿಕೋನದಿಂದ, ಸಮಾಜದ ಹಿರಿಯ ಮುಖಂಡರು ಮತ್ತು ನಾಯಕರು ವಿಶೇಷವಾಗಿ ಶ್ರೀ. ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ, ಸತತ 7 ಬಾರಿ ಲೋಕಸಭಾ ಸದಸ್ಯರಾಗಿದ್ದು, ಕೇಂದ್ರ ಸಚಿವರಾಗಿರುವವರು ಮತ್ತು ಹಲವಾರು ರಾಜ್ಯದ ಶಾಸಕರು, ಸಚಿವರುಗಳು ಒಂದು ದೃಢ ನಿರ್ಣಯದೊಂದಿಗೆ 2015ರಲ್ಲಿ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭೆ' ಯನ್ನು ಆರಂಭಿಸಿದರು.",
       },
     ],
   },
@@ -379,7 +379,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Dr. K.H. Muniyappa\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
-      kn: "ಡಾ|| ಕೆ.ಹೆಚ್‌. ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
+      kn: "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -487,7 +487,7 @@ export const AboutTrustPageContent = {
   },
   thirdParagraph: {
     en: "In order to protect the interests of the Madara community and bring them into the mainstream of society, the senior leaders of the society, especially the Honorable Shri K.H. Muniyappa, who has served as a Member of Parliament from Kolar Lok Sabha for 7 consecutive terms, as a Union Minister, and currently as a Member of Legislative Assembly from Devanahalli constituency and as a Minister in the State Government Cabinet, took interest and planned to start 'Karnataka Madiga Mahasabha' with the aim of filling the Madiga community with organizational strength, keeping in mind the development of future generations, and registered the Mahasabha in 2015 with the trust of all community leaders. The first executive committee of the Mahasabha was constituted as follows.",
-    kn: "ಮಾದರ ಸಮುದಾಯದ ಹಿತಾಸಕ್ತಿಯನ್ನು ಕಾಪಾಡಿ ಸಮಾಜದ ಮುಖ್ಯವಾಹಿನಿಗೆ ತರುವ ನಿಟ್ಟಿನಲ್ಲಿ ಸಮಾಜದ ಹಿರಿಯ ಮುಖಂಡರು ಮತ್ತು ನಾಯಕರು ವಿಶೇಷವಾಗಿ ಶ್ರೀ ಕ್ಕೆ.ಹೆಚ್. ಮುನಿಯಪ್ಪ, ಸತತ 7 ಬಾರಿ ಲೋಕಸಭಾ ಸದಸ್ಯರಾಗಿದ್ದು, ಕೇಂದ್ರ ಸಚಿವರಾಗಿರುವವರು ಮತ್ತು ಹಲವಾರು ರಾಜ್ಯದ ಶಾಸಕರು, ಸಚಿವರುಗಳು ಒಂದು ದೃಢ ನಿರ್ಣಯದೊಂದಿಗೆ 2015ರಲ್ಲಿ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭೆ' ಯನ್ನು ಆರಂಭಿಸಿದರು.",
+    kn: "ಮಾದರ ಸಮುದಾಯದ ಹಿತಾಸಕ್ತಿಯನ್ನು ಕಾಪಾಡಿ ಸಮಾಜದ ಮುಖ್ಯವಾಹಿನಿಗೆ ತರುವ ನಿಟ್ಟಿನಲ್ಲಿ ಸಮಾಜದ ಹಿರಿಯ ಮುಖಂಡರು ಮತ್ತು ನಾಯಕರು ವಿಶೇಷವಾಗಿ ಶ್ರೀ. ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ, ಸತತ 7 ಬಾರಿ ಲೋಕಸಭಾ ಸದಸ್ಯರಾಗಿದ್ದು, ಕೇಂದ್ರ ಸಚಿವರಾಗಿರುವವರು ಮತ್ತು ಹಲವಾರು ರಾಜ್ಯದ ಶಾಸಕರು, ಸಚಿವರುಗಳು ಒಂದು ದೃಢ ನಿರ್ಣಯದೊಂದಿಗೆ 2015ರಲ್ಲಿ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭೆ' ಯನ್ನು ಆರಂಭಿಸಿದರು.",
   },
 };
 
