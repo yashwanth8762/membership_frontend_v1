@@ -270,6 +270,8 @@ export const OrganizationContent = {
       { district: "Nominated", members: 1 },
       { district: "Nominated Lawyer", members: 1 },
     ],
+    total_kn: 0,
+    total_en: 0
   },
   first: {
     kn: [
