@@ -276,7 +276,7 @@ const CommunityPage = () => {
           </div>
 
           {/* Photographs of prominent community leaders / personalities / saints */}
-          <div className="w-full max-w-5xl mx-auto mb-12">
+          {/* <div className="w-full max-w-5xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "Philosophers who fought for the welfare of the community"
@@ -336,10 +336,10 @@ const CommunityPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Additional Photographs Section */}
-          <div className="w-full max-w-5xl mx-auto mb-12">
+          {/* <div className="w-full max-w-5xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish ? "Elders of the community" : "ಸಮುದಾಯದ ಹಿರಿಯ ಚೇತನಗಳು "}
             </h2>
@@ -404,6 +404,110 @@ const CommunityPage = () => {
                     : "ದಿ. ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ \nಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ"}
                 </div>
               </div>
+            </div>
+          </div> */}
+          {/* Philosophers Section */}
+          <div className="w-full max-w-5xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+              {isEnglish
+                ? "Philosophers who fought for the welfare of the community"
+                : "ಸಮುದಾಯದ ಕಲ್ಯಾಣಕ್ಕಾಗಿ ಹೋರಾಡಿದ ದಾರ್ಶನಿಕರು"}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+              {[
+                {
+                  img: "/assets/Gautamabuddha.webp",
+                  name_en: "Buddha",
+                  name_kn: "ಬುದ್ಧ",
+                },
+                {
+                  img: "/assets/Basavanna.jpg",
+                  name_en: "Basavanna",
+                  name_kn: "ಬಸವಣ್ಣ",
+                },
+                {
+                  img: "/assets/gandhiji.jpeg",
+                  name_en: "Mahatma Gandhi",
+                  name_kn: "ಮಹಾತ್ಮ ಗಾಂಧಿ",
+                },
+                {
+                  img: "/assets/amdedkar.jpg",
+                  name_en: "Dr. B.R. Ambedkar",
+                  name_kn: "ಡಾ|| ಬಿ.ಆರ್. ಅಂಬೇಡ್ಕರ್",
+                },
+                {
+                  img: "/assets/babujagajeevanram.jpg",
+                  name_en: "Dr. Babu Jagjivan Ram",
+                  name_kn: "ಡಾ|| ಬಾಬು ಜಗಜೀವನ್ ರಾಮ್",
+                },
+              ].map((member, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs"
+                >
+                  <img
+                    src={member.img}
+                    alt={member.name_en}
+                    className="w-32 h-32 object-contain mb-4"
+                  />
+                  <div className="text-lg font-semibold mb-1 text-center">
+                    {isEnglish ? member.name_en : member.name_kn}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Elders Section */}
+          <div className="w-full max-w-5xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+              {isEnglish ? "Elders of the community" : "ಸಮುದಾಯದ ಹಿರಿಯ ಚೇತನಗಳು "}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+              {[
+                {
+                  img: "/assets/rchanni.jpeg",
+                  name_en: "Late. Shri. R Channigaramaiah",
+                  name_kn:
+                    "ದಿ. ಶ್ರೀ ಆರ್ ಚನ್ನಿಗರಾಮಯ್ಯ\nಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ",
+                },
+                {
+                  img: "/assets/nrachayya.jpeg",
+                  name_en: "Late. Shri. N Rachaiah",
+                  name_kn: "ದಿ. ಶ್ರೀ ಎನ್.ರಾಚಯ್ಯ \nಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ",
+                },
+                {
+                  img: "/assets/prabakar.jpeg",
+                  name_en: "Late. Shri. K. Prabhakar",
+                  name_kn:
+                    "ದಿ. ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ \nಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ",
+                },
+                {
+                  img: "/assets/b-krishnappa.jpg",
+                  name_en: "Late. Shri. B. Krishnappa",
+                  name_kn:
+                    "ದಿ. ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ \nಸ್ಥಾಪಕರು , ದಲಿತ ಸಂಘರ್ಷ ಸಮಿತಿ",
+                },
+                {
+                  img: "/assets/dmanjunath.jpeg",
+                  name_en: "Late. Shri. D Manjunath",
+                  name_kn: "ದಿ. ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ \nಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ",
+                },
+              ].map((elder, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs"
+                >
+                  <img
+                    src={elder.img}
+                    alt={elder.name_en}
+                    className="w-32 h-32 object-contain mb-4"
+                  />
+                  <div className="text-lg font-semibold mb-1 text-center whitespace-pre-line">
+                    {isEnglish ? elder.name_en : elder.name_kn}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
