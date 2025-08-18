@@ -35,6 +35,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx';
 import RefundPolicyPage from './pages/RefundPolicyPage.jsx';
 import TermsConditions from './pages/TermsConditions.jsx';
 import DonatePage from './pages/DonatePage.jsx';
+import MembershipReport from './pages/Admin/MembershipReport.jsx';
 
 
 export default function App() {
@@ -74,6 +75,7 @@ export default function App() {
             <Route index element={<AdminHome />} />
             <Route path="membership/create" element={<AddMembershipForm />} />
             <Route path="membership" element={<Membership />} />
+            <Route path="report" element={<MembershipReport />} />
 
             
             <Route path="activity" element={<DefaultOutlet />}>

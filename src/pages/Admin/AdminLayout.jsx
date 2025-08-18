@@ -97,6 +97,7 @@ export default function AdminLayout({ children }) {
           <a href="/dashboard/activity/list" style={{ textDecoration: 'none', color: '#334155', marginBottom: 8 }}>Activity</a>
           <a href="/dashboard/program/list" style={{ textDecoration: 'none', color: '#334155', marginBottom: 8 }}>Upcomming Programs</a>
           <a href="/dashboard/gallery/list" style={{ textDecoration: 'none', color: '#334155', marginBottom: 8 }}>Gallery</a>
+          <a href="/dashboard/report" style={{ textDecoration: 'none', color: '#334155', marginBottom: 8 }}>Membership Report</a>
         
 
         </aside>

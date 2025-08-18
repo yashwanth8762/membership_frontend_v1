@@ -96,72 +96,72 @@ const COLOR_SCHEMES = [
   },
 ];
 
+const CARD_TYPE_MAP = {
+  500:  "ಸಾಮಾನ್ಯ ಸದಸ್ಯತ್ವ",
+  5000: "ವಿಶೇಷ ಸದಸ್ಯತ್ವ",
+  10000: "ಪ್ರೀಮಿಯಂ ಸದಸ್ಯತ್ವ",
+  25000: "ಆಜೀವ ಸದಸ್ಯತ್ವ",
+  50000: "ಪೋಷಕ ಸದಾಶತ್ವ",
+  100000: "ಮಹಾಪೋಷಕ ಸದಾಶತ್ವ",
+  500000: "ಪ್ರೀಮಿಯಂ ಚಿನ್ನದ ಸದಸ್ಯತ್ವ"
+};
+
 const MembershipCard = ({
   membershipData,
   colorIdx: colorIdxProp,
   onColorChange,
   showColorPicker = true,
-  onImageLoad,
-  cardType
+  onImageLoad
 }) => {
-  console.log('cardType', cardType);
-  
-  // Get membership amount from the data
+  // Helper: get membership amount from data
   const getMembershipAmount = () => {
-    if (!membershipData || !membershipData.values) return 500; // default to 500
+    if (!membershipData || !membershipData.values) return 500;
     const amountField = membershipData.values.find((v) => 
-      v.label?.toLowerCase().includes('membership amount') || 
+      v.label?.toLowerCase().includes('membership amount') ||
       v._doc?.label?.toLowerCase().includes('membership amount')
     );
     if (amountField) {
       const amount = amountField.value || amountField._doc?.value;
-      console.log('Found membership amount field:', amountField);
-      console.log('Raw amount value:', amount);
-      console.log('Parsed amount:', parseInt(amount));
       return parseInt(amount) || 500;
     }
-    console.log('No membership amount field found, defaulting to 500');
     return 500;
   };
 
-  // Determine color scheme based on membership amount
+  // Helper: get card type in Kannada
+  const getCardType = (amount) => {
+    return CARD_TYPE_MAP[amount] || "ಸದಸ್ಯತ್ವ ಕಾರ್ಡ್";
+  };
+
+  // Determine color scheme by amount
   const getColorSchemeByAmount = (amount) => {
-    console.log('Getting color scheme for amount:', amount);
     const scheme = COLOR_SCHEMES.find(scheme => scheme.amount === amount);
-    console.log('Found scheme:', scheme);
-    const index = scheme ? COLOR_SCHEMES.indexOf(scheme) : 0;
-    console.log('Color scheme index:', index);
-    return index; // default to blue if not found
+    const idx = scheme ? COLOR_SCHEMES.indexOf(scheme) : 0;
+    return idx;
   };
 
   const membershipAmount = getMembershipAmount();
+  const cardTypeDisplay = getCardType(membershipAmount);
   const autoColorIdx = getColorSchemeByAmount(membershipAmount);
-  console.log('Final membership amount:', membershipAmount);
-  console.log('Auto color index:', autoColorIdx);
+
   const [colorIdx, setColorIdx] = useState(colorIdxProp ?? autoColorIdx);
   const color = COLOR_SCHEMES[colorIdx];
-  console.log('Selected color scheme:', color);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Update color when membership data changes
   useEffect(() => {
     const newMembershipAmount = getMembershipAmount();
     const newAutoColorIdx = getColorSchemeByAmount(newMembershipAmount);
-    console.log('useEffect - New membership amount:', newMembershipAmount);
-    console.log('useEffect - New color index:', newAutoColorIdx);
-    if (colorIdxProp === undefined) {
-      setColorIdx(newAutoColorIdx);
-    }
+    if (colorIdxProp === undefined) setColorIdx(newAutoColorIdx);
   }, [membershipData, colorIdxProp]);
 
-  // Extract data directly from the API response
+  // Extract value by label
   const getValue = (label) => {
     if (!membershipData || !membershipData.values) return '';
     const field = membershipData.values.find((v) => 
       (v.label?.trim()?.toLowerCase() === label?.trim()?.toLowerCase() ||
-       v.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase())) ||
+      v.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase())) ||
       (v._doc?.label?.trim()?.toLowerCase() === label?.trim()?.toLowerCase() ||
-       v._doc?.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase()))
+      v._doc?.label?.trim()?.toLowerCase().includes(label?.trim()?.toLowerCase()))
     );
     if (!field) return '';
     if (field.value !== undefined) return field.value;
@@ -169,11 +169,9 @@ const MembershipCard = ({
     return '';
   };
 
-  // Extract photo from populated media
+  // Extract photo
   const getPhoto = () => {
     if (!membershipData || !membershipData.values) return undefined;
-    
-    // Only use _doc for image check
     const photoField = membershipData.values.find((v) => 
       v._doc?.label?.toLowerCase().includes('upload image') || 
       v._doc?.label?.toLowerCase().includes('photo') ||
@@ -182,12 +180,10 @@ const MembershipCard = ({
       v.label?.toLowerCase().includes('photo') ||
       v.label?.toLowerCase().includes('image')
     );
-    
     if (photoField && photoField.media && photoField.media.length > 0) {
       const mediaItem = photoField.media[0];
       if (mediaItem && mediaItem.image_url && mediaItem.image_url.full && mediaItem.image_url.full.high_res) {
-        const photoUrl = `${API_BASE_URL}${mediaItem.image_url.full.high_res}`;
-        return photoUrl;
+        return `${API_BASE_URL}${mediaItem.image_url.full.high_res}`;
       }
     }
     return undefined;
@@ -195,7 +191,6 @@ const MembershipCard = ({
 
   // Extract all the data
   const membershipNumber = membershipData?.membershipId ? membershipData.membershipId.slice(-4) : '0000';
-  const serialNumber = '1';
   const name = getValue('Enter Your Name') || getValue('Name') || getValue('Your Name') || 'N/A';
   const parentName = getValue('Father/Mother/Husband/Name') || getValue('Father') || getValue('Parent') || 'N/A';
   const dob = getValue('Date of Birth') || getValue('DOB') || getValue('Birth') || 'N/A';
@@ -204,17 +199,7 @@ const MembershipCard = ({
   const cardId = membershipNumber;
   const qrValue = `${API_BASE_URL}/membership/user/${membershipData?.membershipId}`;
 
-  console.log('MembershipCard data extracted:', {
-    membershipNumber,
-    name,
-    parentName,
-    dob,
-    address,
-    photo,
-    cardId
-  });
-
-  // Allow parent to control color if desired
+  // Color change handler (if parent wants to control)
   const handleColorChange = idx => {
     setColorIdx(idx);
     if (onColorChange) onColorChange(idx);
@@ -222,7 +207,6 @@ const MembershipCard = ({
 
   return (
     <div className="flex flex-col items-center">
-      {/* Card */}
       <div
         className="mx-auto"
         style={{
@@ -266,7 +250,6 @@ const MembershipCard = ({
               ಸದಾಸ್ಯತ್ವ ಕಾರ್ಡ್
             </p>
           </div>
-
           {/* Main Content */}
           <div
             className="flex flex-1 px-4 py-2"
@@ -280,7 +263,6 @@ const MembershipCard = ({
           >
             {/* Left side - Details */}
             <div className="flex-1 pr-2 flex flex-col justify-center items-start">
-              
               <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ಸದಸ್ಯತ್ವ ಸಂಖ್ಯೆ: </span>
                 <span className="font-bold" style={{ color: color.accent }}>{membershipNumber}</span>
@@ -303,10 +285,9 @@ const MembershipCard = ({
               </div>
               <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ಕಾರ್ಡ್ ಪ್ರಕಾರ: </span>
-                <span>{cardType.name}</span>
+                <span>{cardTypeDisplay}</span>
               </div>
             </div>
-
             {/* Right side - Photo */}
             <div className="flex flex-col items-center justify-center w-28 relative">
               <div className="relative mt-1">
@@ -339,7 +320,6 @@ const MembershipCard = ({
               </div>
             </div>
           </div>
-
           {/* Bottom section */}
           <div
             className="border-t border-dashed mt-0 pt-1 px-4 pb-1 flex items-end justify-between"
@@ -367,16 +347,8 @@ const MembershipCard = ({
               </div>
               <div className="text-center text-xs mt-0.5 font-semibold tracking-wide">{cardId}</div>
             </div>
-
             {/* Signatures */}
             <div className="flex-1 flex justify-end space-x-8">
-              {/* <div className="text-center">
-                <div
-                  className="h-6 border-b mb-1"
-                  style={{ borderColor: color.border }}
-                ></div>
-                <span className="text-xs font-medium tracking-wide">ಅಧ್ಯಕ್ಷರು</span>
-              </div> */}
               <div className="text-center">
                 <div
                   className="h-6 border-b mb-1"
