@@ -51,14 +51,14 @@ export const AboutTrustContent = {
   objectives_title_en: "Objectives of Karnataka Madara Mahasabha",
   objectives_title_kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ಉದ್ದೇಶಗಳು",
   objectives_en: [
-    "Since the Madara and Madiga communities of Karnataka have made significant contributions in the economic, social, political, and educational fields, it is necessary to implement programs that further their development in these areas.",
-    "In order to ensure the development of the Madara community, it is essential to systematically provide all possible assistance, facilities, and welfare schemes offered by the State and Central governments as well as other institutions, and to collaborate with other communities to bring this community into the mainstream of society.",
-    "To promote mutual friendship, harmony, and trust with other backward communities, efforts will be made to implement supportive and collaborative programs within the Madara society.",
-    "For the educational development of the Madara and other backward communities in the state, schools, colleges, and educational institutions will be established, and an environment conducive to community development will be created. In addition, efforts will be made to construct hostels, training centers, and community halls for Madara students across the state.",
-    "To provide opportunities for higher education to Madara and other backward community students, scholarships, accommodation, and local facilities will be provided.",
-    "To spread the objectives of the Madara Mahasabha, media and communication centers will be established and made available for public awareness and outreach.",
-    "For the economic development of the Madara and other backward communities, cooperative societies and banks will be established to provide all necessary financial and infrastructural support.",
-    "In the interest of society, timely and need-based programs will be formulated and implemented through general body meetings held periodically.",
+    "Since the Madara/Madiga communities of Karnataka have historically been disadvantaged in the economic, social, political, and educational spheres, the Mahasabha is committed to taking all necessary steps to ensure their progress and development. Its key objectives include:",
+    "Ensuring Development and Support: To secure and facilitate all forms of assistance, benefits, and facilities available from the State and Central Governments, as well as from other institutions, for the upliftment of the Madara community, and to enable collaboration with other communities for mutual growth and integration into the social mainstream.",
+    "Promoting Unity and Solidarity: To organize programs that foster harmony, goodwill, and mutual trust among all allied sub-castes within the Madara community.",
+    "Educational Advancement: To establish schools, colleges, and other educational institutions for the development of the community; to create a supportive environment for social progress; and to build hostels, training centers, and community halls across the State for Madara students.",
+    "Scholarships and Facilities: To provide scholarships, hostels, and loan facilities for Madara and allied community students to pursue higher education.",
+    "Media and Awareness: To establish news channels and publications for the purpose of promoting the objectives of the Mahasabha and ensuring effective communication.",
+    "Economic Empowerment: To set up cooperative societies and banks for the economic progress of the Madara and allied communities, providing financial assistance and loan facilities for their upliftment.",
+    "Time-Bound Programs: To design and implement timely programs approved by the General Body meetings, in line with the changing needs of society, for the welfare of the community.",
   ],
   objectives_kn: [
     "ಕರ್ನಾಟಕ ರಾಜ್ಯ ದ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜ್ರ್ನಾಂಗದವರು ಆರ್ಥಾಕ, ಸ್ಥಮಾಜಿಕ, ರಾಜ್ಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷ ೀತ್ರ ಗಳಲ್ಲಿ ಹಾಂದ್ದಳಿದವರಾಗಿರುವ ಕಾರಣ ಈ ಕ್ಷ ೀತ್ರ ಗಳಲ್ಲಿ ಅವರುಮಾಂದ್ದವರೆದ್ದ ಅಭಿವೃದಿಿ ಹಾಂದಲು ಅಗತ್ಯ ವಾದ ಎಲ್ಲಿ ಕರ ಮಗಳನ್ನು ಕ್ೈಗೊಳ್ಳು ವುದ್ದ.",
@@ -201,6 +201,26 @@ export const HistoryCultureContent = {
 };
 
 export const OrganizationContent = {
+  note: {
+    kn: "ಮಹಾಸಭಾ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದೆ, ಜೊತೆಗೆ ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲ್ಲೂಕು ಶಾಖೆಗಳಿರುತ್ತವೆ. ಸಭಾದ ಮತ್ತು ಶಾಖೆಗಳ ವಿಶಿಷ್ಟ ಆಡಳಿತವನ್ನು ಒಂದು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಿಂದ ನಡೆಸಲ್ಪಡಲಾಗುವುದು.",
+    en: "The Mahasabha headquarters is located in Bangalore, along with district and taluk branches. The specific administration of the Sabha and the branches is carried out by an executive committee.",
+  },
+
+  first: {
+    title_en: "Central Executive Committee",
+    title_kn: "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+    paragraph_kn: [
+      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅವರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರುತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು. ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು  ಮಾದಿಗ ಸಮಾಜದ ಪರ್ಯಾಯ  ಜಾತಿಗಳ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ವರ್ಗದವರಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪೈಕಿ ಒಬ್ಬ ಅಧ್ಯಕ್ಷ, ಎರಡು ಉಪಾಧ್ಯಕ್ಷರು, ಎರಡು ಪ್ರಧಾನಕಾರ್ಯದರ್ಶಿ, ನಾಲ್ಕು ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ, ಒಬ್ಬ ಖಜಾಂಚಿ ಮತ್ತು ಒಬ್ಬ ಕಾನೂನು ಸಲಹೆಗಾರರನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
+      "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ.",
+      "ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
+    ],
+    paragraph_en: [
+      "The number of members of the Central Executive Committee will be 45 from all districts including Bangalore city. The Executive Committee will have the power to select three of them through nomination. One of these members must be a lawyer, must be recognized in the work of the society and must be of good character. The remaining two positions will be filled by the nomination of the non-represented castes of the Madiga society. One president, two vice-presidents, two general secretaries, four organizing secretaries, one treasurer and one legal advisor will be selected from among the members of the Executive Committee.",
+      "The members of the Executive Committee are directly elected by the Central, District and Taluk Committee members in periodic elections.",
+      "The following executive committee member positions have been determined based on the current Madara population from the districts.",
+    ],
+  },
+
   table: {
     kn: [
       { district: "ಬೆಂಗಳೂರು ನಗರ", members: 4 },
@@ -271,25 +291,20 @@ export const OrganizationContent = {
       { district: "Nominated Lawyer", members: 1 },
     ],
     total_kn: 0,
-    total_en: 0
+    total_en: 0,
   },
-  first: {
-    kn: [
-      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅದರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಸದಸ್ಯರನ್ನು ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು.  ಪರ್ಯಾಯ ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು ಮಾದಿಗ ಸಮಾಜದ ವರ್ಗದಿಂದ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ಜಾತಿಗಳಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ. ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
-      "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
+
+  first_otherhalf: {
+    paragraph_kn: [
+      "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲ್ಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
       "ಒಂದು ಸಾಲಿನಲ್ಲಿ ಚುನಾವಣೆಯಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ 3 ವರ್ಷದ ಅವಧಿಯದಾಗಿದ್ದು, ಮುಂದಿನ ಚುನಾವಣೆಯಾಗುವವರೆಗೂ ಅಧಿಕಾರದಲ್ಲಿರುತ್ತದೆ. ಕಾರಣಾಂತರಗಳಿಂದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸ್ಥಾನ ಅಥವಾ ಸ್ಥಾನಗಳು ಖಾಲಿ ಬಿದ್ದಾಗ ಸದರಿ ಸ್ಥಾನಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿಕೊಳ್ಳದಿದ್ದರೂ ಸಹ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ನಿರ್ಣಯಗಳು ಸಿಂಧುವಾಗತಕ್ಕವಾಗಿರುತ್ತದೆ.",
-      "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸಭೆಯನ್ನು ನಡೆಸುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50%, ಹೆಚ್ಚು ಸದಸ್ಯರುಗಳಾದರೂ (ಕೋರಂ) ಹಾಜರಿರಲೇಬೇಕು.",
     ],
-    en: [
-      "The number of Central Executive Members, including all districts and Bangalore Urban, will be a total of 45. Out of these, the Executive Committee has the authority to nominate 3 members. Among the nominated members, one must compulsorily be a lawyer, recognized for contributions in social service, and must possess good character. The remaining two positions will be filled by nominating individuals from castes within the Madiga community that are not already represented. The members of the Executive Committee will be elected directly from time to time through voting by members of the Central, District, and Taluk Committees. Currently, the Executive Member positions have been determined based on the population of the Madiga community in each district.",
-
-      "In case of any vacancies, the Executive Committee shall appoint new members from the respective district, taluk, or related branch jurisdiction in the next scheduled Executive Committee meeting.",
-
-      "An elected Executive Committee shall have a term of 3 years and will remain in power until the next election. Even if some positions remain vacant due to unforeseen reasons, the decisions of the Executive Committee shall still be considered valid.",
-
-      "To conduct a meeting of the Executive Committee, at least 50% of the members (quorum) must be present.",
+    paragraph_en: [
+      "For vacant member positions, members will be appointed from the respective district and taluk branches in the next Executive Committee meeting.",
+      "The term of the Executive Committee elected in a given term is 3 years and shall remain in office until the next election. If, for any reason, a seat or seats on the Executive Committee become vacant, the decisions of the Executive Committee shall be valid even if the said seats are not filled.",
     ],
   },
+
   second: {
     5: {
       title_en: "District Branch Executive Committee",
@@ -352,20 +367,20 @@ export const OrganizationContent = {
       title_kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಗಳು : ಸಮ್ಮೇಳನಗಳು",
       items: [
         {
-          en: "General Body Meeting: The general body meeting consists of executive committee members and all other members, and will be referred to as the General Body Meeting.",
-          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ: ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು.",
+          title_kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ",
+          title_en: "General Body Meeting",
+          en: "The general body meeting consists of executive committee members and all other members, and will be referred to as the General Body Meeting.",
+          kn: "ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು.",
         },
         {
-          en: "Ordinary Meeting: Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
-          kn: "ಸಾಮಾನ್ಯ ಸಭೆ: ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟೀನ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿಲ್ಲದಂತೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು.",
+          title_kn: "ಸಾಮಾನ್ಯ ಸಭೆ",
+          title_en: "Ordinary Meeting",
+          en: "Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
+          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟೀನ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿಲ್ಲದಂತೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು.",
         },
-      ],
-    },
-    8: {
-      title_en: "Special Meeting",
-      title_kn: "ವಿಶೇಷ ಸಭೆ",
-      items: [
         {
+          title_kn: "ವಿಶೇಷ ಸಭೆ",
+          title_en: "Special Meeting",
           en: "Special or important matters of the association can be decided in a special general body meeting called by the president and general secretary with the approval of the executive committee. At least more than 50% of the members must be present for a special meeting. Notice of such a meeting mentioning the subjects to be discussed must be given at least 21 days in advance.",
           kn: "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು ಮತ್ತು ವಿಶೇಷ ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಮಂದಿ ಅಥವಾ 50% ಗಿಂತ ಕಡಿಮೆಯಿಲ್ಲದೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು. ಇಂತಹ ಸಭೆ ಕೂಡುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 21 ದಿನ ಮುಂಚಿತವಾಗಿ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ಮೀಟಿಂಗ್‌ ನೋಟೀಸ್‌ ಕೊಡಲಾಗುವುದು.",
         },
@@ -374,7 +389,6 @@ export const OrganizationContent = {
   },
 };
 
-// CommitteeMembers.js or in OrganizationContent
 export const CommitteeMembers = [
   {
     name: {
@@ -383,7 +397,7 @@ export const CommitteeMembers = [
     },
     position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9611835999",
   },
   {
     name: {
@@ -392,7 +406,7 @@ export const CommitteeMembers = [
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9900495555",
   },
   {
     name: {
@@ -401,7 +415,7 @@ export const CommitteeMembers = [
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9945137402",
   },
   {
     name: {
@@ -410,7 +424,7 @@ export const CommitteeMembers = [
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9980004666",
   },
   {
     name: {
@@ -431,7 +445,7 @@ export const CommitteeMembers = [
       kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9845678275",
   },
   {
     name: {
@@ -440,7 +454,7 @@ export const CommitteeMembers = [
     },
     position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9611133917",
   },
   {
     name: {
@@ -452,7 +466,7 @@ export const CommitteeMembers = [
       kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9448455881",
+    mobile: "9980272727",
   },
   {
     name: {
@@ -464,30 +478,42 @@ export const CommitteeMembers = [
       kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "",
+    mobile: "9448102896",
+  },
+  {
+    name: {
+      en: "Shri.H. Venkatesh Dodderi\n # 1, 2nd Floor, Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
+      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ, # 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
+    },
+    position: {
+      en: "Legal advisors",
+      kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು",
+    },
+    occupation: { en: "Lawyer", kn: "ವಕೀಲರು" },
+    mobile: "9900456379",
   },
 ];
 
 export const AboutTrustPageContent = {
-  firstHeading: {
-    en: "Madaras - The First Kings of India",
-    kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು",
-  },
-  secondHeading: {
-    en: "Madaras - The First Warriors of India",
-    kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು",
-  },
   paragraph: {
-    en: "Madara is the name of one of India's most ancient ethnic groups, the name of the first ethnic group born and raised in India. It is the name of the ethnic group belonging to the first royal dynasty that ruled India. It is the name of the powerful warrior ethnic group that first introduced monarchy and democracy to ancient India. During the time when Madigas ruled, the people of the land used to respectfully call them Mahadore, Mahadore. They used to say Mahadevaru, Mahadevaru with devotion. The word Mahadore itself became Mahadevaru, Madore, Madevaru, Maderu, Madaru, Madara. Thus, through these historical names, the Madara ethnic group has earned their own senior position in India's history. The Madara ethnic group is India's first political ethnic group, and though they are Madiga ethnic group, in the modern era, they are gods, worshipped and revered with fear and devotion by all castes and all ethnic groups, Male Mahadeshwara, Marulasiddha and others are proper evidence and strong proof of ethnic superiority.",
-    kn: "ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು, ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿದ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಕೀಯ ಮತ್ತು ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ,ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ, ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಅದುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ , ಎಲ್ಲ ಜಾತಿ ಎಲ್ಲ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೇಮಹದೇಶ್ವರ ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
+    en: "The Karnataka Madara Mahasabha was established in 2015 with the aim of addressing the backwardness of the Madara/Madiga Communities of Karnataka in the economic, social, political, and educational spheres. Its purpose is to take all necessary measures to enable this Community to progress and integrate into the mainstream of society. The Madara/ Madiga Community of Karnataka come under the purview of the Karnataka Madara Mahasabha.",
+    kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ 2015 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದ್ದು, ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದಿರುವ ಕಾರಣ ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಸಮಾಜದ ಮುಖ್ಯ ವಾಹಿನಿಗೆ ಬರಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವ ಉದ್ದೇಶ ಹೊಂದಿರುತ್ತದೆ. ಕರ್ನಾಟಕ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ವ್ಯಾಪ್ತಿಗೆ ಸೇರಿರುತ್ತಾರೆ.",
   },
   secondParagraph: {
-    en: "However, due to the conspiracy of the first foreign migrants to India, the Arya Brahmins, the Madigas' royal authority was destroyed. Since cultural elevation was destroyed, economic elevation was destroyed. Since economic elevation was destroyed, social elevation was destroyed. Since social elevation was destroyed, educational elevation was destroyed. Since educational elevation was destroyed, industrial elevation was destroyed. Since industrial elevation was destroyed, Madigas became untouchables and became slaves to foreign Brahmin religion and culture. In such a deplorable situation, the Arya Brahmins, who took possession of the Madigas' education and intelligence through many tricks and conspiracies, made them their hereditary property and applied indelible ink to the Madigas' name and breath. By giving derogatory and dirty meanings to the Madigas' supreme tradition and history, they reduced and reduced their mental, intellectual, and physical strength, making them dwarfs. Due to these reasons, the Madiga community has been continuously exploited by upper castes and has become extremely backward socially, economically, and educationally.",
-    kn: "ಆದರೆ ಭಾರತಕ್ಕೆ ವಲಸೆ ಬಂದ ಮೊದಲ ವಿದೇಶಿಯರಾದ ಆರ್ಯ ಬ್ರಾಹ್ಮಣರ ಒಳಸಂಚಿನಿಂದಾಗಿ ಮಾದಿಗರ ರಾಜ್ಯಾಧಿಕಾರ ನಾಶವಾಯಿತು. ಸಾಂಸ್ಕೃತಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಆರ್ಥಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಆರ್ಥಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಸಾಮಾಜಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಔದ್ಯೋಗಿಕ ಉನ್ನತಿ ನಾಶವಾಯಿತು. ಔದ್ಯೋಗಿಕ ಉನ್ನತಿ ನಾಶವಾಗಿದ್ದರಿಂದ ಮಾದಿಗರು ಅಸ್ಪೃಶರಾದರು, ವಿದೇಶಿ ಬ್ರಾಹ್ಮಣರ ಧರ್ಮ ಮತ್ತು ಸಂಸ್ಕೃತಿಗೆ ಗುಲಾಮರಾದರು. ಇಂತಹ ಹೀನಾಯ ಪ್ರಸ್ಥಿತಿಯಲ್ಲಿ ಮಾದಿಗರ ವಿದ್ಯಾವಂತಿಕೆಯನ್ನು, ಬುದ್ದಿವಂತಿಕೆಯನ್ನು ಅನೇಕ ತಂತ್ರಕುತಂತ್ರಗಳಿಂದ ವಶಪಡಿಸಿಕೊಂಡ ಆರ್ಯ ಬ್ರಾಹ್ಮಣರು ಅವುಗಳನ್ನು ತಮ್ಮ ವಂಶಪಾರಂಪರ್ಯ ಗುತ್ತಿಗೆಯ ವಸ್ತುಗಳನ್ನಾಗಿ ಮಾಡಿಕೊಂಡು ಮಾದಿಗರ ಹೆಸರಿಗೆ ಮತ್ತು ಉಸಿರಿಗೆ ಅಳಿಸಲಾರದಂತಹ ಮಸಿ ಬಳಿದರು. ಮಾದಿಗರ ಅತ್ಯುನ್ನತ ಪರಂಪರೆಗೆ, ಇತಿಹಾಸಕ್ಕೆ ಕೀಳಾರ್ಥವನ್ನು, ಕೊಳಕಾರ್ಥವನ್ನು ನೀಡುವ ಮೂಲಕ ಅವರ ಮಾನಸಿಕ , ಬೌದ್ಧಿಕ, ಮತ್ತು ದೈಹಿಕ ಬಲವನ್ನು ಕುಗ್ಗಿಸಿ ಕುಗ್ಗಿಸಿ ಕುಬ್ಜರನ್ನಾಗಿ ಮಾಡಿದರು. ಈ ಕಾರಣಗಳಿಂದ ಮಾದಿಗ ಸಮುದಾಯದವರು ನಿರಂತರವಾಗಿ ಮೇಲ್ಜಾತಿಗಳ ಶೋಷಣೆಗೆ ಒಳಪಟ್ಟು ಸಾಮಾಜಿಕವಾಗಿ, ಆರ್ಥಿಕವಾಗಿ ಮತ್ತು ಶೈಕ್ಷಣಿಕವಾಗಿ ಅತ್ಯಂತ ಹಿಂದುಳಿದಿದ್ದಾರೆ.",
+    en: "With the intention of safeguarding the interests of the Madara / Madiga  Community and bringing them into the social mainstream, senior leaders and visionaries of the Community, particularly the respected Dr. K.H. Muniyappa—who has served seven consecutive terms as a Member of Parliament from Kolar Lok Sabha constituency, held positions as Union Minister, and is currently the MLA from Devanahalli Assembly Constituency as well as a Minister in the Government of Karnataka—took keen interest. Keeping in mind the development of future generations and with the objective of strengthening the organizational unity of the Madiga Community, he initiated the plan to establish Karnataka Madara Mahasabha.",
+    kn: "ಮಾದರ ಸಮುದಾಯದ ಹಿತಾಸಕ್ತಿಯನ್ನು ಕಾಪಾಡಿ ಸಮಾಜದ ಮುಖ್ಯವಾಹಿನಿಗೆ ತರುವ ನಿಟ್ಟಿನಲ್ಲಿ ಸಮಾಜದ ಹಿರಿಯ ಮುತ್ಸದ್ಧಿಗಳು / ಮುಖಂಡರು ವಿಶೇಷವಾಗಿ ಸತತ 7 ಬಾರಿಗೆ ಕೋಲಾರ ಲೋಕಸಭಾದ ಸಂಸದರಾಗಿ, ಕೇಂದ್ರ ಮಂತ್ರಿಗಳಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸಿರುವ ಮತ್ತು ಹಾಲಿ ದೇವನಹಳ್ಳಿ ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರದ ಶಾಸಕರು ಮತ್ತು ರಾಜ್ಯಸರ್ಕಾರದ ಮಂತ್ರಿಮಂಡಲದಲ್ಲಿ ಸಚಿವರಾಗಿರುವ  ಸನ್ಮಾನ್ಯ ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ ನವರು ಆಸಕ್ತಿ ವಹಿಸಿ ಮುಂದಿನ ಪೀಳಿಗೆಯ ಅಭಿವೃದ್ಧಿಯನ್ನು ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡು ಹಾಗೂ ಮಾದಿಗ ಸಮುದಾಯಕ್ಕೆ ಸಂಘಟನಾ ಶಕ್ತಿ ತುಂಬುವ ಉದ್ದೇಶದಿಂದ “ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ” ವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಯೋಜಿಸಿ ಸಮುದಾಯದ ಎಲ್ಲಾ ಮುಖಂಡರುಗಳ ವಿಶ್ವಾಸದೊಂದಿಗೆ 2015 ರಲ್ಲಿ ಮಹಾಸಭಾವನ್ನು ನೊಂದಣಿ ಮಾಡಿಸಿದರು. ಮಹಾಸಭಾದ ಮೊದಲ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯನ್ನು ಕೆಳಕಂಡಂತೆ  ರಚಿಸಲಾಯಿತು.",
   },
   thirdParagraph: {
-    en: "In order to protect the interests of the Madara community and bring them into the mainstream of society, the senior leaders of the society, especially the Honorable Shri K.H. Muniyappa, who has served as a Member of Parliament from Kolar Lok Sabha for 7 consecutive terms, as a Union Minister, and currently as a Member of Legislative Assembly from Devanahalli constituency and as a Minister in the State Government Cabinet, took interest and planned to start 'Karnataka Madiga Mahasabha' with the aim of filling the Madiga community with organizational strength, keeping in mind the development of future generations, and registered the Mahasabha in 2015 with the trust of all community leaders. The first executive committee of the Mahasabha was constituted as follows.",
-    kn: "ಮಾದರ ಸಮುದಾಯದ ಹಿತಾಸಕ್ತಿಯನ್ನು ಕಾಪಾಡಿ ಸಮಾಜದ ಮುಖ್ಯವಾಹಿನಿಗೆ ತರುವ ನಿಟ್ಟಿನಲ್ಲಿ ಸಮಾಜದ ಹಿರಿಯ ಮುಖಂಡರು ಮತ್ತು ನಾಯಕರು ವಿಶೇಷವಾಗಿ ಶ್ರೀ. ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ, ಸತತ 7 ಬಾರಿ ಲೋಕಸಭಾ ಸದಸ್ಯರಾಗಿದ್ದು, ಕೇಂದ್ರ ಸಚಿವರಾಗಿರುವವರು ಮತ್ತು ಹಲವಾರು ರಾಜ್ಯದ ಶಾಸಕರು, ಸಚಿವರುಗಳು ಒಂದು ದೃಢ ನಿರ್ಣಯದೊಂದಿಗೆ 2015ರಲ್ಲಿ 'ಕರ್ನಾಟಕ ಮಾದಿಗ ಮಹಾಸಭೆ' ಯನ್ನು ಆರಂಭಿಸಿದರು.",
+    en: "With the trust and support of all community leaders, the Mahasabha was formally registered in 2015, and its first Executive Committee was constituted as follows.",
+    kn: "",
+  },
+  fourthParagraph: {
+    en: "Late Sri K.A. Anand played a very important role in establishing the Mahasabha. Unfortunately, due to his untimely death, Sri A. Muniyappa, former chairman of Karnataka State SC/ST Commission, was appointed as General Secretary in his place.",
+    kn: "ದಿ. ಶ್ರೀ.ಕೆ.ಎ.ಆನಂದ್‌ ರವರು ಮಹಾಸಭಾ ಸ್ಥಾಪಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಅತ್ಯಂತ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸಿರುತ್ತಾರೆ. ಇವರು ದುರಾದೃಷ್ಟವಶಾತ್‌ ಅಕಾಲಿಕ ಮರಣಕ್ಕೆ ಒಳಗಾಗಿದ್ದರಿಂದ ಇವರ ಸ್ಥಾನದಲ್ಲಿ ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ, ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಪ.ಜಾ ಮತ್ತು ಪ.ಪಂ ಆಯೋಗ, ರವರನ್ನು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಯಾಗಿ ನೇಮಕ ಮಾಡಲಾಗಿದೆ.",
+  },
+  fifthParagraph: {
+    kn: "ಮಹಾಸಭಾದ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದ್ದು, ಸಭಾದ ಶಾಖೆಗಳು 3 ಹಂತದಲ್ಲಿ ಇರುತ್ತವೆ. ಅವುಗಳೆಂದರೆ ಕೇಂದ್ರ ಸ್ಥಾನ , ಜಿಲ್ಲಾ ಶಾಖೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಶಾಖೆ",
+    en: "Headquarters and Branches of the Mahasabha: The central office of the Karnataka Madara Mahasabha is located in Bengaluru. The Mahasabha functions through a three-tier branch system: Central Office , District Branches and Taluk Branches",
   },
 };
 
