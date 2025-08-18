@@ -40,7 +40,7 @@
 //       <div className="flex flex-col">
 //         <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
 //         <div className="space-y-3">
-//           <p><a className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 transition-colors" href="#about-trust">About Us</a></p>
+//           <p><a className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 transition-colors" href="#about-trust">About Mahasabha</a></p>
 //           <p><a className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 transition-colors" href="#">History & Culture</a></p>
 //           <p><a className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 transition-colors" href="#">Activities</a></p>
 //           <p><a className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 transition-colors" href="#">Upcoming Programs</a></p>
@@ -170,7 +170,7 @@ const handleNavigation = useNavigate();
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && handleNavigation('/about-trust')}
             >
-              About Us
+              About Mahasabha
             </span>
           </p>
           <p>
