@@ -232,8 +232,8 @@ const OrganizationPage = () => {
           <div className="w-full max-w-6xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
-                ? "Executive Committee Members"
-                : "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
+                ? "List of current Central Executive Committee members"
+                : "ಪ್ರಸ್ತುತ ಅಧಿಕಾರದಲ್ಲಿರುವ ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪಟ್ಟಿ "}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
@@ -287,7 +287,7 @@ const OrganizationPage = () => {
           {/* Taluk Members Table */}
           <div className="w-full max-w-6xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-              {isEnglish ? "District Samithi" : "ಜಿಲ್ಲಾ ಸಮಿತಿ"}
+              {isEnglish ? "District Samithi" : "ಜಿಲ್ಲಾ  ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ "}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
@@ -313,7 +313,7 @@ const OrganizationPage = () => {
           {/* District Members Table */}
           <div className="w-full max-w-6xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-              {isEnglish ? "Taluk Samithi" : "ತಾಲೂಕು ಸಮಿತಿ"}
+              {isEnglish ? "Taluk Samithi" : "ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ"}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
