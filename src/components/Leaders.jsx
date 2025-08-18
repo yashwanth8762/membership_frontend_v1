@@ -4,7 +4,7 @@ const Leaders = ({ isEnglish = false }) => {
   const leaders = [
     {
       id: 1,
-      name: isEnglish ? "Dr. K.H. Muniyappa" : "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ",
+      name: isEnglish ? "Dr. K.H. Muniyappa" : "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
       position: isEnglish ? 'President' : 'ಅಧ್ಯಕ್ಷರು',
       image: "/assets/DrKHMuniyappa.jpg"
     },
@@ -34,8 +34,8 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 6,
-      name: isEnglish ? "Sri. Pillamuniswamyappa" : "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ",
-      position: isEnglish ? 'Organizing Secretary' : 'ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ',
+      name: isEnglish ? "Sri. Pillamuniswamyappa" : "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
+      position: isEnglish ? 'Organizing Secretary' : 'ರಾಜ್ಯ ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ',
       image: "/assets/Pillamunishamappa.webp"
     },
     {
@@ -52,7 +52,8 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 9,
-      name: isEnglish ? "Sri. Govinda Karajol" : "ಗೋವಿಂದ ಕಾರಜೋಳ",
+      name: isEnglish ? "Sri. Govinda Karajol" : "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ
+",
       position: isEnglish ? 'Executive Committee Member' : 'ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯ',
       image: "/assets/GovindKarajol.jpeg"
     },

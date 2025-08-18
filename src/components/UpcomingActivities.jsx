@@ -110,7 +110,7 @@ const UpcomingActivities = () => {
 
   return (
     <section className="w-full py-12 overflow-hidden">
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">{isEnglish ? "Notifications/Programs" : "ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು"}</h2>
+      <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">{isEnglish ? "Notifications/Programs" : "ಮಹಾಸಭಾದ ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು"}</h2>
       <div className="max-w-7xl mx-auto flex justify-end mb-8 px-4">
         <button
           className="cursor-pointer inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow hover:bg-blue-700 transition-all duration-200 text-sm"

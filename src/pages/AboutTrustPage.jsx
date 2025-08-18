@@ -206,7 +206,7 @@ const AboutTrustPage = () => {
                 {
                   img: "/assets/DrKHMuniyappa.jpg",
                   name_en: "Dr|| K.H. Muniyappa",
-                  name_kn: "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ",
+                  name_kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
                   designation_en: "President",
                   designation_kn: "ಅಧ್ಯಕ್ಷ",
                 },
@@ -241,9 +241,9 @@ const AboutTrustPage = () => {
                 {
                   img: "/assets/Pillamunishamappa.webp",
                   name_en: "Sri. Pillamuniswamyappa",
-                  name_kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ",
+                  name_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
                   designation_en: "Organizational Executive",
-                  designation_kn: "ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
+                  designation_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
                   img: "/assets/DrllSujata.jpeg",
@@ -262,7 +262,8 @@ const AboutTrustPage = () => {
                 {
                   img: "/assets/GovindKarajol.jpeg",
                   name_en: "Sri.Govinda Karajol",
-                  name_kn: "ಗೋವಿಂದ ಕಾರಜೋಳ",
+                  name_kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ
+",
                   designation_en: "Executive Committee Member",
                   designation_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
                 },
@@ -301,28 +302,29 @@ const AboutTrustPage = () => {
                 ? "Founders and First executive Committee members"
                 : "ಸ್ಥಾಪಕರು ಮತ್ತು ಮೊದಲ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+
               {[
                 {
                   img: "/assets/DrKHMuniyappa.jpg",
                   name_en: "Dr|| K.H. Muniyappa",
-                  name_kn: "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ",
+                  name_kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
                   designation_en: "President",
-                  designation_kn: "ಅಧ್ಯಕ್ಷ",
+                  designation_kn: "ಅಧ್ಯಕ್ಷರು",
                 },
                 {
                   img: "/assets/ShriANarayanaswamy.jpg",
                   name_en: "Sri. A. Narayanaswamy",
                   name_kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ",
                   designation_en: "Vice President",
-                  designation_kn: "ಉಪಾಧ್ಯಕ್ಷ",
+                  designation_kn: "ಉಪಾಧ್ಯಕ್ಷರು",
                 },
                 {
                   img: "/assets/KMThimmarayappa.jpeg",
                   name_en: "Sri. K.M. Thimmarayappa",
                   name_kn: "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ",
                   designation_en: "Vice President",
-                  designation_kn: "ಉಪಾಧ್ಯಕ್ಷ",
+                  designation_kn: "ಉಪಾಧ್ಯಕ್ಷರು",
                 },
                 {
                   img: "/assets/DrLHanumantayya.jpg",
@@ -341,9 +343,9 @@ const AboutTrustPage = () => {
                 {
                   img: "/assets/Pillamunishamappa.webp",
                   name_en: "Sri. Pillamuniswamyappa",
-                  name_kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ",
+                  name_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
                   designation_en: "Organizational Executive",
-                  designation_kn: "ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
+                  designation_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
                   img: "/assets/DrllSujata.jpeg",
@@ -362,7 +364,7 @@ const AboutTrustPage = () => {
                 {
                   img: "/assets/GovindKarajol.jpeg",
                   name_en: "Sri.Govinda Karajol",
-                  name_kn: "ಗೋವಿಂದ ಕಾರಜೋಳ",
+                  name_kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
                   designation_en: "Executive Committee Member",
                   designation_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
                 },
@@ -385,9 +387,10 @@ const AboutTrustPage = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="text-lg font-semibold mb-1 text-center">
-                    {isEnglish ? member.name_en : member.name_kn}
-                  </div>
+                  <div className="text-lg font-semibold mb-1 text-center whitespace-nowrap">
+  {isEnglish ? member.name_en : member.name_kn}
+</div>
+
                   <div className="text-sm text-blue-700 font-medium text-center">
                     {isEnglish ? member.designation_en : member.designation_kn}
                   </div>

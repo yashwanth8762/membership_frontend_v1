@@ -1,7 +1,7 @@
 export const NavLinks = [
   {
     about_en: "About Us",
-    about_kn: "ನಮ್ಮ ಬಗ್ಗೆ",
+    about_kn: "ಮಹಾಸಭಾ ಬಗ್ಗೆ",
     href: "#about-trust",
   },
   {
@@ -11,18 +11,18 @@ export const NavLinks = [
   },
   {
     organization_en: "Organization",
-    organization_kn: "ಸಂಸ್ಥೆ",
+    organization_kn: "ಸಾಂಸ್ಥಿಕ ರಚನೆ",
     href: "#organization",
   },
   {
     activities_en: "Documents",
-    activities_kn: "ದಾಖಲೆಗಳು",
+    activities_kn: "ಮಹಾಸಭಾದ ದಾಖಲಾತಿಗಳು",
     href: "#documents",
   },
   
   {
     upcoming_en: "Notifications/Programs",
-    upcoming_kn: "ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು",
+    upcoming_kn: "ಮಹಾಸಭಾದ ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು",
     href: "#upcoming-programs",
   },
   
@@ -45,7 +45,7 @@ export const NavLinks = [
 
 export const AboutTrustContent = {
   title_en: "About Us",
-  title_kn: "ನಮ್ಮ ಬಗ್ಗೆ",
+  title_kn: "ಮಹಾಸಭಾ ಬಗ್ಗೆ",
   short_description_en:
     "The Karnataka Madara Mahasabha was established in 2015 with the aim of addressing the backwardness of the Madara/Madiga Communities of Karnataka in the economic, social, political, and educational spheres. Its purpose is to take all necessary measures to enable this Community to progress and integrate into the mainstream of society. The Madara/ Madiga Community of Karnataka come under the purview of the Karnataka Madara Mahasabha.",
   short_description_kn:
@@ -82,29 +82,31 @@ export const AboutTrustContent = {
     {
       designation: {
         title_en: "Designation",
-        title_kn: "ಹುದ್ದೆ",
+        title_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಹೊಂದಿರುವ  ಸ್ಥಾನ",
         commitee_members_designation: {
           President_en: "President",
-          President_kn: "ಅಧ್ಯಕ್ಷ",
+          President_kn: "ಅಧ್ಯಕ್ಷರು",
           Vice_President_en: "Vice President",
-          Vice_President_kn: "ಉಪಾಧ್ಯಕ್ಷ",
+          Vice_President_kn: "ಉಪಾಧ್ಯಕ್ಷರು",
           Chief_Executive_Members_en: "Chief Executive Members",
           Chief_Executive_Members_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು",
           Organizational_Executives_en: "Organizational Executives",
-          Organizational_Executives_kn: "ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿಗಳು",
+          Organizational_Executives_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿಗಳು",
           Treasurer_en: "Treasurer",
           Treasurer_kn: "ಖಜಾಂಚಿ",
           Executive_Committee_Members_en: "Executive Committee Members",
           Executive_Committee_Members_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
+          Lawyer_en:"Legal Advisor",
+          Lawyer_kn:"ಕಾನೂನು ಸಲಹೆಗಾರರು"
         },
       },
 
       members: {
         title_en: "Name",
-        title_kn: "ಹೆಸರು",
+        title_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಹೆಸರು",
         commitee_members_name: {
-          President_en: "Dr|| K.H. Muniyappa",
-          President_kn: "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ",
+          President_en: "Dr||K.H.Muniyappa",
+          President_kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
 
           Vice_President_en: [
             "Sri. A. Narayanaswamy",
@@ -114,15 +116,15 @@ export const AboutTrustContent = {
 
           Chief_Executive_Members_en: [
             "Dr. L. Hanumantayya",
-            "Shri Anand K.M.",
+            "Sri A. Muniyappa",
           ],
           Chief_Executive_Members_kn: [
             "ಡಾ|| ಎಲ್. ಹನುಮಂತಯ್ಯ",
-            "ಶ್ರೀ ಆನಂದ್ ಕೆ.ಎಂ.",
+            "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
           ],
 
           Organizational_Executives_en: "Sri. Pillamuniswamyappa",
-          Organizational_Executives_kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ",
+          Organizational_Executives_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
 
           Treasurer_en: "Dr|| Sujatha",
           Treasurer_kn: "ಡಾ|| ಸುಜಾತ",
@@ -133,8 +135,10 @@ export const AboutTrustContent = {
           ],
           Executive_Committee_Members_kn: [
             "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ",
-            "ಗೋವಿಂದ ಕಾರಜೋಳ",
+            "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
           ],
+          Lawyer_en:"Mr. H. Venkatesh Dodderi",
+          Lawyer_kn:"ಶ್ರೀ.ಹೆಚ್.ವೆಂಕಟೇಶ್ ದೊಡ್ಡೇರಿ"
         },
       },
     },
@@ -212,7 +216,7 @@ export const OrganizationContent = {
     title_en: "Central Executive Committee",
     title_kn: "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
     paragraph_kn: [
-      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅವರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರುತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು. ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು  ಮಾದಿಗ ಸಮಾಜದ ಪರ್ಯಾಯ  ಜಾತಿಗಳ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ವರ್ಗದವರಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪೈಕಿ ಒಬ್ಬ ಅಧ್ಯಕ್ಷ, ಎರಡು ಉಪಾಧ್ಯಕ್ಷರು, ಎರಡು ಪ್ರಧಾನಕಾರ್ಯದರ್ಶಿ, ನಾಲ್ಕು ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ, ಒಬ್ಬ ಖಜಾಂಚಿ ಮತ್ತು ಒಬ್ಬ ಕಾನೂನು ಸಲಹೆಗಾರರನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
+      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅವರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರುತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು. ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು  ಮಾದಿಗ ಸಮಾಜದ ಪರ್ಯಾಯ  ಜಾತಿಗಳ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ವರ್ಗದವರಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪೈಕಿ ಒಬ್ಬ ಅಧ್ಯಕ್ಷ, ಎರಡು ಉಪಾಧ್ಯಕ್ಷರು, ಎರಡು ಪ್ರಧಾನಕಾರ್ಯದರ್ಶಿ, ನಾಲ್ಕು ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ, ಒಬ್ಬ ಖಜಾಂಚಿ ಮತ್ತು ಒಬ್ಬ ಕಾನೂನು ಸಲಹೆಗಾರರನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
       "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ.",
       "ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
     ],
@@ -322,7 +326,7 @@ export const OrganizationContent = {
         },
         {
           en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 2\n7. One from each taluk – 1",
-          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1",
+          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1",
         },
         // {
         //   "en": "The executive committee meeting must be held once every month.",
@@ -352,7 +356,7 @@ export const OrganizationContent = {
         },
         {
           en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 3",
-          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3",
+          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3",
         },
         // {
         //   "en": "The executive committee must meet once every month.",
@@ -395,7 +399,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Dr. K.H. Muniyappa\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
-      kn: "ಡಾ|| ಕೆ. ಎಚ್. ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
+      kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -440,11 +444,11 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri Pillamuniswamyappa\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
-      kn: "ಶ್ರೀ ಪಿಳ್ಳಮುನಿಸ್ವಾಮಪ್ಪ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
+      kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
     },
     position: {
       en: "State Organizing Secretary",
-      kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
+      kn: "ರಾಜ್ಯ ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
     mobile: "9845678275",
@@ -511,7 +515,7 @@ export const AboutTrustPageContent = {
   },
   fourthParagraph: {
     en: "Late Sri K.A. Anand played a very important role in establishing the Mahasabha. Unfortunately, due to his untimely death, Sri A. Muniyappa, former chairman of Karnataka State SC/ST Commission, was appointed as General Secretary in his place.",
-    kn: "ದಿ. ಶ್ರೀ.ಕೆ.ಎ.ಆನಂದ್‌ ರವರು ಮಹಾಸಭಾ ಸ್ಥಾಪಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಅತ್ಯಂತ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸಿರುತ್ತಾರೆ. ಇವರು ದುರಾದೃಷ್ಟವಶಾತ್‌ ಅಕಾಲಿಕ ಮರಣಕ್ಕೆ ಒಳಗಾಗಿದ್ದರಿಂದ ಇವರ ಸ್ಥಾನದಲ್ಲಿ ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ, ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಪ.ಜಾ ಮತ್ತು ಪ.ಪಂ ಆಯೋಗ, ರವರನ್ನು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಯಾಗಿ ನೇಮಕ ಮಾಡಲಾಗಿದೆ.",
+    kn: "*** ದಿ. ಶ್ರೀ.ಕೆ.ಎ.ಆನಂದ್‌ ರವರು ಮಹಾಸಭಾ ಸ್ಥಾಪಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಅತ್ಯಂತ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸಿರುತ್ತಾರೆ. ಇವರು ದುರಾದೃಷ್ಟವಶಾತ್‌ ಅಕಾಲಿಕ ಮರಣಕ್ಕೆ ಒಳಗಾಗಿದ್ದರಿಂದ ಇವರ ಸ್ಥಾನದಲ್ಲಿ ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ, ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಪ.ಜಾ ಮತ್ತು ಪ.ಪಂ ಆಯೋಗ, ರವರನ್ನು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಯಾಗಿ ನೇಮಕ ಮಾಡಲಾಗಿದೆ.",
   },
   fifthParagraph: {
     kn: "ಮಹಾಸಭಾದ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದ್ದು, ಸಭಾದ ಶಾಖೆಗಳು 3 ಹಂತದಲ್ಲಿ ಇರುತ್ತವೆ. ಅವುಗಳೆಂದರೆ ಕೇಂದ್ರ ಸ್ಥಾನ , ಜಿಲ್ಲಾ ಶಾಖೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಶಾಖೆ",

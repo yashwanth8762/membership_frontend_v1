@@ -11,7 +11,7 @@ const Organization = () => {
         {/* Header */}
         <div className="text-center mb-10 lg:mb-12">
           <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">
-            {user.language ? 'Our Organization' : 'ನಮ್ಮ ಸಂಸ್ಥೆ'}
+            {user.language ? 'Our Organization' : 'ಸಾಂಸ್ಥಿಕ ರಚನೆ'}
           </h2>
           <p className="text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
             {user.language 

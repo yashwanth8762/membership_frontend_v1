@@ -599,7 +599,7 @@ export default function Header({ theme = "transparent" }) {
                 }}
               >
                 <span className="relative z-10 drop-shadow-sm">
-                  {user.language ? "MEMBERSHIP" : "ಸದಸ್ಯತ್ವ"}
+                  {user.language ? "MEMBERSHIP" : "ಸದಸ್ಯತ್ವ ನೊಂದಣಿ"}
                 </span>
               </button>
 
@@ -616,7 +616,7 @@ export default function Header({ theme = "transparent" }) {
                 }}
               >
                 <span className="relative z-10 drop-shadow-sm">
-                  {user.language ? "DONATE" : "ದಾನ"}
+                  {user.language ? "DONATE" : "ದೇಣಿಗೆ"}
                 </span>
               </button>
             </div>
