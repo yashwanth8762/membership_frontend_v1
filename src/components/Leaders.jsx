@@ -52,8 +52,7 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 9,
-      name: isEnglish ? "Sri. Govinda Karajol" : "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ
-",
+      name: isEnglish ? "Sri. Govinda Karajol" : "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
       position: isEnglish ? 'Executive Committee Member' : 'ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯ',
       image: "/assets/GovindKarajol.jpeg"
     },
