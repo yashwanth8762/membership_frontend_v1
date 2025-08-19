@@ -127,7 +127,7 @@ const OrganizationPage = () => {
           </div>
 
           {/* 3. Table Section */}
-          {/* <div className="w-full max-w-5xl mx-auto mb-12">
+          <div className="w-full max-w-4xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "District-wise Executive Committee Members"
@@ -153,14 +153,16 @@ const OrganizationPage = () => {
                   {OrganizationContent.table[isEnglish ? "en" : "kn"].map(
                     (row, idx) => (
                       <tr key={idx} className="hover:bg-gray-50 border-b">
-                        <td className="px-6 py-3">{idx + 1}</td>
-                        <td className="px-6 py-3">{row.district}</td>
-                        <td className="px-6 py-3">{row.members}</td>
+                        <td className="px-6 py-3 text-center">{idx + 1}</td>
+                        <td className="px-6 py-3 text-center">
+                          {row.district}
+                        </td>
+                        <td className="px-6 py-3 text-center">{row.members}</td>
                       </tr>
                     )
                   )}
-                  
-                  <tr className="bg-gray-100 font-bold">
+
+                  {/* <tr className="bg-gray-100 font-bold">
                     <td></td>
                     <td>{isEnglish ? "Total" : "ಒಟ್ಟು"}</td>
                     <td>
@@ -168,22 +170,28 @@ const OrganizationPage = () => {
                         ? OrganizationContent.table.total_en
                         : OrganizationContent.table.total_kn}
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>
-          </div> */}
+            <div className="mt-6 text-right font-bold">
+              {isEnglish ? "Total: " : "ಒಟ್ಟು: "}
+              {isEnglish
+                ? OrganizationContent.table.total_en
+                : OrganizationContent.table.total_kn}
+            </div>
+          </div>
           {/* 3. Table Section */}
-          <div className="w-full max-w-6xl mx-auto mb-12">
+          {/* <div className="w-full max-w-4xl mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "District-wise Executive Committee Members"
                 : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
             </h2>
 
-            {/* Two-column layout */}
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* First 16 rows */}
+              
               <div className="overflow-x-auto">
                 <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
                   <thead>
@@ -201,7 +209,7 @@ const OrganizationPage = () => {
                   </thead>
                   <tbody>
                     {OrganizationContent.table[isEnglish ? "en" : "kn"]
-                      .slice(0, 16) // first 16 rows
+                      .slice(0, 16) 
                       .map((row, idx) => (
                         <tr key={idx} className="hover:bg-gray-50 border-b">
                           <td className="px-6 py-3 text-center">{idx + 1}</td>
@@ -217,7 +225,7 @@ const OrganizationPage = () => {
                 </table>
               </div>
 
-              {/* Next 16 rows */}
+              
               <div className="overflow-x-auto">
                 <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
                   <thead>
@@ -235,7 +243,7 @@ const OrganizationPage = () => {
                   </thead>
                   <tbody>
                     {OrganizationContent.table[isEnglish ? "en" : "kn"]
-                      .slice(16, 32) // next 16 rows
+                      .slice(16, 32) 
                       .map((row, idx) => (
                         <tr
                           key={idx + 16}
@@ -255,14 +263,14 @@ const OrganizationPage = () => {
               </div>
             </div>
 
-            {/* Total row */}
+            
             <div className="mt-6 text-right font-bold">
               {isEnglish ? "Total: " : "ಒಟ್ಟು: "}
               {isEnglish
                 ? OrganizationContent.table.total_en
                 : OrganizationContent.table.total_kn}
             </div>
-          </div>
+          </div> */}
 
           {/* 4. First Other Half - Paragraphs */}
           <div className="w-full max-w-4xl mx-auto mb-10">
@@ -322,7 +330,7 @@ const OrganizationPage = () => {
           </div>
 
           {/* Committee Members Table */}
-          <div className="w-full max-w-6xl mx-auto mb-14">
+          <div className="w-full max-w-4xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "Present Central Executive Committee Members"
@@ -378,7 +386,7 @@ const OrganizationPage = () => {
           </div>
 
           {/* Taluk Members Table */}
-          <div className="w-full max-w-6xl mx-auto mb-14">
+          <div className="w-full max-w-4xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "District Executive Committee Members"
@@ -406,7 +414,7 @@ const OrganizationPage = () => {
           </div>
 
           {/* District Members Table */}
-          <div className="w-full max-w-6xl mx-auto mb-14">
+          <div className="w-full max-w-4xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "Taluk Executive Committee Members"
