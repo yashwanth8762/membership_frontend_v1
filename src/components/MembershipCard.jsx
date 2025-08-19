@@ -173,15 +173,17 @@ const MembershipCard = ({
   const getPhoto = () => {
     if (!membershipData || !membershipData.values) return undefined;
     const photoField = membershipData.values.find((v) => 
-      v._doc?.label?.toLowerCase().includes('upload image') || 
-      v._doc?.label?.toLowerCase().includes('photo') ||
-      v._doc?.label?.toLowerCase().includes('image') ||
-      v.label?.toLowerCase().includes('upload image') ||
-      v.label?.toLowerCase().includes('photo') ||
-      v.label?.toLowerCase().includes('image')
+  // console.log('photoField',v?._doc),
+
+      v._doc?.label?.includes('ಛಾಯಾಚಿತ್ರ /Upload pic') 
+      // v._doc.label?.toLowerCase().includes('upload image') || 
+      // v._doc.label?.toLowerCase().includes('image') ||
+      // v.label.toLowerCase().includes('upload image') ||
+      // v.label.toLowerCase().includes('photo') ||
+      // v.label.toLowerCase().includes('image')
     );
     if (photoField && photoField.media && photoField.media.length > 0) {
-      const mediaItem = photoField.media[0];
+      const mediaItem = photoField.media[0];  
       if (mediaItem && mediaItem.image_url && mediaItem.image_url.full && mediaItem.image_url.full.high_res) {
         return `${API_BASE_URL}${mediaItem.image_url.full.high_res}`;
       }
@@ -196,8 +198,10 @@ const MembershipCard = ({
   const dob = getValue('Date of Birth') || getValue('ಜನ್ಮ ದಿನಾಂಕ/Date of Birth') || getValue('Birth') || 'N/A';
   const address = getValue('Permanent adress') || getValue('Permanent Address') || getValue('ಶಾಶ್ವತ ವಿಳಾಸ / Permanent adress') || 'N/A';
   const education = getValue('ವಿದ್ಯಾರ್ಹತೆ') || getValue('ವಿದ್ಯಾರ್ಹತೆ/ ವೃತ್ತಿ / Qualification/ Profession') || 'N/A';
-
+  
   const photo = getPhoto();
+  console.log('photo',photo)
+
   const cardId = membershipNumber;
   const qrValue = `${API_BASE_URL}/membership/user/${membershipData?.membershipId}`;
 
