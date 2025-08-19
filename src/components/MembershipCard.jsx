@@ -191,10 +191,12 @@ const MembershipCard = ({
 
   // Extract all the data
   const membershipNumber = membershipData?.membershipId ? membershipData.membershipId.slice(-4) : '0000';
-  const name = getValue('Enter Your Name') || getValue('Name') || getValue('Your Name') || 'N/A';
-  const parentName = getValue('Father/Mother/Husband/Name') || getValue('Father') || getValue('Parent') || 'N/A';
-  const dob = getValue('Date of Birth') || getValue('DOB') || getValue('Birth') || 'N/A';
-  const address = getValue('Permanent adress') || getValue('Permanent Address') || getValue('Address') || 'N/A';
+  const name = getValue('ಅರ್ಜಿದಾರನ/ಳ ಹೆಸರು/ Applicant Name') || getValue('Name') || getValue('Your Name') || 'N/A';
+  const parentName = getValue('Father/Mother/Husband/Name') || getValue('ತಂದೆ/ತಾಯಿ/ಗಂಡನ ಹೆಸರು / Father/Mother/Husband/Name') || getValue('Parent') || 'N/A';
+  const dob = getValue('Date of Birth') || getValue('ಜನ್ಮ ದಿನಾಂಕ/Date of Birth') || getValue('Birth') || 'N/A';
+  const address = getValue('Permanent adress') || getValue('Permanent Address') || getValue('ಶಾಶ್ವತ ವಿಳಾಸ / Permanent adress') || 'N/A';
+  const education = getValue('ವಿದ್ಯಾರ್ಹತೆ') || getValue('ವಿದ್ಯಾರ್ಹತೆ/ ವೃತ್ತಿ / Qualification/ Profession') || 'N/A';
+
   const photo = getPhoto();
   const cardId = membershipNumber;
   const qrValue = `${API_BASE_URL}/membership/user/${membershipData?.membershipId}`;
@@ -284,9 +286,14 @@ const MembershipCard = ({
                 <span className="break-words">{address}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
+  <span className="font-semibold">ವಿದ್ಯಾರ್ಹತೆ/ ⁠ಪದವಿ: </span>
+  <span>{education}</span>
+</div>
+
+              {/* <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ಸದಸ್ಯತ್ವ: </span>
                 <span>{cardTypeDisplay}</span>
-              </div>
+              </div> */}
             </div>
             {/* Right side - Photo */}
             <div className="flex flex-col items-center justify-center w-28 relative">
@@ -337,16 +344,24 @@ const MembershipCard = ({
           >
             {/* QR Code and ID */}
             <div className="flex flex-col items-center w-28">
-              <div
-                className="w-16 h-16 flex items-center justify-center mb-1"
-                style={{ background: '#fff', border: `1px solid ${color.border}`, borderRadius: 8 }}
-              >
-                {qrValue && (
-                  <QRCode value={qrValue} size={48} />
-                )}
-              </div>
-              <div className="text-center text-xs mt-0.5 font-semibold tracking-wide">{cardId}</div>
-            </div>
+  <div
+    className="w-16 h-16 flex items-center justify-center mb-1"
+    style={{ background: '#fff', border: `1px solid ${color.border}`, borderRadius: 8 }}
+  >
+    {qrValue && (
+      <QRCode value={qrValue} size={48} />
+    )}
+  </div>
+  <div className="text-center text-xs mt-0.5 font-semibold tracking-wide">{cardId}</div>
+
+  <div
+    className="mt-1 text-sm font-bold text-center"
+    style={{ color: color.accent, letterSpacing: "0.02em" }}
+  >
+    {cardTypeDisplay}
+  </div>
+</div>
+
             {/* Signatures */}
             <div className="flex-1 flex justify-end space-x-8">
               <div className="text-center">
