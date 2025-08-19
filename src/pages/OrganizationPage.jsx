@@ -98,12 +98,16 @@ const OrganizationPage = () => {
 
           {/* 1. Note Section */}
           <div className="w-full max-w-4xl mx-auto mb-10">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {isEnglish
-                ? OrganizationContent.note.en
-                : OrganizationContent.note.kn}
-            </p>
-          </div>
+  <div
+    className="text-lg text-gray-700 leading-relaxed"
+    dangerouslySetInnerHTML={{
+      __html: isEnglish
+        ? OrganizationContent.note.en
+        : OrganizationContent.note.kn,
+    }}
+  />
+</div>
+
 
           {/* 2. First -> Title + Paragraphs */}
           <div className="w-full max-w-4xl mx-auto mb-10">

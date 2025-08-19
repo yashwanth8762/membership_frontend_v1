@@ -81,7 +81,7 @@ export const AboutTrustContent = {
   commitee_list: [
     {
       designation: {
-        title_en: "Designation",
+        title_en: "Position",
         title_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಹೊಂದಿರುವ  ಸ್ಥಾನ",
         commitee_members_designation: {
           President_en: "President",
@@ -102,7 +102,7 @@ export const AboutTrustContent = {
       },
 
       members: {
-        title_en: "Name",
+        title_en: "Executive Committee Member Name.",
         title_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಹೆಸರು",
         commitee_members_name: {
           President_en: "Dr.K.H.Muniyappa",
@@ -199,12 +199,7 @@ In such a degraded situation, the Aryan Brahmins, using various strategies and c
         ],
       },
       {
-        en: [`The Madiga are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origins are explained through various mythological stories and folk legends.
-Some scholars believe that the word Madiga comes from the invocation of the deities Mahadigera  (Maha = great, Dige/Degeba = grandfather/elder), which gradually evolved into the term Madiga.
-In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the Gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.
-Another legend says that when Lord Shiva’s sacred cow, Kamadhenu, died, Jambavanta cut its body into pieces. For violating divine rules, Shiva cursed Jambavanta and a boy named Chinnayya — their descendants became the Madiga and Maala communities.
-According to yet another story, the Madigas are the children of Goddess Matangi, which gave rise to the term “Matangi Makkalu” (Children of Matangi).
-Thus, the origins of the Madiga community are closely tied to tales of divine service and curses. Even today, these myths remain an honored part of their cultural identity and traditions. `,
+        en: ["The Madiga are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origins are explained through various mythological stories and folk legends.","Some scholars believe that the word Madiga comes from the invocation of the deities Mahadigera  (Maha = great, Dige/Degeba = grandfather/elder), which gradually evolved into the term Madiga.","In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.","Another legend says that when Lord Shiva’s sacred cow, Kamadhenu, died, Jambavanta cut its body into pieces. For violating divine rules, Shiva cursed Jambavanta and a boy named Chinnayya — their descendants became the Madiga and Maala communities.","According to yet another story, the Madigas are the children of Goddess Matangi, which gave rise to the term “Matangi Makkalu” (Children of Matangi).","Thus, the origins of the Madiga community are closely tied to tales of divine service and curses. Even today, these myths remain an honored part of their cultural identity and traditions. "
         ],
           kn: ["ಮಾದಿಗರು ದಕ್ಷಿಣ ಭಾರತದ ಪ್ರಮುಖ ದಲಿತ ಸಮುದಾಯಗಳಲ್ಲಿ ಒಬ್ಬರಾಗಿದ್ದು, ಪಾರಂಪರಿಕವಾಗಿ ಚರ್ಮ ಕಾರ್ಯ ಮತ್ತು ಗ್ರಾಮೀಣ ಸೇವೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡವರಾಗಿದ್ದಾರೆ. ಇವರ ಮೂಲವನ್ನು ಹಲವು ಪೌರಾಣಿಕ ಕಥೆಗಳು ಮತ್ತು ಜನಪದ ಕಥೆಗಳು ವಿವರಿಸುತ್ತವೆ.  ಸಮುದಾಯದ ಹೆಸರು ಮಹಾದಿಗೆ ರಾ (ತಾತ, ಮಹಾ, ದಿಗೆ ಬಾ) ದೇವತೆಗಳ ಕರೆಯಿನಿಂದ ಬಂದಿದ್ದು, ಇದರಿಂದ ಮಡಿಗ ಎಂಬ ಪದ ರೂಪವಾಯಿತೆಂದು ಕೆಲವು ಪಂಡಿತರು ಹೇಳುತ್ತಾರೆ.","ಪುರಾಣ ಕಥೆಗಳಲ್ಲಿ ಬರುವ ಜಾಂಬವಂತನು ರಾಮಾಯಣದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ಪಾತ್ರ ಹಾಗೂ ಮಾದಿಗರ ಮೂಲ ಪಿತಾಮಹರಾಗಿದ್ದಾರೆ. ದೇವತೆಗಳು ಸಂಕಟದಲ್ಲಿದ್ದಾಗ ಜಾಂಬವಂತನಿಗೆ ಸಹಾಯ ಮಾಡುವಂತೆ ಕೋರುತ್ತಿದ್ದರು. ಅವನು ಕತ್ತಿಗಳಿಂದ ಚರ್ಮ ತೆಗೆದು ಬಳಕೆಮಾಡುವುದು ಮೊದಲಾದ ಕಾರ್ಯಗಳಲ್ಲಿ ಮುಂಚೂಣಿಯಲ್ಲಿ ಇದ್ದನೆಂಬ ಕಥೆಗಳು ಪ್ರಸಿದ್ಧ. ","ಇನ್ನೊಂದು ಕಥೆಯ ಪ್ರಕಾರ, ಶಿವನ ಪವಿತ್ರ ಹಸು ಕಾಮಧೇನು ಸತ್ತಾಗ, ಜಾಂಬವಂತನು ಅದರ ದೇಹವನ್ನು ತುಂಡು ಮಾಡುತ್ತಾನೆ. ಆದರೆ ದೈವೀ ನಿಯಮಗಳನ್ನು ಉಲ್ಲಂಘಿಸಿದ ಕಾರಣ, ಶಿವನು ಜಾಂಬವಂತ ಮತ್ತು ಮತ್ತೊಬ್ಬ ಹುಡುಗ ಚಿನ್ನಯ್ಯನಿಗೆ ಶಾಪ ನೀಡುತ್ತಾನೆ. ಅವರ ಸಂತತಿಯೇ ಮಡಿಗ ಮತ್ತು ಮಾಳಾ ಸಮುದಾಯಗಳು ಎನಿಸಿಕೊಳ್ಳುತ್ತವೆ. ಇನ್ನೊಂದು ಪುರಾಣದಲ್ಲಿ ಮಡಿಗರು ಮಾತಂಗಿ ದೇವಿಯ ಮಕ್ಕಳು ಎಂದು ಹೆಸರಾಗಿದ್ದಾರೆ, ಇದರಿಂದ “ಮಾತಂಗಿ ಮಕ್ಕಳು” ಎಂಬ ಪದ ಬಳಕೆ ರೂಢಿಯಾಗಿದೆ.","ಹೀಗಾಗಿ, ಮಾದಿಗ ಸಮುದಾಯದ ಮೂಲ ಪವಿತ್ರತೆ ದೇವತೆಗಳ ಸೇವೆ ಮತ್ತು ಶಾಪದ ಕಥೆಗಳ ಸಂಧಿ ಬಿಂದುವಾಗಿದ್ದು, ಇಂದಿಗೂ ಈ ಪೌರಾಣಿಕತೆಯನ್ನು ತಮ್ಮ ಸಂಸ್ಕೃತಿಯ ಭಾಗವಾಗಿ ಗೌರವದಿಂದ ಮರೆಯದೇ ಆಚರಿಸುತ್ತಾರೆ."],
       },
@@ -216,10 +211,14 @@ Thus, the origins of the Madiga community are closely tied to tales of divine se
   },
 };
 
+
 export const OrganizationContent = {
   note: {
     kn: "ಮಹಾಸಭಾ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದೆ, ಜೊತೆಗೆ ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲ್ಲೂಕು ಶಾಖೆಗಳಿರುತ್ತವೆ. ಸಭಾದ ಮತ್ತು ಶಾಖೆಗಳ ವಿಶಿಷ್ಟ ಆಡಳಿತವನ್ನು ಒಂದು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಿಂದ ನಡೆಸಲ್ಪಡಲಾಗುವುದು.",
-    en: "The Mahasabha headquarters is located in Bangalore, along with district and taluk branches. The specific administration of the Sabha and the branches is carried out by an executive committee.",
+    en: `<b>Office Location :</b><br></br>
+The central office of the Mahasabha is located in Bengaluru. In addition, there will be branches at the District and Taluk levels.<br></br>
+<b>Administration:</b><br></br>
+The administration of the Mahasabha and its branches will be managed by one  Central Executive Committee.`,
   },
 
   first: {
@@ -475,7 +474,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri. H. Anjaneya\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
-      kn: "ಶ್ರೀ.ಹೆಚ್. ಆಂಜನೇಯ, 2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
+      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ, ಅವ್ವ, #2733, 3 ನೇ ಕ್ರಾಸ್‌,ಎಚ್‌.ಎ.ಎಲ್‌ 3 ನೇ ಸ್ಟೇಜ್‌, ನ್ಯೂ ತಿಪ್ಪಸಂದ್ರ, ಬೆಂಗಳೂರು-560075",
     },
     position: {
       en: "Executive Committee Member",
@@ -487,14 +486,14 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri. Govind M Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
-      kn: "ಶ್ರೀ. ಗೋವಿಂದ್ ಎಂ ಕಾರಜೋಳ, 199/ಎ, 4ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು.",
+      kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, ಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ, ಹೊಸ  ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ,  ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ,  ಚಿತ್ರದುರ್ಗ-577517",
     },
     position: {
       en: "Executive Committee Member",
       kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9448102896",
+    mobile: "9663679337",
   },
   {
     name: {
@@ -524,7 +523,7 @@ export const AboutTrustPageContent = {
     kn: "",
   },
   fourthParagraph: {
-    en: "Late Sri K.A. Anand played a very important role in establishing the Mahasabha. Unfortunately, due to his untimely death, Sri A. Muniyappa, former chairman of Karnataka State SC/ST Commission, was appointed as General Secretary in his place.",
+    en: "*** Late Sri K.A. Anand played a very important role in establishing the Mahasabha. Unfortunately, due to his untimely death, Sri A. Muniyappa, former chairman of Karnataka State SC/ST Commission, was appointed as General Secretary in his place.",
     kn: "*** ದಿ. ಶ್ರೀ.ಕೆ.ಎ.ಆನಂದ್‌ ರವರು ಮಹಾಸಭಾ ಸ್ಥಾಪಿಸುವ ನಿಟ್ಟಿನಲ್ಲಿ ಅತ್ಯಂತ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸಿರುತ್ತಾರೆ. ಇವರು ದುರಾದೃಷ್ಟವಶಾತ್‌ ಅಕಾಲಿಕ ಮರಣಕ್ಕೆ ಒಳಗಾಗಿದ್ದರಿಂದ ಇವರ ಸ್ಥಾನದಲ್ಲಿ ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ, ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಪ.ಜಾ ಮತ್ತು ಪ.ಪಂ ಆಯೋಗ, ರವರನ್ನು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಯಾಗಿ ನೇಮಕ ಮಾಡಲಾಗಿದೆ.",
   },
   fifthParagraph: {

@@ -284,7 +284,7 @@ const MembershipCard = ({
                 <span className="break-words">{address}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
-                <span className="font-semibold">ಕಾರ್ಡ್ ಪ್ರಕಾರ: </span>
+                <span className="font-semibold">ಸದಸ್ಯತ್ವ: </span>
                 <span>{cardTypeDisplay}</span>
               </div>
             </div>

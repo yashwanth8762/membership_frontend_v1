@@ -28,14 +28,14 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 5,
-      name: isEnglish ? "Mr. Anand" : "ಶ್ರೀ ಆನಂದ್",
+      name: isEnglish ? "Sri.A. Muniyappa" : "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ",
       position: isEnglish ? 'General Secretary' : 'ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ',
-      image: ""
+      image: "/assets/AMuniyappageneralSecretary.jpeg"
     },
     {
       id: 6,
-      name: isEnglish ? "Sri. Pillamuniswamyappa" : "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
-      position: isEnglish ? 'Organizing Secretary' : 'ರಾಜ್ಯ ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ',
+      name: isEnglish ? "Sri. Pilla Munishyamappa" : "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
+      position: isEnglish ? 'Organizing Secretary' : 'ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ',
       image: "/assets/Pillamunishamappa.webp"
     },
     {
@@ -46,7 +46,7 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 8,
-      name: isEnglish ? "Sri. H. Anjaneya" : "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ",
+      name: isEnglish ? "Sri. H. Anjaneya" : "ಶ್ರೀ. ಹೆಚ್. ಆಂಜನೇಯ",
       position: isEnglish ? 'Executive Committee Member' : 'ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯ',
       image: "/assets/HAnjaneya.jpeg"
     },

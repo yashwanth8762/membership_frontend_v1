@@ -94,7 +94,7 @@ const CommunityPage = () => {
                   );
                 })()}
                 {/* Description: first item as two paragraphs, others as one */}
-                {(() => {
+                {/* {(() => {
                   const desc = isEnglish
                     ? HistoryCultureContent.content.description[idx].en
                     : HistoryCultureContent.content.description[idx].kn;
@@ -110,7 +110,26 @@ const CommunityPage = () => {
                       {desc}
                     </p>
                   );
-                })()}
+                })()} */}
+                {(() => {
+  const desc = isEnglish
+    ? HistoryCultureContent.content.description[idx].en
+    : HistoryCultureContent.content.description[idx].kn;
+
+  if (Array.isArray(desc)) {
+    return desc.map((para, i) => (
+      <p key={i} className="text-lg leading-relaxed text-gray-700 text-justify mb-4">
+        {para}
+      </p>
+    ));
+  }
+  return (
+    <p className="text-lg leading-relaxed text-gray-700 text-justify">
+      {desc}
+    </p>
+  );
+})()}
+
               </div>
             ))}
           </div>

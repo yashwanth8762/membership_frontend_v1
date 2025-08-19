@@ -112,7 +112,7 @@ const AboutTrustPage = () => {
             </p> */}
 
             {/* Committee List Table */}
-            {AboutTrustContent.commitee_list &&
+            {/* {AboutTrustContent.commitee_list &&
               AboutTrustContent.commitee_list.length > 0 && (
                 <div className="overflow-x-auto mt-6 mb-4">
                   <table className="min-w-full border border-gray-200 rounded-lg">
@@ -185,7 +185,71 @@ const AboutTrustPage = () => {
                     </tbody>
                   </table>
                 </div>
-              )}
+              )} */}
+
+{AboutTrustContent.commitee_list &&
+ AboutTrustContent.commitee_list.length > 0 && (
+  <div className="overflow-x-auto mt-6 mb-4">
+    <table className="min-w-full border border-gray-200 rounded-lg">
+      <thead>
+        <tr className="bg-blue-50">
+          <th className="px-4 py-2 text-left text-blue-800 font-semibold">Sl. No.</th>
+          <th className="px-4 py-2 text-left text-blue-800 font-semibold">
+            {isEnglish
+              ? AboutTrustContent.commitee_list[0].members.title_en
+              : AboutTrustContent.commitee_list[0].members.title_kn}
+          </th>
+          <th className="px-4 py-2 text-left text-blue-800 font-semibold">
+            {isEnglish
+              ? AboutTrustContent.commitee_list[0].designation.title_en
+              : AboutTrustContent.commitee_list[0].designation.title_kn}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {(() => {
+          const rows = [];
+          let slNo = 1;
+
+          const designations = AboutTrustContent.commitee_list[0].designation?.commitee_members_designation;
+          const members = AboutTrustContent.commitee_list[0].members?.commitee_members_name;
+
+          if (!designations || !members) return null;
+
+          Object.keys(designations)
+            .filter((key) => key.endsWith('_en'))
+            .forEach((designationKey) => {
+              const baseKey = designationKey.replace('_en', '');
+              const designation = isEnglish
+                ? designations[`${baseKey}_en`]
+                : designations[`${baseKey}_kn`];
+              const memberList = isEnglish
+                ? members[`${baseKey}_en`]
+                : members[`${baseKey}_kn`];
+
+              if (Array.isArray(memberList)) {
+                memberList.forEach((member) => {
+                  rows.push({ slNo: slNo++, name: member, designation });
+                });
+              } else if (memberList) {
+                rows.push({ slNo: slNo++, name: memberList, designation });
+              }
+            });
+
+          return rows.map(({ slNo, name, designation }) => (
+            <tr key={`${designation}-${name}-${slNo}`} className="border-t border-gray-200">
+              <td className="px-4 py-2 text-gray-700">{slNo}</td>
+              <td className="px-4 py-2 text-gray-700">{name}</td>
+              <td className="px-4 py-2 text-gray-700">{designation}</td>
+            </tr>
+          ));
+        })()}
+      </tbody>
+    </table>
+  </div>
+)}
+
+
           </div>
           <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">
             <p className="text-lg leading-relaxed text-gray-700 text-justify">
@@ -194,108 +258,6 @@ const AboutTrustPage = () => {
                 : AboutTrustPageContent.fourthParagraph.kn}
             </p>
           </div>
-          {/* Executive Committee Members Cards */}
-          {/* <div className="w-full max-w-5xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-              {isEnglish
-                ? "Founders and First executive Committee members"
-                : "ಸ್ಥಾಪಕರು ಮತ್ತು ಮೊದಲ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
-              {[
-                {
-                  img: "/assets/DrKHMuniyappa.jpg",
-                  name_en: "Dr|| K.H. Muniyappa",
-                  name_kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
-                  designation_en: "President",
-                  designation_kn: "ಅಧ್ಯಕ್ಷ",
-                },
-                {
-                  img: "/assets/ShriANarayanaswamy.jpg",
-                  name_en: "Sri. A. Narayanaswamy",
-                  name_kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ",
-                  designation_en: "Vice President",
-                  designation_kn: "ಉಪಾಧ್ಯಕ್ಷ",
-                },
-                {
-                  img: "/assets/KMThimmarayappa.jpeg",
-                  name_en: "Sri. K.M. Thimmarayappa",
-                  name_kn: "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ",
-                  designation_en: "Vice President",
-                  designation_kn: "ಉಪಾಧ್ಯಕ್ಷ",
-                },
-                {
-                  img: "/assets/DrLHanumantayya.jpg",
-                  name_en: "Dr. L. Hanumantayya",
-                  name_kn: "ಡಾ|| ಎಲ್. ಹನುಮಂತಯ್ಯ",
-                  designation_en: "General Secretary",
-                  designation_kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
-                },
-                {
-                  img: "/assets/AMuniyappageneralSecretary.jpeg",
-                  name_en: "Sri A. Muniyappa",
-                  name_kn: "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
-                  designation_en: "General Secretary",
-                  designation_kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
-                },
-                {
-                  img: "/assets/Pillamunishamappa.webp",
-                  name_en: "Sri. Pillamuniswamyappa",
-                  name_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
-                  designation_en: "Organizational Executive",
-                  designation_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
-                },
-                {
-                  img: "/assets/DrllSujata.jpeg",
-                  name_en: "Dr|| Sujatha",
-                  name_kn: "ಡಾ|| ಸುಜಾತ",
-                  designation_en: "Treasurer",
-                  designation_kn: "ಖಜಾಂಚಿ",
-                },
-                {
-                  img: "/assets/HAnjaneya.jpeg",
-                  name_en: "Sri. H. Anjaneya",
-                  name_kn: "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ",
-                  designation_en: "Executive Committee Member",
-                  designation_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
-                },
-                {
-                  img: "/assets/GovindKarajol.jpeg",
-                  name_en: "Sri.Govinda Karajol",
-                  name_kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ
-",
-                  designation_en: "Executive Committee Member",
-                  designation_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
-                },
-                {
-                  img: "/assets/venkateshdodderi.jpg",
-                  name_en: "Sri H. Venkatesh Dodderi",
-                  name_kn: "ಶ್ರೀ.ಹೆಚ್.ವೆಂಕಟೇಶ್ ದೊಡ್ಡೇರಿ",
-                  designation_en: "Legal Advisor",
-                  designation_kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು",
-                },
-              ].map((member, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs"
-                >
-                  <div className="w-28 h-28 mb-4 flex items-center justify-center bg-blue-50 rounded-full overflow-hidden border-4 border-blue-200">
-                    <img
-                      src={member.img}
-                      alt={member.name_en}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="text-lg font-semibold mb-1 text-center">
-                    {isEnglish ? member.name_en : member.name_kn}
-                  </div>
-                  <div className="text-sm text-blue-700 font-medium text-center">
-                    {isEnglish ? member.designation_en : member.designation_kn}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
           <div className="w-full max-w-5xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
@@ -397,20 +359,22 @@ const AboutTrustPage = () => {
                 </div>
               ))}
             </div>
+            <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">
             <p className="text-lg leading-relaxed text-gray-700 text-justify mt-6">
               {isEnglish
                 ? AboutTrustPageContent.fifthParagraph.en
                 : AboutTrustPageContent.fifthParagraph.kn}
             </p>
+            </div>
           </div>
           {/* Objectives Section */}
-          <div className="w-full max-w-3xl mx-auto mb-10">
+          <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">
             <h2 className="text-2xl font-semibold mb-4 text-blue-700">
               {isEnglish
                 ? AboutTrustContent.objectives_title_en
                 : AboutTrustContent.objectives_title_kn}
             </h2>
-            <ol className="list-decimal list-inside space-y-2 text-lg">
+            <ol className="text-justify list-decimal list-inside space-y-2 text-lg">
               {(isEnglish
                 ? AboutTrustContent.objectives_en
                 : AboutTrustContent.objectives_kn
