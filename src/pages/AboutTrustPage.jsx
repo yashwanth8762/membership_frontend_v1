@@ -329,16 +329,16 @@ const AboutTrustPage = () => {
                 {
                   img: "/assets/DrLHanumantayya.jpg",
                   name_en: "Dr. L. Hanumantayya",
-                  name_kn: "ಡಾ|| ಎಲ್. ಹನುಮಂತಯ್ಯ",
+                  name_kn: "ಡಾ. ಎಲ್. ಹನುಮಂತಯ್ಯ",
                   designation_en: "General Secretary",
-                  designation_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
+                  designation_kn: "ಪ್ರಧಾನ  ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
                   img: "/assets/AMuniyappageneralSecretary.jpeg",
                   name_en: "Sri A. Muniyappa",
                   name_kn: "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
                   designation_en: "General Secretary",
-                  designation_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
+                  designation_kn: "ಪ್ರಧಾನ  ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
                   img: "/assets/Pillamunishamappa.webp",
@@ -349,15 +349,15 @@ const AboutTrustPage = () => {
                 },
                 {
                   img: "/assets/DrllSujata.jpeg",
-                  name_en: "Dr|| Sujatha",
-                  name_kn: "ಡಾ|| ಸುಜಾತ",
+                  name_en: "Dr. Sujatha",
+                  name_kn: "ಡಾ. ಸುಜಾತ",
                   designation_en: "Treasurer",
                   designation_kn: "ಖಜಾಂಚಿ",
                 },
                 {
                   img: "/assets/HAnjaneya.jpeg",
                   name_en: "Sri. H. Anjaneya",
-                  name_kn: "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ",
+                  name_kn: "ಶ್ರೀ.ಹೆಚ್. ಆಂಜನೇಯ",
                   designation_en: "Executive Committee Member",
                   designation_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
                 },

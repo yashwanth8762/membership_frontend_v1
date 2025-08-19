@@ -107,26 +107,26 @@
 //     {/* Card 1 */}
     
 //     <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-//       <img src="/assets/gandhiji.jpeg" alt="Leader 6" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+//       <img src="/assets/gandhiji.jpeg" alt="Leader 6" className="w-30 h-30 object-cover rounded-full mb-4 " />
 //       <div className="text-lg font-semibold mb-1">{isEnglish ? "Mahatma Gandhi" : "ಮಹಾತ್ಮ ಗಾಂಧಿ"}</div>
 //     </div>
 //     {/* Card 7 */}
 //     <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-//       <img src="/assets/amdedkar.jpg" alt="Leader 7" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+//       <img src="/assets/amdedkar.jpg" alt="Leader 7" className="w-30 h-30 object-cover rounded-full mb-4 " />
 //       <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. B.R. Ambedkar" : "ಡಾ|| ಬಿ.ಆರ್. ಅಂಬೇಡ್ಕರ್"}</div>
 //     </div>
 //     {/* Card 8 */}
 //     <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-//       <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+//       <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-cover rounded-full mb-4 " />
 //       <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. Babu Jagjivan Ram" : "ಡಾ|| ಬಾಬು ಜಗಜೀವನ್ ರಾಮ್"}</div>
 //     </div>
 //     {/* Card 9 */}
 //     <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-//       <img src="/assets/b-krishnappa.jpg" alt="Leader 9" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+//       <img src="/assets/b-krishnappa.jpg" alt="Leader 9" className="w-30 h-30 object-cover rounded-full mb-4 " />
 //       <div className="text-lg font-semibold mb-1">{isEnglish ? "Prof. B. Krishnappa" : "ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ"}</div>
 //     </div>
 //     {/* <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-//       <img src="/assets/Basavaiah.jpeg" alt="Leader 10" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+//       <img src="/assets/Basavaiah.jpeg" alt="Leader 10" className="w-30 h-30 object-cover rounded-full mb-4 " />
 //       <div className="text-lg font-semibold mb-1">{isEnglish ? "Basavaiah Rachaiah" : "ಬಸವಯ್ಯ ರಾಚಯ್ಯ"}</div>
 //     </div> */}
 //   </div>
@@ -266,24 +266,24 @@ const CommunityPage = () => {
                 : 'ಸಮುದಾಯದ ಕಲ್ಯಾಣಕ್ಕಾಗಿ ಹೋರಾಡಿದ ದಾರ್ಶನಿಕರು'}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/Gautamabuddha.webp" alt="Leader 6" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/Gautamabuddha.webp" alt="Leader 6" className="w-30 h-30 object-contain mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Buddha" : "ಬುದ್ಧ"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/Basavanna.jpg" alt="Leader 9" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/Basavanna.jpg" alt="Leader 9" className="w-30 h-30 object-contain mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Basavanna" : "ಬಸವಣ್ಣ"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/gandhiji.jpeg" alt="Leader 6" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/gandhiji.jpeg" alt="Leader 6" className="w-30 h-30 object-contain mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Mahatma Gandhi" : "ಮಹಾತ್ಮ ಗಾಂಧಿ"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/amdedkar.jpg" alt="Leader 7" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/amdedkar.jpg" alt="Leader 7" className="w-30 h-30 object-contain mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. B.R. Ambedkar" : "ಡಾ|| ಬಿ.ಆರ್. ಅಂಬೇಡ್ಕರ್"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-contain mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. Babu Jagjivan Ram" : "ಡಾ|| ಬಾಬು ಜಗಜೀವನ್ ರಾಮ್"}</div>
               </div>
               
@@ -298,20 +298,20 @@ const CommunityPage = () => {
                 : 'ಸಮುದಾಯದ ಹಿರಿಯ ಚೇತನಗಳು '}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/rchanni.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. R Channigaramaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಆರ್. ಚನ್ನಿಗರಾಮಯ್ಯ"}</div>
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/rchanni.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. R Channigaramaiah" : "ದಿವಂಗತ. ಶ್ರೀ.ಆರ್.ಚನ್ನಿಗರಾಮಯ್ಯ"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/nrachayya.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/nrachayya.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. N Rachaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಎನ್ ರಾಚಯ್ಯ"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/prabakar.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/prabakar.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. K. Prabhakar" : "ದಿವಂಗತ. ಶ್ರೀ. ಕೆ. ಪ್ರಭಾಕರ್"}</div>
               </div>
-              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
-                <img src="/assets/dmanjunath.jpeg" alt="Leader" className="w-30 h-30 object-cover rounded-full mb-4 border-4 border-blue-200" />
+              <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+                <img src="/assets/dmanjunath.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
                 <div className="text-lg font-semibold mb-1">{isEnglish ? "D Manjunath" : "ಡಿ ಮಂಜುನಾಥ್"}</div>
               </div>
             </div>
