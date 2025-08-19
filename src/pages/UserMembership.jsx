@@ -1353,7 +1353,7 @@ export default function UserMembership() {
               marginTop: 16,
             }}
           >
-            Continue to Membership Application Form
+            ಸದಸ್ಯತ್ವ ಅರ್ಜಿ ನಮೂನೆಗೆ ಮುಂದುವರೆಯಿರಿ/Continue to Membership Application Form
           </button>
         </div>
       )}
