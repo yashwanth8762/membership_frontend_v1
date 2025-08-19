@@ -144,7 +144,7 @@ const ContactUsPage = () => {
                       href="tel:+918012345678" 
                       className="text-green-600 hover:text-green-800 font-medium text-sm lg:text-base transition-colors duration-200"
                     >
-                      +91 801 234 5678
+                      080-4993 4829
                     </a>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ const ContactUsPage = () => {
                       rel="noopener noreferrer"
                       className="text-green-600 hover:text-green-800 font-medium text-sm lg:text-base transition-colors duration-200"
                     >
-                      +91 801 234 5678
+                      +91 7676707615
                     </a>
                   </div>
                 </div>
