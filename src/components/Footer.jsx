@@ -277,7 +277,7 @@ const handleNavigation = useNavigate();
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && handleNavigation('/donate')}
             >
-              Donate
+              Donation
             </span>
           </p>
           {/* <p>

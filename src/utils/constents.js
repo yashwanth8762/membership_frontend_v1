@@ -53,7 +53,7 @@ export const AboutTrustContent = {
   objectives_title_en: "Objectives of Karnataka Madara Mahasabha",
   objectives_title_kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ಉದ್ದೇಶಗಳು",
   objectives_en: [
-    "Since the Madara/Madiga communities of Karnataka have historically been disadvantaged in the economic, social, political, and educational spheres, the Mahasabha is committed to taking all necessary steps to ensure their progress and development. Its key objectives include:",
+    "Since the Madara/Madiga community of Karnataka have historically been disadvantaged in the economic, social, political, and educational spheres, the Mahasabha is committed to taking all necessary steps to ensure their progress and development. Its key objectives include:",
     "Ensuring Development and Support: To secure and facilitate all forms of assistance, benefits, and facilities available from the State and Central Governments, as well as from other institutions, for the upliftment of the Madara community, and to enable collaboration with other communities for mutual growth and integration into the social mainstream.",
     "Promoting Unity and Solidarity: To organize programs that foster harmony, goodwill, and mutual trust among all allied sub-castes within the Madara community.",
     "Educational Advancement: To establish schools, colleges, and other educational institutions for the development of the community; to create a supportive environment for social progress; and to build hostels, training centers, and community halls across the State for Madara students.",
@@ -186,9 +186,9 @@ export const HistoryCultureContent = {
     description: [
       {
         en: [
-          `Madara" is the name of one of the most ancient ethnic groups of India — the name of the first indigenous people who were born and raised in this land. It is the name of the community to which the earliest ruling dynasty of India belonged. It is the name of a powerful warrior race that first introduced political governance and democracy to ancient India. During the time when the Madigas ruled, the people of the land respectfully addressed them as "Mahadore" (Great Lords) and reverently referred to them as "Mahadevaru" (Great Gods).
+          `"Madara" is the name of one of the most ancient ethnic groups of India — the name of the first indigenous people who were born and raised in this land. It is the name of the community to which the earliest ruling dynasty of India belonged. It is the name of a powerful warrior race that first introduced political governance and democracy to ancient India. During the time when the Madigas ruled, the people of the land respectfully addressed them as "Mahadore" (Great Lords) and reverently referred to them as "Mahadevaru" (Great Gods).
 The term "Mahadore" eventually evolved into Mahadevaru, Madore, Madevaru, Maderu, Madaru, and finally Mādara. In this way, the Mādara community — through their historic titles — earned a distinguished place in the history of India. Though they are today known as the Madiga community, they are in fact the first political community of India.`,
-          `Great figures from this community, like  Male Mahadeshwara, Marulasiddha, and others — who are now considered divine and worshipped with reverence and devotion by people of all castes and communities — serve as strong evidence of the ethnic greatness and historical legacy of the Mādara people.
+          `Great personalities from this community, like  Male Mahadeshwara, Marulasiddha, and others — who are now considered divine and worshipped with reverence and devotion by people of all castes and communities — serve as strong evidence of the ethnic greatness and historical legacy of the Mādara people.
 However, due to the conspiracy of the Aryan Brahmins — who were the first foreigners to migrate to India — the political power of the Madiga community was destroyed. The decline of cultural progress led to the downfall of economic progress. The collapse of economic progress, in turn, led to the decline of social progress. With the loss of social progress came the decline of educational progress. The decline in education led to a downfall in industrial progress. This chain of decline ultimately resulted in the Madigas being deemed untouchables, becoming slaves to the religion and culture of foreign Brahmins.
 In such a degraded situation, the Aryan Brahmins, using various strategies and conspiracies, appropriated the intelligence and knowledge of the Madigas. They made these intellectual riches their own hereditary property and indelibly tarnished the name and identity of the Madigas. By distorting the glorious heritage and history of the Madigas, they assigned it negative and degrading interpretations, systematically weakening their mental, intellectual, and physical strength — eventually rendering them powerless.
 `,
@@ -201,7 +201,7 @@ In such a degraded situation, the Aryan Brahmins, using various strategies and c
       {
         en: [`The Madiga are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origins are explained through various mythological stories and folk legends.
 Some scholars believe that the word Madiga comes from the invocation of the deities Mahadigera  (Maha = great, Dige/Degeba = grandfather/elder), which gradually evolved into the term Madiga.
-In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.
+In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the Gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.
 Another legend says that when Lord Shiva’s sacred cow, Kamadhenu, died, Jambavanta cut its body into pieces. For violating divine rules, Shiva cursed Jambavanta and a boy named Chinnayya — their descendants became the Madiga and Maala communities.
 According to yet another story, the Madigas are the children of Goddess Matangi, which gave rise to the term “Matangi Makkalu” (Children of Matangi).
 Thus, the origins of the Madiga community are closely tied to tales of divine service and curses. Even today, these myths remain an honored part of their cultural identity and traditions. `,
@@ -279,7 +279,7 @@ export const OrganizationContent = {
       { district: "Kodagu", members: 1 },
       { district: "Dharwad", members: 2 },
       { district: "Uttara Kannada", members: 1 },
-      { district: "Bijapur", members: 2 },
+      { district: "Vijayapura", members: 2 },
       { district: "Mangalore", members: 1 },
       { district: "Mysore", members: 2 },
       { district: "Chamarajanagar", members: 1 },
@@ -287,7 +287,7 @@ export const OrganizationContent = {
       { district: "Davangere", members: 2 },
       { district: "Belgaum", members: 1 },
       { district: "Haveri", members: 1 },
-      { district: "Gulbarga (1 woman)", members: 2 },
+      { district: "Kalaburagi (1 woman)", members: 2 },
       { district: "Bagalkote", members: 1 },
       { district: "Bellary", members: 1 },
       { district: "Gadag", members: 1 },
@@ -498,7 +498,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Shri.H. Venkatesh Dodderi\n # 1, 2nd Floor, Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
+      en: "Sri.H. Venkatesh Dodderi\n # 1, 2nd Floor, Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
       kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ, # 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
     },
     position: {

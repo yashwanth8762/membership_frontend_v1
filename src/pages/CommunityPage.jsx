@@ -157,15 +157,15 @@ const CommunityPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/rchanni.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. R Channigaramaiah" : "ದಿವಂಗತ. ಶ್ರೀ.ಆರ್.ಚನ್ನಿಗರಾಮಯ್ಯ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. R Channigaramaiah" : "ದಿವಂಗತ. ಶ್ರೀ.ಆರ್.ಚನ್ನಿಗರಾಮಯ್ಯ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/nrachayya.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. N Rachaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಎನ್ ರಾಚಯ್ಯ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. N Rachaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಎನ್ ರಾಚಯ್ಯ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/prabakar.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Shri. K. Prabhakar" : "ದಿವಂಗತ. ಶ್ರೀ. ಕೆ. ಪ್ರಭಾಕರ್"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. K. Prabhakar" : "ದಿವಂಗತ. ಶ್ರೀ. ಕೆ. ಪ್ರಭಾಕರ್"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/b-krishnappa.jpg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />

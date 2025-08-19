@@ -644,7 +644,7 @@ export default function Header({ theme = "transparent" }) {
                 style={{ animation: "neonGlow 1.5s ease-in-out infinite alternate" }}
               >
                 <span className="relative z-10 drop-shadow-sm">
-                  {user.language ? "DONATE" : "ದೇಣಿಗೆ"}
+                  {user.language ? "DONATION" : "ದೇಣಿಗೆ"}
                 </span>
               </button>
             </div>
