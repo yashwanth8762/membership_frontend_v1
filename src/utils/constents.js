@@ -544,20 +544,8 @@ export const AboutTrustPageContent = {
 
 export const organizationTalukMembers = {
   heading: {
-    tableHeading_en: [
-      "Sl No.",
-      "District",
-      "Designation",
-      "Name and address",
-      "Contact No.",
-    ],
-    tableHeading_kn: [
-      "ಕ್ರ.ಸಂ",
-      "ಜಿಲ್ಲೆ",
-      "ಹುದ್ದೆ",
-      "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
-      "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
-    ],
+    tableHeading_en: ["Sl No.", "Name & address", "Designation", "Mobile No."],
+    tableHeading_kn: ["ಕ್ರ.ಸಂ", "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ", "ಹುದ್ದೆ", "ಮೊಬೈಲ್‌ ನಂ"],
   },
 };
 
@@ -565,17 +553,10 @@ export const organizationDistrictMembers = {
   heading: {
     tableHeading_en: [
       "Sl No.",
-      "Taluk",
-      "Designation",
       "Name and address",
-      "Contact No.",
+      "Designation",
+      "Mobile No.",
     ],
-    tableHeading_kn: [
-      "ಕ್ರ.ಸಂ",
-      "ತಾಲೂಕು",
-      "ಹುದ್ದೆ",
-      "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
-      "ಸಂಪರ್ಕ ಸಂಖ್ಯೆ",
-    ],
+    tableHeading_kn: ["ಕ್ರ.ಸಂ", "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ", "ಹುದ್ದೆ", "ಮೊಬೈಲ್‌ ನಂ"],
   },
 };
