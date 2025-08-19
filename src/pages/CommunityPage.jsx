@@ -118,7 +118,7 @@
 //     {/* Card 8 */}
 //     <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
 //       <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-cover rounded-full mb-4 " />
-//       <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. Babu Jagjivan Ram" : "ಡಾ|| ಬಾಬು ಜಗಜೀವನ್ ರಾಮ್"}</div>
+//       <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. Babu Jagjivan Ram" : "ಡಾ.  ಬಾಬು ಜಗಜೀವನ ರಾಂ"}</div>
 //     </div>
 //     {/* Card 9 */}
 //     <div className="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
@@ -284,7 +284,7 @@ const CommunityPage = () => {
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-contain mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. Babu Jagjivan Ram" : "ಡಾ|| ಬಾಬು ಜಗಜೀವನ್ ರಾಮ್"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. Babu Jagjivan Ram" : "ಡಾ.  ಬಾಬು ಜಗಜೀವನ ರಾಂ"}</div>
               </div>
               
             </div>

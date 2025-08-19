@@ -49,7 +49,7 @@ export const AboutTrustContent = {
   short_description_en:
     "The Karnataka Madara Mahasabha was established in 2015 with the aim of addressing the backwardness of the Madara/Madiga Communities of Karnataka in the economic, social, political, and educational spheres. Its purpose is to take all necessary measures to enable this Community to progress and integrate into the mainstream of society. The Madara/ Madiga Community of Karnataka come under the purview of the Karnataka Madara Mahasabha.",
   short_description_kn:
-    "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ 2015 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದ್ದು, ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದಿರುವ ಕಾರಣ ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಸಮಾಜದ ಮುಖ್ಯ ವಾಹಿನಿಗೆ ಬರಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವ ಉದ್ದೇಶ ಹೊಂದಿರುತ್ತದೆ. ಕರ್ನಾಟಕ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ವ್ಯಾಪ್ತಿಗೆ ಸೇರಿರುತ್ತಾರೆ.",
+    "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ 2015 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದ್ದು, ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ/ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದಿರುವ ಕಾರಣ ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಸಮಾಜದ ಮುಖ್ಯ ವಾಹಿನಿಗೆ ಬರಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವ ಉದ್ದೇಶ ಹೊಂದಿರುತ್ತದೆ. ಕರ್ನಾಟಕ ಮಾದರ/ಮಾದಿಗ ಜನಾಂಗದವರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ವ್ಯಾಪ್ತಿಗೆ ಸೇರಿರುತ್ತಾರೆ.",
   objectives_title_en: "Objectives of Karnataka Madara Mahasabha",
   objectives_title_kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ಉದ್ದೇಶಗಳು",
   objectives_en: [
@@ -63,7 +63,7 @@ export const AboutTrustContent = {
     "Time-Bound Programs: To design and implement timely programs approved by the General Body meetings, in line with the changing needs of society, for the welfare of the community.",
   ],
   objectives_kn: [
-    "ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದವರಾಗಿರುವ ಕಾರಣ. ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಅಭಿವೃದ್ಧಿ ಹೊಂದಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವುದು.",
+    "ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ/ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದವರಾಗಿರುವ ಕಾರಣ. ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಅಭಿವೃದ್ಧಿ ಹೊಂದಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವುದು.",
     "ಮಾದರ ಜನಾಂಗದವರ ಅಭಿವೃದ್ಧಿಗಾಗಿ ರಾಜ್ಯ ಮತ್ತು ಕೇಂದ್ರ ಸರ್ಕಾರ ಹಾಗೂ ಇತರ ಸಂಸ್ಥೆಗಳು ಕೊಡಬಹುದಾದ ಎಲ್ಲಾ ವಿಧವಾದ ಸಹಾಯ ಸೌಲಭ್ಯಗಳನ್ನು, ಸೌಕರ್ಯಗಳನ್ನು ಸಮರ್ಪಕವಾಗಿ ದೊರಕಿಸಿಕೊಡಲು ಹಾಗೂ ಇತರೆ ಜನಾಂಗದೊಡನೆ ಕಲೆತು ಪರಸ್ಪರ ಅಭಿವೃದ್ಧಿಗೆ ಸಹಕರಿಸುವುದು ಈ ಸಮುದಾಯವನ್ನು ಸಮಾಜದ ಮುಖ್ಯವಾಹಿನಿಗೆ ತರಲು ಶ್ರಮಿಸುವುದು ಆಗಿರುತ್ತದೆ.",
     "ಮಾದರ ಸಮಾಜಕ್ಕೆ ಒಳಪಡುವ ಎಲ್ಲಾ ಪರ್ಯಾಯ ಜಾತಿಗಳೊಡನೆ ಪರಸ್ಪರ ಮೈತ್ರಿ ಹಾಗೂ ಸಹೃದಯ, ವಿಶ್ವಾಸಗಳು ಬೆಳೆಯುವಂತೆ ಪೂರಕ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಹಮ್ಮಿಕೊಳ್ಳುವುದು.",
     "ರಾಜ್ಯದಲ್ಲಿ ಮಾದರ ಮತ್ತು ಪರ್ಯಾಯ ಜನಾಂಗದ ಅಭಿವೃದ್ಧಿಗಾಗಿ ಶಾಲಾ ಕಾಲೇಜುಗಳು, ಶೈಕ್ಷಣಿಕ ವಿದ್ಯಾಸಂಸ್ಥೆಗಳನ್ನು ಸ್ಥಾಪಿಸಿ ಸಮಾಜದ ಅಭಿವೃದ್ಧಿಗೆ ಪೂರಕವಾದ ವಾತಾವರಣವನ್ನು ಕಲ್ಪಿಸುವುದು ಹಾಗೂ ಮಾದರ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ರಾಜ್ಯದ ಎಲ್ಲೆಡೆ ವಸತಿ ನಿಲಯಗಳನ್ನು,ತರಬೇತಿ ಕೇಂದ್ರಗಳನ್ನು ಹಾಗೂ ಸಮುದಾಯ ಭವನಗಳನ್ನು ನಿರ್ಮಿಸಲು ವ್ಯವಸ್ಥೆ ಮಾಡುವುದು.",
@@ -89,7 +89,7 @@ export const AboutTrustContent = {
           Vice_President_en: "Vice President",
           Vice_President_kn: "ಉಪಾಧ್ಯಕ್ಷರು",
           Chief_Executive_Members_en: "Chief Executive Members",
-          Chief_Executive_Members_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು",
+          Chief_Executive_Members_kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು",
           Organizational_Executives_en: "Organizational Executives",
           Organizational_Executives_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿಗಳು",
           Treasurer_en: "Treasurer",
@@ -105,7 +105,7 @@ export const AboutTrustContent = {
         title_en: "Name",
         title_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಹೆಸರು",
         commitee_members_name: {
-          President_en: "Dr||K.H.Muniyappa",
+          President_en: "Dr.K.H.Muniyappa",
           President_kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
 
           Vice_President_en: [
@@ -119,15 +119,15 @@ export const AboutTrustContent = {
             "Sri A. Muniyappa",
           ],
           Chief_Executive_Members_kn: [
-            "ಡಾ|| ಎಲ್. ಹನುಮಂತಯ್ಯ",
+            "ಡಾ. ಎಲ್. ಹನುಮಂತಯ್ಯ",
             "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
           ],
 
           Organizational_Executives_en: "Sri. Pillamuniswamyappa",
           Organizational_Executives_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
 
-          Treasurer_en: "Dr|| Sujatha",
-          Treasurer_kn: "ಡಾ|| ಸುಜಾತ",
+          Treasurer_en: "Dr. Sujatha",
+          Treasurer_kn: "ಡಾ. ಸುಜಾತ",
 
           Executive_Committee_Members_en: [
             "Sri. H. Anjaneya",
@@ -236,7 +236,7 @@ export const OrganizationContent = {
       { district: "ಕೊಡಗು", members: 1 },
       { district: "ಧಾರವಾಡ", members: 2 },
       { district: "ಉತ್ತರ ಕನ್ನಡ", members: 1 },
-      { district: "ಬಿಜಾಪುರ", members: 2 },
+      { district: "ವಿಜಯಪುರ", members: 2 },
       { district: "ಮಂಗಳೂರು", members: 1 },
       { district: "ಮೈಸೂರು", members: 2 },
       { district: "ಚಾಮರಾಜನಗರ", members: 1 },
@@ -244,7 +244,7 @@ export const OrganizationContent = {
       { district: "ದಾವಣಗೆರೆ", members: 2 },
       { district: "ಬೆಳಗಾಂ", members: 1 },
       { district: "ಹಾವೇರಿ", members: 1 },
-      { district: "ಗುಲ್ಬರ್ಗಾ (ಒಂದು ಮಹಿಳೆ)", members: 2 },
+      { district: "ಕಲಬುರಗಿ (ಒಂದು ಮಹಿಳೆ)", members: 2 },
       { district: "ಬಾಗಲಕೋಟೆ", members: 1 },
       { district: "ಬಳ್ಳಾರಿ", members: 1 },
       { district: "ಗದಗ", members: 1 },
@@ -427,7 +427,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Dr. L. Hanumanthayya\n30. 207/A, 'D' Cross, 2nd Block, Basaveshwaranagar, Bengaluru.",
-      kn: "ಡಾ|| ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ , ʼಡಿʼಕ್ರಾಸ್‌, 2ನೇ  ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
+      kn: "ಡಾ. ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ , ʼಡಿʼಕ್ರಾಸ್‌, 2ನೇ  ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -457,7 +457,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Dr. Sujata\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
-      kn: "ಡಾ|| ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ  ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096.",
+      kn: "ಡಾ. ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ  ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096.",
     },
     position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -504,7 +504,7 @@ export const CommitteeMembers = [
 export const AboutTrustPageContent = {
   paragraph: {
     en: "The Karnataka Madara Mahasabha was established in 2015 with the aim of addressing the backwardness of the Madara/Madiga Communities of Karnataka in the economic, social, political, and educational spheres. Its purpose is to take all necessary measures to enable this Community to progress and integrate into the mainstream of society. The Madara/ Madiga Community of Karnataka come under the purview of the Karnataka Madara Mahasabha.",
-    kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ 2015 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದ್ದು, ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದಿರುವ ಕಾರಣ ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಸಮಾಜದ ಮುಖ್ಯ ವಾಹಿನಿಗೆ ಬರಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವ ಉದ್ದೇಶ ಹೊಂದಿರುತ್ತದೆ. ಕರ್ನಾಟಕ ಮಾದರ ಮತ್ತು ಮಾದಿಗ ಜನಾಂಗದವರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ವ್ಯಾಪ್ತಿಗೆ ಸೇರಿರುತ್ತಾರೆ.",
+    kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ 2015 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟಿದ್ದು, ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮಾದರ/ಮಾದಿಗ ಜನಾಂಗದವರು ಆರ್ಥಿಕ, ಸಾಮಾಜಿಕ, ರಾಜಕೀಯ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹಿಂದುಳಿದಿರುವ ಕಾರಣ ಈ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವರು ಮುಂದುವರೆದು ಸಮಾಜದ ಮುಖ್ಯ ವಾಹಿನಿಗೆ ಬರಲು ಅಗತ್ಯವಾದ ಎಲ್ಲಾ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವ ಉದ್ದೇಶ ಹೊಂದಿರುತ್ತದೆ. ಕರ್ನಾಟಕ ಮಾದರ/ಮಾದಿಗ ಜನಾಂಗದವರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾದ ವ್ಯಾಪ್ತಿಗೆ ಸೇರಿರುತ್ತಾರೆ.",
   },
   secondParagraph: {
     en: "With the intention of safeguarding the interests of the Madara / Madiga  Community and bringing them into the social mainstream, senior leaders and visionaries of the Community, particularly the respected Dr. K.H. Muniyappa—who has served seven consecutive terms as a Member of Parliament from Kolar Lok Sabha constituency, held positions as Union Minister, and is currently the MLA from Devanahalli Assembly Constituency as well as a Minister in the Government of Karnataka—took keen interest. Keeping in mind the development of future generations and with the objective of strengthening the organizational unity of the Madiga Community, he initiated the plan to establish Karnataka Madara Mahasabha.",

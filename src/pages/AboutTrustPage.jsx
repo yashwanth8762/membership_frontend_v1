@@ -229,14 +229,14 @@ const AboutTrustPage = () => {
                   name_en: "Dr. L. Hanumantayya",
                   name_kn: "ಡಾ|| ಎಲ್. ಹನುಮಂತಯ್ಯ",
                   designation_en: "General Secretary",
-                  designation_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
+                  designation_kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
                   img: "/assets/AMuniyappageneralSecretary.jpeg",
                   name_en: "Sri A. Muniyappa",
                   name_kn: "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
                   designation_en: "General Secretary",
-                  designation_kn: "ರ್ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
+                  designation_kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
                   img: "/assets/Pillamunishamappa.webp",
