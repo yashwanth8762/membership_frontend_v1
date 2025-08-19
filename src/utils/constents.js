@@ -134,7 +134,7 @@ export const AboutTrustContent = {
             "Sri.Govinda Karajol",
           ],
           Executive_Committee_Members_kn: [
-            "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ",
+            "ಶ್ರೀ.ಹೆಚ್. ಆಂಜನೇಯ",
             "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
           ],
           Lawyer_en:"Mr. H. Venkatesh Dodderi",
@@ -171,11 +171,11 @@ export const HistoryCultureContent = {
   content: {
     title: [
       {
-        en: "The Madras were the first kings of India./n The Madras were the first warriors of India.",
+        en: "Madara – The First Kings of India./n Madara – The First Warriors of India",
         kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು./n ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು",
       },
       {
-        en: "Madigas in Myth & Folklore",
+        en: "Madiga in Mythology and Folklore",
         kn: "ಪೌರಾಣಿಕ ಹಾಗೂ ಜನಪದಗಳಲ್ಲಿ ಮಾದಿಗ ",
       },
       // {
@@ -186,8 +186,12 @@ export const HistoryCultureContent = {
     description: [
       {
         en: [
-          "Madara is the name of the most ancient tribe in India. It is the name of the very first tribe born and raised in India. It is the name of the tribe that belonged to the first dynasty to rule India. It is the name of the powerful warrior tribe that first introduced monarchy and democracy to ancient India. During the time when the Madigas were ruling, the people of the country used to respectfully call them Mahadore, Mahadore. They used to say Mahadev, Mahadev with devotion. The word Mahadore itself means Mahadev, Madore, Madevaru, Maderu, Madaru, Madara. Thus, the Madara tribe, which has earned its own senior position in the history of India with its historical names, is the first political tribe in India. Although they are from the Madiga tribe, in the modern era, all castes and all races, who are worshipped and worshipped with fear and devotion by all castes and races, are a suitable proof and powerful proof of the tribal superiority.",
-          "But due to the intrigues of the Arya Brahmins, the first foreigners who migrated to India, the Madigas' statehood was destroyed. As cultural progress was destroyed, economic progress was destroyed. As economic progress was destroyed, social progress was destroyed. As social progress was destroyed, educational progress was destroyed. As educational progress was destroyed, industrial progress was destroyed. As industrial progress was destroyed, the Madigas became untouchables and became slaves to the religion and culture of the foreign Brahmins. In such a miserable situation, the Arya Brahmins, who captured the education and intelligence of the Madigas through many tricks, made them objects of their hereditary contract and painted an indelible stain on the name and breath of the Madigas. By giving a low and dirty meaning to the highest heritage and history of the Madigas, they reduced their mental, intellectual, and physical strength and made them dwarfs. For these reasons, the Madiga community is constantly subjected to exploitation by upper castes and remains extremely backward socially, economically, and educationally.",
+          `Madara" is the name of one of the most ancient ethnic groups of India — the name of the first indigenous people who were born and raised in this land. It is the name of the community to which the earliest ruling dynasty of India belonged. It is the name of a powerful warrior race that first introduced political governance and democracy to ancient India. During the time when the Madigas ruled, the people of the land respectfully addressed them as "Mahadore" (Great Lords) and reverently referred to them as "Mahadevaru" (Great Gods).
+The term "Mahadore" eventually evolved into Mahadevaru, Madore, Madevaru, Maderu, Madaru, and finally Mādara. In this way, the Mādara community — through their historic titles — earned a distinguished place in the history of India. Though they are today known as the Madiga community, they are in fact the first political community of India.`,
+          `Great figures from this community, like  Male Mahadeshwara, Marulasiddha, and others — who are now considered divine and worshipped with reverence and devotion by people of all castes and communities — serve as strong evidence of the ethnic greatness and historical legacy of the Mādara people.
+However, due to the conspiracy of the Aryan Brahmins — who were the first foreigners to migrate to India — the political power of the Madiga community was destroyed. The decline of cultural progress led to the downfall of economic progress. The collapse of economic progress, in turn, led to the decline of social progress. With the loss of social progress came the decline of educational progress. The decline in education led to a downfall in industrial progress. This chain of decline ultimately resulted in the Madigas being deemed untouchables, becoming slaves to the religion and culture of foreign Brahmins.
+In such a degraded situation, the Aryan Brahmins, using various strategies and conspiracies, appropriated the intelligence and knowledge of the Madigas. They made these intellectual riches their own hereditary property and indelibly tarnished the name and identity of the Madigas. By distorting the glorious heritage and history of the Madigas, they assigned it negative and degrading interpretations, systematically weakening their mental, intellectual, and physical strength — eventually rendering them powerless.
+`,
         ],
         kn: [
           "ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದಲ್ಲಿ ಪ್ರಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿದ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಪ್ರಭುತ್ವವನ್ನು, ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ, ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ. ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಆಧುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ ಎಲ್ಲಾ ಜಾತಿ, ಎಲ್ಲಾ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೆ ಮಹದೇಶ್ವರ, ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
@@ -195,7 +199,12 @@ export const HistoryCultureContent = {
         ],
       },
       {
-        en: ["The Madigas are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origin is explained by several mythological stories and folk tales. Some scholars say that the name of the community comes from the call of the gods Mahadige Ra (father, great, dige ba), from which the word Madiga is formed. Jambavant, who appears in the mythological stories, is a famous character in the Ramayana and the original ancestor of the Madigas. The gods used to ask Jambavant for help when they were in distress. Stories are famous that he was at the forefront of works such as skinning and using swords. According to another story, when Shiva's sacred cow Kamadhenu died, Jambavant dismembered its body. But for violating the divine rules, Shiva cursed Jambavant and another boy Chinnayya. Their descendants are the Madiga and Mala communities. In another myth, the Madigas are called the children of the goddess Matangi, hence the use of the term “children of Matangi” has become customary. Thus, the original sanctity of the Madiga community is a juncture between stories of service to the gods and curses, and even today they celebrate this mythology with respect and without forgetting it as part of their culture.",
+        en: [`The Madiga are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origins are explained through various mythological stories and folk legends.
+Some scholars believe that the word Madiga comes from the invocation of the deities Mahadigera  (Maha = great, Dige/Degeba = grandfather/elder), which gradually evolved into the term Madiga.
+In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.
+Another legend says that when Lord Shiva’s sacred cow, Kamadhenu, died, Jambavanta cut its body into pieces. For violating divine rules, Shiva cursed Jambavanta and a boy named Chinnayya — their descendants became the Madiga and Maala communities.
+According to yet another story, the Madigas are the children of Goddess Matangi, which gave rise to the term “Matangi Makkalu” (Children of Matangi).
+Thus, the origins of the Madiga community are closely tied to tales of divine service and curses. Even today, these myths remain an honored part of their cultural identity and traditions. `,
         ],
           kn: ["ಮಾದಿಗರು ದಕ್ಷಿಣ ಭಾರತದ ಪ್ರಮುಖ ದಲಿತ ಸಮುದಾಯಗಳಲ್ಲಿ ಒಬ್ಬರಾಗಿದ್ದು, ಪಾರಂಪರಿಕವಾಗಿ ಚರ್ಮ ಕಾರ್ಯ ಮತ್ತು ಗ್ರಾಮೀಣ ಸೇವೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡವರಾಗಿದ್ದಾರೆ. ಇವರ ಮೂಲವನ್ನು ಹಲವು ಪೌರಾಣಿಕ ಕಥೆಗಳು ಮತ್ತು ಜನಪದ ಕಥೆಗಳು ವಿವರಿಸುತ್ತವೆ.  ಸಮುದಾಯದ ಹೆಸರು ಮಹಾದಿಗೆ ರಾ (ತಾತ, ಮಹಾ, ದಿಗೆ ಬಾ) ದೇವತೆಗಳ ಕರೆಯಿನಿಂದ ಬಂದಿದ್ದು, ಇದರಿಂದ ಮಡಿಗ ಎಂಬ ಪದ ರೂಪವಾಯಿತೆಂದು ಕೆಲವು ಪಂಡಿತರು ಹೇಳುತ್ತಾರೆ.","ಪುರಾಣ ಕಥೆಗಳಲ್ಲಿ ಬರುವ ಜಾಂಬವಂತನು ರಾಮಾಯಣದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ಪಾತ್ರ ಹಾಗೂ ಮಾದಿಗರ ಮೂಲ ಪಿತಾಮಹರಾಗಿದ್ದಾರೆ. ದೇವತೆಗಳು ಸಂಕಟದಲ್ಲಿದ್ದಾಗ ಜಾಂಬವಂತನಿಗೆ ಸಹಾಯ ಮಾಡುವಂತೆ ಕೋರುತ್ತಿದ್ದರು. ಅವನು ಕತ್ತಿಗಳಿಂದ ಚರ್ಮ ತೆಗೆದು ಬಳಕೆಮಾಡುವುದು ಮೊದಲಾದ ಕಾರ್ಯಗಳಲ್ಲಿ ಮುಂಚೂಣಿಯಲ್ಲಿ ಇದ್ದನೆಂಬ ಕಥೆಗಳು ಪ್ರಸಿದ್ಧ. ","ಇನ್ನೊಂದು ಕಥೆಯ ಪ್ರಕಾರ, ಶಿವನ ಪವಿತ್ರ ಹಸು ಕಾಮಧೇನು ಸತ್ತಾಗ, ಜಾಂಬವಂತನು ಅದರ ದೇಹವನ್ನು ತುಂಡು ಮಾಡುತ್ತಾನೆ. ಆದರೆ ದೈವೀ ನಿಯಮಗಳನ್ನು ಉಲ್ಲಂಘಿಸಿದ ಕಾರಣ, ಶಿವನು ಜಾಂಬವಂತ ಮತ್ತು ಮತ್ತೊಬ್ಬ ಹುಡುಗ ಚಿನ್ನಯ್ಯನಿಗೆ ಶಾಪ ನೀಡುತ್ತಾನೆ. ಅವರ ಸಂತತಿಯೇ ಮಡಿಗ ಮತ್ತು ಮಾಳಾ ಸಮುದಾಯಗಳು ಎನಿಸಿಕೊಳ್ಳುತ್ತವೆ. ಇನ್ನೊಂದು ಪುರಾಣದಲ್ಲಿ ಮಡಿಗರು ಮಾತಂಗಿ ದೇವಿಯ ಮಕ್ಕಳು ಎಂದು ಹೆಸರಾಗಿದ್ದಾರೆ, ಇದರಿಂದ “ಮಾತಂಗಿ ಮಕ್ಕಳು” ಎಂಬ ಪದ ಬಳಕೆ ರೂಢಿಯಾಗಿದೆ.","ಹೀಗಾಗಿ, ಮಾದಿಗ ಸಮುದಾಯದ ಮೂಲ ಪವಿತ್ರತೆ ದೇವತೆಗಳ ಸೇವೆ ಮತ್ತು ಶಾಪದ ಕಥೆಗಳ ಸಂಧಿ ಬಿಂದುವಾಗಿದ್ದು, ಇಂದಿಗೂ ಈ ಪೌರಾಣಿಕತೆಯನ್ನು ತಮ್ಮ ಸಂಸ್ಕೃತಿಯ ಭಾಗವಾಗಿ ಗೌರವದಿಂದ ಮರೆಯದೇ ಆಚರಿಸುತ್ತಾರೆ."],
       },
@@ -383,13 +392,13 @@ export const OrganizationContent = {
           title_kn: "ಸಾಮಾನ್ಯ ಸಭೆ",
           title_en: "Ordinary Meeting",
           en: "Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
-          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟೀನ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿಲ್ಲದಂತೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು.",
+          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು  ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ  ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ  ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟಿಸ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ",
         },
         {
           title_kn: "ವಿಶೇಷ ಸಭೆ",
           title_en: "Special Meeting",
           en: "Special or important matters of the association can be decided in a special general body meeting called by the president and general secretary with the approval of the executive committee. At least more than 50% of the members must be present for a special meeting. Notice of such a meeting mentioning the subjects to be discussed must be given at least 21 days in advance.",
-          kn: "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು ಮತ್ತು ವಿಶೇಷ ಸಾಮಾನ್ಯ ಸಭೆಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ 50% ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಮಂದಿ ಅಥವಾ 50% ಗಿಂತ ಕಡಿಮೆಯಿಲ್ಲದೆ ಸದಸ್ಯರು ಹಾಜರಿರಬೇಕು. ಇಂತಹ ಸಭೆ ಕೂಡುವುದಕ್ಕೆ ಕನಿಷ್ಠ ಪಕ್ಷ 21 ದಿನ ಮುಂಚಿತವಾಗಿ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ಮೀಟಿಂಗ್‌ ನೋಟೀಸ್‌ ಕೊಡಲಾಗುವುದು.",
+          kn: "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು  ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು. ",
         },
       ],
     },
@@ -436,7 +445,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "A. Muniyappa\nNo.2, IT Township, Dooravani Nagar, Bengaluru-16.",
-      kn: "ಎ.ಮುನಿಯಪ್ಪ, ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16.",
+      kn: "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ, ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -449,7 +458,7 @@ export const CommitteeMembers = [
     },
     position: {
       en: "State Organizing Secretary",
-      kn: "ರಾಜ್ಯ ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
+      kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
     mobile: "9845678275",
@@ -466,7 +475,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri. H. Anjaneya\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
-      kn: "ಶ್ರೀ. ಎಚ್‌. ಆಂಜನೇಯ, 2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
+      kn: "ಶ್ರೀ.ಹೆಚ್. ಆಂಜನೇಯ, 2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
     },
     position: {
       en: "Executive Committee Member",
@@ -534,7 +543,7 @@ export const organizationTalukMembers = {
       "Contact No.",
     ],
     tableHeading_kn: [
-      "ಸಂ.ಸಂಖ್ಯೆ",
+      "ಕ್ರ.ಸಂ",
       "ಜಿಲ್ಲೆ",
       "ಹುದ್ದೆ",
       "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",
@@ -553,7 +562,7 @@ export const organizationDistrictMembers = {
       "Contact No.",
     ],
     tableHeading_kn: [
-      "ಸಂ.ಸಂಖ್ಯೆ",
+      "ಕ್ರ.ಸಂ",
       "ತಾಲೂಕು",
       "ಹುದ್ದೆ",
       "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ",

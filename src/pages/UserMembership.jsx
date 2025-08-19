@@ -799,7 +799,7 @@ export default function UserMembership() {
                     <option value="">{isEnglish ? 'Select amount...' : 'ಮೊತ್ತ ಆಯ್ಕೆಮಾಡಿ...'}</option>
                     <option value="500">₹500 - {isEnglish ? 'General Membership' : 'ಸಾಮಾನ್ಯ ಸದಸ್ಯತ್ವ'}</option>
                     <option value="1000">₹5,000 - {isEnglish ? 'Special membership' : 'ವಿಶೇಷ ಸದಸ್ಯತ್ವ  '}</option>
-                    <option value="5000">₹10,000 - {isEnglish ? 'Special membership' : 'ವಿಶೇಷ ಸದಸ್ಯತ್ವ  '}</option>
+                    <option value="5000">₹10,000 - {isEnglish ? 'Special membership' : 'ಪ್ರೀಮಿಯಂ ಸದಸ್ಯತ್ವ  '}</option>
                     <option value="25000">₹25,000 - {isEnglish ? 'Lifetime Membership' : 'ಆಜೀವ ಸದಸ್ಯತ್ವ'}</option>
                     <option value="50000">₹50,000 - {isEnglish ? 'Patron Membership' : 'ಪ್ಯಾಟ್ರಾನ್ ಸದಸ್ಯತ್ವ'}</option>
                     <option value="100000">₹1,00,000 - {isEnglish ? 'Chief Patron Membership' : 'ಮುಖ್ಯ ಪ್ಯಾಟ್ರಾನ್ ಸದಸ್ಯತ್ವ'}</option>

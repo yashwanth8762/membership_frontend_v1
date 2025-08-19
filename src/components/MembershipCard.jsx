@@ -272,7 +272,7 @@ const MembershipCard = ({
                 <span className="font-bold">{name}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
-                <span className="font-semibold">ತಂದೆ/ಗಾಂಗ: </span>
+                <span className="font-semibold">ತಂದೆ: </span>
                 <span>{parentName}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
