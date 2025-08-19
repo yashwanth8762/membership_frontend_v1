@@ -19,13 +19,13 @@ export const NavLinks = [
     activities_kn: "ಮಹಾಸಭಾದ ದಾಖಲಾತಿಗಳು",
     href: "#documents",
   },
-  
+
   {
     upcoming_en: "Notifications/Programs",
     upcoming_kn: "ಮಹಾಸಭಾದ ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು",
     href: "#upcoming-programs",
   },
-  
+
   {
     gallery_en: "Gallery",
     gallery_kn: "ಗ್ಯಾಲರಿ",
@@ -96,8 +96,8 @@ export const AboutTrustContent = {
           Treasurer_kn: "ಖಜಾಂಚಿ",
           Executive_Committee_Members_en: "Executive Committee Members",
           Executive_Committee_Members_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
-          Lawyer_en:"Legal Advisor",
-          Lawyer_kn:"ಕಾನೂನು ಸಲಹೆಗಾರರು"
+          Lawyer_en: "Legal Advisor",
+          Lawyer_kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು",
         },
       },
 
@@ -137,8 +137,8 @@ export const AboutTrustContent = {
             "ಶ್ರೀ.ಹೆಚ್. ಆಂಜನೇಯ",
             "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
           ],
-          Lawyer_en:"Mr. H. Venkatesh Dodderi",
-          Lawyer_kn:"ಶ್ರೀ.ಹೆಚ್.ವೆಂಕಟೇಶ್ ದೊಡ್ಡೇರಿ"
+          Lawyer_en: "Mr. H. Venkatesh Dodderi",
+          Lawyer_kn: "ಶ್ರೀ.ಹೆಚ್.ವೆಂಕಟೇಶ್ ದೊಡ್ಡೇರಿ",
         },
       },
     },
@@ -167,7 +167,7 @@ export const HistoryCultureContent = {
   short_description_en:
     "Madara is the name of the most ancient tribe in India. It is the name of the very first tribe born and raised in India. It is the name of the tribe that belonged to the first dynasty to rule India. It is the name of the powerful warrior tribe that first introduced monarchy and democracy to ancient India. During the time when the Madigas were ruling, the people of the country used to respectfully call them Mahadore, Mahadore. They used to say Mahadev, Mahadev with devotion. The word Mahadore itself means Mahadev, Madore, Madevaru, Maderu, Madaru, Madara. Thus, the Madara tribe, which has earned its own senior position in the history of India with its historical names, is the first political tribe in India. Although they are from the Madiga tribe, in the modern era, all castes and all races, who are worshipped and worshipped with fear and devotion by all castes and races, are a suitable proof and powerful proof of the tribal superiority.",
   short_description_kn:
-          "ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದಲ್ಲಿ ಪ್ರಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿದ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಪ್ರಭುತ್ವವನ್ನು, ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ, ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ. ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಆಧುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ ಎಲ್ಲಾ ಜಾತಿ, ಎಲ್ಲಾ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೆ ಮಹದೇಶ್ವರ, ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
+    "ಮಾದರ ಎಂಬುದು ಭಾರತದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದಲ್ಲಿ ಹುಟ್ಟಿ ಬೆಳೆದ ಮೊಟ್ಟಮೊದಲ ಜನಾಂಗದ ಹೆಸರು. ಭಾರತದಲ್ಲಿ ಪ್ರಪ್ರಥಮ ರಾಜ್ಯಭಾರ ಮಾಡಿದ ರಾಜವಂಶಕ್ಕೆ ಸೇರಿದ ಜನಾಂಗದ ಹೆಸರು. ಪ್ರಾಚೀನ ಭಾರತಕ್ಕೆ ರಾಜಪ್ರಭುತ್ವವನ್ನು, ಪ್ರಜಾಪ್ರಭುತ್ವವನ್ನು ಪ್ರಪ್ರಥಮವಾಗಿ ಪರಿಚಯಿಸಿದ ಶಕ್ತಿಶಾಲಿ ಯೋಧ ಜನಾಂಗದ ಹೆಸರು, ಮಾದಿಗರು ಆಳುತ್ತಿದ್ದ ಕಾಲದಲ್ಲಿ ಅವರನ್ನು ನಾಡಿನ ಪ್ರಜೆಗಳು ಮಹಾದೊರೆ, ಮಹಾದೊರೆ ಎಂದು ಗೌರವದಿಂದ ಕರೆಯುತ್ತಿದ್ದರು. ಮಹಾದೇವರು, ಮಹಾದೇವರು ಎಂದು ಭಕ್ತಿಯಿಂದ ಹೇಳುತ್ತಿದ್ದರು. ಮಹಾದೊರೆ ಪದವೇ ಮಹಾದೇವರು, ಮಾದೊರೆ, ಮಾದೇವರು, ಮಾದೇರು, ಮಾದರು, ಮಾದರ ಎಂದಾಗಿದೆ. ಹೀಗೆ ಐತಿಹಾಸಿಕ ಹೆಸರುಗಳಿಂದ ಭಾರತದ ಇತಿಹಾಸದಲ್ಲಿ ತಮ್ಮದೇ ಆದ ಹಿರಿಯ ಸ್ಥಾನವನ್ನು ಗಳಿಸಿರುವ ಮಾದರ ಜನಾಂಗ ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜಕೀಯ ಜನಾಂಗ. ಮಾದಿಗ ಜನಾಂಗದವರಾಗಿದ್ದರೂ ಆಧುನಿಕ ಯುಗದಲ್ಲಿ ದೇವರಾಗಿರುವ ಎಲ್ಲಾ ಜಾತಿ, ಎಲ್ಲಾ ಜನಾಂಗದವರಿಂದ ಭಯ ಭಕ್ತಿಯಿಂದ ಪೂಜಿಸಿಕೊಳ್ಳುತ್ತಿರುವ, ಆರಾಧನೆಗೊಳ್ಳುತ್ತಿರುವ ಮಲೆ ಮಹದೇಶ್ವರ, ಮರುಳಸಿದ್ದರು ಮೊದಲಾದವರು ಜನಾಂಗೀಯ ಶ್ರೇಷ್ಠತೆಗೆ ಸೂಕ್ತ ಸಾಕ್ಷಿ, ಪ್ರಬಲ ಪುರಾವೆ.",
   content: {
     title: [
       {
@@ -199,9 +199,20 @@ In such a degraded situation, the Aryan Brahmins, using various strategies and c
         ],
       },
       {
-        en: ["The Madiga are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origins are explained through various mythological stories and folk legends.","Some scholars believe that the word Madiga comes from the invocation of the deities Mahadigera  (Maha = great, Dige/Degeba = grandfather/elder), which gradually evolved into the term Madiga.","In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.","Another legend says that when Lord Shiva’s sacred cow, Kamadhenu, died, Jambavanta cut its body into pieces. For violating divine rules, Shiva cursed Jambavanta and a boy named Chinnayya — their descendants became the Madiga and Maala communities.","According to yet another story, the Madigas are the children of Goddess Matangi, which gave rise to the term “Matangi Makkalu” (Children of Matangi).","Thus, the origins of the Madiga community are closely tied to tales of divine service and curses. Even today, these myths remain an honored part of their cultural identity and traditions. "
+        en: [
+          "The Madiga are one of the major Dalit communities of South India, traditionally engaged in leather work and rural services. Their origins are explained through various mythological stories and folk legends.",
+          "Some scholars believe that the word Madiga comes from the invocation of the deities Mahadigera  (Maha = great, Dige/Degeba = grandfather/elder), which gradually evolved into the term Madiga.",
+          "In the Ramayana, the character Jambavanta is considered the ancestral patriarch of the Madigas. It is said that whenever the gods were in trouble, they sought Jambavanta’s help. Stories also describe him as being skilled in cutting and using animal hides, placing him at the forefront of such tasks.",
+          "Another legend says that when Lord Shiva’s sacred cow, Kamadhenu, died, Jambavanta cut its body into pieces. For violating divine rules, Shiva cursed Jambavanta and a boy named Chinnayya — their descendants became the Madiga and Maala communities.",
+          "According to yet another story, the Madigas are the children of Goddess Matangi, which gave rise to the term “Matangi Makkalu” (Children of Matangi).",
+          "Thus, the origins of the Madiga community are closely tied to tales of divine service and curses. Even today, these myths remain an honored part of their cultural identity and traditions. ",
         ],
-          kn: ["ಮಾದಿಗರು ದಕ್ಷಿಣ ಭಾರತದ ಪ್ರಮುಖ ದಲಿತ ಸಮುದಾಯಗಳಲ್ಲಿ ಒಬ್ಬರಾಗಿದ್ದು, ಪಾರಂಪರಿಕವಾಗಿ ಚರ್ಮ ಕಾರ್ಯ ಮತ್ತು ಗ್ರಾಮೀಣ ಸೇವೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡವರಾಗಿದ್ದಾರೆ. ಇವರ ಮೂಲವನ್ನು ಹಲವು ಪೌರಾಣಿಕ ಕಥೆಗಳು ಮತ್ತು ಜನಪದ ಕಥೆಗಳು ವಿವರಿಸುತ್ತವೆ.  ಸಮುದಾಯದ ಹೆಸರು ಮಹಾದಿಗೆ ರಾ (ತಾತ, ಮಹಾ, ದಿಗೆ ಬಾ) ದೇವತೆಗಳ ಕರೆಯಿನಿಂದ ಬಂದಿದ್ದು, ಇದರಿಂದ ಮಡಿಗ ಎಂಬ ಪದ ರೂಪವಾಯಿತೆಂದು ಕೆಲವು ಪಂಡಿತರು ಹೇಳುತ್ತಾರೆ.","ಪುರಾಣ ಕಥೆಗಳಲ್ಲಿ ಬರುವ ಜಾಂಬವಂತನು ರಾಮಾಯಣದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ಪಾತ್ರ ಹಾಗೂ ಮಾದಿಗರ ಮೂಲ ಪಿತಾಮಹರಾಗಿದ್ದಾರೆ. ದೇವತೆಗಳು ಸಂಕಟದಲ್ಲಿದ್ದಾಗ ಜಾಂಬವಂತನಿಗೆ ಸಹಾಯ ಮಾಡುವಂತೆ ಕೋರುತ್ತಿದ್ದರು. ಅವನು ಕತ್ತಿಗಳಿಂದ ಚರ್ಮ ತೆಗೆದು ಬಳಕೆಮಾಡುವುದು ಮೊದಲಾದ ಕಾರ್ಯಗಳಲ್ಲಿ ಮುಂಚೂಣಿಯಲ್ಲಿ ಇದ್ದನೆಂಬ ಕಥೆಗಳು ಪ್ರಸಿದ್ಧ. ","ಇನ್ನೊಂದು ಕಥೆಯ ಪ್ರಕಾರ, ಶಿವನ ಪವಿತ್ರ ಹಸು ಕಾಮಧೇನು ಸತ್ತಾಗ, ಜಾಂಬವಂತನು ಅದರ ದೇಹವನ್ನು ತುಂಡು ಮಾಡುತ್ತಾನೆ. ಆದರೆ ದೈವೀ ನಿಯಮಗಳನ್ನು ಉಲ್ಲಂಘಿಸಿದ ಕಾರಣ, ಶಿವನು ಜಾಂಬವಂತ ಮತ್ತು ಮತ್ತೊಬ್ಬ ಹುಡುಗ ಚಿನ್ನಯ್ಯನಿಗೆ ಶಾಪ ನೀಡುತ್ತಾನೆ. ಅವರ ಸಂತತಿಯೇ ಮಡಿಗ ಮತ್ತು ಮಾಳಾ ಸಮುದಾಯಗಳು ಎನಿಸಿಕೊಳ್ಳುತ್ತವೆ. ಇನ್ನೊಂದು ಪುರಾಣದಲ್ಲಿ ಮಡಿಗರು ಮಾತಂಗಿ ದೇವಿಯ ಮಕ್ಕಳು ಎಂದು ಹೆಸರಾಗಿದ್ದಾರೆ, ಇದರಿಂದ “ಮಾತಂಗಿ ಮಕ್ಕಳು” ಎಂಬ ಪದ ಬಳಕೆ ರೂಢಿಯಾಗಿದೆ.","ಹೀಗಾಗಿ, ಮಾದಿಗ ಸಮುದಾಯದ ಮೂಲ ಪವಿತ್ರತೆ ದೇವತೆಗಳ ಸೇವೆ ಮತ್ತು ಶಾಪದ ಕಥೆಗಳ ಸಂಧಿ ಬಿಂದುವಾಗಿದ್ದು, ಇಂದಿಗೂ ಈ ಪೌರಾಣಿಕತೆಯನ್ನು ತಮ್ಮ ಸಂಸ್ಕೃತಿಯ ಭಾಗವಾಗಿ ಗೌರವದಿಂದ ಮರೆಯದೇ ಆಚರಿಸುತ್ತಾರೆ."],
+        kn: [
+          "ಮಾದಿಗರು ದಕ್ಷಿಣ ಭಾರತದ ಪ್ರಮುಖ ದಲಿತ ಸಮುದಾಯಗಳಲ್ಲಿ ಒಬ್ಬರಾಗಿದ್ದು, ಪಾರಂಪರಿಕವಾಗಿ ಚರ್ಮ ಕಾರ್ಯ ಮತ್ತು ಗ್ರಾಮೀಣ ಸೇವೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡವರಾಗಿದ್ದಾರೆ. ಇವರ ಮೂಲವನ್ನು ಹಲವು ಪೌರಾಣಿಕ ಕಥೆಗಳು ಮತ್ತು ಜನಪದ ಕಥೆಗಳು ವಿವರಿಸುತ್ತವೆ.  ಸಮುದಾಯದ ಹೆಸರು ಮಹಾದಿಗೆ ರಾ (ತಾತ, ಮಹಾ, ದಿಗೆ ಬಾ) ದೇವತೆಗಳ ಕರೆಯಿನಿಂದ ಬಂದಿದ್ದು, ಇದರಿಂದ ಮಡಿಗ ಎಂಬ ಪದ ರೂಪವಾಯಿತೆಂದು ಕೆಲವು ಪಂಡಿತರು ಹೇಳುತ್ತಾರೆ.",
+          "ಪುರಾಣ ಕಥೆಗಳಲ್ಲಿ ಬರುವ ಜಾಂಬವಂತನು ರಾಮಾಯಣದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ಪಾತ್ರ ಹಾಗೂ ಮಾದಿಗರ ಮೂಲ ಪಿತಾಮಹರಾಗಿದ್ದಾರೆ. ದೇವತೆಗಳು ಸಂಕಟದಲ್ಲಿದ್ದಾಗ ಜಾಂಬವಂತನಿಗೆ ಸಹಾಯ ಮಾಡುವಂತೆ ಕೋರುತ್ತಿದ್ದರು. ಅವನು ಕತ್ತಿಗಳಿಂದ ಚರ್ಮ ತೆಗೆದು ಬಳಕೆಮಾಡುವುದು ಮೊದಲಾದ ಕಾರ್ಯಗಳಲ್ಲಿ ಮುಂಚೂಣಿಯಲ್ಲಿ ಇದ್ದನೆಂಬ ಕಥೆಗಳು ಪ್ರಸಿದ್ಧ. ",
+          "ಇನ್ನೊಂದು ಕಥೆಯ ಪ್ರಕಾರ, ಶಿವನ ಪವಿತ್ರ ಹಸು ಕಾಮಧೇನು ಸತ್ತಾಗ, ಜಾಂಬವಂತನು ಅದರ ದೇಹವನ್ನು ತುಂಡು ಮಾಡುತ್ತಾನೆ. ಆದರೆ ದೈವೀ ನಿಯಮಗಳನ್ನು ಉಲ್ಲಂಘಿಸಿದ ಕಾರಣ, ಶಿವನು ಜಾಂಬವಂತ ಮತ್ತು ಮತ್ತೊಬ್ಬ ಹುಡುಗ ಚಿನ್ನಯ್ಯನಿಗೆ ಶಾಪ ನೀಡುತ್ತಾನೆ. ಅವರ ಸಂತತಿಯೇ ಮಡಿಗ ಮತ್ತು ಮಾಳಾ ಸಮುದಾಯಗಳು ಎನಿಸಿಕೊಳ್ಳುತ್ತವೆ. ಇನ್ನೊಂದು ಪುರಾಣದಲ್ಲಿ ಮಡಿಗರು ಮಾತಂಗಿ ದೇವಿಯ ಮಕ್ಕಳು ಎಂದು ಹೆಸರಾಗಿದ್ದಾರೆ, ಇದರಿಂದ “ಮಾತಂಗಿ ಮಕ್ಕಳು” ಎಂಬ ಪದ ಬಳಕೆ ರೂಢಿಯಾಗಿದೆ.",
+          "ಹೀಗಾಗಿ, ಮಾದಿಗ ಸಮುದಾಯದ ಮೂಲ ಪವಿತ್ರತೆ ದೇವತೆಗಳ ಸೇವೆ ಮತ್ತು ಶಾಪದ ಕಥೆಗಳ ಸಂಧಿ ಬಿಂದುವಾಗಿದ್ದು, ಇಂದಿಗೂ ಈ ಪೌರಾಣಿಕತೆಯನ್ನು ತಮ್ಮ ಸಂಸ್ಕೃತಿಯ ಭಾಗವಾಗಿ ಗೌರವದಿಂದ ಮರೆಯದೇ ಆಚರಿಸುತ್ತಾರೆ.",
+        ],
       },
       // {
       //   en: "To restore the dignity of the Madara community and bring them into the mainstream of society, senior community leaders — especially Shri K.H. Muniyappa, a 7-time Member of Parliament and former Union Minister — along with various MLAs and Ministers from the state, resolved to launch a unified front. In 2015, they formally established the Karnataka Madiga Mahasabha with a vision to unite and empower the community.",
@@ -211,10 +222,9 @@ In such a degraded situation, the Aryan Brahmins, using various strategies and c
   },
 };
 
-
 export const OrganizationContent = {
   note: {
-    kn: "ಮಹಾಸಭಾ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದೆ, ಜೊತೆಗೆ ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲ್ಲೂಕು ಶಾಖೆಗಳಿರುತ್ತವೆ. ಸಭಾದ ಮತ್ತು ಶಾಖೆಗಳ ವಿಶಿಷ್ಟ ಆಡಳಿತವನ್ನು ಒಂದು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಿಂದ ನಡೆಸಲ್ಪಡಲಾಗುವುದು.",
+    kn: "ಮಹಾಸಭಾ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದೆ, ಜೊತೆಗೆ ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲೂಕು ಶಾಖೆಗಳಿರುತ್ತವೆ. ಸಭಾದ ಮತ್ತು ಶಾಖೆಗಳ ವಿಶಿಷ್ಟ ಆಡಳಿತವನ್ನು ಒಂದು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಿಂದ ನಡೆಸಲ್ಪಡಲಾಗುವುದು.",
     en: `<b>Office Location :</b><br></br>
 The central office of the Mahasabha is located in Bengaluru. In addition, there will be branches at the District and Taluk levels.<br></br>
 <b>Administration:</b><br></br>
@@ -222,17 +232,17 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
   },
 
   first: {
-    title_en: "Central Executive Committee",
+    title_en: "Central Executive Committee (45 Members):",
     title_kn: "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
     paragraph_kn: [
-      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅವರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರುತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು. ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು  ಮಾದಿಗ ಸಮಾಜದ ಪರ್ಯಾಯ  ಜಾತಿಗಳ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ವರ್ಗದವರಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪೈಕಿ ಒಬ್ಬ ಅಧ್ಯಕ್ಷ, ಎರಡು ಉಪಾಧ್ಯಕ್ಷರು, ಎರಡು ಪ್ರಧಾನಕಾರ್ಯದರ್ಶಿ, ನಾಲ್ಕು ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ, ಒಬ್ಬ ಖಜಾಂಚಿ ಮತ್ತು ಒಬ್ಬ ಕಾನೂನು ಸಲಹೆಗಾರರನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
+      "ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳಿಂದ ಬೆಂಗಳೂರು ನಗರ  ಸೇರಿ ಒಟ್ಟು 45 ಜನ ಆಗಿರುತ್ತದೆ.  ಅವರಲ್ಲಿ ಮೂರು  ಜನ ನಾಮಕರಣ ಮೂಲಕ  ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳುವ ಅಧಿಕಾರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಇರುತ್ತದೆ. ಈ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬ ಸದಸ್ಯನು ಕಡ್ಡಾಯವಾಗಿ ವಕೀಲರಾಗಿದ್ದು, ಸಮಾಜದ ಕೆಲಸ ಕಾರ್ಯಗಳಲ್ಲಿ ಗುರುತಿಸಿಕೊಂಡಿರಬೇಕು ಹಾಗೂ  ಉತ್ತಮ ವ್ಯಕ್ತಿತ್ವ ಉಳ್ಳವರಾಗಿರಬೇಕು. ಉಳಿದ ಎರಡು ಸ್ಥಾನಗಳು  ಮಾದಿಗ ಸಮಾಜದ ಪರ್ಯಾಯ  ಜಾತಿಗಳ ನಾಮಕರಣ ಪ್ರತಿನಿಧಿಸಿಲ್ಲದವರ ವರ್ಗದವರಿಂದ  ಮಾಡಲಾಗುತ್ತದೆ. ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪೈಕಿ ಒಬ್ಬ ಅಧ್ಯಕ್ಷ, ಎರಡು ಉಪಾಧ್ಯಕ್ಷರು, ಎರಡು ಪ್ರಧಾನಕಾರ್ಯದರ್ಶಿ, ನಾಲ್ಕು ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ, ಒಬ್ಬ ಖಜಾಂಚಿ ಮತ್ತು ಒಬ್ಬ ಕಾನೂನು ಸಲಹೆಗಾರರನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
       "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ನೇರವಾಗಿ ಕಾಲಕಾಲಕ್ಕೆ ನಡೆಯುವ ಚುನಾವಣೆಗೆ ಕೇಂದ್ರ, ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಸಮಿತಿ ಸದಸ್ಯರು ಮಾಡುವ ಮತದಾನದಿಂದ ಆರಿಸಿಬರುತ್ತಾರೆ.",
       "ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
     ],
     paragraph_en: [
-      "The number of members of the Central Executive Committee will be 45 from all districts including Bangalore city. The Executive Committee will have the power to select three of them through nomination. One of these members must be a lawyer, must be recognized in the work of the society and must be of good character. The remaining two positions will be filled by the nomination of the non-represented castes of the Madiga society. One president, two vice-presidents, two general secretaries, four organizing secretaries, one treasurer and one legal advisor will be selected from among the members of the Executive Committee.",
-      "The members of the Executive Committee are directly elected by the Central, District and Taluk Committee members in periodic elections.",
-      "The following executive committee member positions have been determined based on the current Madara population from the districts.",
+      "The committee consists of a total of 45 members, including representatives from all districts as well as Bengaluru Urban. Among these, the committee holds the authority to nominate three members. Of the nominated members, one must be a lawyer who is recognized for their service to society and noted for having a good personality. The remaining two members will be chosen from the sub-sections of the Madiga community, specifically from groups that are otherwise not directly represented.",
+      "The members of the Executive Committee are directly elected through voting conducted by the members of the Central, District, and Taluk Committees from time to time.",
+      "The Central Executive Committee will select the office bearers from among its members. These include one President, two Vice Presidents, two General Secretaries, four Organizing Secretaries, one Treasurer, and one Legal Advisor.",
     ],
   },
 
@@ -312,30 +322,30 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
   first_otherhalf: {
     paragraph_kn: [
       "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲ್ಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
-      "ಒಂದು ಸಾಲಿನಲ್ಲಿ ಚುನಾವಣೆಯಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ 3 ವರ್ಷದ ಅವಧಿಯದಾಗಿದ್ದು, ಮುಂದಿನ ಚುನಾವಣೆಯಾಗುವವರೆಗೂ ಅಧಿಕಾರದಲ್ಲಿರುತ್ತದೆ. ಕಾರಣಾಂತರಗಳಿಂದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸ್ಥಾನ ಅಥವಾ ಸ್ಥಾನಗಳು ಖಾಲಿ ಬಿದ್ದಾಗ ಸದರಿ ಸ್ಥಾನಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿಕೊಳ್ಳದಿದ್ದರೂ ಸಹ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ನಿರ್ಣಯಗಳು ಸಿಂಧುವಾಗತಕ್ಕವಾಗಿರುತ್ತದೆ.",
+      " ಒಂದು ಸಾಲಿನಲ್ಲಿ ಚುನಾವಣೆಯಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ 3 ವರ್ಷದ ಅವಧಿಯದಾಗಿದ್ದು, ಮುಂದಿನ ಚುನಾವಣೆಯಾಗುವವರೆಗೂ ಅಧಿಕಾರದಲ್ಲಿರುತ್ತದೆ. ಕಾರಣಾಂತರಗಳಿಂದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸ್ಥಾನ ಅಥವಾ ಸ್ಥಾನಗಳು ಖಾಲಿ ಬಿದ್ದಾಗ ಸದರಿ ಸ್ಥಾನಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿಕೊಳ್ಳದಿದ್ದರೂ ಸಹ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ನಿರ್ಣಯಗಳು ಸಿಂಧುವಾಗತಕ್ಕವಾಗಿರುತ್ತದೆ.",
     ],
     paragraph_en: [
-      "For vacant member positions, members will be appointed from the respective district and taluk branches in the next Executive Committee meeting.",
-      "The term of the Executive Committee elected in a given term is 3 years and shall remain in office until the next election. If, for any reason, a seat or seats on the Executive Committee become vacant, the decisions of the Executive Committee shall be valid even if the said seats are not filled.",
+      "For any member position become vacant, the Executive Committee shall appoint replacements from among eligible persons belonging to the respective District, Taluk, or Branch jurisdiction during the next meeting of the Executive Committee. The  elected Executive Committee shall have a tenure of three years and will remain in authority until the next election is conducted.",
+      "If, for any reason, a position or multiple positions in the Executive Committee fall vacant and are not filled, the decisions taken by the Committee shall still be valid and binding.",
     ],
   },
 
   second: {
     5: {
-      title_en: "District Branch Executive Committee",
-      title_kn: "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      title_en: "District Mahasabha  Executive Committee :",
+      title_kn: "  ಜಿಲ್ಲಾ ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ :",
       items: [
         {
-          en: "The district branch office is located at the district headquarters. The District Executive Committee consists of 8 members, with at least one additional member from each taluk included in the committee.",
-          kn: "ಜಿಲ್ಲಾ ಶಾಖೆ ಕಛೇರಿ ಜಿಲ್ಲಾ ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ. ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ 8 ಸದಸ್ಯರುಗಳಿದ್ದು ಮತ್ತು ಹೆಚ್ಚುವರಿಯಾಗಿ ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ ಕನಿಷ್ಠ ಒಬ್ಬ ಸದಸ್ಯರನ್ನು ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
+          en: "1.	The District Mahasabha  office shall be located at the District Headquarters. The District Executive Committee shall consist of 8 members. In addition, at least one member from each taluk shall be included in the District Executive Committee.",
+          kn: "1.	ಜಿಲ್ಲಾ ಶಾಖೆ ಕಛೇರಿಯು  ಜಿಲ್ಲಾ ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ.  ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ 8     ಸದಸ್ಯರುಗಳಿರುತ್ತಾರೆ. ಹೆಚ್ಚುವರಿಯಾಗಿ ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ ಕನಿಷ್ಠ ಒಬ್ಬ  ಸದಸ್ಯರನ್ನು ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
         },
         {
-          en: "The District Executive Committee shall have at least 8 members. District office-bearers are elected from among the committee members elected by the District General Body as follows:",
-          kn: "ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 ಜನ ಸದಸ್ಯರಿರುತ್ತಾರೆ. ಜಿಲ್ಲಾ ಸಭಾದ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಿಂದ ಚುನಾಯಿತರಾದ ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಜಿಲ್ಲಾ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಕೆಳಕಂಡಂತೆ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
+          en: "2.	The District Executive Committee shall have a minimum of 8 members. From among the members elected by the General Body of the District branch, the following office bearers shall be chosen:",
+          kn: "2.	ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 ಜನ ಸದಸ್ಯರಿರುತ್ತಾರೆ. ಜಿಲ್ಲಾ ಸಭಾದ  ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಿಂದ ಚುನಾಯಿತರಾದ ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ  ಸದಸ್ಯರಲ್ಲಿ ಜಿಲ್ಲಾ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಕೆಳಕಂಡಂತೆ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
         },
         {
-          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 2\n7. One from each taluk – 1",
-          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1",
+          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5.	Organizing Secretary – 1\n6. Executive Members – 2\n7. One member from each taluk – 1",
+          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1",
         },
         // {
         //   "en": "The executive committee meeting must be held once every month.",
@@ -348,24 +358,24 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       ],
     },
     6: {
-      title_en: "Taluk Branch Executive Committee",
-      title_kn: "ತಾಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ",
+      title_en: "Taluk Mahasabha Executive Committee :",
+      title_kn: "ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ :",
       items: [
         {
-          en: "The taluk branch office is located at the respective taluk headquarters.",
-          kn: "ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲ್ಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ.",
+          en: "1. The Taluk Mahasabha office shall be located at the respective Taluk Headquarters.",
+          kn: "1.	ತಾಲ್ಲೂಕು ಶಾಖೆ ಕಛೇರಿ ಆಯಾ ತಾಲ್ಲೂಕು ಕೇಂದ್ರದಲ್ಲಿರುತ್ತದೆ.",
         },
         {
-          en: "The Taluk Executive Committee must have at least 8 members.",
-          kn: "ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 (ಎಂಟು) ಜನ ಸದಸ್ಯರಿರಬೇಕು.",
+          en: "2. The Taluk Executive Committee shall consist of at least 8 members.",
+          kn: "2.	ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 (ಎಂಟು) ಜನ ಸದಸ್ಯರಿರಬೇಕು.",
         },
         {
-          en: "From among the members elected by the Taluk General Body, the office-bearers are selected as follows:",
-          kn: "ಆಯಾ ತಾಲ್ಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲ್ಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
+          en: "3.	From among the members elected by the Taluk Body, the following office bearers shall be chosen:",
+          kn: "3.	ಆಯಾ ತಾಲ್ಲೂಕು ಶಾಖೆಗಳ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಲ್ಲಿ ಚುನಾಯಿತರಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರಲ್ಲಿ ಕೆಳಕಂಡಂತೆ ತಾಲ್ಲೂಕು ಶಾಖೆಯ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
         },
         {
-          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizational Secretary – 1\n6. Executive Members – 3",
-          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3",
+          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5. Organizing Secretary – 1\n6. Executive Members – 3",
+          kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -3",
         },
         // {
         //   "en": "The executive committee must meet once every month.",
@@ -378,25 +388,25 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       ],
     },
     7: {
-      title_en: "General Body Meetings: Conferences",
-      title_kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಗಳು : ಸಮ್ಮೇಳನಗಳು",
+      title_en: "General Body Meetings/ Conferences:",
+      title_kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಗಳು : ಸಮ್ಮೇಳನಗಳು ",
       items: [
         {
           title_kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ",
           title_en: "General Body Meeting",
-          en: "The general body meeting consists of executive committee members and all other members, and will be referred to as the General Body Meeting.",
-          kn: "ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು.",
+          en: "The General Body shall consist of all members of the Mahasabha, including members of the Executive Committee.",
+          kn: "ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸದಸ್ಯರು ಮತ್ತು ಸಭಾಕ್ಕೆ ಸೇರಿದ ಇತರ ಎಲ್ಲಾ ಸದಸ್ಯರು ಸೇರಿ ಸರ್ವಸದಸ್ಯರ ಸಭೆ ಎನಿಸಿಕೊಳ್ಳುವುದು.",
         },
         {
           title_kn: "ಸಾಮಾನ್ಯ ಸಭೆ",
           title_en: "Ordinary Meeting",
-          en: "Generally held once a year. At least 15 days in advance, a notice stating the items to be discussed will be sent to all members. If a member does not receive the notice, that will not invalidate the proceedings of the meeting. At least 50% of the members must attend the ordinary meeting.",
-          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು  ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ  ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ  ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟಿಸ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ. ",
+          en: "The General Body shall ordinarily be convened once every year. At least 15 days prior notice, along with the agenda of matters to be discussed, shall be sent to all members of the organization. Failure of a member to receive the meeting notice shall not invalidate the proceedings of the meeting.",
+          kn: "ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯನ್ನು  ಸಾಧಾರಣವಾಗಿ ವರ್ಷಕ್ಕೊಮ್ಮೆ  ಕರೆಯಲಾಗುವುದು. ಇಂತಹ ಸಭೆಯು ಕೂಡುವುದಕ್ಕೆ 15 ದಿವಸ ಮುಂಚಿತವಾಗಿ  ಕನಿಷ್ಠ ಪಕ್ಷ ಪರ್ಯಾಲೋಚಿಸಬೇಕಾದ ವಿಷಯಗಳನ್ನೊಳಗೊಂಡ ನೋಟೀಸನ್ನು ಸಂಘದ ಎಲ್ಲಾ ಸದಸ್ಯರುಗಳಿಗೂ ರವಾನಿಸಲ್ಪಡುವುದು. ಸಭಾದ ಸದಸ್ಯರಿಗೆ ಮೀಟಿಂಗ್ ನೋಟಿಸ್ ತಲುಪಲಿಲ್ಲವೆಂಬ ಕಾರಣದ ಮೇಲೆ ಸಭೆಯು ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ರದ್ದುಗೊಳಿಸುವಂತಿಲ್ಲ.",
         },
         {
           title_kn: "ವಿಶೇಷ ಸಭೆ",
           title_en: "Special Meeting",
-          en: "Special or important matters of the association can be decided in a special general body meeting called by the president and general secretary with the approval of the executive committee. At least more than 50% of the members must be present for a special meeting. Notice of such a meeting mentioning the subjects to be discussed must be given at least 21 days in advance.",
+          en: "If the President and General Secretary of the Mahasabha consider it necessary for the General Body to make decisions on any special or important matters, a Special General Body Meeting may be convened with the approval of the Executive Committee.",
           kn: "ಸಭಾಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ವಿಶೇಷ ಅಥವಾ ಮಹತ್ವದ ವಿಷಯಗಳ ಮೇಲೆ ಸರ್ವ ಸದಸ್ಯರ ಸಭೆ ತೀರ್ಮಾನ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ಸಭಾದ ಅಧ್ಯಕ್ಷರು ಮತ್ತು ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಗಳು  ಅಭಿಪ್ರಾಯಪಟ್ಟರೆ ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಒಪ್ಪಿಗೆಯನ್ನು ಪಡೆದು ಸರ್ವಸದಸ್ಯರ ವಿಶೇಷ ಸಭೆಯನ್ನು ಕರೆಯಬಹುದು. ",
         },
       ],
@@ -501,10 +511,10 @@ export const CommitteeMembers = [
       kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ, # 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
     },
     position: {
-      en: "Legal advisors",
+      en: "Legal advisor",
       kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು",
     },
-    occupation: { en: "Lawyer", kn: "ವಕೀಲರು" },
+    occupation: { en: "Advocate/Social service", kn: "ವಕೀಲರು/ಸಮಾಜ ಸೇವೆ" },
     mobile: "9900456379",
   },
 ];

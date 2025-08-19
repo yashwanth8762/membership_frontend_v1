@@ -98,16 +98,15 @@ const OrganizationPage = () => {
 
           {/* 1. Note Section */}
           <div className="w-full max-w-4xl mx-auto mb-10">
-  <div
-    className="text-lg text-gray-700 leading-relaxed"
-    dangerouslySetInnerHTML={{
-      __html: isEnglish
-        ? OrganizationContent.note.en
-        : OrganizationContent.note.kn,
-    }}
-  />
-</div>
-
+            <div
+              className="text-lg text-gray-700 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: isEnglish
+                  ? OrganizationContent.note.en
+                  : OrganizationContent.note.kn,
+              }}
+            />
+          </div>
 
           {/* 2. First -> Title + Paragraphs */}
           <div className="w-full max-w-4xl mx-auto mb-10">
@@ -128,7 +127,7 @@ const OrganizationPage = () => {
           </div>
 
           {/* 3. Table Section */}
-          <div className="w-full max-w-5xl mx-auto mb-12">
+          {/* <div className="w-full max-w-5xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? "District-wise Executive Committee Members"
@@ -160,7 +159,7 @@ const OrganizationPage = () => {
                       </tr>
                     )
                   )}
-                  {/* Total Row */}
+                  
                   <tr className="bg-gray-100 font-bold">
                     <td></td>
                     <td>{isEnglish ? "Total" : "ಒಟ್ಟು"}</td>
@@ -172,6 +171,96 @@ const OrganizationPage = () => {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div> */}
+          {/* 3. Table Section */}
+          <div className="w-full max-w-6xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+              {isEnglish
+                ? "District-wise Executive Committee Members"
+                : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
+            </h2>
+
+            {/* Two-column layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* First 16 rows */}
+              <div className="overflow-x-auto">
+                <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
+                  <thead>
+                    <tr className="bg-blue-600 text-white">
+                      <th className="px-6 py-4">
+                        {isEnglish ? "S.No" : "ಕ್ರ.ಸಂ"}
+                      </th>
+                      <th className="px-6 py-4">
+                        {isEnglish ? "District" : "ಜಿಲ್ಲೆ"}
+                      </th>
+                      <th className="px-6 py-4">
+                        {isEnglish ? "Members" : "ಸದಸ್ಯರು"}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {OrganizationContent.table[isEnglish ? "en" : "kn"]
+                      .slice(0, 16) // first 16 rows
+                      .map((row, idx) => (
+                        <tr key={idx} className="hover:bg-gray-50 border-b">
+                          <td className="px-6 py-3 text-center">{idx + 1}</td>
+                          <td className="px-6 py-3 text-center">
+                            {row.district}
+                          </td>
+                          <td className="px-6 py-3 text-center">
+                            {row.members}
+                          </td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Next 16 rows */}
+              <div className="overflow-x-auto">
+                <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
+                  <thead>
+                    <tr className="bg-blue-600 text-white">
+                      <th className="px-6 py-4">
+                        {isEnglish ? "S.No" : "ಕ್ರ.ಸಂ"}
+                      </th>
+                      <th className="px-6 py-4">
+                        {isEnglish ? "District" : "ಜಿಲ್ಲೆ"}
+                      </th>
+                      <th className="px-6 py-4">
+                        {isEnglish ? "Members" : "ಸದಸ್ಯರು"}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {OrganizationContent.table[isEnglish ? "en" : "kn"]
+                      .slice(16, 32) // next 16 rows
+                      .map((row, idx) => (
+                        <tr
+                          key={idx + 16}
+                          className="hover:bg-gray-50 border-b"
+                        >
+                          <td className="px-6 py-3 text-center">{idx + 17}</td>
+                          <td className="px-6 py-3 text-center">
+                            {row.district}
+                          </td>
+                          <td className="px-6 py-3 text-center">
+                            {row.members}
+                          </td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Total row */}
+            <div className="mt-6 text-right font-bold">
+              {isEnglish ? "Total: " : "ಒಟ್ಟು: "}
+              {isEnglish
+                ? OrganizationContent.table.total_en
+                : OrganizationContent.table.total_kn}
             </div>
           </div>
 
@@ -194,7 +283,7 @@ const OrganizationPage = () => {
             {Object.values(OrganizationContent.second).map((section, idx) => (
               <div key={idx} className="mb-10">
                 {/* Section Title */}
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">
                   {isEnglish ? section.title_en : section.title_kn}
                 </h3>
 
@@ -207,7 +296,7 @@ const OrganizationPage = () => {
                       <div key={i} className="mb-3">
                         {/* Sub-title if available (like “General Body Meeting”) */}
                         {title && (
-                          <h4 className=" font-bold text-gray-900 mb-2">
+                          <h4 className=" font-semibold text-gray-900 mb-2">
                             {title}
                           </h4>
                         )}
@@ -236,8 +325,8 @@ const OrganizationPage = () => {
           <div className="w-full max-w-6xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
-                ? "List of current Central Executive Committee members"
-                : "ಪ್ರಸ್ತುತ ಅಧಿಕಾರದಲ್ಲಿರುವ ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪಟ್ಟಿ "}
+                ? "Present Central Executive Committee Members"
+                : "ಪ್ರಸ್ತುತ ಅಧಿಕಾರದಲ್ಲಿರುವ ಕೇಂದ್ರ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಪಟ್ಟಿ"}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
@@ -291,7 +380,9 @@ const OrganizationPage = () => {
           {/* Taluk Members Table */}
           <div className="w-full max-w-6xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-              {isEnglish ? "District Samithi" : "ಜಿಲ್ಲಾ  ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ "}
+              {isEnglish
+                ? "District Executive Committee Members"
+                : "ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ  "}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
@@ -317,7 +408,9 @@ const OrganizationPage = () => {
           {/* District Members Table */}
           <div className="w-full max-w-6xl mx-auto mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-              {isEnglish ? "Taluk Samithi" : "ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ"}
+              {isEnglish
+                ? "Taluk Executive Committee Members"
+                : "ತಾಲ್ಲೂಕು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ"}
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
