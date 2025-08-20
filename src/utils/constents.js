@@ -417,8 +417,8 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
 export const CommitteeMembers = [
   {
     name: {
-      en: "Dr. K.H. Muniyappa\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
-      kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
+      en: "Dr. K.H. Muniyappa,\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
+      kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ,\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -426,7 +426,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. A. Narayanaswamy\nNo. 691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru.",
+      en: "Sri. A. Narayanaswamy,\nNo. 691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru.",
       kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ\nನಂ.691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ, 2ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌. ಲೇಔಟ್‌, ಬೆಂಗಳೂರು.",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
@@ -435,8 +435,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. K.M. Timmarayappa\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
-      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, \nಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ.",
+      en: "Sri. K.M. Timmarayappa,\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, \nಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ,ನಿಡಗಲ್ ಹೋಬಳಿ,ಪಾವಗಡ ತಾಲೂಕು,ತುಮಕೂರು ಜಿಲ್ಲೆ.",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -444,8 +444,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Dr. L. Hanumanthayya\n30. 207/A, 'D' Cross, 2nd Block, Basaveshwaranagar, Bengaluru.",
-      kn: "ಡಾ. ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ , ʼಡಿʼಕ್ರಾಸ್‌, 2ನೇ  ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
+      en: "Dr. L. Hanumanthayya,\n30. 207/A,'D' Cross, 2nd Block,Basaveshwaranagar, Bengaluru.",
+      kn: "ಡಾ. ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ ,ʼಡಿʼಕ್ರಾಸ್‌,2ನೇ ಬ್ಲಾಕ್,ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -453,8 +453,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "A. Muniyappa\nNo.2, IT Township, Dooravani Nagar, Bengaluru-16.",
-      kn: "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ,\n ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16.",
+      en: "A. Muniyappa,\nNo.2, IT Township,Dooravani Nagar, Bengaluru-16.",
+      kn: "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ,\n ನಂ.2,ಐಟಿ ಟೌನ್‌ಶಿಪ್‌,ದೂರವಾಣಿ ನಗರ,ಬೆಂಗಳೂರು-16.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -463,7 +463,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri Pilla muniswamyappa,\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
-      kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
+      kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ.814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
     },
     position: {
       en: "State Organizing Secretary",
@@ -474,8 +474,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Dr. Sujata\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
-      kn: "ಡಾ. ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ  ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096.",
+      en: "Dr. Sujata,\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
+      kn: "ಡಾ. ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌, ಬೆಂಗಳೂರು - 560096.",
     },
     position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -495,8 +495,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. Govind M Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
-      kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, \nಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ, ಹೊಸ  ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ,  ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ,  ಚಿತ್ರದುರ್ಗ-577517",
+      en: "Sri. Govind M Karjol,\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
+      kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, \nಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ,ಹೊಸ ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ, ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ, ಚಿತ್ರದುರ್ಗ-577517",
     },
     position: {
       en: "Executive Committee Member",
@@ -507,8 +507,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri.H. Venkatesh Dodderi\n # 1, 2nd Floor, Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
-      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ,\n # 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
+      en: "Sri.H. Venkatesh Dodderi,\n #1,2nd Floor,Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
+      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ,\n #1,2 ನೇ ಮಹಡಿ,ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
     },
     position: {
       en: "Legal advisor",
