@@ -5,3 +5,18 @@
 html {
     scroll-behavior: smooth;
   }
+
+  .custom-list-style ol {
+    list-style-type: decimal; /* numbered */
+    padding-left: 1.5em;
+  }
+  
+  .custom-list-style ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+  }
+  
+  .custom-list-style li {
+    margin-bottom: 0.5em;
+  }
+  

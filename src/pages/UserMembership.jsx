@@ -1336,7 +1336,19 @@ export default function UserMembership() {
             textAlign: 'center',
             marginBottom: 40,
           }}>
-            ಕರ್ನಾಟಕ ರಾಜ್ಯದ ವಿವಿಧ ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕುಗಳಿಂದ ಕನಿಷ್ಠ 18 ವರ್ಷ ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ/ಮಾದಿಗ ಜನಾಂಗದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾಗೆ ಸದಸ್ಯರಾಗಲು ಅರ್ಹರಾಗಿರುತ್ತಾರೆ. ಸದಸ್ಯರಾಗಲು ಇಚ್ಚಿಸುವ ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ನಿಗಧಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ವಿವರಗಳನ್ನು ತುಂಬಿ ನಿಗಧಿ ಪಡಿಸಿದ ಶುಲ್ಕ ಪಾವತಿಸಬೇಕಾಗಿರುತ್ತದೆ. ಅರ್ಜಿ ನಮೂನೆ ಮತ್ತು ಪಾವತಿ ವಿವರಗಳು ಕೆಳಕಂಡಂತಿದ್ದು, ಆನ್‌ಲೈನ್‌ ಮೂಲಕ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಶುಲ್ಕ ಪಾವತಿಸಿ ಸದಸ್ಯತ್ವ ಪಡೆಯಬಹುದಾಗಿದೆ ಹಾಗೂ ಮೆಂಬರ್‌ಶಿಪ್‌ ಕಾರ್ಡ್‌ನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಿಕೊಳ್ಳಬಹುದಾಗಿದೆ.
+ಕರ್ನಾಟಕ ರಾಜ್ಯದ ವಿವಿಧ ಜಿಲ್ಲೆ  ಮತ್ತು ತಾಲ್ಲೂಕುಗಳಿಂದ  ಕನಿಷ್ಠ 18 ವರ್ಷ ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ / ಮಾದಿಗ ಜನಾಂಗದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾಗೆ ಸದಸ್ಯರಾಗಲು ಅರ್ಹರಾಗಿರುತ್ತಾರೆ. ಸದಸ್ಯರಾಗಲು ಇಚ್ಚಿಸುವ ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ನಿಗಧಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ವಿವರಗಳನ್ನು ತುಂಬಿ ನಿಗಧಿ ಪಡಿಸಿದ ಶುಲ್ಕ ಪಾವತಿಸಬೇಕಾಗಿರುತ್ತದೆ. ಅರ್ಜಿ ನಮೂನೆ ಮತ್ತು ಪಾವತಿ ವಿವರಗಳು ಕೆಳಕಂಡಂತಿದ್ದು, ಆನ್‌ಲೈನ್‌ ಮೂಲಕ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಶುಲ್ಕ ಪಾವತಿಸಿ ಸದಸ್ಯತ್ವ ಪಡೆಯಬಹುದಾಗಿದೆ ಹಾಗೂ ಮೆಂಬರ್‌ಶಿಪ್‌ ಕಾರ್ಡ್‌ನ್ನು ಡೌನ್‌ಲೋಡ್‌  ಮಾಡಿಕೊಳ್ಳಬಹುದಾಗಿದೆ.
+          </div>
+          <div style={{
+            maxWidth: 900,
+            fontSize: 18,
+            lineHeight: 1.7,
+            fontWeight: 500,
+            textAlign: 'center',
+            marginBottom: 40,
+          }}>
+          Men and Women belonging to the Madara / Madiga community from various Districts and Taluks of Karnataka, who are at least 18 years of age, are eligible to become members of the Karnataka Madara Mahasabha.
+ 
+ Residents of the respective Taluk and District who wish to become members must fill in the details in the prescribed application form determined by the Executive Committee of the Mahasabha and pay the prescribed membership fee.
           </div>
           <button
             onClick={() => setShowForm(true)}

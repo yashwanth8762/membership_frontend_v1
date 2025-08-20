@@ -306,7 +306,7 @@ const AboutTrustPage = () => {
                   img: "/assets/Pillamunishamappa.webp",
                   name_en: "Sri. Pilla Munishyappa",
                   name_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
-                  designation_en: "Organizational Executive",
+                  designation_en: "State Organizational Secretary",
                   designation_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
                 },
                 {
@@ -359,13 +359,23 @@ const AboutTrustPage = () => {
                 </div>
               ))}
             </div>
-            <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">
+            {/* <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">
             <p className="text-lg leading-relaxed text-gray-700 text-justify mt-6">
               {isEnglish
                 ? AboutTrustPageContent.fifthParagraph.en
                 : AboutTrustPageContent.fifthParagraph.kn}
             </p>
-            </div>
+            </div> */}
+            <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">
+             <div
+    className="text-lg leading-relaxed text-gray-700 text-justify mt-6"
+    dangerouslySetInnerHTML={{
+      __html: isEnglish
+      ? AboutTrustPageContent.fifthParagraph.en
+      : AboutTrustPageContent.fifthParagraph.kn,
+    }}
+  />
+  </div>
           </div>
           {/* Objectives Section */}
           <div className="w-full max-w-4xl mx-auto mb-10 space-y-6">

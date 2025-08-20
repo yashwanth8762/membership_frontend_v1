@@ -88,12 +88,20 @@ const ContactUsPage = () => {
                     <p className="text-gray-600 text-sm">
                       {user.language ? 'Main Office' : 'ಮುಖ್ಯ ಕಛೇರಿ'}
                     </p>
-                    <p className="text-gray-900 font-medium">
+                    {user.language ?  <p className="text-gray-900 font-medium">
                       Karnataka Madara Mahasabha<br />
                       # 39/A, 1st Floor, near Shivananda Circle,<br />
                       Kumara Park East, Seshadripuram,<br />
                       Bengaluru, Karnataka 560001
-                    </p>
+                    </p>:<p className="text-gray-900 font-medium">
+                      ಕರ್ನಾಟಕ ಮಾದಾರ ಮಹಾಸಭಾ
+                      # 39/A, 1 ನೇ ಮಹಡಿ, ಶಿವಾನಂದ ಸರ್ಕಲ್ ಹತ್ತಿರ,
+                      ಕುಮಾರ ಪಾರ್ಕ್ ಪೂರ್ವ, ಶೇಷಾದ್ರಿಪುರಂ,
+                      ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ 560001
+                      </p>}
+                   
+
+
                   </div>
                 </div>
               </div>

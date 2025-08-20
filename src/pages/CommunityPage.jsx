@@ -144,11 +144,11 @@ const CommunityPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/Gautamabuddha.webp" alt="Leader 6" className="w-30 h-30 object-contain mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Buddha" : "ಬುದ್ಧ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Gouthama Buddha" : " ಗೌತಮ ಬುದ್ದ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/Basavanna.jpg" alt="Leader 9" className="w-30 h-30 object-contain mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Basavanna" : "ಬಸವಣ್ಣ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Vishwaguru Basavanna" : "ವಿಶ್ವಗುರು ಬಸವಣ್ಣ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/gandhiji.jpeg" alt="Leader 6" className="w-30 h-30 object-contain mb-4 " />
@@ -167,7 +167,7 @@ const CommunityPage = () => {
           </div>
 
           {/* Additional Photographs Section */}
-          <div className="w-full max-w-5xl mx-auto mb-12">
+          {/* <div className="w-full max-w-5xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
                 ? 'Elders of the community'
@@ -176,26 +176,73 @@ const CommunityPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/rchanni.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. R Channigaramaiah" : "ದಿವಂಗತ. ಶ್ರೀ.ಆರ್.ಚನ್ನಿಗರಾಮಯ್ಯ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Sri R. Channigaramaiah Former Minister, Mysore State" : " ಶ್ರೀ ಆರ್ ಚನ್ನಿಗರಾಮಯ್ಯ ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/nrachayya.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. N Rachaiah" : "ದಿವಂಗತ. ಶ್ರೀ. ಎನ್ ರಾಚಯ್ಯ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Sri. N. Rachaiah Former Minister, Mysore State" : " ಶ್ರೀ ಎನ್.ರಾಚಯ್ಯ ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ	"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/prabakar.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. K. Prabhakar" : "ದಿವಂಗತ. ಶ್ರೀ. ಕೆ. ಪ್ರಭಾಕರ್"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Sri. K. Prabhakar Senior Gandhian and Former Minister, Government of Karnataka" : "ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/b-krishnappa.jpg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. Sri. Prof. B. Krishnappa" : "ದಿವಂಗತ ಶ್ರೀ. ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Sri. Prof. B. Krishnappa Founder, Dalita Sangharsha Samiti" : "ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ ಸ್ಥಾಪಕರು ,ದಲಿತ ಸಂಘರ್ಷ ಸಮಿತಿ"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/dmanjunath.jpeg" alt="Leader" className="w-30 h-30 object-contains mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Late. D Manjunath" : "ದಿವಂಗತ. ಡಿ ಮಂಜುನಾಥ್"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Sri. D. Manjunath Former Minister, Government of Karnataka" : "ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ"}</div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <div className="w-full max-w-5xl mx-auto mb-12">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
+    {isEnglish
+      ? 'Elders of the community'
+      : 'ಸಮುದಾಯದ ಹಿರಿಯ ಚೇತನಗಳು '}
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+    {[{
+      src: '/assets/rchanni.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri R. Channigaramaiah Former Minister, Mysore State',
+      textKn: ' ಶ್ರೀ ಆರ್ ಚನ್ನಿಗ ರಾಮಯ್ಯ ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ'
+    },
+    {
+      src: '/assets/nrachayya.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri. N. Rachaiah Former Minister, Mysore State',
+      textKn: ' ಶ್ರೀ ಎನ್.ರಾಚಯ್ಯ ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ '
+    },
+    {
+      src: '/assets/prabakar.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri. K. Prabhakar Senior Gandhian and Former Minister, Government of Karnataka',
+      textKn: 'ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+    },
+    {
+      src: '/assets/b-krishnappa.jpg',
+      alt: 'Leader',
+      textEn: 'Sri. Prof. B. Krishnappa Founder, Dalita Sangharsha Samiti',
+      textKn: 'ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ ಸ್ಥಾಪಕರು ,ದಲಿತ ಸಂಘರ್ಷ ಸಮಿತಿ'
+    },
+    {
+      src: '/assets/dmanjunath.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri. D. Manjunath Former Minister, Government of Karnataka',
+      textKn: 'ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+    }].map(({ src, alt, textEn, textKn }, idx) => (
+      <div key={idx} className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+        <img src={src} alt={alt} className="w-28 h-28 object-contain mb-4" />
+        <div className="text-lg font-semibold mb-1 text-center">
+          {isEnglish ? textEn : textKn}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         </div>
       </section>

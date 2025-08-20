@@ -131,13 +131,13 @@ export const AboutTrustContent = {
 
           Executive_Committee_Members_en: [
             "Sri. H. Anjaneya",
-            "Sri.Govinda Karajol",
+            "Sri.Govinda M. Karajola",
           ],
           Executive_Committee_Members_kn: [
             "ಶ್ರೀ.ಹೆಚ್. ಆಂಜನೇಯ",
             "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
           ],
-          Lawyer_en: "Mr. H. Venkatesh Dodderi",
+          Lawyer_en: "Sri. H. Venkatesh Dodderi",
           Lawyer_kn: "ಶ್ರೀ.ಹೆಚ್.ವೆಂಕಟೇಶ್ ದೊಡ್ಡೇರಿ",
         },
       },
@@ -171,8 +171,8 @@ export const HistoryCultureContent = {
   content: {
     title: [
       {
-        en: "Madara – The First Kings of India./n Madara – The First Warriors of India",
-        kn: "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು./n ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು",
+        en: `"Madara – The First Kings of India"./n "Madara – The First Warriors of India"`,
+        kn: `"ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ರಾಜರು"/n "ಮಾದರು ಭಾರತದ ಪ್ರಪ್ರಥಮ ಯೋಧರು"`,
       },
       {
         en: "Madiga in Mythology and Folklore",
@@ -240,9 +240,30 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       "ಪ್ರಸ್ತುತ ಜಿಲ್ಲೆಗಳಿಂದ ಈ ಕೆಳಗಿನಂತೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರ ಸ್ಥಾನಗಳನ್ನು ಮಾದರ ಜನಾಂಗದ ಜನಸಂಖ್ಯೆಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧರಿಸಲಾಗಿದೆ.",
     ],
     paragraph_en: [
-      "The committee consists of a total of 45 members, including representatives from all districts as well as Bengaluru Urban. Among these, the committee holds the authority to nominate three members. Of the nominated members, one must be a lawyer who is recognized for their service to society and noted for having a good personality. The remaining two members will be chosen from the sub-sections of the Madiga community, specifically from groups that are otherwise not directly represented.",
-      "The members of the Executive Committee are directly elected through voting conducted by the members of the Central, District, and Taluk Committees from time to time.",
-      "The Central Executive Committee will select the office bearers from among its members. These include one President, two Vice Presidents, two General Secretaries, four Organizing Secretaries, one Treasurer, and one Legal Advisor.",
+      `<ul>
+      <li>A total of 45 members, including representatives from all districts and Bengaluru Urban.</li>
+      <li>Among them, the committee has the authority to nominate 3 members:
+      <ol>
+      <li>One must be a lawyer – a person recognized for  service to society and possessing a good personality.</li>
+      <li>The remaining two will be selected from among the sub-sections of the Madiga community, i.e., groups that are otherwise not directly represented.</li>
+      </ol>
+      </li>
+      </ul>`,
+      `
+      <b>Election of Members:</b><br></br>
+      <p>The members of the Executive Committee are directly elected through the voting conducted by the members of the Central, District, and Taluk Committees from time to time.</p>
+      `,
+      `<b>Selection of  Office Barreres :</b><br></br>
+      <p>The following office Barreres will be selected by the  Central Executive Committee, from among the members.</p> <br></br>
+      <ul>
+      <li>President -01</li>
+      <li>Vice Presidents -02</li>
+      <li>General Secretaries -02</li>
+      <li>Organizing Secretaries -04</li>
+      <li>Treasurer -01</li>
+      <li>Legal Advisor -01</li>
+      </ul>
+      `,
     ],
   },
 
@@ -296,11 +317,11 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       { district: "Davangere", members: 2 },
       { district: "Belgaum", members: 1 },
       { district: "Haveri", members: 1 },
-      { district: "Kalaburagi (1 woman)", members: 2 },
+      { district: "Kalaburagi (one woman)", members: 2 },
       { district: "Bagalkote", members: 1 },
       { district: "Bellary", members: 1 },
       { district: "Gadag", members: 1 },
-      { district: "Tumkur (1 woman)", members: 2 },
+      { district: "Tumkur (one woman)", members: 2 },
       { district: "Koppal", members: 1 },
       { district: "Chitradurga", members: 2 },
       { district: "Udupi", members: 1 },
@@ -312,8 +333,8 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       { district: "Ramanagara", members: 1 },
       { district: "Chikkamagaluru", members: 1 },
       { district: "Shivamogga", members: 1 },
-      { district: "Nominated", members: 1 },
-      { district: "Nominated Lawyer", members: 1 },
+      { district: "Nominated (General)", members: 1 },
+      { district: "Nominated (Lawyer)", members: 1 },
     ],
     total_kn: 0,
     total_en: 0,
@@ -344,7 +365,7 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
           kn: "2.	ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಗೆ ಕನಿಷ್ಠ 8 ಜನ ಸದಸ್ಯರಿರುತ್ತಾರೆ. ಜಿಲ್ಲಾ ಸಭಾದ  ಸರ್ವ ಸದಸ್ಯರ ಸಭೆಯಿಂದ ಚುನಾಯಿತರಾದ ಜಿಲ್ಲಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ  ಸದಸ್ಯರಲ್ಲಿ ಜಿಲ್ಲಾ ಪದಾಧಿಕಾರಿಗಳನ್ನು ಕೆಳಕಂಡಂತೆ ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದು.",
         },
         {
-          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5.	Organizing Secretary – 1\n6. Executive Members – 2\n7. One member from each taluk – 1",
+          en: "1. President – 1\n2. Vice President – 1\n3. Secretary – 1\n4. Treasurer – 1\n5.	Organizing Secretary – 1\n6. Executive Members – 2\n7. One member from each taluk",
           kn: "1. ಅಧ್ಯಕ್ಷರು -1\n2. ಉಪಾಧ್ಯಕ್ಷರು -1\n3. ಕಾರ್ಯದರ್ಶಿ -1\n4. ಖಜಾಂಚಿ -1\n5. ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ -1\n6. ಕಾರ್ಯಕಾರಿ ಸದಸ್ಯರು -2\n7. ಪ್ರತಿ ತಾಲ್ಲೂಕಿನಿಂದ -1",
         },
         // {
@@ -417,8 +438,8 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
 export const CommitteeMembers = [
   {
     name: {
-      en: "Dr. K.H. Muniyappa,\nNo. 100/13, 60 Ft Main Road, Siddhi Vinayak Layout, Sanjay Nagar, Bengaluru.",
-      kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ,\nನಂ. 100/13, 60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
+      en: "Dr. K. H. Muniyappa,\n #100/13, 60 Feet Main Road, Siddi vinayaka Layout, Sanjay Nagar, Bengaluru",
+      kn: "ಡಾ. ಕೆ.ಹೆಚ್‌.ಮುನಿಯಪ್ಪ, \n# 100/13,60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -426,8 +447,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. A. Narayanaswamy,\nNo. 691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru.",
-      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ\nನಂ.691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ, 2ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌. ಲೇಔಟ್‌, ಬೆಂಗಳೂರು.",
+      en: "Sri. A. Narayanaswamy,\n #691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru",
+      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ,\n # 691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ,2 ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌.ಲೇಔಟ್‌, ಬೆಂಗಳೂರು.",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -435,8 +456,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. K.M. Timmarayappa,\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
-      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, \nಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ,ನಿಡಗಲ್ ಹೋಬಳಿ,ಪಾವಗಡ ತಾಲೂಕು,ತುಮಕೂರು ಜಿಲ್ಲೆ.",
+      en: "Sri. K. M. Timmarayappa,\n Kondatimmana Halli, Nidagal Hobli, Pavagada Taluk, Tumakuru District",
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ,\n ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲ್ಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -444,8 +465,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Dr. L. Hanumanthayya,\n30. 207/A,'D' Cross, 2nd Block,Basaveshwaranagar, Bengaluru.",
-      kn: "ಡಾ. ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n30. 207/ಎ ,ʼಡಿʼಕ್ರಾಸ್‌,2ನೇ ಬ್ಲಾಕ್,ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
+      en: "Dr. L. Hanumanthaiah,\n #30, 207/A, ‘D’ Cross, 2nd Block, Basaveshwara Nagar, Bengaluru",
+      kn: "ಡಾ. ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n #30. 207/ಎ, ʼಡಿʼ ಕ್ರಾಸ್‌, 2ನೇ ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -453,8 +474,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "A. Muniyappa,\nNo.2, IT Township,Dooravani Nagar, Bengaluru-16.",
-      kn: "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ,\n ನಂ.2,ಐಟಿ ಟೌನ್‌ಶಿಪ್‌,ದೂರವಾಣಿ ನಗರ,ಬೆಂಗಳೂರು-16.",
+      en: "Sri. A. Muniyappa,\n #2, ITI Township, Dooravani Nagar, Bengaluru – 16",
+      kn: "ಎ. ಮುನಿಯಪ್ಪ,\n #2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -462,8 +483,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri Pilla Muniswamyappa,\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
-      kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ.814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
+      en: "Sri. Pilla Munishyamappa,\n #814, Mathrusree Nilaya, A Sector, Yelahanka, Bengaluru",
+      kn: "ಶ್ರೀ ಪಿಳ್ಳ ಮುನಿ ಶ್ಯಾಮಪ್ಪ,\n # 814, ಮಾತೃಶ್ರೀ ನಿಲಯ, ಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು",
     },
     position: {
       en: "State Organizing Secretary",
@@ -474,8 +495,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Dr. Sujatha,\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
-      kn: "ಡಾ. ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌, ಬೆಂಗಳೂರು - 560096.",
+      en: "Dr. Sujatha,\n #AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru – 560096",
+      kn: "ಡಾ. ಸುಜಾತ,\n # ಎ.ಒ.ಎಫ್‌ 38/5, 1 ನೇ ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096",
     },
     position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -483,8 +504,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. H. Anjaneya,\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
-      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ,\n ಅವ್ವ, #2733, 3 ನೇ ಕ್ರಾಸ್‌,ಎಚ್‌.ಎ.ಎಲ್‌ 3 ನೇ ಸ್ಟೇಜ್‌, ನ್ಯೂ ತಿಪ್ಪಸಂದ್ರ, ಬೆಂಗಳೂರು-560075",
+      en: "Sri. H. Anjaneya,\n Avva #2733, 3rd Cross, HAL 3rd Stage, New Thippasandra, Bengaluru-560075",
+      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ,\n #2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
     },
     position: {
       en: "Executive Committee Member",
@@ -495,20 +516,20 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. Govind M. Karjola,\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
-      kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, \nಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ,ಹೊಸ ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ, ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ, ಚಿತ್ರದುರ್ಗ-577517",
+      en: "Sri. Govinda M. Karajola,\n #199/A, 4th Phase, Legislators’ Bhavan, Bengaluru",
+      kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ,\n # 199/ಎ, 4 ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು.",
     },
     position: {
       en: "Executive Committee Member",
       kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
     },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9663679337",
+    mobile: "9448102896",
   },
   {
     name: {
-      en: "Sri.H. Venkatesh Dodderi,\n #1,2nd Floor,Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
-      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ,\n #1,2 ನೇ ಮಹಡಿ,ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
+      en: "Sri. H. Venkatesh Dodderi,\n #1, 2nd Floor, Yamunabai Road, Madhava nagar, Bengaluru – 560001",
+      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ,\n# 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
     },
     position: {
       en: "Legal advisor",
@@ -538,7 +559,9 @@ export const AboutTrustPageContent = {
   },
   fifthParagraph: {
     kn: "ಮಹಾಸಭಾದ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದ್ದು, ಸಭಾದ ಶಾಖೆಗಳು 3 ಹಂತದಲ್ಲಿ ಇರುತ್ತವೆ. ಅವುಗಳೆಂದರೆ ಕೇಂದ್ರ ಸ್ಥಾನ , ಜಿಲ್ಲಾ ಶಾಖೆ ಮತ್ತು ತಾಲ್ಲೂಕು ಶಾಖೆ",
-    en: "Headquarters and Branches of the Mahasabha: The central office of the Karnataka Madara Mahasabha is located in Bengaluru. The Mahasabha functions through a three-tier branch system: Central Office , District Branches and Taluk Branches",
+    en: `Headquarters and Branches of the Mahasabha: The central office of the Karnataka Madara Mahasabha is located in Bengaluru. The Mahasabha functions through a three-tier branch system: <br>
+     <ol>
+     <li>Central Office </li> <li> District Branches</li> <li> Taluk Branches</li></ol>`,
   },
 };
 

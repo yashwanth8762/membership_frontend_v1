@@ -107,14 +107,19 @@ const OrganizationPage = () => {
               }}
             />
           </div>
-
-          {/* 2. First -> Title + Paragraphs */}
-          <div className="w-full max-w-4xl mx-auto mb-10">
-            <h2 className="text-2xl font-semibold mb-4">
-              {isEnglish
+ {/* {isEnglish
                 ? OrganizationContent.first.title_en
-                : OrganizationContent.first.title_kn}
-            </h2>
+                : OrganizationContent.first.title_kn} */}
+          {/* 2. First -> Title + Paragraphs */}
+          {/* <div className="w-full max-w-4xl mx-auto mb-10">
+            < div className="text-2xl font-semibold mb-4"
+             
+                dangerouslySetInnerHTML={{
+                __html: isEnglish
+                  ? OrganizationContent.first.title_en
+                  : OrganizationContent.first.title_kn,
+              }}
+            />
             <div className="space-y-4 text-lg text-gray-700">
               {OrganizationContent.first[
                 isEnglish ? "paragraph_en" : "paragraph_kn"
@@ -124,15 +129,42 @@ const OrganizationPage = () => {
                 </p>
               ))}
             </div>
-          </div>
+          </div> */}
+          <div className="w-full max-w-4xl mx-auto mb-10">
+  <div
+    className="text-2xl font-semibold mb-4"
+    dangerouslySetInnerHTML={{
+      __html: isEnglish
+        ? OrganizationContent.first.title_en
+        : OrganizationContent.first.title_kn,
+    }}
+  />
+  
+  <div className="space-y-4 text-lg text-gray-700 custom-list-style">
+    {OrganizationContent.first[
+      isEnglish ? "paragraph_en" : "paragraph_kn"
+    ].map((para, idx) => (
+      <div
+        key={idx}
+        className="leading-relaxed"
+        dangerouslySetInnerHTML={{ __html: para }}
+      />
+    ))}
+  </div>
+</div>
+
 
           {/* 3. Table Section */}
           <div className="w-full max-w-4xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
-              {isEnglish
-                ? "District wise allocation of Executive Committee Members"
-                : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
-            </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-2">
+  {isEnglish
+    ? "District wise allocation of Executive Committee Members"
+    : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
+</h2>
+<p className="text-center text-gray-600 mt-0">
+  {isEnglish ? "(Based on the population of the Madara/Madiga community in each District)" : ""}
+</p>
+
 
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
@@ -347,7 +379,7 @@ const OrganizationPage = () => {
                       {isEnglish ? "Name & Address" : "ಹೆಸರು ಮತ್ತು ವಿಳಾಸ"}
                     </th>
                     <th className="px-4 py-3 text-left font-semibold text-md border-b border-blue-700">
-                      {isEnglish ? "Position" : "ಹುದ್ದೆ"}
+                      {isEnglish ? "Designation" : "ಹುದ್ದೆ"}
                     </th>
                     <th className="px-4 py-3 text-left font-semibold text-md border-b border-blue-700">
                       {isEnglish ? "Occupation" : "ಉದ್ಯೋಗ"}

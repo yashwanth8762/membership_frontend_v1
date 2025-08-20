@@ -272,11 +272,11 @@ const MembershipCard = ({
                 <span className="font-bold">{dob}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
-                <span className="font-semibold">ವಿಳಾಸ: </span>
+                <span className="font-semibold">ಖಾಯಂ ವಿಳಾಸ: </span>
                 <span className="break-words">{address}</span>
               </div>
               <div className="mb-0.5 text-sm font-medium">
-                <span className="font-semibold">ವಿದ್ಯಾರ್ಹತೆ/ ⁠ಪದವಿ: </span>
+                <span className="font-semibold">ವಿದ್ಯಾರ್ಹತೆ: </span>
                 <span>{education}</span>
               </div>
             </div>
