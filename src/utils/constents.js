@@ -16,13 +16,13 @@ export const NavLinks = [
   },
   {
     activities_en: "Documents",
-    activities_kn: "ಮಹಾಸಭಾದ ದಾಖಲಾತಿಗಳು",
+    activities_kn: "ದಾಖಲಾತಿಗಳು",
     href: "#documents",
   },
 
   {
     upcoming_en: "Notifications/Programs",
-    upcoming_kn: "ಮಹಾಸಭಾದ ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು",
+    upcoming_kn: "ಅಧಿಸೂಚನೆಗಳು/ಕಾರ್ಯಕ್ರಮಗಳು",
     href: "#upcoming-programs",
   },
 
@@ -36,11 +36,11 @@ export const NavLinks = [
     opportunities_kn: "ಅಭಿವೃದ್ಧಿಯ ಸದಾವಕಾಶಗಳು",
     href: "#opportunities",
   },
-  // {
-  //   contact_en: "Contact Us",
-  //   contact_kn: "ಸಂಪರ್ಕಿಸಿ",
-  //   href: "#contact-us",
-  // },
+  {
+    contact_en: "Contact Us",
+    contact_kn: "ಸಂಪರ್ಕಿಸಿ",
+    href: "#contact-us",
+  },
 ];
 
 export const AboutTrustContent = {
