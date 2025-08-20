@@ -244,7 +244,15 @@ const MembershipCard = ({
               className="text-lg font-extrabold tracking-wide mb-1"
               style={{ letterSpacing: "0.02em" }}
             >
-              ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ
+              ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ (ರಿ.,)
+              {/* Karnataka Madara Mahasabha (R.,) */}
+            </h1>
+            <h1
+              className="text-lg font-extrabold tracking-wide mb-1"
+              style={{ letterSpacing: "0.02em" }}
+            >
+              {/* ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ (ರಿ.,) */}
+              Karnataka Madara Mahasabha (R.,)
             </h1>
             <div className="flex justify-center">
               <div className="w-4/5 border-t" style={{ borderColor: color.headerText, opacity: 0.4, margin: "0.15rem 0" }}></div>
@@ -277,10 +285,10 @@ const MembershipCard = ({
                 <span className="font-semibold">ಹೆಸರು: </span>
                 <span className="font-bold">{name}</span>
               </div>
-              <div className="mb-0.5 text-sm font-medium">
+              {/* <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ತಂದೆ: </span>
                 <span>{parentName}</span>
-              </div>
+              </div> */}
               <div className="mb-0.5 text-sm font-medium">
                 <span className="font-semibold">ಜನ್ಮ ದಿನಾಂಕ: </span>
                 <span className="font-bold">{dob}</span>
