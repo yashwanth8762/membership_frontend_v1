@@ -436,7 +436,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri. K.M. Timmarayappa\nKondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumakuru District.",
-      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ.",
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ. ತಿಮ್ಮರಾಯಪ್ಪ, \nಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ.",
     },
     position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -454,7 +454,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "A. Muniyappa\nNo.2, IT Township, Dooravani Nagar, Bengaluru-16.",
-      kn: "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ, ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16.",
+      kn: "ಶ್ರೀ.ಎ.ಮುನಿಯಪ್ಪ,\n ನಂ.2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16.",
     },
     position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
     occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
@@ -462,7 +462,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri Pilla muniswamyappa\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
+      en: "Sri Pilla muniswamyappa,\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
       kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
     },
     position: {
@@ -483,8 +483,8 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. H. Anjaneya\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
-      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ, ಅವ್ವ, #2733, 3 ನೇ ಕ್ರಾಸ್‌,ಎಚ್‌.ಎ.ಎಲ್‌ 3 ನೇ ಸ್ಟೇಜ್‌, ನ್ಯೂ ತಿಪ್ಪಸಂದ್ರ, ಬೆಂಗಳೂರು-560075",
+      en: "Sri. H. Anjaneya,\n2/A, 2nd Main Road, Jayamahal Extension, Bengaluru.",
+      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ,\n ಅವ್ವ, #2733, 3 ನೇ ಕ್ರಾಸ್‌,ಎಚ್‌.ಎ.ಎಲ್‌ 3 ನೇ ಸ್ಟೇಜ್‌, ನ್ಯೂ ತಿಪ್ಪಸಂದ್ರ, ಬೆಂಗಳೂರು-560075",
     },
     position: {
       en: "Executive Committee Member",
@@ -496,7 +496,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri. Govind M Karjol\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
-      kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, ಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ, ಹೊಸ  ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ,  ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ,  ಚಿತ್ರದುರ್ಗ-577517",
+      kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, \nಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ, ಹೊಸ  ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ,  ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ,  ಚಿತ್ರದುರ್ಗ-577517",
     },
     position: {
       en: "Executive Committee Member",
@@ -508,7 +508,7 @@ export const CommitteeMembers = [
   {
     name: {
       en: "Sri.H. Venkatesh Dodderi\n # 1, 2nd Floor, Yamuna Bai Road, Madhava Nagar, Bangalore-560001",
-      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ, # 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
+      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ,\n # 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
     },
     position: {
       en: "Legal advisor",

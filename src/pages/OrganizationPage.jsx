@@ -138,13 +138,13 @@ const OrganizationPage = () => {
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
                 <thead>
                   <tr className="bg-blue-600 text-white">
-                    <th className="px-6 py-4">
+                    <th className="px-6 py-4 text-center">
                       {isEnglish ? "S.No" : "ಕ್ರ.ಸಂ"}
                     </th>
-                    <th className="px-6 py-4">
+                    <th className="px-6 py-4 text-center">
                       {isEnglish ? "District" : "ಜಿಲ್ಲೆ"}
                     </th>
-                    <th className="px-6 py-4">
+                    <th className="px-6 py-4 text-center">
                       {isEnglish ? "Members" : "ಸದಸ್ಯರು"}
                     </th>
                   </tr>
