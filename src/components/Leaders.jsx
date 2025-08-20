@@ -22,7 +22,7 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 4,
-      name: isEnglish ? "Dr. L. Hanumanthaiah" : "ಡಾ.ಎಲ್. ಹನುಮಂತಯ್ಯ",
+      name: isEnglish ? "Dr. L. Hanumantayya" : "ಡಾ.ಎಲ್. ಹನುಮಂತಯ್ಯ",
       position: isEnglish ? 'General Secretary' : 'ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ',
       image: "/assets/DrLHanumantayya.jpg"
     },
@@ -52,7 +52,7 @@ const Leaders = ({ isEnglish = false }) => {
     },
     {
       id: 9,
-      name: isEnglish ? "Sri. Govinda Karajol" : "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
+      name: isEnglish ? "Sri. Govinda M. Karajola" : "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
       position: isEnglish ? 'Executive Committee Member' : 'ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯ',
       image: "/assets/GovindKarajol.jpeg"
     },
