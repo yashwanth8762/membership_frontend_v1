@@ -123,7 +123,7 @@ export const AboutTrustContent = {
             "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
           ],
 
-          Organizational_Executives_en: "Sri. Pilla Munishyappa",
+          Organizational_Executives_en: "Sri. Pilla Munishyamappa",
           Organizational_Executives_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
 
           Treasurer_en: "Dr. Sujatha",

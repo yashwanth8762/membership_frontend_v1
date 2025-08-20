@@ -304,7 +304,7 @@ const AboutTrustPage = () => {
                 },
                 {
                   img: "/assets/Pillamunishamappa.webp",
-                  name_en: "Sri. Pilla Munishyappa",
+                  name_en: "Sri. Pilla Munishyamappa",
                   name_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
                   designation_en: "State Organizational Secretary",
                   designation_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
