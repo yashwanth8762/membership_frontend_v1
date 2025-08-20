@@ -269,7 +269,7 @@ const AboutTrustPage = () => {
               {[
                 {
                   img: "/assets/DrKHMuniyappa.jpg",
-                  name_en: "Dr|| K.H. Muniyappa",
+                  name_en: "Dr. K.H. Muniyappa",
                   name_kn: "ಡಾ. ಕೆ.ಹೆಚ್.‌ ಮುನಿಯಪ್ಪ",
                   designation_en: "President",
                   designation_kn: "ಅಧ್ಯಕ್ಷರು",
@@ -304,7 +304,7 @@ const AboutTrustPage = () => {
                 },
                 {
                   img: "/assets/Pillamunishamappa.webp",
-                  name_en: "Sri. Pillamuniswamyappa",
+                  name_en: "Sri. Pilla Munishyappa",
                   name_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
                   designation_en: "Organizational Executive",
                   designation_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
@@ -325,7 +325,7 @@ const AboutTrustPage = () => {
                 },
                 {
                   img: "/assets/GovindKarajol.jpeg",
-                  name_en: "Sri.Govinda Karajol",
+                  name_en: "Sri.Govinda M. Karajola",
                   name_kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ.ಕಾರಜೋಳ",
                   designation_en: "Executive Committee Member",
                   designation_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
