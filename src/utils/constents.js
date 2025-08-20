@@ -462,7 +462,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri Pilla muniswamyappa,\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
+      en: "Sri Pilla Muniswamyappa,\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
       kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ.814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
     },
     position: {
@@ -474,7 +474,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Dr. Sujata,\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
+      en: "Dr. Sujatha,\nNo. AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru - 560096.",
       kn: "ಡಾ. ಸುಜಾತ,\nನಂ. ಎಒ.ಎಫ್‌ 38/5, 1ನೇ ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌, ಬೆಂಗಳೂರು - 560096.",
     },
     position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
@@ -495,7 +495,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri. Govind M Karjol,\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
+      en: "Sri. Govind M. Karjola,\n199/A, 4th Stage, Legislators' Home, Bengaluru.",
       kn: "ಶ್ರೀ.ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, \nಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ,ಹೊಸ ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ, ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ, ಚಿತ್ರದುರ್ಗ-577517",
     },
     position: {
