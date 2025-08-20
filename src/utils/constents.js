@@ -94,7 +94,7 @@ export const AboutTrustContent = {
           Organizational_Executives_kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿಗಳು",
           Treasurer_en: "Treasurer",
           Treasurer_kn: "ಖಜಾಂಚಿ",
-          Executive_Committee_Members_en: "Executive Committee Members",
+          Executive_Committee_Members_en: "Executive Committee Member",
           Executive_Committee_Members_kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
           Lawyer_en: "Legal Advisor",
           Lawyer_kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು",
