@@ -301,6 +301,7 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       { district: "ಶಿವಮೊಗ್ಗ", members: 1 },
       { district: "ನಾಮ ನಿರ್ದೇಶನ", members: 1 },
       { district: "ನಾಮ ನಿರ್ದೇಶಿತ ವಕೀಲರು", members: 1 },
+      { district: "ಒಟ್ಟು", members: 45 },
     ],
     en: [
       { district: "Bangalore Urban", members: 4 },
@@ -335,6 +336,7 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
       { district: "Shivamogga", members: 1 },
       { district: "Nominated (General)", members: 1 },
       { district: "Nominated (Lawyer)", members: 1 },
+      { district: "Total", members: 45 },
     ],
     total_kn: 0,
     total_en: 0,

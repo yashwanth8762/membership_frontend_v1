@@ -107,7 +107,7 @@ const OrganizationPage = () => {
               }}
             />
           </div>
- {/* {isEnglish
+          {/* {isEnglish
                 ? OrganizationContent.first.title_en
                 : OrganizationContent.first.title_kn} */}
           {/* 2. First -> Title + Paragraphs */}
@@ -131,40 +131,40 @@ const OrganizationPage = () => {
             </div>
           </div> */}
           <div className="w-full max-w-4xl mx-auto mb-10">
-  <div
-    className="text-2xl font-semibold mb-4"
-    dangerouslySetInnerHTML={{
-      __html: isEnglish
-        ? OrganizationContent.first.title_en
-        : OrganizationContent.first.title_kn,
-    }}
-  />
-  
-  <div className="space-y-4 text-lg text-gray-700 custom-list-style">
-    {OrganizationContent.first[
-      isEnglish ? "paragraph_en" : "paragraph_kn"
-    ].map((para, idx) => (
-      <div
-        key={idx}
-        className="leading-relaxed"
-        dangerouslySetInnerHTML={{ __html: para }}
-      />
-    ))}
-  </div>
-</div>
+            <div
+              className="text-2xl font-semibold mb-4"
+              dangerouslySetInnerHTML={{
+                __html: isEnglish
+                  ? OrganizationContent.first.title_en
+                  : OrganizationContent.first.title_kn,
+              }}
+            />
 
+            <div className="space-y-4 text-lg text-gray-700 custom-list-style">
+              {OrganizationContent.first[
+                isEnglish ? "paragraph_en" : "paragraph_kn"
+              ].map((para, idx) => (
+                <div
+                  key={idx}
+                  className="leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: para }}
+                />
+              ))}
+            </div>
+          </div>
 
           {/* 3. Table Section */}
           <div className="w-full max-w-4xl mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-2">
-  {isEnglish
-    ? "District wise allocation of Executive Committee Members"
-    : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
-</h2>
-<p className="text-center text-gray-600 mt-0">
-  {isEnglish ? "(Based on the population of the Madara/Madiga community in each District)" : ""}
-</p>
-
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-2">
+              {isEnglish
+                ? "District wise allocation of Executive Committee Members"
+                : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
+            </h2>
+            <p className="text-center text-gray-600 mt-0">
+              {isEnglish
+                ? "(Based on the population of the Madara/Madiga community in each District)"
+                : ""}
+            </p>
 
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
@@ -181,7 +181,7 @@ const OrganizationPage = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* <tbody>
                   {OrganizationContent.table[isEnglish ? "en" : "kn"].map(
                     (row, idx) => (
                       <tr key={idx} className="hover:bg-gray-50 border-b">
@@ -193,25 +193,58 @@ const OrganizationPage = () => {
                       </tr>
                     )
                   )}
-
-                  {/* <tr className="bg-gray-100 font-bold">
-                    <td></td>
-                    <td>{isEnglish ? "Total" : "ಒಟ್ಟು"}</td>
-                    <td>
-                      {isEnglish
-                        ? OrganizationContent.table.total_en
-                        : OrganizationContent.table.total_kn}
-                    </td>
-                  </tr> */}
+                </tbody> */}
+                <tbody>
+                  {OrganizationContent.table[isEnglish ? "en" : "kn"].map(
+                    (row, idx) => {
+                      const isLast =
+                        idx ===
+                        OrganizationContent.table[isEnglish ? "en" : "kn"]
+                          .length -
+                          1;
+                      return (
+                        <tr
+                          key={idx}
+                          className={`hover:bg-gray-50 ${
+                            isLast ? "" : "border-b"
+                          }`}
+                        >
+                          <td
+                            className={`px-6 py-3 text-center ${
+                              isLast ? "font-bold text-lg" : ""
+                            }`}
+                          >
+                            {isLast ? "" : idx + 1}
+                          </td>
+                          <td
+                            className={`px-6 py-3 text-center ${
+                              isLast ? "font-bold text-lg" : ""
+                            }`}
+                          >
+                            {row.district}
+                          </td>
+                          <td
+                            className={`px-6 py-3 text-center ${
+                              isLast ? "font-bold text-lg" : ""
+                            }`}
+                          >
+                            {row.members}
+                          </td>
+                        </tr>
+                      );
+                    }
+                  )}
                 </tbody>
               </table>
             </div>
-            <div className="mt-6 text-right font-bold">
-              {isEnglish ? "Total: " : "ಒಟ್ಟು: "}
-              {isEnglish
-                ? OrganizationContent.table.total_en
-                : OrganizationContent.table.total_kn}
-            </div>
+            {/* <div className="mt-6 flex justify-between font-bold">
+              <span>{isEnglish ? "Total: " : "ಒಟ್ಟು: "}</span>
+              <p>
+                {isEnglish
+                  ? OrganizationContent.table.total_en
+                  : OrganizationContent.table.total_kn}
+              </p>
+            </div> */}
           </div>
           {/* 3. Table Section */}
           {/* <div className="w-full max-w-4xl mb-12">
