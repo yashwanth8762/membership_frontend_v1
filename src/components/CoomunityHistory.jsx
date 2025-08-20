@@ -269,7 +269,7 @@ const CoomunityHistory = () => {
           <div className="lg:col-span-7 flex justify-center items-center mb-8 lg:mb-0">
             <img
               className="rounded-xl shadow-lg object-cover w-full max-h-[700px] sm:max-h-[800px]"
-              src={isEnglish ? "assets/englishhistory.jpeg":"assets/culture_new_1.jpeg"}
+              src={isEnglish ? "assets/englishhistory.jpeg":"assets/kannadahis.jpeg"}
               alt={isEnglish ? "Community History" : "ಸಮುದಾಯದ ಇತಿಹಾಸ"}
               style={{ height: '100vw', minHeight: '500px', width: '90vw', maxWidth: '900px' }}
             />

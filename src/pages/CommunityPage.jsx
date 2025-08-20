@@ -133,12 +133,16 @@ const CommunityPage = () => {
               </div>
             ))}
           </div>
+          <div className="w-full max-w-5xl mx-auto mb-12 flex justify-center">
+  <img className="h-200" src={isEnglish ? "/assets/englishhistory.jpeg" : "/assets/kannadahis.jpeg"} />
+</div>
+
 
           {/* Photographs of prominent community leaders / personalities / saints */}
           <div className="w-full max-w-5xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
-                ? 'Philosophers who fought for the welfare of the community'
+                ? 'Visionaries who fought for the Welfare of the Community'
                 : 'ಸಮುದಾಯದ ಕಲ್ಯಾಣಕ್ಕಾಗಿ ಹೋರಾಡಿದ ದಾರ್ಶನಿಕರು'}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
@@ -199,7 +203,7 @@ const CommunityPage = () => {
           <div className="w-full max-w-5xl mx-auto mb-12">
   <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
     {isEnglish
-      ? 'Elders of the community'
+      ? 'Prominent  Leaders of the Community'
       : 'ಸಮುದಾಯದ ಹಿರಿಯ ಚೇತನಗಳು '}
   </h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
