@@ -499,7 +499,7 @@ const GalleryPage = () => {
                     }`}
                   >
                     {/* Card Header with Banner and Heading */}
-                    <div
+                    {/* <div
                       className="cursor-pointer relative group"
                       onClick={() => toggleExpandCard(cardIndex)}
                     >
@@ -521,7 +521,32 @@ const GalleryPage = () => {
                       onClick={() => toggleExpandCard(cardIndex)}
                     >
                       {isEnglish ? card.heading.en : card.heading.kn}
-                    </h3>
+                    </h3> */}
+                    <div className="relative group">
+                      <img
+                        src={card.banner}
+                        alt={`Banner for card ${cardIndex + 1}`}
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+
+                    <div className="flex items-center justify-between px-4 mt-2">
+                      <h3 className="font-semibold text-gray-900 flex-1 pr-4">
+                        {isEnglish ? card.heading.en : card.heading.kn}
+                      </h3>
+                      <button
+                        onClick={() => toggleExpandCard(cardIndex)}
+                        className="text-sm px-3 py-1 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      >
+                        {expandedCardIndex === cardIndex
+                          ? isEnglish
+                            ? "Hide"
+                            : "ಮರೆಮಾಡಿ"
+                          : isEnglish
+                          ? "View Images"
+                          : "ಚಿತ್ರಗಳು"}
+                      </button>
+                    </div>
 
                     {/* Expandable Images List */}
                     {expandedCardIndex === cardIndex && (
