@@ -156,7 +156,7 @@ const CommunityPage = () => {
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/amdedkar.jpg" alt="Leader 7" className="w-30 h-30 object-contain mb-4 " />
-                <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. B.R. Ambedkar" : "ಡಾ|| ಬಿ.ಆರ್. ಅಂಬೇಡ್ಕರ್"}</div>
+                <div className="text-lg font-semibold mb-1">{isEnglish ? "Dr. B.R. Ambedkar" : "ಡಾ. ಬಿ.ಆರ್. ಅಂಬೇಡ್ಕರ್"}</div>
               </div>
               <div className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
                 <img src="/assets/babujagajeevanram.jpg" alt="Leader 8" className="w-30 h-30 object-contain mb-4 " />
