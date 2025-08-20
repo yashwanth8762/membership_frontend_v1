@@ -528,25 +528,45 @@ const GalleryPage = () => {
                         alt={`Banner for card ${cardIndex + 1}`}
                         className="w-full h-48 object-cover"
                       />
+                      {/* <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center px-4">
+                        <p className="text-white text-center font-semibold text-lg">
+                          {isEnglish
+                            ? "Click here to view images"
+                            : "ಇಮೇಜ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ"}
+                        </p>
+                      </div> */}
                     </div>
-
-                    <div className="flex items-center justify-between px-4 mt-2">
-                      <h3 className="font-semibold text-gray-900 flex-1 pr-4">
-                        {isEnglish ? card.heading.en : card.heading.kn}
-                      </h3>
-                      <button
-                        onClick={() => toggleExpandCard(cardIndex)}
-                        className="text-sm px-3 py-1 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      >
-                        {expandedCardIndex === cardIndex
-                          ? isEnglish
-                            ? "Hide"
-                            : "ಮರೆಮಾಡಿ"
-                          : isEnglish
-                          ? "View Images"
-                          : "ಚಿತ್ರಗಳು"}
-                      </button>
-                    </div>
+                    {/* <h3 className="p-4 font-semibold text-gray-900">
+                      {isEnglish ? card.heading.en : card.heading.kn}
+                    </h3>
+                    <button
+                      onClick={() => toggleExpandCard(cardIndex)}
+                      className="mb-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                      {expandedCardIndex === cardIndex
+                        ? isEnglish
+                          ? "Hide Images"
+                          : "ಇಮೇಜ್‌ಗಳನ್ನು ಹೈಡ್ ಮಾಡಿ"
+                        : isEnglish
+                        ? "Click here to view images"
+                        : "ಇಮೇಜ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ"}
+                    </button> */}
+                    <h3 className="p-4 font-semibold text-gray-900">
+                      {isEnglish ? card.heading.en : card.heading.kn}
+                    </h3>
+                    <button
+                      onClick={() => toggleExpandCard(cardIndex)}
+                      className="mb-4 px-3 py-2 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 mx-auto block"
+                      style={{ maxWidth: "150px" }}
+                    >
+                      {expandedCardIndex === cardIndex
+                        ? isEnglish
+                          ? "Hide Images"
+                          : "ಇಮೇಜ್‌ಗಳನ್ನು ಹೈಡ್ ಮಾಡಿ"
+                        : isEnglish
+                        ? "View Images"
+                        : "ಇಮೇಜ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ"}
+                    </button>
 
                     {/* Expandable Images List */}
                     {expandedCardIndex === cardIndex && (
