@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect, useRef } from 'react';
 // import axios from 'axios';
 // import Header from '../components/Header';
 // import Footer from '../components/Footer';
@@ -11,13 +11,17 @@
 //   const [images, setImages] = useState([]);
 //   const [isModalOpen, setIsModalOpen] = useState(false);
 //   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+//   const [activeTab, setActiveTab] = useState('photos');
 //   const dispatch = useDispatch();
 //   const user = useSelector((state) => state.user.value);
+//   const iframeRef = useRef(null);
+
 //   useEffect(() => {
 //     if (user.language === undefined) {
 //       dispatch(setLanguage(false));
 //     }
 //   }, [dispatch, user.language]);
+
 //   const isEnglish = !!user.language;
 
 //   // Fetch images from API
@@ -25,17 +29,23 @@
 //     const fetchImages = async () => {
 //       try {
 //         const response = await axios.get(`${API_BASE_URL}gallery`);
-//         const formattedImages = (response.data || []).flatMap(item => 
+//         const formattedImages = (response.data || []).flatMap((item) =>
 //           (item.media || [])
-//             .filter(mf => mf.image_url && mf.image_url.full && mf.image_url.full.high_res)
-//             .map(mf => ({
+//             .filter(
+//               (mf) =>
+//                 mf.image_url &&
+//                 mf.image_url.full &&
+//                 mf.image_url.full.high_res
+//             )
+//             .map((mf) => ({
 //               src: `${API_BASE_URL}${mf.image_url.full.high_res}`,
-//               alt: mf.name?.original || (isEnglish ? 'Gallery Image' : 'ಗ್ಯಾಲರಿ ಚಿತ್ರ')
+//               alt:
+//                 mf.name?.original || (isEnglish ? 'Gallery Image' : 'ಗ್ಯಾಲರಿ ಚಿತ್ರ'),
 //             }))
 //         );
 //         setImages(formattedImages);
 //       } catch (error) {
-//         console.error("Failed to fetch gallery images:", error);
+//         console.error('Failed to fetch gallery images:', error);
 //       }
 //     };
 //     fetchImages();
@@ -58,43 +68,112 @@
 //     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
 //   };
 
+//   const goFullscreen = () => {
+//     const iframe = iframeRef.current;
+//     if (iframe) {
+//       if (iframe.requestFullscreen) {
+//         iframe.requestFullscreen();
+//       } else if (iframe.mozRequestFullScreen) { /* Firefox */
+//         iframe.mozRequestFullScreen();
+//       } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+//         iframe.webkitRequestFullscreen();
+//       } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+//         iframe.msRequestFullscreen();
+//       }
+//     }
+//   };
+
 //   return (
 //     <>
-//       <Header theme='solid' />
+//       <Header theme="solid" />
 //       <div className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
 //         <div className="max-w-7xl mx-auto text-center">
 //           <h2 className="mt-30 text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
 //             {isEnglish ? 'Our Gallery' : 'ನಮ್ಮ ಗ್ಯಾಲರಿ'}
 //           </h2>
 //           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
-//             {isEnglish ? "Explore moments from our community events, activities, and celebrations. Our gallery captures the spirit and togetherness of our members." : "ನಮ್ಮ ಸಮುದಾಯದ ಕಾರ್ಯಕ್ರಮಗಳು, ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಹಬ್ಬಗಳ ಕ್ಷಣಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ನಮ್ಮ ಗ್ಯಾಲರಿ ಸದಸ್ಯರ ಒಗ್ಗಟ್ಟನ್ನು ಮತ್ತು ಆತ್ಮೀಯತೆಯನ್ನು ಹಿಡಿದಿಟ್ಟಿದೆ."}
+//             {isEnglish
+//               ? "Explore moments from our community events, activities, and celebrations. Our gallery captures the spirit and togetherness of our members."
+//               : 'ನಮ್ಮ ಸಮುದಾಯದ ಕಾರ್ಯಕ್ರಮಗಳು, ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಹಬ್ಬಗಳ ಕ್ಷಣಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ನಮ್ಮ ಗ್ಯಾಲರಿ ಸದಸ್ಯರ ಒಗ್ಗಟ್ಟನ್ನು ಮತ್ತು ಆತ್ಮೀಯತೆಯನ್ನು ಹಿಡಿದಿಟ್ಟಿದೆ.'}
 //           </p>
 //         </div>
 
-//         {/* Image Grid */}
-//         <div className="mt-12 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
-//           {images.map((image, index) => (
-//             <div
-//               key={index}
-//               className="group relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden cursor-pointer"
-//               onClick={() => openModal(index)}
+//         {/* Tabs */}
+//         <div className="mt-12 max-w-7xl mx-auto">
+//           {/* Tab Buttons */}
+//           <div className="flex justify-center space-x-4 border-b border-gray-300">
+//             <button
+//               className={`px-4 py-2 font-semibold ${
+//                 activeTab === 'photos'
+//                   ? 'border-b-2 border-indigo-600 text-indigo-600'
+//                   : 'text-gray-600 hover:text-indigo-600'
+//               }`}
+//               onClick={() => setActiveTab('photos')}
 //             >
-//               <img
-//                 src={image.src}
-//                 alt={image.alt}
-//                 className="w-full h-full object-cover object-center group-hover:opacity-80 transition-opacity duration-300"
-//               />
-//               <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-//                 <p className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity">{isEnglish ? 'View' : 'ನೋಡಿ'}</p>
+//               {isEnglish ? 'Photos' : 'ಚಿತ್ರಗಳು'}
+//             </button>
+//             <button
+//               className={`px-4 py-2 font-semibold ${
+//                 activeTab === 'videos'
+//                   ? 'border-b-2 border-indigo-600 text-indigo-600'
+//                   : 'text-gray-600 hover:text-indigo-600'
+//               }`}
+//               onClick={() => setActiveTab('videos')}
+//             >
+//               {isEnglish ? 'Videos' : 'ವೀಡಿಯೊಗಳು'}
+//             </button>
+//           </div>
+
+//           {/* Tab Content */}
+//           <div className="mt-6">
+//             {activeTab === 'photos' && (
+//               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+//                 {images.map((image, index) => (
+//                   <div
+//                     key={index}
+//                     className="group relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden cursor-pointer"
+//                     onClick={() => openModal(index)}
+//                   >
+//                     <img
+//                       src={image.src}
+//                       alt={image.alt}
+//                       className="w-full h-full object-cover object-center group-hover:opacity-80 transition-opacity duration-300"
+//                     />
+//                     <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+//                       <p className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+//                         {isEnglish ? 'View' : 'ನೋಡಿ'}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 ))}
 //               </div>
-//             </div>
-//           ))}
+//             )}
+
+//             {activeTab === 'videos' && (
+//               <div
+//                 className="max-w-4xl mx-auto cursor-pointer"
+//                 onClick={goFullscreen}
+//                 title={isEnglish ? "Click to fullscreen" : "ಪೂರ್ಣ ಪರದೆಯಲ್ಲಿ ತೋರಿ"}
+//                 style={{ display: 'inline-block' }}
+//               >
+//                 <iframe
+//                   ref={iframeRef}
+//                   src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=735925022409049&show_text=0"
+//                   frameBorder="0"
+//                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+//                   allowFullScreen
+//                   title="Facebook Video"
+//                   style={{ border: 'none', overflow: 'hidden', width: '100%', height: '315px', maxWidth: '560px' }}
+//                 />
+//               </div>
+//             )}
+//           </div>
 //         </div>
 //       </div>
 
 //       {/* Modal / Lightbox */}
 //       {isModalOpen && (
-//         <div 
+//         <div
 //           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
 //           onClick={closeModal}
 //         >
@@ -105,9 +184,9 @@
 //           >
 //             <X size={32} />
 //           </button>
-          
+
 //           {/* Carousel Container */}
-//           <div 
+//           <div
 //             className="relative w-full max-w-4xl h-full max-h-[85vh] flex items-center justify-center"
 //             onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking on the image/buttons
 //           >
@@ -118,14 +197,14 @@
 //             >
 //               <ChevronLeft size={28} />
 //             </button>
-            
+
 //             {/* Image Display */}
 //             <img
 //               src={images[currentImageIndex].src}
 //               alt={images[currentImageIndex].alt}
 //               className="max-w-full max-h-full object-contain rounded-lg"
 //             />
-            
+
 //             {/* Next Button */}
 //             <button
 //               className="absolute right-0 sm:-right-12 top-1/2 -translate-y-1/2 p-2 bg-white/20 hover:bg-white/30 rounded-full text-white"
@@ -143,25 +222,26 @@
 // };
 
 // export default GalleryPage;
-import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { API_BASE_URL } from '../../config';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setLanguage } from '../reducers/user';
+import React, { useState, useRef } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { useSelector, useDispatch } from "react-redux";
+import { setLanguage } from "../reducers/user";
 
 const GalleryPage = () => {
-  const [images, setImages] = useState([]);
+  const [activeTab, setActiveTab] = useState("photos");
+  const [expandedCardIndex, setExpandedCardIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState('photos');
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.value);
+  const [currentImages, setCurrentImages] = useState([]);
   const iframeRef = useRef(null);
 
-  useEffect(() => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.value);
+
+  // Initialize language if undefined
+  React.useEffect(() => {
     if (user.language === undefined) {
       dispatch(setLanguage(false));
     }
@@ -169,34 +249,117 @@ const GalleryPage = () => {
 
   const isEnglish = !!user.language;
 
-  // Fetch images from API
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await axios.get(`${API_BASE_URL}gallery`);
-        const formattedImages = (response.data || []).flatMap((item) =>
-          (item.media || [])
-            .filter(
-              (mf) =>
-                mf.image_url &&
-                mf.image_url.full &&
-                mf.image_url.full.high_res
-            )
-            .map((mf) => ({
-              src: `${API_BASE_URL}${mf.image_url.full.high_res}`,
-              alt:
-                mf.name?.original || (isEnglish ? 'Gallery Image' : 'ಗ್ಯಾಲರಿ ಚಿತ್ರ'),
-            }))
-        );
-        setImages(formattedImages);
-      } catch (error) {
-        console.error('Failed to fetch gallery images:', error);
-      }
-    };
-    fetchImages();
-  }, [isEnglish]);
+  // Hardcoded cards data with bilingual headings & banners and images
+  const cards = [
+    {
+      heading: {
+        en: "Greater Bangalore Area Survey Awareness Campaign Meeting on Reservation of Madiga Related Castes, Venue: Hotel Maurya Annex, Bangalore, Date: 14-06-2025.",
+        kn: "ಗ್ರೇಟರ್‌ ಬೆಂಗಳೂರು ವ್ಯಾಪ್ತಿಯ ಮಾದಿಗ ಸಂಬಂಧಿಸಿದ ಜಾತಿಗಳ ಒಳ ಮೀಸಲಾತಿ ಸಮೀಕ್ಷೆಯ ಜಾಗೃತಿ ಅಭಿಯಾನ ಸಭೆ,  ಸ್ಥಳ: ಹೋಟೆಲ್‌ ಮೌರ್ಯ ಅನೆಕ್ಸ್, ಬೆಂಗಳೂರು, ದಿನಾಂಕ: 14-06-2025.",
+      },
+      banner: "/assets/banner1gallery.jpg",
+      images: [
+        { src: "/assets/14062025/1401.jpeg", alt: "Image 1" },
+        { src: "/assets/14062025/1402.jpeg", alt: "Image 2" },
+        { src: "/assets/14062025/1403.jpeg", alt: "Image 3" },
+        { src: "/assets/14062025/1404.jpeg", alt: "Image 4" },
+        { src: "/assets/14062025/1405.jpeg", alt: "Image 5" },
+        { src: "/assets/14062025/1406.jpeg", alt: "Image 6" },
+        { src: "/assets/14062025/1407.jpeg", alt: "Image 7" },
+        { src: "/assets/14062025/1408.jpeg", alt: "Image 8" },
+        { src: "/assets/14062025/1409.jpeg", alt: "Image 9" },
+        { src: "/assets/14062025/1410.jpeg", alt: "Image 10" },
+      ],
+    },
+    {
+      heading: {
+        en: "Greater Bangalore Area Caste Census Survey Awareness Meeting 2025, Gandhi Bhavan, Bangalore. Date: 25-06-2025.",
+        kn: "ಗ್ರೇಟರ್‌ ಬೆಂಗಳೂರು ವ್ಯಾಪ್ತಿಯ ಜಾತಿ ಗಣತಿ ಸಮೀಕ್ಷೆ-ಜಾಗೃತಿ ಸಭೆ-2025, ಗಾಂಧಿ ಭವನ, ಬೆಂಗಳೂರು.  ದಿನಾಂಕ: 25-06-2025.",
+      },
+      banner: "/assets/banner2gallery.jpg",
+      images: [
+        { src: "/assets/25062025/2501.jpeg", alt: "Image 1" },
+        { src: "/assets/25062025/2502.jpeg", alt: "Image 2" },
+        { src: "/assets/25062025/2503.jpeg", alt: "Image 3" },
+        { src: "/assets/25062025/2504.jpeg", alt: "Image 4" },
+        { src: "/assets/25062025/2505.jpeg", alt: "Image 5" },
+        { src: "/assets/25062025/2506.jpeg", alt: "Image 6" },
+        { src: "/assets/25062025/2507.jpeg", alt: "Image 7" },
+        { src: "/assets/25062025/2508.jpeg", alt: "Image 8" },
+        { src: "/assets/25062025/2509.jpeg", alt: "Image 9" },
+        { src: "/assets/25062025/2510.jpeg", alt: "Image 10" },
+        { src: "/assets/25062025/2511.jpeg", alt: "Image 11" },
+        { src: "/assets/25062025/2512.jpeg", alt: "Image 12" },
+        { src: "/assets/25062025/2513.jpeg", alt: "Image 13" },
+      ],
+    },
+    {
+      heading: {
+        en: "Greater Bangalore Area Comprehensive Survey 2025 Public Awareness Meeting, Tamar Hotel, Maurya Annex, Bangalore, Date: 26-06-2025.",
+        kn: "ಗ್ರೇಟರ್‌ ಬೆಂಗಳೂರು ವ್ಯಾಪ್ತಿಯ ಪರಿಶಿಷ್ಟ ಜಾತಿಯ ಸಮಗ್ರ ಸಮೀಕ್ಷೆ 2025 ರ ಜನಜಾಗೃತಿ ಸಭೆ,ತಾಮರ  ಹೋಟೆಲ್‌, ಮೈರ್ಯ ಅನೆಕ್ಸ್‌, ಬೆಂಗಳೂರು,  ದಿನಾಂಕ: 26-06-2025.",
+      },
+      banner: "/assets/banner3gallery.jpg",
+      images: [
+        { src: "/assets/27052025/2701.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025/2702.jpeg", alt: "Image 2" },
+        { src: "/assets/27052025/2703.jpeg", alt: "Image 3" },
+        { src: "/assets/27052025/2704.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/2705.jpeg", alt: "Image 5" },
+        { src: "/assets/27052025/2706.jpeg", alt: "Image 6" },
+        { src: "/assets/27052025/2707.jpeg", alt: "Image 7" },
+        { src: "/assets/27052025/2708.jpeg", alt: "Image 8" },
+        { src: "/assets/27052025/2709.jpeg", alt: "Image 9" },
+        { src: "/assets/27052025/2710.jpeg", alt: "Image 10" },
+      ],
+    },
+    {
+      heading: {
+        en: "Karnataka Madara Mahasabha Membership Registration Campaign - Gandhi Bhavan, Bangalore, Date - 13-07-2025.",
+        kn: "ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ ಸದಸ್ಯತ್ವ ನೊಂದಣಿ ಅಭಿಯಾನ -  ಗಾಂಧಿ ಭವನ, ಬೆಂಗಳೂರು, ದಿನಾಂಕ- 13-07-2025.",
+      },
+      banner: "/assets/banner4gallery.jpg",
+      images: [
+        { src: "/assets/13072025/1301.jpeg", alt: "Image 1" },
+        { src: "/assets/13072025/1302.jpeg", alt: "Image 2" },
+        { src: "/assets/13072025/1303.jpeg", alt: "Image 3" },
+        { src: "/assets/13072025/1304.jpeg", alt: "Image 4" },
+        { src: "/assets/13072025/1305.jpeg", alt: "Image 5" },
+        { src: "/assets/13072025/1306.jpeg", alt: "Image 6" },
+        { src: "/assets/13072025/1307.jpeg", alt: "Image 7" },
+        { src: "/assets/13072025/1308.jpeg", alt: "Image 8" },
+        { src: "/assets/13072025/1309.jpeg", alt: "Image 9" },
+        { src: "/assets/13072025/1310.jpeg", alt: "Image 10" },
+        { src: "/assets/13072025/1311.jpeg", alt: "Image 11" },
+        { src: "/assets/13072025/1312.jpeg", alt: "Image 12" },
+        { src: "/assets/13072025/1313.jpeg", alt: "Image 13" },
+        { src: "/assets/13072025/1314.jpeg", alt: "Image 14" },
+        { src: "/assets/13072025/1315.jpeg", alt: "Image 15" },
+        { src: "/assets/13072025/1316.jpeg", alt: "Image 16" },
+        { src: "/assets/13072025/1317.jpeg", alt: "Image 17" },
+        { src: "/assets/13072025/1318.jpeg", alt: "Image 18" },
+        { src: "/assets/13072025/1319.jpeg", alt: "Image 19" },
+        { src: "/assets/13072025/1320.jpeg", alt: "Image 20" },
+        { src: "/assets/13072025/1321.jpeg", alt: "Image 21" },
+        { src: "/assets/13072025/1322.jpeg", alt: "Image 22" },
+        { src: "/assets/13072025/1323.jpeg", alt: "Image 23" },
+        { src: "/assets/13072025/1324.jpeg", alt: "Image 24" },
+        { src: "/assets/13072025/1325.jpeg", alt: "Image 25" },
+        { src: "/assets/13072025/1326.jpeg", alt: "Image 26" },
+        { src: "/assets/13072025/1327.jpeg", alt: "Image 27" },
+        { src: "/assets/13072025/1328.jpeg", alt: "Image 28" },
+      ],
+    },
+  ];
 
-  const openModal = (index) => {
+  const toggleExpandCard = (index) => {
+    if (expandedCardIndex === index) {
+      setExpandedCardIndex(null);
+    } else {
+      setExpandedCardIndex(index);
+    }
+  };
+
+  const openModal = (index, images) => {
+    setCurrentImages(images);
     setCurrentImageIndex(index);
     setIsModalOpen(true);
   };
@@ -206,11 +369,14 @@ const GalleryPage = () => {
   };
 
   const showNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % currentImages.length);
   };
 
   const showPrevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentImageIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + currentImages.length) % currentImages.length
+    );
   };
 
   const goFullscreen = () => {
@@ -218,11 +384,11 @@ const GalleryPage = () => {
     if (iframe) {
       if (iframe.requestFullscreen) {
         iframe.requestFullscreen();
-      } else if (iframe.mozRequestFullScreen) { /* Firefox */
+      } else if (iframe.mozRequestFullScreen) {
         iframe.mozRequestFullScreen();
-      } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      } else if (iframe.webkitRequestFullscreen) {
         iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+      } else if (iframe.msRequestFullscreen) {
         iframe.msRequestFullscreen();
       }
     }
@@ -234,12 +400,12 @@ const GalleryPage = () => {
       <div className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="mt-30 text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-            {isEnglish ? 'Our Gallery' : 'ನಮ್ಮ ಗ್ಯಾಲರಿ'}
+            {isEnglish ? "Our Gallery" : "ನಮ್ಮ ಗ್ಯಾಲರಿ"}
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
             {isEnglish
               ? "Explore moments from our community events, activities, and celebrations. Our gallery captures the spirit and togetherness of our members."
-              : 'ನಮ್ಮ ಸಮುದಾಯದ ಕಾರ್ಯಕ್ರಮಗಳು, ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಹಬ್ಬಗಳ ಕ್ಷಣಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ನಮ್ಮ ಗ್ಯಾಲರಿ ಸದಸ್ಯರ ಒಗ್ಗಟ್ಟನ್ನು ಮತ್ತು ಆತ್ಮೀಯತೆಯನ್ನು ಹಿಡಿದಿಟ್ಟಿದೆ.'}
+              : "ನಮ್ಮ ಸಮುದಾಯದ ಕಾರ್ಯಕ್ರಮಗಳು, ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಹಬ್ಬಗಳ ಕ್ಷಣಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ನಮ್ಮ ಗ್ಯಾಲರಿ ಸದಸ್ಯರ ಒಗ್ಗಟ್ಟನ್ನು ಮತ್ತು ಆತ್ಮೀಯತೆಯನ್ನು ಹಿಡಿದಿಟ್ಟಿದೆ."}
           </p>
         </div>
 
@@ -249,57 +415,145 @@ const GalleryPage = () => {
           <div className="flex justify-center space-x-4 border-b border-gray-300">
             <button
               className={`px-4 py-2 font-semibold ${
-                activeTab === 'photos'
-                  ? 'border-b-2 border-indigo-600 text-indigo-600'
-                  : 'text-gray-600 hover:text-indigo-600'
+                activeTab === "photos"
+                  ? "border-b-2 border-indigo-600 text-indigo-600"
+                  : "text-gray-600 hover:text-indigo-600"
               }`}
-              onClick={() => setActiveTab('photos')}
+              onClick={() => setActiveTab("photos")}
             >
-              {isEnglish ? 'Photos' : 'ಚಿತ್ರಗಳು'}
+              {isEnglish ? "Photos" : "ಚಿತ್ರಗಳು"}
             </button>
             <button
               className={`px-4 py-2 font-semibold ${
-                activeTab === 'videos'
-                  ? 'border-b-2 border-indigo-600 text-indigo-600'
-                  : 'text-gray-600 hover:text-indigo-600'
+                activeTab === "videos"
+                  ? "border-b-2 border-indigo-600 text-indigo-600"
+                  : "text-gray-600 hover:text-indigo-600"
               }`}
-              onClick={() => setActiveTab('videos')}
+              onClick={() => setActiveTab("videos")}
             >
-              {isEnglish ? 'Videos' : 'ವೀಡಿಯೊಗಳು'}
+              {isEnglish ? "Videos" : "ವೀಡಿಯೊಗಳು"}
             </button>
           </div>
 
           {/* Tab Content */}
           <div className="mt-6">
-            {activeTab === 'photos' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
-                {images.map((image, index) => (
+            {activeTab === "photos" && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                {/* {cards.map((card, cardIndex) => (
                   <div
-                    key={index}
-                    className="group relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden cursor-pointer"
-                    onClick={() => openModal(index)}
+                    key={cardIndex}
+                    className="border rounded-lg overflow-hidden shadow-sm flex flex-col"
                   >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover object-center group-hover:opacity-80 transition-opacity duration-300"
-                    />
-                    <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                      <p className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                        {isEnglish ? 'View' : 'ನೋಡಿ'}
-                      </p>
+                   
+                    <div
+                      className="cursor-pointer relative group"
+                      onClick={() => toggleExpandCard(cardIndex)}
+                    >
+                      <img
+                        src={card.banner}
+                        alt={`Banner for card ${cardIndex + 1}`}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center px-4">
+                        <p className="text-white text-center font-semibold text-lg">
+                          {isEnglish
+                            ? "Click to view details"
+                            : "ಕ್ಲಿಕ್ ಮಾಡಿ ವಿವರಗಳಿಗೆ"}
+                        </p>
+                      </div>
                     </div>
+                    <h3
+                      className="p-4 font-semibold cursor-pointer text-gray-900"
+                      onClick={() => toggleExpandCard(cardIndex)}
+                    >
+                      {isEnglish ? card.heading.en : card.heading.kn}
+                    </h3>
+
+                    
+                    {expandedCardIndex === cardIndex && (
+                      <div className="px-4 pb-4 col-span-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+                        {card.images.map((img, imgIndex) => (
+                          <div
+                            key={imgIndex}
+                            className="cursor-pointer rounded overflow-hidden border hover:border-indigo-500"
+                            onClick={() => openModal(imgIndex, card.images)}
+                          >
+                            <img
+                              src={img.src}
+                              alt={img.alt}
+                              className="w-full h-24 object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))} */}
+                {cards.map((card, cardIndex) => (
+                  <div
+                    key={cardIndex}
+                    className={`flex flex-col overflow-hidden rounded-lg transition-shadow duration-300 ${
+                      expandedCardIndex === cardIndex
+                        ? "border rounded-lg shadow-sm"
+                        : "border-transparent shadow-none"
+                    }`}
+                  >
+                    {/* Card Header with Banner and Heading */}
+                    <div
+                      className="cursor-pointer relative group"
+                      onClick={() => toggleExpandCard(cardIndex)}
+                    >
+                      <img
+                        src={card.banner}
+                        alt={`Banner for card ${cardIndex + 1}`}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center px-4">
+                        <p className="text-white text-center font-semibold text-lg">
+                          {isEnglish
+                            ? "Click to view details"
+                            : "ಕ್ಲಿಕ್ ಮಾಡಿ ವಿವರಗಳಿಗೆ"}
+                        </p>
+                      </div>
+                    </div>
+                    <h3
+                      className="p-4 font-semibold cursor-pointer text-gray-900"
+                      onClick={() => toggleExpandCard(cardIndex)}
+                    >
+                      {isEnglish ? card.heading.en : card.heading.kn}
+                    </h3>
+
+                    {/* Expandable Images List */}
+                    {expandedCardIndex === cardIndex && (
+                      <div className="px-4 pb-4 col-span-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+                        {card.images.map((img, imgIndex) => (
+                          <div
+                            key={imgIndex}
+                            className="cursor-pointer rounded overflow-hidden border hover:border-indigo-500"
+                            onClick={() => openModal(imgIndex, card.images)}
+                          >
+                            <img
+                              src={img.src}
+                              alt={img.alt}
+                              className="w-full h-24 object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
             )}
 
-            {activeTab === 'videos' && (
+            {activeTab === "videos" && (
               <div
                 className="max-w-4xl mx-auto cursor-pointer"
                 onClick={goFullscreen}
-                title={isEnglish ? "Click to fullscreen" : "ಪೂರ್ಣ ಪರದೆಯಲ್ಲಿ ತೋರಿ"}
-                style={{ display: 'inline-block' }}
+                title={
+                  isEnglish ? "Click to fullscreen" : "ಪೂರ್ಣ ಪರದೆಯಲ್ಲಿ ತೋರಿ"
+                }
+                style={{ display: "inline-block" }}
               >
                 <iframe
                   ref={iframeRef}
@@ -308,7 +562,13 @@ const GalleryPage = () => {
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                   allowFullScreen
                   title="Facebook Video"
-                  style={{ border: 'none', overflow: 'hidden', width: '100%', height: '315px', maxWidth: '560px' }}
+                  style={{
+                    border: "none",
+                    overflow: "hidden",
+                    width: "100%",
+                    height: "315px",
+                    maxWidth: "560px",
+                  }}
                 />
               </div>
             )}
@@ -345,8 +605,8 @@ const GalleryPage = () => {
 
             {/* Image Display */}
             <img
-              src={images[currentImageIndex].src}
-              alt={images[currentImageIndex].alt}
+              src={currentImages[currentImageIndex].src}
+              alt={currentImages[currentImageIndex].alt}
               className="max-w-full max-h-full object-contain rounded-lg"
             />
 
@@ -367,4 +627,3 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
-
