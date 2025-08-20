@@ -175,7 +175,7 @@ const MembershipCard = ({
     const photoField = membershipData.values.find((v) => 
   // console.log('photoField',v?._doc),
 
-      v._doc?.label?.includes('ಛಾಯಾಚಿತ್ರ /Upload pic') 
+      v._doc?.label?.includes('ಛಾಯಾಚಿತ್ರ /Upload photo') 
       // v._doc.label?.toLowerCase().includes('upload image') || 
       // v._doc.label?.toLowerCase().includes('image') ||
       // v.label.toLowerCase().includes('upload image') ||
@@ -329,14 +329,14 @@ const MembershipCard = ({
                   )}
                 </div>
               </div>
-              <div className="text-center mt-1">
+              {/* <div className="text-center mt-1">
                 <span
                   className="text-xs font-semibold tracking-wide"
                   style={{ color: color.accent }}
                 >
                   ಮಾಹಿತಿ/ಪದವೀಧರ
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* Bottom section */}
