@@ -123,7 +123,7 @@ export const AboutTrustContent = {
             "ಶ್ರೀ. ಎ. ಮುನಿಯಪ್ಪ",
           ],
 
-          Organizational_Executives_en: "Sri. Pillamuniswamyappa",
+          Organizational_Executives_en: "Sri. Pilla Munishyappa",
           Organizational_Executives_kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ",
 
           Treasurer_en: "Dr. Sujatha",
@@ -462,7 +462,7 @@ export const CommitteeMembers = [
   },
   {
     name: {
-      en: "Sri Pillamuniswamyappa\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
+      en: "Sri Pilla muniswamyappa\nNo. 814, Mathrushree Nilaya,\nA Sector, Yelahanka, Bengaluru.",
       kn: "ಶ್ರೀ. ಪಿಳ್ಳ ಮುನಿಶ್ಯಾಮಪ್ಪ ,\nನಂ. 814, ಮಾತೃಶ್ರೀ ನಿಲಯ,\nಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು.",
     },
     position: {
