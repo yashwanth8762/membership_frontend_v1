@@ -130,7 +130,7 @@ const OrganizationPage = () => {
           <div className="w-full max-w-4xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-800 mb-8">
               {isEnglish
-                ? "District-wise Executive Committee Members"
+                ? "District wise allocation of Executive Committee Members"
                 : "ಜಿಲ್ಲಾ ವಾರು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು"}
             </h2>
 
@@ -142,10 +142,10 @@ const OrganizationPage = () => {
                       {isEnglish ? "S.No" : "ಕ್ರ.ಸಂ"}
                     </th>
                     <th className="px-6 py-4 text-center">
-                      {isEnglish ? "District" : "ಜಿಲ್ಲೆ"}
+                      {isEnglish ? "District/Category" : "ಜಿಲ್ಲೆ"}
                     </th>
                     <th className="px-6 py-4 text-center">
-                      {isEnglish ? "Members" : "ಸದಸ್ಯರು"}
+                      {isEnglish ? "Seats" : "ಸದಸ್ಯರು"}
                     </th>
                   </tr>
                 </thead>
