@@ -95,16 +95,11 @@ const GalleryPage = () => {
       },
       banner: "/assets/banner3gallery.jpg",
       images: [
-        { src: "/assets/27052025/2701.jpeg", alt: "Image 1" },
-        { src: "/assets/27052025/2702.jpeg", alt: "Image 2" },
-        { src: "/assets/27052025/2703.jpeg", alt: "Image 3" },
-        { src: "/assets/27052025/2704.jpeg", alt: "Image 4" },
-        { src: "/assets/27052025/2705.jpeg", alt: "Image 5" },
-        { src: "/assets/27052025/2706.jpeg", alt: "Image 6" },
-        { src: "/assets/27052025/2707.jpeg", alt: "Image 7" },
-        { src: "/assets/27052025/2708.jpeg", alt: "Image 8" },
-        { src: "/assets/27052025/2709.jpeg", alt: "Image 9" },
-        { src: "/assets/27052025/2710.jpeg", alt: "Image 10" },
+        { src: "/assets/27052025/261.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025/262.jpeg", alt: "Image 2" },
+        { src: "/assets/27052025/263.jpeg", alt: "Image 3" },
+        { src: "/assets/27052025/264.jpeg", alt: "Image 4" },
+ 
       ],
     },
     {
