@@ -262,7 +262,7 @@ const CommunityPage = () => {
     {
       src: '/assets/prabakar.jpeg',
       alt: 'Leader',
-      textEn: 'Sri. K. Prabhakar Senior Gandhian and Former Minister, Government of Karnataka',
+      textEn: 'Sri. K. Prabhakar \n Senior Gandhian and Former Minister, Government of Karnataka',
       textKn: 'ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ \n ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
     },
     {
