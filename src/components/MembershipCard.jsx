@@ -18,17 +18,17 @@ const COLOR_SCHEMES = [
   },
   // Green - ₹5,000 (Special membership)
   {
-    name: "Emerald Green",
-    headerBg: "#047857",
-    headerText: "#ffffff",
-    border: "#10b981",
-    detailText: "#047857",
-    accent: "#10b981",
-    barcode: "#047857",
-    cardBg: "linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)",
-    mainBg: "#ecfdf5",
+    name: "Maroon Red",
+    headerBg: "#7f1d1d",       // dark maroon
+    headerText: "#ffffff",     // keep white for contrast
+    border: "#b91c1c",         // bright red-maroon
+    detailText: "#7f1d1d",     // same as headerBg for detail text
+    accent: "#b91c1c",         // bright red-maroon as accent
+    barcode: "#7f1d1d",        // dark maroon
+    cardBg: "linear-gradient(135deg, #fca5a5 0%, #b91c1c 100%)",  // light to dark maroon gradient
+    mainBg: "#fee2e2",         // very light red background
     amount: 5000,
-  },
+  },  
   // Bronze - ₹10,000 (Premium membership)
   {
     name: "Bronze",
