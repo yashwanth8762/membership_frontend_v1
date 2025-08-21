@@ -242,7 +242,7 @@ const MembershipCard = ({
               className="text-xs font-medium tracking-wide mt-1"
               style={{ letterSpacing: "0.01em" }}
             >
-              ಸದಾಸ್ಯತ್ವ ಕಾರ್ಡ್
+              ಸದಸ್ಯತ್ವ ಕಾರ್ಡ್
             </p>
           </div>
 

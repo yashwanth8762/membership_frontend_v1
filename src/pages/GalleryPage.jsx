@@ -28,6 +28,27 @@ const GalleryPage = () => {
   const cards = [
     {
       heading: {
+        en: "Meeting of Madiga Leaders under the Jurisdiction of Bruhat Bangalore Mahanagara Palike, Date: 27.05.2025, 9 am, Gandhi Bhavan, Bangalore",
+        kn: "ಬೃಹತ್ ಬೆಂಗಳೂರು ಮಹಾನಗರ ಪಾಲಿಕೆ ವ್ಯಾಪ್ತಿಯ ಮಾದಿಗ ಮುಖಂಡರ ಸಭೆ, ದಿನಾಂಕ: 27.05.2025, ಬೆಳಿಗ್ಗೆ: 9 ಗಂಟೆಗೆ, ಗಾಂಧಿಭವನ, ಬೆಂಗಳೂರು",
+      },
+      banner: "/assets/banner5gallery.png",
+      images: [
+        { src: "/assets/27052025pt2/201.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/202.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/203.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/204.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/205.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/206.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/207.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/208.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/209.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/210.jpeg", alt: "Image 1" },
+
+
+      ],
+    },
+    {
+      heading: {
         en: "Greater Bangalore Area Survey Awareness Campaign Meeting on Reservation of Madiga Related Castes, Venue: Hotel Maurya Annex, Bangalore, Date: 14-06-2025.",
         kn: "ಗ್ರೇಟರ್‌ ಬೆಂಗಳೂರು ವ್ಯಾಪ್ತಿಯ ಮಾದಿಗ ಸಂಬಂಧಿಸಿದ ಜಾತಿಗಳ ಒಳ ಮೀಸಲಾತಿ ಸಮೀಕ್ಷೆಯ ಜಾಗೃತಿ ಅಭಿಯಾನ ಸಭೆ,  ಸ್ಥಳ: ಹೋಟೆಲ್‌ ಮೌರ್ಯ ಅನೆಕ್ಸ್, ಬೆಂಗಳೂರು, ದಿನಾಂಕ: 14-06-2025.",
       },
@@ -123,22 +144,28 @@ const GalleryPage = () => {
         { src: "/assets/13072025/1328.jpeg", alt: "Image 28" },
       ],
     },
+
     {
       heading: {
-        en: "Meeting of Madiga Leaders under the Jurisdiction of Bruhat Bangalore Mahanagara Palike, Date: 27.05.2025, 9 am, Gandhi Bhavan, Bangalore",
-        kn: "ಬೃಹತ್ ಬೆಂಗಳೂರು ಮಹಾನಗರ ಪಾಲಿಕೆ ವ್ಯಾಪ್ತಿಯ ಮಾದಿಗ ಮುಖಂಡರ ಸಭೆ, ದಿನಾಂಕ: 27.05.2025, ಬೆಳಿಗ್ಗೆ: 9 ಗಂಟೆಗೆ, ಗಾಂಧಿಭವನ, ಬೆಂಗಳೂರು",
+        en: "Internal Reservation Protest, Date: 14/08/2025 to 19/08/2025, Freedom Park Bengaluru.",
+        kn: "ಒಳ ಮೀಸಲಾತಿ ಪ್ರತಿಭಟನೆ, ದಿನಾಂಕ: 14/08/2025 ರಿಂದ 19/08/2025, ಫ್ರೀಡಂ ಪಾರ್ಕ್ ಬೆಂಗಳೂರು.",
       },
-      banner: "/assets/banner5gallery.png",
+      banner: "/assets/vala/vala3.jpeg",
       images: [
-        { src: "/assets/27052025pt2/270501.jpeg", alt: "Image 1" },
-        { src: "/assets/27052025pt2/270502.jpeg", alt: "Image 1" },
-        { src: "/assets/27052025pt2/270503.jpeg", alt: "Image 1" },
-        { src: "/assets/27052025pt2/270504.jpeg", alt: "Image 1" },
-        { src: "/assets/27052025pt2/270505.jpeg", alt: "Image 1" },
-        { src: "/assets/27052025pt2/270506.jpeg", alt: "Image 1" },
+        { src: "/assets/vala/vala1.jpeg", alt: "Image 1" },
+        { src: "/assets/vala/vala2.jpeg", alt: "Image 1" },
+        { src: "/assets/vala/vala3.jpeg", alt: "Image 1" },
+        { src: "/assets/vala/vala4.jpeg", alt: "Image 1" },
+        { src: "/assets/vala/vala5.jpeg", alt: "Image 1" },
+        { src: "/assets/vala/vala6.jpeg", alt: "Image 1" },
+        // { src: "/assets/vala/vala7.jpeg", alt: "Image 1" },
+        // { src: "/assets/vala/vala8.jpeg", alt: "Image 1" },
+        // { src: "/assets/vala/vala9.jpeg", alt: "Image 1" },
+
 
       ],
     },
+    
   ];
 
   const toggleExpandCard = (index) => {
@@ -486,7 +513,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="/assets/27052025pt2/270507.mp4"
+        src="/assets/vala/vala9.mp4"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
@@ -505,7 +532,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="/assets/27052025pt2/270508.mp4"
+        src="/assets/vala/vala8.mp4"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
@@ -524,7 +551,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="/assets/27052025pt2/270509.mp4"
+        src="/assets/vala/vala7.mp4"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
@@ -543,7 +570,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="/assets/27052025pt2/reel2.mp4"
+        src="/assets/vala/reel2.mp4"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
