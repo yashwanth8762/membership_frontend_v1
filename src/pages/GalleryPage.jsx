@@ -99,6 +99,13 @@ const GalleryPage = () => {
         { src: "/assets/27052025/262.jpeg", alt: "Image 2" },
         { src: "/assets/27052025/263.jpeg", alt: "Image 3" },
         { src: "/assets/27052025/264.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/265.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/266.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/267.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/268.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/269.jpeg", alt: "Image 4" },
+        { src: "/assets/27052025/270.jpeg", alt: "Image 4" },
+
  
       ],
     },
