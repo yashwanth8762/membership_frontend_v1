@@ -206,36 +206,36 @@ const CommunityPage = () => {
       ? 'Prominent  Leaders of the Community'
       : 'ಸಮುದಾಯದ ಹಿರಿಯ ಚೇತನಗಳು '}
   </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+  {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
     {[{
       src: '/assets/rchanni.jpeg',
       alt: 'Leader',
-      textEn: 'Sri R. Channigaramaiah Former Minister, Mysore State',
-      textKn: ' ಶ್ರೀ ಆರ್ ಚನ್ನಿಗ ರಾಮಯ್ಯ ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ'
+      textEn: 'Sri R. Channigaramaiah \n Former Minister, Mysore State',
+      textKn: ' ಶ್ರೀ ಆರ್ ಚನ್ನಿಗ ರಾಮಯ್ಯ \n ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ'
     },
     {
       src: '/assets/nrachayya.jpeg',
       alt: 'Leader',
-      textEn: 'Sri. N. Rachaiah Former Minister, Mysore State',
-      textKn: ' ಶ್ರೀ ಎನ್.ರಾಚಯ್ಯ ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ '
+      textEn: 'Sri. N. Rachaiah \n Former Minister, Mysore State',
+      textKn: ' ಶ್ರೀ ಎನ್.ರಾಚಯ್ಯ \n ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ '
     },
     {
       src: '/assets/prabakar.jpeg',
       alt: 'Leader',
       textEn: 'Sri. K. Prabhakar Senior Gandhian and Former Minister, Government of Karnataka',
-      textKn: 'ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+      textKn: 'ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ \n ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
     },
     {
       src: '/assets/b-krishnappa.jpg',
       alt: 'Leader',
-      textEn: 'Sri. Prof. B. Krishnappa Founder, Dalita Sangharsha Samiti',
-      textKn: 'ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ ಸ್ಥಾಪಕರು ,ದಲಿತ ಸಂಘರ್ಷ ಸಮಿತಿ'
+      textEn: 'Sri. Prof. B. Krishnappa \n Founder, Dalita Sangharsha Samiti',
+      textKn: 'ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ \n ಸ್ಥಾಪಕರು ,ದಲಿತ ಸಂಘರ್ಷ ಸಮಿತಿ'
     },
     {
       src: '/assets/dmanjunath.jpeg',
       alt: 'Leader',
-      textEn: 'Sri. D. Manjunath Former Minister, Government of Karnataka',
-      textKn: 'ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+      textEn: 'Sri. D. Manjunath \n Former Minister, Government of Karnataka',
+      textKn: 'ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ \n ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
     }].map(({ src, alt, textEn, textKn }, idx) => (
       <div key={idx} className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
         <img src={src} alt={alt} className="w-28 h-28 object-contain mb-4" />
@@ -244,7 +244,54 @@ const CommunityPage = () => {
         </div>
       </div>
     ))}
-  </div>
+  </div> */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+  {[
+    {
+      src: '/assets/rchanni.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri R. Channigaramaiah \n Former Minister, Mysore State',
+      textKn: 'ಶ್ರೀ ಆರ್ ಚನ್ನಿಗ ರಾಮಯ್ಯ \n ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ'
+    },
+    {
+      src: '/assets/nrachayya.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri. N. Rachaiah \n Former Minister, Mysore State',
+      textKn: 'ಶ್ರೀ ಎನ್.ರಾಚಯ್ಯ \n ಮಾಜಿ ಸಚಿವರು, ಮೈಸೂರು ರಾಜ್ಯ'
+    },
+    {
+      src: '/assets/prabakar.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri. K. Prabhakar Senior Gandhian and Former Minister, Government of Karnataka',
+      textKn: 'ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ \n ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+    },
+    {
+      src: '/assets/b-krishnappa.jpg',
+      alt: 'Leader',
+      textEn: 'Sri. Prof. B. Krishnappa \n Founder, Dalita Sangharsha Samiti',
+      textKn: 'ಪ್ರೊ. ಬಿ. ಕೃಷ್ಣಪ್ಪ \n ಸ್ಥಾಪಕರು ,ದಲಿತ ಸಂಘರ್ಷ ಸಮಿತಿ'
+    },
+    {
+      src: '/assets/dmanjunath.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri. D. Manjunath \n Former Minister, Government of Karnataka',
+      textKn: 'ಶ್ರೀ ಡಿ ಮಂಜುನಾಥ್ \n ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+    }
+  ].map(({ src, alt, textEn, textKn }, idx) => (
+    <div key={idx} className="bg-white shadow-lg flex flex-col items-center p-6 w-full max-w-xs">
+      <img src={src} alt={alt} className="w-28 h-28 object-contain mb-4" />
+      <div className="text-lg font-semibold mb-1 text-center">
+        {(isEnglish ? textEn : textKn).split('\n').map((line, i) => (
+          <React.Fragment key={i}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
 </div>
 
 

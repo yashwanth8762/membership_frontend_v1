@@ -123,6 +123,22 @@ const GalleryPage = () => {
         { src: "/assets/13072025/1328.jpeg", alt: "Image 28" },
       ],
     },
+    {
+      heading: {
+        en: "Meeting of Madiga Leaders under the Jurisdiction of Bruhat Bangalore Mahanagara Palike, Date: 27.05.2025, 9 am, Gandhi Bhavan, Bangalore",
+        kn: "ಬೃಹತ್ ಬೆಂಗಳೂರು ಮಹಾನಗರ ಪಾಲಿಕೆ ವ್ಯಾಪ್ತಿಯ ಮಾದಿಗ ಮುಖಂಡರ ಸಭೆ, ದಿನಾಂಕ: 27.05.2025, ಬೆಳಿಗ್ಗೆ: 9 ಗಂಟೆಗೆ, ಗಾಂಧಿಭವನ, ಬೆಂಗಳೂರು",
+      },
+      banner: "/assets/banner5gallery.png",
+      images: [
+        { src: "/assets/27052025pt2/270501.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/270502.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/270503.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/270504.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/270505.jpeg", alt: "Image 1" },
+        { src: "/assets/27052025pt2/270506.jpeg", alt: "Image 1" },
+
+      ],
+    },
   ];
 
   const toggleExpandCard = (index) => {
@@ -427,7 +443,7 @@ const GalleryPage = () => {
               </div>
             )}
 
-            {activeTab === "videos" && (
+            {/* {activeTab === "videos" && (
               <div
                 className="max-w-4xl mx-auto cursor-pointer"
                 onClick={goFullscreen}
@@ -452,7 +468,120 @@ const GalleryPage = () => {
                   }}
                 />
               </div>
-            )}
+            )} */}
+            {activeTab === "videos" && (
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "16px",
+      maxWidth: "1200px",
+      margin: "0 auto",
+      cursor: "pointer",
+    }}
+    onClick={goFullscreen}
+    title={isEnglish ? "Click to fullscreen" : "ಪೂರ್ಣ ಪರದೆಯಲ್ಲಿ ತೋರಿ"}
+  >
+    {/* Repeat this block for each video iframe */}
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="/assets/27052025pt2/270507.mp4"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="/assets/27052025pt2/270508.mp4"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="/assets/27052025pt2/270509.mp4"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="/assets/27052025pt2/reel2.mp4"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=735925022409049&show_text=0"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    {/* Add more video iframe blocks here */}
+  </div>
+)}
+
           </div>
         </div>
       </div>
