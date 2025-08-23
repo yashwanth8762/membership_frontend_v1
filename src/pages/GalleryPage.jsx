@@ -95,10 +95,7 @@ const GalleryPage = () => {
       },
       banner: "/assets/banner3gallery.jpg",
       images: [
-        // { src: "/assets/27052025/261.jpeg", alt: "Image 1" },
-        // { src: "/assets/27052025/262.jpeg", alt: "Image 2" },
-        // { src: "/assets/27052025/263.jpeg", alt: "Image 3" },
-        // { src: "/assets/27052025/264.jpeg", alt: "Image 4" },
+
         { src: "/assets/27052025/265.jpeg", alt: "Image 1" },
         { src: "/assets/27052025/266.jpeg", alt: "Image 2" },
         { src: "/assets/27052025/267.jpeg", alt: "Image 3" },
@@ -511,6 +508,130 @@ const GalleryPage = () => {
     onClick={goFullscreen}
     title={isEnglish ? "Click to fullscreen" : "ಪೂರ್ಣ ಪರದೆಯಲ್ಲಿ ತೋರಿ"}
   >
+
+<div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="https://www.youtube.com/embed/tZ--pSLGOhY"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="https://www.youtube.com/embed/xuo_n7YeDIo"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Youtube Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+
+
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+         src="https://www.youtube.com/embed/-8WcUSpNS_c"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Youtube Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+
+
+    
+
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+         src="https://www.youtube.com/embed/snRHJPu8Omc"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Youtube Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+         src="https://www.youtube.com/embed/vZhMuVc3JDk"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Youtube Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+         src="https://www.youtube.com/embed/7DvX5jaMyWA"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Youtube Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
     {/* Repeat this block for each video iframe */}
     <div style={{ width: "100%" }}>
       <iframe
@@ -607,6 +728,11 @@ const GalleryPage = () => {
         }}
       />
     </div>
+
+
+
+   
+
     {/* Add more video iframe blocks here */}
   </div>
 )}
