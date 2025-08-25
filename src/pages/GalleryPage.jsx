@@ -1103,7 +1103,7 @@ const GalleryPage = () => {
               }`}
               onClick={() => setActiveTab("youtube")}
             >
-             {isEnglish?"YouTube":"ಯುಟ್ಯೂಬ್"  }
+             {isEnglish?"Informative Videos on Madiga History":"ಮಾದಿಗ ಇತಿಹಾಸ-ಮಾಹಿತಿ ವಿಡಿಯೋಗಳು"  }
             </button>
           </div>
 
