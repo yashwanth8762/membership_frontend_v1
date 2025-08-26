@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import ContactUs from "../components/ContactUs";
 import Organization from "../components/Organization";
 import Documents from "../components/Documents";
+import HeroVideo from "../components/HeroVideo";
 
 // Lazy load all main sections
 const HeroSection = React.lazy(() => import("../components/HeroSection"));
@@ -48,7 +49,9 @@ export default function Home() {
         <Section>
           <HeroSection />
         </Section>
-
+        <Section>
+          <HeroVideo />
+        </Section>
         <Section id="about-trust">
           <AboutTrust />
         </Section>
