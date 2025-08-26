@@ -7,7 +7,7 @@ const HeroVideo = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center px-4 py-12">
       <h1 className="text-2xl md:text-3xl font-bold mb-6">
-      {isEnglish ? `President's message`  :'ಅಧ್ಯಕ್ಷರ ಇತನುಡಿ'}
+      {isEnglish ? `President's Message`  :'ಅಧ್ಯಕ್ಷರ ಸಂದೇಶ'}
       </h1>
 
       <div className="w-full max-w-3xl aspect-video">

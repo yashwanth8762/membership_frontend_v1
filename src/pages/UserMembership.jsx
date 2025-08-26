@@ -844,31 +844,26 @@
 //     </div>
 //   );
 // }
-import React, { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
-import { API_BASE_URL } from '../../config';
-import MembershipCard from '../components/MembershipCard';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from "react";
+import axios from "axios";
+import { API_BASE_URL } from "../../config";
+import MembershipCard from "../components/MembershipCard";
+import { useNavigate } from "react-router-dom";
 
 export default function UserMembership() {
-  
   const [form, setForm] = useState(null);
-  // Values for non-media inputs
   const [values, setValues] = useState({});
-  // Media files per label: { label: [{file, status, id, name, preview}] }
   const [mediaFiles, setMediaFiles] = useState({});
-  // UI states
   const [loading, setLoading] = useState(true);
-  const [success, setSuccess] = useState('');
-  const [error, setError] = useState('');
-  const [membershipId, setMembershipId] = useState('');
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const [membershipId, setMembershipId] = useState("");
   const [fetchedMembershipData, setFetchedMembershipData] = useState(null);
   const [fetchingMembershipData, setFetchingMembershipData] = useState(false);
-  // District and Taluk states
   const [districts, setDistricts] = useState([]);
   const [taluks, setTaluks] = useState([]);
-  const [selectedDistrict, setSelectedDistrict] = useState('');
-  const [selectedTaluk, setSelectedTaluk] = useState('');
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [selectedTaluk, setSelectedTaluk] = useState("");
   const [loadingDistricts, setLoadingDistricts] = useState(false);
   const [loadingTaluks, setLoadingTaluks] = useState(false);
   const cardRef = useRef();
@@ -876,92 +871,62 @@ export default function UserMembership() {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
 
-  // Helper function to get membership type and color info
   const getMembershipTypeInfo = (amount) => {
     const membershipTypes = {
-      500: { 
-        name: 'General Membership', 
-        color: '#3b82f6', // Blue
-        bgColor: '#dbeafe'
-      },
-      5000: { 
-        name: 'Special Membership', 
-        color: '#10b981', // Green
-        bgColor: '#d1fae5'
-      },
-      10000: { 
-        name: 'Premium Membership', 
-        color: '#d97706', // Bronze
-        bgColor: '#fef3c7'
-      },
-      25000: { 
-        name: 'Lifetime Membership', 
-        color: '#64748b', // Silver
-        bgColor: '#f1f5f9'
-      },
-      50000: { 
-        name: 'Poshaka Membership', 
-        color: '#eab308', // Gold
-        bgColor: '#fef3c7'
-      },
-      100000: { 
-        name: 'Mahaposhaka Sadasatva', 
-        color: '#9ca3af', // Platinum
-        bgColor: '#f9fafb'
-      },
+      500: { name: "General Membership", color: "#3b82f6", bgColor: "#dbeafe" },
+      5000: { name: "Special Membership", color: "#10b981", bgColor: "#d1fae5" },
+      10000: { name: "Premium Membership", color: "#d97706", bgColor: "#fef3c7" },
+      25000: { name: "Lifetime Membership", color: "#64748b", bgColor: "#f1f5f9" },
+      50000: { name: "Poshaka Membership", color: "#eab308", bgColor: "#fef3c7" },
+      100000: { name: "Mahaposhaka Sadasatva", color: "#9ca3af", bgColor: "#f9fafb" },
     };
     return membershipTypes[amount] || null;
   };
 
-  // Fetch membership data after submission
   const fetchMembershipData = async (membershipId) => {
+    setFetchingMembershipData(true);
     try {
-      setFetchingMembershipData(true);
       const res = await axios.get(`${API_BASE_URL}membership/submission/${membershipId}`);
       setFetchedMembershipData(res.data);
-    } catch (err) {
-      setError('Failed to fetch membership details.');
+    } catch {
+      setError("Failed to fetch membership details.");
     } finally {
       setFetchingMembershipData(false);
     }
   };
 
-  // Fetch districts
   const fetchDistricts = async () => {
+    setLoadingDistricts(true);
     try {
-      setLoadingDistricts(true);
       const res = await axios.get(`${API_BASE_URL}district/public/active`);
       setDistricts(res.data);
-    } catch (err) {
-      setError('Failed to load districts.');
+    } catch {
+      setError("Failed to load districts.");
     } finally {
       setLoadingDistricts(false);
     }
   };
 
-  // Fetch taluks by district
   const fetchTaluksByDistrict = async (districtId) => {
     if (!districtId) {
       setTaluks([]);
       return;
     }
-    
+    setLoadingTaluks(true);
     try {
-      setLoadingTaluks(true);
       const res = await axios.get(`${API_BASE_URL}taluk/public/get-taluk-by-district/${districtId}`);
       setTaluks(res.data.data.taluks || []);
-    } catch (err) {
-      setError('Failed to load taluks for selected district.');
+    } catch {
+      setError("Failed to load taluks for selected district.");
       setTaluks([]);
     } finally {
       setLoadingTaluks(false);
     }
   };
 
-  // Handle district selection
   const handleDistrictChange = (districtId) => {
     setSelectedDistrict(districtId);
-    setSelectedTaluk(''); // Reset taluk selection
+    setSelectedTaluk("");
     if (districtId) {
       fetchTaluksByDistrict(districtId);
     } else {
@@ -969,7 +934,6 @@ export default function UserMembership() {
     }
   };
 
-  // Fetch form on mount
   useEffect(() => {
     async function fetchForm() {
       setLoading(true);
@@ -978,37 +942,33 @@ export default function UserMembership() {
         const fetchedForm = res.data[0];
         setForm(fetchedForm);
 
-        // Initialize values for non-media fields
         const initialValues = {};
-        fetchedForm?.fields.forEach(f => {
-          if (f.inputType === 'checkbox') {
+        fetchedForm?.fields.forEach((f) => {
+          if (f.inputType === "checkbox") {
             initialValues[f.label] = false;
-          } else if (f.inputType !== 'media') {
-            initialValues[f.label] = '';
+          } else if (f.inputType !== "media") {
+            initialValues[f.label] = "";
           }
         });
 
-        // --- Initialization for new fields ---
-        initialValues['Blood Group'] = '';
-        initialValues['Email ID'] = '';
-        initialValues['Adhar No'] = '';
+        initialValues["Blood Group"] = "";
+        initialValues["Email ID"] = "";
+        initialValues["Adhar No"] = "";
+        initialValues["Membership Amount"] = "";
 
         setValues(initialValues);
 
-        // Initialize mediaFiles with empty arrays for media fields
         const initialMedia = {};
-        fetchedForm?.fields.forEach(f => {
-          if (f.inputType === 'media') {
+        fetchedForm?.fields.forEach((f) => {
+          if (f.inputType === "media") {
             initialMedia[f.label] = [];
           }
         });
         setMediaFiles(initialMedia);
 
-        // Fetch districts
         await fetchDistricts();
-
-      } catch (err) {
-        setError('Failed to load form.');
+      } catch {
+        setError("Failed to load form.");
       } finally {
         setLoading(false);
       }
@@ -1016,93 +976,81 @@ export default function UserMembership() {
     fetchForm();
   }, []);
 
-  // Handle non-media input changes
   const handleChange = (label, value, type) => {
-    if (type === 'media') {
-      // Media handled separately in handleFileChange
+    if (type === "media") {
+      // handled separately
     } else {
-      setValues(v => ({ ...v, [label]: value }));
+      setValues((v) => ({ ...v, [label]: value }));
     }
   };
 
-  // Handle file selection for media fields
   const handleFileChange = (label, files) => {
     if (!files || files.length === 0) {
-      setMediaFiles(prev => ({ ...prev, [label]: [] }));
+      setMediaFiles((prev) => ({ ...prev, [label]: [] }));
       return;
     }
-
     const selectedFile = files[0];
     const newFileObj = {
       file: selectedFile,
-      status: 'pending', // pending, uploading, saved
+      status: "pending",
       id: null,
       name: selectedFile.name,
       preview: URL.createObjectURL(selectedFile),
     };
-    setMediaFiles(prev => ({ ...prev, [label]: [newFileObj] }));
+    setMediaFiles((prev) => ({ ...prev, [label]: [newFileObj] }));
   };
 
-  // Handle media save (uploading to backend)
   const handleSaveMedia = async (label, index) => {
     const fileObj = mediaFiles[label][index];
-    if (!fileObj || fileObj.status !== 'pending') return;
+    if (!fileObj || fileObj.status !== "pending") return;
 
-    updateMediaStatus(label, index, 'uploading');
-
+    updateMediaStatus(label, index, "uploading");
     try {
       const formData = new FormData();
-      formData.append('media', fileObj.file);
+      formData.append("media", fileObj.file);
 
       const res = await axios.post(`${API_BASE_URL}media`, formData);
-
       if (res.status === 200 || res.status === 201) {
         const mediaId = res.data.data || res.data.id;
         if (mediaId) {
-          updateMediaDetails(label, index, {
-            status: 'saved',
-            id: mediaId,
-          });
+          updateMediaDetails(label, index, { status: "saved", id: mediaId });
           setSuccess(`'${fileObj.name}' uploaded successfully!`);
-          setError('');
+          setError("");
         } else {
-          updateMediaStatus(label, index, 'pending');
-          setError(`Invalid response from server for ${fileObj.name}`);
-          setSuccess('');
+          updateMediaStatus(label, index, "pending");
+          setError(`Invalid response for ${fileObj.name}`);
+          setSuccess("");
         }
       } else {
-        updateMediaStatus(label, index, 'pending');
+        updateMediaStatus(label, index, "pending");
         setError(res.data.message || `Failed to upload ${fileObj.name}`);
-        setSuccess('');
+        setSuccess("");
       }
     } catch (err) {
-      updateMediaStatus(label, index, 'pending');
+      updateMediaStatus(label, index, "pending");
       setError(`Failed to upload ${fileObj.name}: ${err.message}`);
-      setSuccess('');
+      setSuccess("");
     }
   };
 
-  // Helper to update status of a media file (for specific label and index)
   const updateMediaStatus = (label, index, status) => {
-    setMediaFiles(prev => {
+    setMediaFiles((prev) => {
       const updated = [...prev[label]];
       updated[index] = { ...updated[index], status };
       return { ...prev, [label]: updated };
     });
   };
 
-  // Helper to update details of media file, e.g. status and id
   const updateMediaDetails = (label, index, details) => {
-    setMediaFiles(prev => {
+    setMediaFiles((prev) => {
       const updated = [...prev[label]];
       updated[index] = { ...updated[index], ...details };
       return { ...prev, [label]: updated };
     });
   };
 
-  // Remove media file from specific media field
   const handleRemoveMedia = (label, index) => {
-    setMediaFiles(prev => {
+    setMediaFiles((prev) => {
       const updated = [...prev[label]];
       if (updated[index]?.preview) {
         URL.revokeObjectURL(updated[index].preview);
@@ -1110,82 +1058,80 @@ export default function UserMembership() {
       updated.splice(index, 1);
       return { ...prev, [label]: updated };
     });
-    setSuccess('');
-    setError('');
+    setSuccess("");
+    setError("");
   };
 
-  // Check if all media files (for all media fields) are uploaded/saved
   const allMediaSaved = () => {
-    const result = Object.entries(mediaFiles).every(([label, filesArray]) => {
-      if (filesArray.length === 0) {
-        return true;
-      }
-      return filesArray.every(f => f.status === 'saved');
+    return Object.entries(mediaFiles).every(([label, filesArray]) => {
+      if (filesArray.length === 0) return true;
+      return filesArray.every((f) => f.status === "saved");
     });
-    return result;
   };
 
-  // Form submit handler
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess('');
-    setError('');
+    setSuccess("");
+    setError("");
 
-    // Validate district and taluk selection
     if (!selectedDistrict) {
-      setError('Please select a district.');
+      setError("Please select a district.");
       return;
     }
-
     if (!selectedTaluk) {
-      setError('Please select a taluk.');
+      setError("Please select a taluk.");
       return;
     }
-
-    // Check if all media files are saved before submission
     if (!allMediaSaved()) {
       const unsavedMedia = Object.entries(mediaFiles)
-        .filter(([label, filesArray]) => 
-          filesArray.length > 0 && filesArray.some(f => f.status !== 'saved')
+        .filter(
+          ([label, filesArray]) =>
+            filesArray.length > 0 && filesArray.some((f) => f.status !== "saved")
         )
-        .map(([label, filesArray]) => 
-          `${label}: ${filesArray.filter(f => f.status !== 'saved').map(f => f.name).join(', ')}`
+        .map(
+          ([label, filesArray]) =>
+            `${label}: ${filesArray
+              .filter((f) => f.status !== "saved")
+              .map((f) => f.name)
+              .join(", ")}`
         );
-      
-      setError(`Please save all selected media files before submitting. Unsaved files: ${unsavedMedia.join('; ')}`);
+
+      setError(
+        `Please save all selected media files before submitting. Unsaved files: ${unsavedMedia.join(
+          "; "
+        )}`
+      );
       return;
     }
 
     try {
-      const submissionValues = form.fields.map(field => {
-        if (field.inputType === 'media') {
+      const submissionValues = form.fields.map((field) => {
+        if (field.inputType === "media") {
           const savedMedia = mediaFiles[field.label];
-          if (!savedMedia || savedMedia.length === 0) {
+          if (!savedMedia || savedMedia.length === 0)
             return { label: field.label, value: [], media: [] };
-          }
-          const mediaIds = savedMedia.map(f => f.id).filter(id => id !== null);
+          const mediaIds = savedMedia.map((f) => f.id).filter((id) => id !== null);
           return { label: field.label, value: mediaIds, media: mediaIds };
         } else {
-          return { 
-            label: field.label, 
-            value: values[field.label] ?? '', 
-            media: [] 
-          };
+          return { label: field.label, value: values[field.label] ?? "", media: [] };
         }
       });
 
-      // Add membership amount as the first item
-      submissionValues.unshift({
-        label: 'Membership Amount',
-        value: values['Membership Amount'],
-        media: []
-      });
+      if (!submissionValues.some((v) => v.label === "Membership Amount")) {
+        submissionValues.unshift({
+          label: "Membership Amount",
+          value: values["Membership Amount"] || "",
+          media: [],
+        });
+      }
 
-      // Add new fields value to submission
+      const emailVal = values["Email ID"] || "";
+      const adharVal = values["Adhar No"] || "";
+
       submissionValues.push(
-        { label: 'Blood Group', value: values['Blood Group'] || '', media: [] },
-        { label: 'Email ID', value: values['Email ID'] || '', media: [] },
-        { label: 'Adhar No', value: values['Adhar No'] || '', media: [] },
+        { label: "Blood Group", value: values["Blood Group"] || "", media: [] },
+        { label: "Email ID", value: emailVal, media: [] },
+        { label: "Adhar No", value: adharVal, media: [] }
       );
 
       setLoading(true);
@@ -1193,29 +1139,29 @@ export default function UserMembership() {
         formId: form.id,
         district: selectedDistrict,
         taluk: selectedTaluk,
+        adhar_no: adharVal,
+        email: emailVal,
+        bloodGroup: values["Blood Group"] || "",
         values: submissionValues,
       });
+
       setMembershipId(res.data.membershipId);
-      
-      // Fetch the complete membership data after submission
       await fetchMembershipData(res.data.membershipId);
-      
-      setSuccess('Membership card created successfully!');
-      setError('');
+      setSuccess("Membership card created successfully!");
+      setError("");
     } catch (err) {
-      setError('Failed to create membership card.');
-      setSuccess('');
+      setError("Failed to create membership card.");
+      setSuccess("");
     } finally {
       setLoading(false);
     }
   };
 
-  // Download card as image
   const handleDownload = async () => {
     if (!cardOnlyRef.current) return;
-    const html2canvas = (await import('html2canvas')).default;
-    html2canvas(cardOnlyRef.current).then(canvas => {
-      const link = document.createElement('a');
+    const html2canvas = (await import("html2canvas")).default;
+    html2canvas(cardOnlyRef.current).then((canvas) => {
+      const link = document.createElement("a");
       link.download = `membership_card_${membershipId}.png`;
       link.href = canvas.toDataURL();
       link.click();
@@ -1225,117 +1171,146 @@ export default function UserMembership() {
   return (
     <div
       style={{
-        minHeight: '100vh',
-        background: '#fff',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        minHeight: "100vh",
+        background: "#fff",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         padding: 0,
-        position: 'relative',
+        position: "relative",
       }}
     >
       {/* Go to Home Button */}
       <button
-        onClick={() => navigate('/')}
+        onClick={() => navigate("/")}
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 24,
           left: 24,
-          padding: '8px 18px',
-          background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
-          color: '#fff',
+          padding: "8px 18px",
+          background: "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
+          color: "#fff",
           fontWeight: 600,
           fontSize: 16,
-          border: 'none',
+          border: "none",
           borderRadius: 8,
-          cursor: 'pointer',
-          boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
+          cursor: "pointer",
+          boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
         }}
       >
         Go to Home
       </button>
+
       {/* Info Box Full Screen */}
       {!showForm && (
-        <div style={{
-          width: '100vw',
-          minHeight: '100vh',
-          background: '#f1f5f9',
-          color: '#1e293b',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          zIndex: 100,
-          padding: '0 24px',
-        }}>
-          <div style={{
-            maxWidth: 900,
-            fontSize: 18,
-            lineHeight: 1.7,
-            fontWeight: 500,
-            textAlign: 'center',
-            marginBottom: 40,
-          }}>
-ಕರ್ನಾಟಕ ರಾಜ್ಯದ ವಿವಿಧ ಜಿಲ್ಲೆ  ಮತ್ತು ತಾಲ್ಲೂಕುಗಳಿಂದ  ಕನಿಷ್ಠ 18 ವರ್ಷ ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ / ಮಾದಿಗ ಜನಾಂಗದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾಗೆ ಸದಸ್ಯರಾಗಲು ಅರ್ಹರಾಗಿರುತ್ತಾರೆ. ಸದಸ್ಯರಾಗಲು ಇಚ್ಚಿಸುವ ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ನಿಗಧಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ವಿವರಗಳನ್ನು ತುಂಬಿ ನಿಗಧಿ ಪಡಿಸಿದ ಶುಲ್ಕ ಪಾವತಿಸಬೇಕಾಗಿರುತ್ತದೆ. ಅರ್ಜಿ ನಮೂನೆ ಮತ್ತು ಪಾವತಿ ವಿವರಗಳು ಕೆಳಕಂಡಂತಿದ್ದು, ಆನ್‌ಲೈನ್‌ ಮೂಲಕ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಶುಲ್ಕ ಪಾವತಿಸಿ ಸದಸ್ಯತ್ವ ಪಡೆಯಬಹುದಾಗಿದೆ ಹಾಗೂ ಮೆಂಬರ್‌ಶಿಪ್‌ ಕಾರ್ಡ್‌ನ್ನು ಡೌನ್‌ಲೋಡ್‌  ಮಾಡಿಕೊಳ್ಳಬಹುದಾಗಿದೆ.
+        <div
+          style={{
+            width: "100vw",
+            minHeight: "100vh",
+            background: "#f1f5f9",
+            color: "#1e293b",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: 100,
+            padding: "0 24px",
+          }}
+        >
+          <div
+            style={{
+              maxWidth: 900,
+              fontSize: 18,
+              lineHeight: 1.7,
+              fontWeight: 500,
+              textAlign: "center",
+              marginBottom: 40,
+            }}
+          >
+            ಕರ್ನಾಟಕ ರಾಜ್ಯದ ವಿವಿಧ ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕುಗಳಿಂದ ಕನಿಷ್ಠ 18 ವರ್ಷ
+            ವಯಸ್ಸು ತುಂಬಿದ ಮಾದರ / ಮಾದಿಗ ಜನಾಂಗದ ಪುರುಷರು ಮತ್ತು ಮಹಿಳೆಯರು
+            ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾಗೆ ಸದಸ್ಯರಾಗಲು ಅರ್ಹರಾಗಿರುತ್ತಾರೆ. ಸದಸ್ಯರಾಗಲು
+            ಇಚ್ಛಿಸುವ ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ನಿವಾಸಿಗಳು ಸಭಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ
+            ನಿಗಧಿಪಡಿಸಿದ ಅರ್ಜಿ ನಮೂನೆಯಲ್ಲಿ ವಿವರಗಳನ್ನು ತುಂಬಿ ನಿಗಧಿ ಪಡಿಸಿದ ಶುಲ್ಕ
+            ಪಾವತಿಸಬೇಕಾಗಿರುತ್ತದೆ. ಅರ್ಜಿ ನಮೂನೆ ಮತ್ತು ಪಾವತಿ ವಿವರಗಳು ಕೆಳಕಂಡಂತಿದ್ದು,
+            ಆನ್‌ಲೈನ್‌ ಮೂಲಕ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಶುಲ್ಕ ಪಾವತಿಸಿ ಸದಸ್ಯತ್ವ ಪಡೆಯಬಹುದಾಗಿದೆ
+            ಹಾಗೂ ಮೆಂಬರ್‌ಶಿಪ್‌ ಕಾರ್ಡ್‌ನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಿಕೊಳ್ಳಬಹುದಾಗಿದೆ.
           </div>
-          <div style={{
-            maxWidth: 900,
-            fontSize: 18,
-            lineHeight: 1.7,
-            fontWeight: 500,
-            textAlign: 'center',
-            marginBottom: 40,
-          }}>
-          Men and Women belonging to the Madara / Madiga community from various Districts and Taluks of Karnataka, who are at least 18 years of age, are eligible to become members of the Karnataka Madara Mahasabha.
- 
- Residents of the respective Taluk and District who wish to become members must fill in the details in the prescribed application form determined by the Executive Committee of the Mahasabha and pay the prescribed membership fee.
+          <div
+            style={{
+              maxWidth: 900,
+              fontSize: 18,
+              lineHeight: 1.7,
+              fontWeight: 500,
+              textAlign: "center",
+              marginBottom: 40,
+            }}
+          >
+            Men and Women belonging to the Madara / Madiga community from various
+            Districts and Taluks of Karnataka, who are at least 18 years of age,
+            are eligible to become members of the Karnataka Madara Mahasabha.
+            Residents of the respective Taluk and District who wish to become members
+            must fill in the details in the prescribed application form determined by
+            the Executive Committee of the Mahasabha and pay the prescribed membership
+            fee.
           </div>
           <button
             onClick={() => setShowForm(true)}
             style={{
-              padding: '16px 40px',
-              background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
-              color: '#fff',
+              padding: "16px 40px",
+              background: "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
+              color: "#fff",
               fontWeight: 700,
               fontSize: 20,
-              border: 'none',
+              border: "none",
               borderRadius: 12,
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
+              cursor: "pointer",
+              boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
               marginTop: 16,
             }}
           >
-            ಸದಸ್ಯತ್ವ ಅರ್ಜಿ ನಮೂನೆಗೆ ಮುಂದುವರೆಯಿರಿ/Continue to Membership Application Form
+            ಸದಸ್ಯತ್ವ ಅರ್ಜಿ ನಮೂನೆಗೆ ಮುಂದುವರೆಯಿರಿ/Continue to Membership Application
+            Form
           </button>
         </div>
       )}
+
       {/* Membership Form */}
       {showForm && (
         <div
           style={{
-            width: '100vw',
-            minHeight: '100vh',
-            background: '#fff',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '48px 0',
+            width: "100vw",
+            minHeight: "100vh",
+            background: "#fff",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "48px 0",
             margin: 0,
-            boxSizing: 'border-box',
+            boxSizing: "border-box",
           }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32, width: '100%', maxWidth: 600 }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 32,
+              width: "100%",
+              maxWidth: 600,
+            }}
+          >
             <h2
               style={{
                 fontWeight: 700,
                 fontSize: 28,
-                color: '#1e293b',
-                textAlign: 'center',
+                color: "#1e293b",
+                textAlign: "center",
                 margin: 0,
                 flex: 1,
               }}
@@ -1347,115 +1322,135 @@ export default function UserMembership() {
               onClick={() => setShowForm(false)}
               style={{
                 marginLeft: 16,
-                padding: '8px 18px',
-                background: '#e5e7eb',
-                color: '#1e293b',
+                padding: "8px 18px",
+                background: "#e5e7eb",
+                color: "#1e293b",
                 fontWeight: 600,
                 fontSize: 15,
-                border: 'none',
+                border: "none",
                 borderRadius: 8,
-                cursor: 'pointer',
-                boxShadow: '0 2px 8px 0 rgba(99,102,241,0.06)',
+                cursor: "pointer",
+                boxShadow: "0 2px 8px 0 rgba(99,102,241,0.06)",
               }}
             >
               Cancel
             </button>
           </div>
-          <div style={{ width: '100%', maxWidth: 600 }}>
+          <div style={{ width: "100%", maxWidth: 600 }}>
             {loading && <div>Loading form...</div>}
-            {error && <div style={{ color: '#e11d48', marginBottom: 12 }}>{error}</div>}
+            {error && (
+              <div style={{ color: "#e11d48", marginBottom: 12 }}>{error}</div>
+            )}
             {!membershipId && form && (
-              <form onSubmit={handleSubmit} style={{ maxWidth: 600, margin: '0 auto' }}>
+              <form
+                onSubmit={handleSubmit}
+                style={{ maxWidth: 600, margin: "0 auto" }}
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                   {form.fields.map((field, idx) => {
                     const fieldMediaFiles = mediaFiles[field.label] || [];
-                    const isFullWidth = field.inputType === 'textarea' || field.inputType === 'media';
+                    const isFullWidth =
+                      field.inputType === "textarea" || field.inputType === "media";
                     const labelText = field.label;
                     return (
-                      <div
-                        key={idx}
-                        className={isFullWidth ? 'col-span-full' : ''}
-                      >
+                      <div key={idx} className={isFullWidth ? "col-span-full" : ""}>
                         <label
                           style={{
                             fontWeight: 500,
-                            color: '#334155',
-                            display: 'block',
+                            color: "#334155",
+                            display: "block",
                             marginBottom: 6,
                           }}
                         >
                           {labelText}
-                          {field.required && <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>}
+                          {field.required && (
+                            <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
+                          )}
                         </label>
 
-                        {field.inputType === 'text' && (
+                        {field.inputType === "text" && (
                           <input
                             type="text"
-                            value={values[field.label] || ''}
-                            onChange={e => handleChange(field.label, e.target.value)}
+                            value={values[field.label] || ""}
+                            onChange={(e) =>
+                              handleChange(field.label, e.target.value)
+                            }
                             required={field.required}
                             className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                           />
                         )}
 
-                        {field.inputType === 'textarea' && (
+                        {field.inputType === "textarea" && (
                           <textarea
-                            value={values[field.label] || ''}
-                            onChange={e => handleChange(field.label, e.target.value)}
+                            value={values[field.label] || ""}
+                            onChange={(e) =>
+                              handleChange(field.label, e.target.value)
+                            }
                             required={field.required}
                             className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                             rows={3}
                           />
                         )}
 
-                        {field.inputType === 'number' && (
+                        {field.inputType === "number" && (
                           <input
                             type="number"
-                            value={values[field.label] || ''}
-                            onChange={e => handleChange(field.label, e.target.value)}
+                            value={values[field.label] || ""}
+                            onChange={(e) =>
+                              handleChange(field.label, e.target.value)
+                            }
                             required={field.required}
                             className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                           />
                         )}
 
-                        {['dropdown', 'radio'].includes(field.inputType) && field.options && (
-                          <select
-                            value={values[field.label] || ''}
-                            onChange={e => handleChange(field.label, e.target.value)}
-                            required={field.required}
-                            className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                          >
-                            <option value="">Select...</option>
-                            {field.options.map((opt, i) => (
-                              <option key={i} value={opt}>
-                                {opt}
-                              </option>
-                            ))}
-                          </select>
-                        )}
+                        {["dropdown", "radio"].includes(field.inputType) &&
+                          field.options && (
+                            <select
+                              value={values[field.label] || ""}
+                              onChange={(e) =>
+                                handleChange(field.label, e.target.value)
+                              }
+                              required={field.required}
+                              className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            >
+                              <option value="">Select...</option>
+                              {field.options.map((opt, i) => (
+                                <option key={i} value={opt}>
+                                  {opt}
+                                </option>
+                              ))}
+                            </select>
+                          )}
 
-                        {field.inputType === 'checkbox' && (
+                        {field.inputType === "checkbox" && (
                           <input
                             type="checkbox"
                             checked={!!values[field.label]}
-                            onChange={e => handleChange(field.label, e.target.checked)}
+                            onChange={(e) =>
+                              handleChange(field.label, e.target.checked)
+                            }
                             className="scale-110"
                           />
                         )}
 
-                        {field.inputType === 'media' && (
+                        {field.inputType === "media" && (
                           <div className="w-full">
                             <input
                               type="file"
                               accept="image/*"
-                              onChange={e => handleFileChange(field.label, e.target.files)}
-                              required={field.required && fieldMediaFiles.length === 0}
+                              onChange={(e) =>
+                                handleFileChange(field.label, e.target.files)
+                              }
+                              required={
+                                field.required && fieldMediaFiles.length === 0
+                              }
                               className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2"
                               style={{ minHeight: 44 }}
                             />
                             {fieldMediaFiles.length > 0 && (
                               <div className="flex gap-2 mb-2">
-                                {fieldMediaFiles[0].status === 'pending' && (
+                                {fieldMediaFiles[0].status === "pending" && (
                                   <button
                                     type="button"
                                     onClick={() => handleSaveMedia(field.label, 0)}
@@ -1471,11 +1466,15 @@ export default function UserMembership() {
                                 >
                                   Remove
                                 </button>
-                                {fieldMediaFiles[0].status === 'uploading' && (
-                                  <span className="text-blue-600 font-semibold">Saving...</span>
+                                {fieldMediaFiles[0].status === "uploading" && (
+                                  <span className="text-blue-600 font-semibold">
+                                    Saving...
+                                  </span>
                                 )}
-                                {fieldMediaFiles[0].status === 'saved' && (
-                                  <span className="text-green-600 font-semibold align-middle">✓ Saved</span>
+                                {fieldMediaFiles[0].status === "saved" && (
+                                  <span className="text-green-600 font-semibold align-middle">
+                                    ✓ Saved
+                                  </span>
                                 )}
                               </div>
                             )}
@@ -1492,15 +1491,20 @@ export default function UserMembership() {
                   {/* Blood Group */}
                   <div>
                     <label
-                      style={{ fontWeight: 500, color: '#334155', display: 'block', marginBottom: 6 }}
+                      style={{
+                        fontWeight: 500,
+                        color: "#334155",
+                        display: "block",
+                        marginBottom: 6,
+                      }}
                     >
                       Blood Group
-                      <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
                     </label>
                     <input
                       type="text"
-                      value={values['Blood Group'] || ''}
-                      onChange={e => handleChange('Blood Group', e.target.value)}
+                      value={values["Blood Group"] || ""}
+                      onChange={(e) => handleChange("Blood Group", e.target.value)}
                       required
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
@@ -1508,15 +1512,20 @@ export default function UserMembership() {
                   {/* Email ID */}
                   <div>
                     <label
-                      style={{ fontWeight: 500, color: '#334155', display: 'block', marginBottom: 6 }}
+                      style={{
+                        fontWeight: 500,
+                        color: "#334155",
+                        display: "block",
+                        marginBottom: 6,
+                      }}
                     >
                       Email ID
-                      <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
                     </label>
                     <input
                       type="email"
-                      value={values['Email ID'] || ''}
-                      onChange={e => handleChange('Email ID', e.target.value)}
+                      value={values["Email ID"] || ""}
+                      onChange={(e) => handleChange("Email ID", e.target.value)}
                       required
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
@@ -1524,64 +1533,81 @@ export default function UserMembership() {
                   {/* Adhar No */}
                   <div>
                     <label
-                      style={{ fontWeight: 500, color: '#334155', display: 'block', marginBottom: 6 }}
+                      style={{
+                        fontWeight: 500,
+                        color: "#334155",
+                        display: "block",
+                        marginBottom: 6,
+                      }}
                     >
                       Adhar No
-                      <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
                     </label>
                     <input
                       type="text"
-                      value={values['Adhar No'] || ''}
-                      onChange={e => handleChange('Adhar No', e.target.value)}
+                      value={values["Adhar No"] || ""}
+                      onChange={(e) => handleChange("Adhar No", e.target.value)}
                       required
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
                   </div>
                 </div>
 
-                {/* District and Taluk Selection */}
+                {/* District and Taluk */}
 
                 <div className="grid grid-cols-1 mt-4 sm:grid-cols-2 gap-x-6 gap-y-4 mb-4">
-                  {/* District Dropdown */}
+                  {/* District */}
                   <div className="col-span-1">
-                    <label className="block font-medium text-gray-700 mb-2">
-                      ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ/Select District <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                    <label
+                      className="block font-medium text-gray-700 mb-2"
+                      htmlFor="district-select"
+                    >
+                      ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ/Select District
+                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
                     </label>
                     <select
+                      id="district-select"
                       value={selectedDistrict}
-                      onChange={e => handleDistrictChange(e.target.value)}
+                      onChange={(e) => handleDistrictChange(e.target.value)}
                       required
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                       disabled={loadingDistricts}
                     >
                       <option value="">Select district...</option>
-                      {districts.map((district) => (
-                        <option key={district.id} value={district.id}>
-                          {district.name}
+                      {districts.map((d) => (
+                        <option key={d.id} value={d.id}>
+                          {d.name}
                         </option>
                       ))}
                     </select>
                     {loadingDistricts && (
-                      <div className="text-sm text-gray-500 mt-1">Loading districts...</div>
+                      <div className="text-sm text-gray-500 mt-1">
+                        Loading districts...
+                      </div>
                     )}
                   </div>
 
-                  {/* Taluk Dropdown */}
+                  {/* Taluk */}
                   <div className="col-span-1">
-                    <label className="block font-medium text-gray-700 mb-2">
-                      ತಾಲೂಕನ್ನು ಆಯ್ಕೆಮಾಡಿ/Select Taluk <span style={{ color: '#e11d48', marginLeft: 4 }}>*</span>
+                    <label
+                      className="block font-medium text-gray-700 mb-2"
+                      htmlFor="taluk-select"
+                    >
+                      ತಾಲೂಕನ್ನು ಆಯ್ಕೆಮಾಡಿ/Select Taluk
+                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
                     </label>
                     <select
+                      id="taluk-select"
                       value={selectedTaluk}
-                      onChange={e => setSelectedTaluk(e.target.value)}
+                      onChange={(e) => setSelectedTaluk(e.target.value)}
                       required
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                       disabled={!selectedDistrict || loadingTaluks}
                     >
                       <option value="">Select taluk...</option>
-                      {taluks.map((taluk) => (
-                        <option key={taluk.id} value={taluk.id}>
-                          {taluk.name}
+                      {taluks.map((t) => (
+                        <option key={t.id} value={t.id}>
+                          {t.name}
                         </option>
                       ))}
                     </select>
@@ -1589,7 +1615,9 @@ export default function UserMembership() {
                       <div className="text-sm text-gray-500 mt-1">Loading taluks...</div>
                     )}
                     {!selectedDistrict && (
-                      <div className="text-sm text-gray-500 mt-1">Please select a district first</div>
+                      <div className="text-sm text-gray-500 mt-1">
+                        Please select a district first
+                      </div>
                     )}
                   </div>
                 </div>
@@ -1598,115 +1626,196 @@ export default function UserMembership() {
                 <div className="col-span-full mb-6">
                   <div
                     style={{
-                      background: 'linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%)',
-                      borderRadius: '12px',
-                      boxShadow: '0 2px 8px 0 rgba(99,102,241,0.08)',
-                      padding: '18px 24px',
-                      marginBottom: '8px',
-                      borderLeft: '6px solid #6366f1',
-                      fontSize: '1.08rem',
-                      color: '#1e293b',
+                      background:
+                        "linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%)",
+                      borderRadius: "12px",
+                      boxShadow: "0 2px 8px 0 rgba(99,102,241,0.08)",
+                      padding: "18px 24px",
+                      marginBottom: "8px",
+                      borderLeft: "6px solid #6366f1",
+                      fontSize: "1.08rem",
+                      color: "#1e293b",
                       fontWeight: 500,
                       lineHeight: 1.7,
                     }}
                   >
-                    <span style={{ fontWeight: 700, color: '#4338ca', fontSize: '1.1rem', display: 'block', marginBottom: '10px' }}>ಸೂಚನೆ:</span>
-                    <ol style={{ paddingLeft: '1.2em', margin: 0,listStyleType: 'decimal' }}>
-                      <li style={{ marginBottom: '6px' }}>
-                        ಸಮಾನ್ಯ , ವಿಶೇಷ ಮತ್ತು ಪ್ರೀಮಿಯಂ ಸದಸ್ಯತ್ವ ಹೊಂದಿರುವರು ಜಿಲ್ಲಾ/ತಾಲ್ಲೂಕ ಮಟ್ಟದ ಪದಾಧೀಕಾರಿಗಳ ಚುನಾವಣೆಗೆ ಮಾತ್ರ ಸ್ಪರ್ಧೀಸಲು ಅವಕಾಶವಿರುತ್ತದೆ.
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        color: "#4338ca",
+                        fontSize: "1.1rem",
+                        display: "block",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      ಸೂಚನೆ:
+                    </span>
+                    <ol style={{ paddingLeft: "1.2em", margin: 0, listStyleType: "decimal" }}>
+                      <li style={{ marginBottom: "6px" }}>
+                        ಸಮಾನ್ಯ , ವಿಶೇಷ ಮತ್ತು ಪ್ರೀಮಿಯಂ ಸದಸ್ಯತ್ವ ಹೊಂದಿರುವರು ಜಿಲ್ಲ
+                        /ತಾಲ್ಲೂಕ ಮಟ್ಟದ ಪದಾಧೀಕಾರಿಗಳ ಚುನಾವಣೆಗೆ ಮಾತ್ರ ಸ್ಪರ್ಧೀಸಲು ಅವಕಾಶವಿರುತ್ತದೆ.
                       </li>
-                      <li >
+                      <li>
                         ಅಜೀವ, ಪೋಷಕ ಮತ್ತು ಮಹಾ ಪೋಷಕ ಸದಸ್ಯತ್ವ ಹೊಂದಿರುವರು ಮಾತ್ರ ರಾಜ್ಯ ಮಟ್ಟದ ಪದಾಧೀಕಾರಿಗಳ ಚುನಾವಣೆಗೆ ಸ್ಪರ್ಧಿಸಲು ಆರ್ಹರಿರುತ್ತಾರೆ.
                       </li>
                     </ol>
 
-                    <span style={{ fontWeight: 700, color: '#4338ca', fontSize: '1.1rem', display: 'block', marginBottom: '8px' }}>Note:</span>
-                    <ol style={{ paddingLeft: '1.2em', margin: 0,listStyleType: 'decimal' }}>
-                      <li style={{ marginBottom: '6px' }}>
-                        Holders of General, Special and Premium memberships can only contest elections for district/taluk level positions.
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        color: "#4338ca",
+                        fontSize: "1.1rem",
+                        display: "block",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      Note:
+                    </span>
+                    <ol style={{ paddingLeft: "1.2em", margin: 0, listStyleType: "decimal" }}>
+                      <li style={{ marginBottom: "6px" }}>
+                        Holders of General, Special and Premium memberships can only
+                        contest elections for district/taluk level positions.
                       </li>
                       <li>
-                        Holders of Lifetime, Patron and Chief Patron memberships are eligible to contest state level positions.
+                        Holders of Lifetime, Patron and Chief Patron memberships are
+                        eligible to contest state level positions.
                       </li>
                     </ol>
-                    
                   </div>
+                  <select
+                    value={values["Membership Amount"] || ""}
+                    onChange={(e) =>
+                      setValues((v) => ({ ...v, "Membership Amount": e.target.value }))
+                    }
+                    required
+                    className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  >
+                    <option value="">Select amount...</option>
+                    <option value="500">
+                      ₹500 - ಸಾಮಾನ್ಯ ಸದಸ್ಯತ್ವ/General Membership
+                    </option>
+                    <option value="1000">
+                      ₹5,000 - ವಿಶೇಷ ಸದಸ್ಯತ್ವ/Special membership
+                    </option>
+                    <option value="5000">
+                      ₹10,000 - ಪ್ರೀಮಿಯಂ ಸದಸ್ಯತ್ವ/Premium membership
+                    </option>
+                    <option value="25000">
+                      ₹25,000 - ಆಜೀವ ಸದಸ್ಯತ್ವ/Lifetime Membership
+                    </option>
+                    <option value="50000">
+                      ₹50,000 - ಪ್ಯಾಟ್ರಾನ್ ಸದಸ್ಯತ್ವ/Patron Membership
+                    </option>
+                    <option value="100000">
+                      ₹1,00,000 - ಮುಖ್ಯ ಪ್ಯಾಟ್ರಾನ್ ಸದಸ್ಯತ್ವ/Chief Patron Membership
+                    </option>
+                  </select>
                 </div>
-                
-                <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: 24 }}>
+
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "12px",
+                    justifyContent: "center",
+                    marginTop: 24,
+                  }}
+                >
                   <button
                     type="submit"
                     style={{
-                      padding: '12px 32px',
-                      background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
-                      color: '#fff',
+                      padding: "12px 32px",
+                      background:
+                        "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
+                      color: "#fff",
                       fontWeight: 700,
                       fontSize: 18,
-                      border: 'none',
+                      border: "none",
                       borderRadius: 10,
-                      cursor: 'pointer',
-                      boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
+                      cursor: "pointer",
+                      boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
                     }}
                     disabled={loading}
                   >
-                    {loading ? 'Submitting...' : 'Create Membership Card'}
+                    {loading ? "Submitting..." : "Create Membership Card"}
                   </button>
                 </div>
               </form>
             )}
             {membershipId && fetchedMembershipData && !fetchingMembershipData && (
-              <div ref={cardRef} style={{ margin: '2rem auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+              <div
+                ref={cardRef}
+                style={{
+                  margin: "2rem auto",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div ref={cardOnlyRef}>
-                  <MembershipCard 
+                  <MembershipCard
                     membershipData={fetchedMembershipData}
-                    showColorPicker={true} 
-                    cardType={getMembershipTypeInfo(parseInt(values['Membership Amount']))}
+                    showColorPicker={true}
+                    cardType={getMembershipTypeInfo(
+                      parseInt(values["Membership Amount"])
+                    )}
                   />
                 </div>
                 <button
                   onClick={handleDownload}
                   style={{
-                    padding: '10px 28px',
-                    background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
-                    color: '#fff',
+                    padding: "10px 28px",
+                    background:
+                      "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
+                    color: "#fff",
                     fontWeight: 700,
                     fontSize: 17,
-                    border: 'none',
+                    border: "none",
                     borderRadius: 8,
-                    cursor: 'pointer',
-                    boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
-                    margin: '1rem auto 0',
-                    display: 'block',
+                    cursor: "pointer",
+                    boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
+                    margin: "1rem auto 0",
+                    display: "block",
                   }}
                 >
                   Download Card
                 </button>
               </div>
             )}
-            
+
             {fetchingMembershipData && (
-              <div style={{ textAlign: 'center', margin: '2rem auto' }}>
+              <div style={{ textAlign: "center", margin: "2rem auto" }}>
                 <div>Loading membership card...</div>
               </div>
             )}
           </div>
         </div>
       )}
+
       {/* Go to Home button if form is not available */}
       {showForm && !loading && !form && (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: "60vh",
+          }}
+        >
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             style={{
-              padding: '14px 36px',
-              background: 'linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)',
-              color: '#fff',
+              padding: "14px 36px",
+              background: "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
+              color: "#fff",
               fontWeight: 700,
               fontSize: 20,
-              border: 'none',
+              border: "none",
               borderRadius: 12,
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px 0 rgba(99,102,241,0.10)',
+              cursor: "pointer",
+              boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
               marginTop: 24,
             }}
           >
@@ -1717,3 +1826,4 @@ export default function UserMembership() {
     </div>
   );
 }
+
