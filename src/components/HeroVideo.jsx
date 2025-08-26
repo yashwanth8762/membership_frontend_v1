@@ -15,7 +15,7 @@ const HeroVideo = () => {
           className="w-full h-full rounded-lg shadow-lg"
           controls
         >
-          <source src="assets/herovideo1.mp4" type="video/mp4" />
+          <source src="assets/hero2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
