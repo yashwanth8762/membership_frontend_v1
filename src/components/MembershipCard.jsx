@@ -694,21 +694,23 @@ console.log('membershipData',membershipData)
           >
             {/* QR Code with centered text */}
             <div className="flex items-center space-x-3">
-              <div
-                className="w-16 h-16 flex items-center justify-center bg-white rounded border"
-                style={{ borderColor: color.border, padding: "4px" }}
-              >
-                {qrValue && <QRCode value={qrValue} size={48} />}
-              </div>
-              <div className="flex items-center h-16">
-                <span
-                  className="text-base font-bold whitespace-nowrap"
-                  style={{ color: color.accent }}
-                >
-                  {cardTypeDisplay}
-                </span>
-              </div>
-            </div>
+  <div
+    className="w-16 h-16 flex items-center justify-center bg-white rounded border"
+    style={{ borderColor: color.border, padding: "4px" }}
+  >
+    {qrValue && <QRCode value={qrValue} size={48} />}
+  </div>
+  {/* The text box must use same h-16 and flex items-center */}
+  <div className="h-16 flex items-center" style={{marginLeft:'50px'}}>
+    <span
+      className="text-base font-bold whitespace-nowrap"
+      style={{ color: color.accent }}
+    >
+      {cardTypeDisplay}
+    </span>
+  </div>
+</div>
+
 
             {/* Signatures */}
             <div className="flex-1 flex justify-end space-x-8">
