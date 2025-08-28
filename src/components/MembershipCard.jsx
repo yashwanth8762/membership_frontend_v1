@@ -537,10 +537,9 @@ console.log('membershipData',membershipData)
     }
     return undefined;
   };
-
+console.log('membershipData',membershipData)
   const membershipNumber = membershipData?.membershipId
-    ? membershipData.membershipId.slice(-4)
-    : "0000";
+    
   const name =
     getValue("ಅರ್ಜಿದಾರನ/ಳ ಹೆಸರು/ Applicant Name") ||
     getValue("Name") ||
