@@ -392,7 +392,9 @@ export default function UserMembership() {
         boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
       }}
     >
-      ಆನ್ಲೈನ್ನಲ್ಲಿ ಸದಸಯ ತ್ವ ಪಡೆಯುವ ವಿಧಾನ
+     {/* ಆನ್ ಲೈನ್ ಸದಸಯ ತ್ವ ಪಡೆಯುವ ವಿಧಾನ */}
+     ಆನ್‌ಲೈನ್ ಸದಸ್ಯತ್ವ ಪಡೆಯುವ ವಿಧಾನ
+
     </button>
           <div
             style={{
