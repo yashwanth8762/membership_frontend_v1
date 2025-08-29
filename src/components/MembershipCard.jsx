@@ -626,7 +626,7 @@ const MembershipCard = ({
             }}
           >
             {/* Logo image on left */}
-            <div className="flex-shrink-0 mr-3">
+            <div className="flex-shrink-0 ">
               <img
                 src="assets/logo1.png"
                 alt="Logo"
