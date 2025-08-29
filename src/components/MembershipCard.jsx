@@ -383,9 +383,8 @@ const membershipPrefixMap = {
   5000: 'S',      // Special
   10000: 'P',     // Premium
   25000: 'L',     // Lifetime
-  50000: 'A',     // Patron
-  100000: 'C',    // Chief Patron
-  500000: 'P',    // Premium Gold (assuming 'P' as prefix, can be adjusted)
+  50000: 'PT',     // Patron
+  100000: 'CPT',    // Chief Patron
 };
 const COLOR_SCHEMES = [
   {
