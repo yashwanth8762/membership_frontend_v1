@@ -630,11 +630,11 @@ const MembershipCard = ({
   <img
     src="assets/logo1.png"
     alt="Logo"
-    style={{ height: 64, width: 140, objectFit: "contain" }} // increased size
+    style={{ height: 75, width: 160, objectFit: "contain" }} // increased size
   />
 </div>
 {/* Text center aligned but flex-grow, shifted slightly left */}
-<div className="flex-grow" style={{ marginLeft: "-1rem" }}>
+<div className="flex-grow" style={{ marginLeft: "-2.5rem" }}>
   <h1 className="text-lg font-extrabold tracking-wide mb-1">
     ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ (ರಿ.,)
   </h1>
