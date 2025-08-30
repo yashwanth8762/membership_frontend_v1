@@ -266,6 +266,12 @@ const CommunityPage = () => {
       textKn: 'ಶ್ರೀ ಕೆ ಪ್ರಭಾಕರ್ \n ಹಿರಿಯ ಗಾಂಧಿವಾದಿ ಮತ್ತು ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
     },
     {
+      src: '/assets/ramakrishna.jpeg',
+      alt: 'Leader',
+      textEn: 'Sri Y. Ramakrishna \n Former Minister, Government of Karnataka',
+      textKn: 'ಶ್ರೀ ವೈ. ರಾಮಕೃಷ್ಣ \n ಮಾಜಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ'
+    },
+    {
       src: '/assets/b-krishnappa.jpg',
       alt: 'Leader',
       textEn: 'Sri. Prof. B. Krishnappa \n Founder, Dalita Sangharsha Samiti',
