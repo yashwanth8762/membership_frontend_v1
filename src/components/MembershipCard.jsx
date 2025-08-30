@@ -627,34 +627,35 @@ const MembershipCard = ({
           >
             {/* Logo image on left */}
             <div className="flex-shrink-0 ">
-              <img
-                src="assets/logo1.png"
-                alt="Logo"
-                style={{ height: 48, width: 100, objectFit: "contain" }}
-              />
-            </div>
-            {/* Text center aligned but flex-grow */}
-            <div className="flex-grow">
-              <h1 className="text-lg font-extrabold tracking-wide mb-1">
-                ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ (ರಿ.,)
-              </h1>
-              <h1 className="text-lg font-extrabold tracking-wide mb-1">
-                Karnataka Madara Mahasabha (R.,)
-              </h1>
-              <div className="flex justify-center">
-                <div
-                  className="w-4/5 border-t"
-                  style={{
-                    borderColor: color.headerText,
-                    opacity: 0.4,
-                    margin: "0.15rem 0",
-                  }}
-                ></div>
-              </div>
-              <p className="text-xs font-medium tracking-wide mt-1">
-                ಸದಸ್ಯತ್ವ ಕಾರ್ಡ್
-              </p>
-            </div>
+  <img
+    src="assets/logo1.png"
+    alt="Logo"
+    style={{ height: 64, width: 140, objectFit: "contain" }} // increased size
+  />
+</div>
+{/* Text center aligned but flex-grow, shifted slightly left */}
+<div className="flex-grow" style={{ marginLeft: "-1rem" }}>
+  <h1 className="text-lg font-extrabold tracking-wide mb-1">
+    ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾಸಭಾ (ರಿ.,)
+  </h1>
+  <h1 className="text-lg font-extrabold tracking-wide mb-1">
+    Karnataka Madara Mahasabha (R.,)
+  </h1>
+  <div className="flex justify-center">
+    <div
+      className="w-4/5 border-t"
+      style={{
+        borderColor: color.headerText,
+        opacity: 0.4,
+        margin: "0.15rem 0",
+      }}
+    ></div>
+  </div>
+  <p className="text-xs font-medium tracking-wide mt-1">
+    ಸದಸ್ಯತ್ವ ಕಾರ್ಡ್
+  </p>
+</div>
+
           </div>
 
           {/* Main Content */}
@@ -748,7 +749,7 @@ const MembershipCard = ({
     className="text-base font-bold whitespace-nowrap"
     style={{ color: color.accent }}
   >
-    {prefix ? `${prefix}-` : ''}
+    {/* {prefix ? `${prefix}-` : ''} */}
     {cardTypeDisplay}
   </span>
 </div>
