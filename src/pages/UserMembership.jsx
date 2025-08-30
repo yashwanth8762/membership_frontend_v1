@@ -695,7 +695,7 @@ export default function UserMembership() {
                       }}
                     >
                       Email ID
-                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
+                      {/* <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span> */}
                     </label>
                     <input
                       type="email"
