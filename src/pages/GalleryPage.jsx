@@ -1279,11 +1279,11 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="https://www.facebook.com/share/v/1DLng4Jh2j/"
+        src="https://www.facebook.com/share/v/15ab6HT6vE/"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
-        title="Facebook Video 1"
+        title="Facebook Video 3"
         style={{
           border: "none",
           overflow: "hidden",
@@ -1298,11 +1298,11 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="https://www.facebook.com/share/v/1BvE6979XZ/"
+        src="https://www.facebook.com/share/v/1AXEoVLp69/"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
-        title="Facebook Video 1"
+        title="Facebook Video 4"
         style={{
           border: "none",
           overflow: "hidden",
