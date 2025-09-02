@@ -1276,7 +1276,45 @@ const GalleryPage = () => {
         }}
       />
     </div>
-
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="https://www.facebook.com/share/v/1Ce8G1Eevk/"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    <div style={{ width: "100%" }}>
+      <iframe
+        ref={iframeRef}
+        src="https://www.facebook.com/reel/1409591313460435"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowFullScreen
+        title="Facebook Video 1"
+        style={{
+          border: "none",
+          overflow: "hidden",
+          width: "100%",
+          height: "315px",
+          maxWidth: "560px",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
+    </div>
+    
 
                 {/* Add more video iframe blocks here if needed */}
               </div>
