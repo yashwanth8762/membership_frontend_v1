@@ -1279,7 +1279,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="https://www.facebook.com/share/v/15ab6HT6vE/"
+        src="https://www.facebook.com/watch/?v=1206990601450475&rdid=i5T7jNnZFbnHkNeJ"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
@@ -1298,7 +1298,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="https://www.facebook.com/share/v/1AXEoVLp69/"
+        src="https://www.facebook.com/reel/1409591313460435"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
