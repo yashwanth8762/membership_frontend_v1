@@ -1279,7 +1279,7 @@ const GalleryPage = () => {
     <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
-        src="https://www.facebook.com/watch/?v=1206990601450475&rdid=i5T7jNnZFbnHkNeJ"
+        src="https://www.facebook.com/KhMuniyappa/videos/1206990601450475/?rdid=8iLbIxG3rdvxm5dj#"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen
