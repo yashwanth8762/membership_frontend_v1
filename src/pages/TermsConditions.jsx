@@ -84,7 +84,7 @@ const TermsConditions = () => {
                 These T&amp;C are governed by the laws of <span className="font-semibold">[Your Jurisdiction]</span>.
               </li>
               <li>
-                Any disputes will be subject to the exclusive jurisdiction of the courts in <span className="font-semibold">[Your City, Your Jurisdiction]</span>.
+                Any disputes will be subject to the exclusive jurisdiction of the courts in <span className="font-semibold">Bengaluru, Karnataka</span>.
               </li>
             </ul>
             <h2 className="text-2xl font-semibold mb-4 mt-8">6. Changes to Terms &amp; Conditions</h2>
