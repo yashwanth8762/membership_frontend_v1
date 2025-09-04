@@ -50,6 +50,7 @@ const RefundPolicyPage = () => {
                   <li>Proof of the deduction of the donation amount and other supporting documents may be required.</li>
                   <li>If a tax exemption certificate has been issued and/or utilized, a refund may not be possible.</li>
                   <li>Refunds will be processed within <span className="font-semibold">7 </span> business days upon approval and credited back to the original payment method, states HelpAge India.</li>
+                  <li>Any approved refunds will be credited to original mode of payment in 7 business days</li>
                   <li>No cash refunds will be provided.</li>
                 </ul>
               </li>
