@@ -1276,7 +1276,7 @@ const GalleryPage = () => {
         }}
       />
     </div>
-    <div style={{ width: "100%" }}>
+    {/* <div style={{ width: "100%" }}>
       <iframe
         ref={iframeRef}
         src="https://www.facebook.com/KhMuniyappa/videos/1206990601450475/?rdid=8iLbIxG3rdvxm5dj#"
@@ -1313,7 +1313,7 @@ const GalleryPage = () => {
           margin: "0 auto",
         }}
       />
-    </div>
+    </div> */}
     
 
                 {/* Add more video iframe blocks here if needed */}
