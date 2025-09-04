@@ -461,7 +461,7 @@ export default function Header({ theme = "transparent" }) {
         link.about_en ||
         link.community_en ||
         link.organization_en ||
-        link.opportunities_en ||
+        // link.opportunities_en ||
         link.activities_en ||
         link.upcoming_en ||
         link.gallery_en ||
@@ -472,7 +472,7 @@ export default function Header({ theme = "transparent" }) {
         link.about_kn ||
         link.community_kn ||
         link.organization_kn ||
-        link.opportunities_kn ||
+        // link.opportunities_kn ||
         link.activities_kn ||
         link.upcoming_kn ||
         link.gallery_kn ||
