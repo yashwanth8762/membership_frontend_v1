@@ -1274,7 +1274,7 @@ export default function UserMembership() {
     setError("");
 
     // Show alert and prevent any processing
-    alert("Payment gateway is in progress.");
+    alert("We’re still setting up our payment gateway. Thank you for your patience- it will be live soon");
     return;
 
     // Below code is commented to prevent membership card creation until payment gateway is ready

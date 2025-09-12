@@ -303,7 +303,7 @@ const DonatePage = () => {
     // Alert that payment gateway is under progress
     alert(
       isEnglish
-        ? "Payment gateway is in progress."
+        ? "We’re still setting up our payment gateway. Thank you for your patience- it will be live soon"
         : "ಪಾವತಿ ಗೇಟ್‌ವೇ ಅಭಿವೃದ್ಧಿಯಲ್ಲಿ ಇದೆ."
     );
 
