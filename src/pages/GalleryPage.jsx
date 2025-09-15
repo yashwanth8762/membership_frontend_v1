@@ -942,9 +942,9 @@ const GalleryPage = () => {
         { src: "/assets/vala/vala1.jpeg", alt: "Image 1" },
         { src: "/assets/vala/vala2.jpeg", alt: "Image 1" },
         { src: "/assets/vala/vala3.jpeg", alt: "Image 1" },
-        { src: "/assets/vala/vala4.jpeg", alt: "Image 1" },
-        { src: "/assets/vala/vala5.jpeg", alt: "Image 1" },
-        { src: "/assets/vala/vala6.jpeg", alt: "Image 1" },
+        // { src: "/assets/vala/vala4.jpeg", alt: "Image 1" },
+        // { src: "/assets/vala/vala5.jpeg", alt: "Image 1" },
+        // { src: "/assets/vala/vala6.jpeg", alt: "Image 1" },
       ],
     },
     {
