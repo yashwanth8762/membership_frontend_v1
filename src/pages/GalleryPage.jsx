@@ -947,6 +947,46 @@ const GalleryPage = () => {
         { src: "/assets/vala/vala6.jpeg", alt: "Image 1" },
       ],
     },
+    {
+      heading: {
+        en: "Various issues were discussed at the meeting of Devanahalli, Periyaballapur, Nelamangala and Hoskote taluks in the Bangalore rural district of Karnataka Madara Maha Sabha held at Devanahalli on Tuesday, 26-08-2025.",
+        kn: "ದಿನಾಂಕ :26-08-2025 ರ ಮಂಗಳವಾರ ದಂದು ದೇವನಹಳ್ಳಿಯಲ್ಲಿ ನಡೆದ ಕರ್ನಾಟಕ ಮಾದರ ಮಹಾ ಸಭಾದ ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ ಜಿಲ್ಲೆಯ ದೇವನಹಳ್ಳಿ, ದೊಡ್ಡಬಳ್ಳಾಪುರ, ನೆಲಮಂಗಲ, ಹೊಸಕೋಟೆ ತಾಲ್ಲೂಕುಗಳ ಪ್ರಮುಖರ ಸಭೆಯಲ್ಲಿ ಮಾದರ ಮಹಾಸಭಾ ಸದಸ್ಯತ್ವ ನೋಂದಣಿ ಸೇರಿದಂತೆ ವಿವಿಧ ವಿಷಯಗಳ ಬಗ್ಗೆ ಚರ್ಚಿಸಲಾಯಿತು.",
+      },
+      banner: "/assets/banner_cb.jpeg",
+      images: [
+        { src: "/assets/cb1.jpeg", alt: "Image 1" },
+        { src: "/assets/cb2.jpeg", alt: "Image 2" },
+        { src: "/assets/cb3.jpeg", alt: "Image 3" },
+        { src: "/assets/cb4.jpeg", alt: "Image 4" },
+        { src: "/assets/cb5.jpeg", alt: "Image 5" },
+        { src: "/assets/cb7.jpeg", alt: "Image 6" },
+      ],
+    },
+    {
+      heading: {
+        en: "Pictures of the inner reservation triumphant ceremony held at Davanagere on 12-09-2025 by Davanagere District Madiga Great.",
+        kn: "ದಿನಾಂಕ :12-09-2025 ರಂದು ದಾವಣಗೆರೆ ಜಿಲ್ಲಾ ಮಾದಿಗ ಮಹಾ ಸಭಾವತಿಯಿಂದ ದಾವಣಗೆರೆಯಲ್ಲಿ ಆಯೋಜಿಸಿದ್ದ ಒಳ ಮೀಸಲಾತಿ ವಿಜಯೋತ್ಸವ ಸಮಾರಂಭದ ಚಿತ್ರಗಳು.",
+      },
+      banner: "/assets/banner_dvg.jpeg",
+      images: [
+        { src: "/assets/dvg1.jpeg", alt: "Image 1" },
+        { src: "/assets/dvg2.jpeg", alt: "Image 2" },
+        { src: "/assets/dvg3.jpeg", alt: "Image 3" },
+        { src: "/assets/dvg4.jpeg", alt: "Image 4" },
+        { src: "/assets/dvg5.jpeg", alt: "Image 5" },
+        { src: "/assets/dvg6.jpeg", alt: "Image 6" },
+        { src: "/assets/dvg7.jpeg", alt: "Image 7" },
+        { src: "/assets/dvg8.jpeg", alt: "Image 8" },
+        { src: "/assets/dvg9.jpeg", alt: "Image 9" },
+        { src: "/assets/dvg10.jpeg", alt: "Image 10" },
+        { src: "/assets/dvg11.jpeg", alt: "Image 11" },
+        { src: "/assets/dvg12.jpeg", alt: "Image 12" },
+        { src: "/assets/dvg13.jpeg", alt: "Image 13" },
+        { src: "/assets/dvg14.jpeg", alt: "Image 14" },
+        { src: "/assets/dvg15.jpeg", alt: "Image 15" },
+        { src: "/assets/dvg16.jpeg", alt: "Image 16" },
+ ],
+    },
   ];
 
   const youtubeVideos = [
