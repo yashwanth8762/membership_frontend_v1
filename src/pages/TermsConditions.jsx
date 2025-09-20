@@ -28,7 +28,7 @@ const TermsConditions = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-center mb-8 mt-8">Terms &amp; Conditions (T&amp;C)</h1>
           <div className="w-full bg-white rounded-lg shadow-lg p-6 lg:p-10 mb-10">
             <p className="mb-6 text-lg text-gray-700">
-              Welcome to <span className="font-semibold">madaramahasabha.com</span>! These Terms &amp; Conditions (T&amp;C) govern your use of our website, donation services, and membership offerings. By accessing and using our website, you agree to be bound by these T&amp;C, as well as our Privacy Policy and Refund Policy.
+              Welcome to <span className="font-semibold">KARNATAKA MAADARA MAHASABHA R</span>! These Terms &amp; Conditions (T&amp;C) govern your use of our website, donation services, and membership offerings. By accessing and using our website, you agree to be bound by these T&amp;C, as well as our Privacy Policy and Refund Policy.
             </p>
             <h2 className="text-2xl font-semibold mb-4 mt-6">1. Donation Services</h2>
             <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 mb-6">
