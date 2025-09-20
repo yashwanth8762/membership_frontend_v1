@@ -80,9 +80,10 @@ const TermsConditions = () => {
             </ul>
             <h2 className="text-2xl font-semibold mb-4 mt-8">5. Governing Law and Jurisdiction</h2>
             <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 mb-6">
-              <li>
-                These T&amp;C are governed by the laws of <span className="font-semibold">[Your Jurisdiction]</span>.
-              </li>
+            <li>
+  These T&amp;C are governed by the laws of <span className="font-semibold">India</span>, and the courts of <span className="font-semibold">Bengaluru, Karnataka</span> shall have exclusive jurisdiction.
+</li>
+
               <li>
                 Any disputes will be subject to the exclusive jurisdiction of the courts in <span className="font-semibold">Bengaluru, Karnataka</span>.
               </li>
