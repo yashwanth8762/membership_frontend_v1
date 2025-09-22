@@ -576,7 +576,7 @@ const DonatePage = () => {
 
     try {
       // POST donation form data to backend API to start payment process
-      const response = await fetch(`${API_BASE_URL}/donation`, {
+      const response = await fetch(`${API_BASE_URL}donation`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
