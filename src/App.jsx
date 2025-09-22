@@ -36,6 +36,8 @@ import RefundPolicyPage from './pages/RefundPolicyPage.jsx';
 import TermsConditions from './pages/TermsConditions.jsx';
 import DonatePage from './pages/DonatePage.jsx';
 import MembershipReport from './pages/Admin/MembershipReport.jsx';
+import Success from './components/Success.jsx';
+import Failure from './components/Failure.jsx';
 
 
 export default function App() {
@@ -118,6 +120,8 @@ export default function App() {
           <Route path="/refund-policy" element={<RefundPolicyPage />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/donate" element={<DonatePage />} />
+          <Route path="/payment-success" element={<Success/>} />
+          <Route path="/payment-failure" element={<Failure/>} />
         </>
       )}
     </Routes>

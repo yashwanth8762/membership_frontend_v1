@@ -228,75 +228,36 @@ export default function UserMembership() {
     setSuccess("");
     setError("");
 
-    // if (!selectedDistrict) {
-    //   setError("Please select a district.");
-    //   return;
-    // }
-    // if (!selectedTaluk) {
-    //   setError("Please select a taluk.");
-    //   return;
-    // }
-    // if (!allMediaSaved()) {
-    //   const unsavedMedia = Object.entries(mediaFiles)
-    //     .filter(
-    //       ([label, filesArray]) =>
-    //         filesArray.length > 0 && filesArray.some((f) => f.status !== "saved")
-    //     )
-    //     .map(
-    //       ([label, filesArray]) =>
-    //         `${label}: ${filesArray
-    //           .filter((f) => f.status !== "saved")
-    //           .map((f) => f.name)
-    //           .join(", ")}`
-    //     );
-
-    //   setError(
-    //     `Please save all selected media files before submitting. Unsaved files: ${unsavedMedia.join(
-    //       "; "
-    //     )}`
-    //   );
-    //   return;
-    // }
-
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      setSuccess("");
-      setError("");
-      alert("Payment gateway is under progress.");
-    
-      // Commented validation and checks
-      // if (!selectedDistrict) {
-      //   setError("Please select a district.");
-      //   return;
-      // }
-      // if (!selectedTaluk) {
-      //   setError("Please select a taluk.");
-      //   return;
-      // }
-      // if (!allMediaSaved()) {
-      //   const unsavedMedia = Object.entries(mediaFiles)
-      //     .filter(
-      //       ([label, filesArray]) =>
-      //         filesArray.length > 0 && filesArray.some((f) => f.status !== "saved")
-      //     )
-      //     .map(
-      //       ([label, filesArray]) =>
-      //         `${label}: ${filesArray
-      //           .filter((f) => f.status !== "saved")
-      //           .map((f) => f.name)
-      //           .join(", ")}`
-      //     );
-    
-      //   setError(
-      //     `Please save all selected media files before submitting. Unsaved files: ${unsavedMedia.join(
-      //       "; "
-      //     )}`
-      //   );
-      //   return;
-      // }
-    
+    if (!selectedDistrict) {
+      setError("Please select a district.");
       return;
-    };
+    }
+    if (!selectedTaluk) {
+      setError("Please select a taluk.");
+      return;
+    }
+    if (!allMediaSaved()) {
+      const unsavedMedia = Object.entries(mediaFiles)
+        .filter(
+          ([label, filesArray]) =>
+            filesArray.length > 0 && filesArray.some((f) => f.status !== "saved")
+        )
+        .map(
+          ([label, filesArray]) =>
+            `${label}: ${filesArray
+              .filter((f) => f.status !== "saved")
+              .map((f) => f.name)
+              .join(", ")}`
+        );
+
+      setError(
+        `Please save all selected media files before submitting. Unsaved files: ${unsavedMedia.join(
+          "; "
+        )}`
+      );
+      return;
+    }
+
     
 
     try {
@@ -910,10 +871,10 @@ export default function UserMembership() {
                     <option value="500">
                       ₹500 - ಸಾಮಾನ್ಯ ಸದಸ್ಯತ್ವ/General Membership
                     </option>
-                    <option value="1000">
+                    <option value="5000">
                       ₹5,000 - ವಿಶೇಷ ಸದಸ್ಯತ್ವ/Special membership
                     </option>
-                    <option value="5000">
+                    <option value="10000">
                       ₹10,000 - ಪ್ರೀಮಿಯಂ ಸದಸ್ಯತ್ವ/Premium membership
                     </option>
                     <option value="25000">
