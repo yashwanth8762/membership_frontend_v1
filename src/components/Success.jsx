@@ -52,15 +52,63 @@ export default function Success() {
     };
   }, [dispatch, navigate, searchParams]);
 
+  const waitForFonts = async () => {
+    if (document && document.fonts && document.fonts.ready) {
+      try { await document.fonts.ready; } catch {}
+    }
+    await new Promise(r => setTimeout(r, 150));
+  };
+
   const handleDownload = async () => {
     if (!cardRef.current) return;
-    const html2canvas = (await import("html2canvas")).default;
-    html2canvas(cardRef.current).then((canvas) => {
-      const link = document.createElement("a");
-      link.download = `membership_card_${membershipData?.membershipId || 'card'}.png`;
-      link.href = canvas.toDataURL();
-      link.click();
-    });
+    await waitForFonts();
+    const html2pdf = (await import('html2pdf.js')).default;
+
+    // Build a dedicated hidden export node to avoid layout issues
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.left = '-99999px';
+    container.style.top = '0';
+    container.style.width = '600px';
+    container.style.background = '#ffffff';
+    document.body.appendChild(container);
+
+    // Render a clean HTML snapshot of the card
+    container.innerHTML = cardRef.current.outerHTML;
+    const node = container.firstChild;
+    node.style.width = '600px';
+    node.style.maxWidth = '600px';
+    node.style.minWidth = '600px';
+
+    const rect = node.getBoundingClientRect();
+    const width = Math.ceil(rect.width);
+    const height = Math.ceil(rect.height);
+    const scale = Math.max(3, Math.ceil((window.devicePixelRatio || 2)));
+
+    const opt = {
+      margin: 0,
+      filename: `membership_card_${membershipData?.membershipId || 'card'}.pdf`,
+      image: { type: 'png', quality: 1 },
+      html2canvas: {
+        scale,
+        backgroundColor: '#ffffff',
+        useCORS: true,
+        letterRendering: true,
+        windowWidth: 600,
+        windowHeight: height,
+        logging: false,
+      },
+      jsPDF: {
+        unit: 'pt',
+        format: [width, height],
+        orientation: 'landscape',
+        compress: true,
+      },
+      pagebreak: { mode: ['avoid-all'] },
+    };
+
+    await html2pdf().set(opt).from(node).save();
+    document.body.removeChild(container);
   };
 
   return (

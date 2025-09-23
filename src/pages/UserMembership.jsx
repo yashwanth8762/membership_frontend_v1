@@ -317,12 +317,57 @@ export default function UserMembership() {
   const handleDownload = async () => {
     if (!cardOnlyRef.current) return;
     const html2canvas = (await import("html2canvas")).default;
-    html2canvas(cardOnlyRef.current).then((canvas) => {
-      const link = document.createElement("a");
-      link.download = `membership_card_${membershipId}.png`;
-      link.href = canvas.toDataURL();
-      link.click();
+    const { jsPDF } = await import("jspdf");
+
+    // Clone card to remove any transforms and ensure consistent size while capturing
+    const original = cardOnlyRef.current;
+    const clone = original.cloneNode(true);
+    // slight downscale to avoid any tight line-wrap collisions during rasterization
+    clone.style.transform = 'scale(0.94)';
+    clone.style.transformOrigin = 'top left';
+    clone.style.background = '#ffffff';
+    clone.style.width = '600px';
+    clone.style.maxWidth = '600px';
+    clone.style.minWidth = '600px';
+    clone.style.position = 'fixed';
+    clone.style.left = '-2000px';
+    clone.style.top = '0';
+    document.body.appendChild(clone);
+
+    // Remove any nested transforms that could distort the export (e.g., from MembershipCard)
+    try {
+      const all = clone.querySelectorAll('*');
+      all.forEach((el) => {
+        if (el && el.style && el.style.transform) {
+          el.style.transform = 'none';
+        }
+      });
+    } catch {}
+
+    // Small wait to let images/fonts render in the clone
+    await new Promise((r) => setTimeout(r, 150));
+
+    const scale = Math.max(3, Math.ceil((window.devicePixelRatio || 2)));
+    const canvas = await html2canvas(clone, {
+      scale,
+      backgroundColor: '#ffffff',
+      useCORS: true,
+      logging: false,
+      windowWidth: 600,
+      windowHeight: clone.scrollHeight,
     });
+
+    document.body.removeChild(clone);
+
+    const imgData = canvas.toDataURL('image/png', 1.0);
+    const pdf = new jsPDF({
+      orientation: 'landscape',
+      unit: 'pt',
+      format: [canvas.width, canvas.height],
+      compress: true,
+    });
+    pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height, '', 'FAST');
+    pdf.save(`membership_card_${membershipId || 'card'}.pdf`);
   };
 
   return (
