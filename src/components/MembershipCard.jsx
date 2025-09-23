@@ -202,7 +202,7 @@ const MembershipCard = ({
   const address =
     getValue("Permanent adress") ||
     getValue("Permanent Address") ||
-    getValue("ಶಾಶ್ವತ ವಿಳಾಸ / Permanent adress") ||
+    getValue("ಖಾಯಂ ವಿಳಾಸ / Permanent adress") ||
     "N/A";
   const education =
     getValue("ವಿದ್ಯಾರ್ಹತೆ") ||
