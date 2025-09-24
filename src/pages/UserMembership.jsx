@@ -425,21 +425,21 @@ export default function UserMembership() {
         }}
       >
           <button
+      className="umobile-steps-btn"
       onClick={() => window.open("/assets/membership_steps.pdf", "_blank")}
       style={{
-        position: "fixed",
-        top: 16,
-        right: 16,
-        padding: "8px 14px",
+        position: "absolute",
+        top: 80,
+        right: 430,
+        padding: "8px 18px",
         background: "linear-gradient(90deg, #06b6d4 0%, #6366f1 100%)",
         color: "#fff",
         fontWeight: 600,
-        fontSize: 14,
+        fontSize: 16,
         border: "none",
         borderRadius: 8,
         cursor: "pointer",
         boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
-        zIndex: 110,
       }}
     >
      {/* ಆನ್ ಲೈನ್ ಸದಸಯ ತ್ವ ಪಡೆಯುವ ವಿಧಾನ */}
@@ -447,6 +447,7 @@ export default function UserMembership() {
 
     </button>
           <div
+            className="umobile-paragraph"
             style={{
               maxWidth: 900,
               fontSize: 18,
@@ -466,6 +467,7 @@ export default function UserMembership() {
             ಹಾಗೂ ಮೆಂಬರ್‌ಶಿಪ್‌ ಕಾರ್ಡ್‌ನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಿಕೊಳ್ಳಬಹುದಾಗಿದೆ.
           </div>
           <div
+            className="umobile-paragraph"
             style={{
               maxWidth: 900,
               fontSize: 18,
@@ -503,6 +505,28 @@ export default function UserMembership() {
           </button>
         </div>
       )}
+      {/* Mobile responsiveness for info overlay */}
+      <style>
+        {`
+          @media (max-width: 640px) {
+            .umobile-steps-btn {
+              position: fixed !important;
+              top: 12px !important;
+              right: 12px !important;
+              padding: 6px 12px !important;
+              font-size: 13px !important;
+              z-index: 110 !important;
+            }
+            .umobile-paragraph {
+              max-width: 92vw !important;
+              font-size: 15px !important;
+              line-height: 1.6 !important;
+              margin-bottom: 24px !important;
+              text-align: left !important;
+            }
+          }
+        `}
+      </style>
 
       {/* Membership Form */}
       {showForm && (
