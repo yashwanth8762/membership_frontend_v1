@@ -416,7 +416,7 @@ const MembershipCard = ({
                   src="assets/signature.jpeg"
                   alt="Signature of Secretary"
                   crossOrigin="anonymous"
-                  style={{ height: 30, width: 'auto', objectFit: 'contain', marginBottom: -1 }}
+                  style={{ height: 30, width: 'auto', objectFit: 'contain', marginBottom: 0 }}
                 />
                 <div
                   className="h-5 border-b mb-0"
@@ -431,6 +431,8 @@ const MembershipCard = ({
                     fontFamily: "'Noto Sans Kannada','Noto Sans','Inter','Segoe UI',Arial,sans-serif",
                     fontVariantLigatures: 'normal',
                     fontFeatureSettings: '"kern" 1, "liga" 1, "clig" 1',
+                    lineHeight: 1.0,
+                    marginTop: 0,
                   }}
                 >
                   ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ
