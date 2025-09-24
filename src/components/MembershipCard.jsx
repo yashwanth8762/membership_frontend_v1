@@ -416,7 +416,7 @@ const MembershipCard = ({
                   src="assets/signature.jpeg"
                   alt="Signature of Secretary"
                   crossOrigin="anonymous"
-                  style={{ height: 30, width: 'auto', objectFit: 'contain', marginBottom: 0 }}
+                  style={{ height: 30, width: 'auto', objectFit: 'contain', marginBottom: -1 }}
                 />
                 <div
                   className="h-5 border-b mb-0"
