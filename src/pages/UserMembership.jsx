@@ -384,26 +384,28 @@ export default function UserMembership() {
         position: "relative",
       }}
     >
-      {/* Go to Home Button */}
-      <button
-        onClick={() => navigate("/")}
-        style={{
-          position: "absolute",
-          top: 24,
-          left: 24,
-          padding: "8px 18px",
-          background: "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
-          color: "#fff",
-          fontWeight: 600,
-          fontSize: 16,
-          border: "none",
-          borderRadius: 8,
-          cursor: "pointer",
-          boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
-        }}
-      >
-        Go to Home
-      </button>
+      {/* Go to Home Button (only when overlay is shown) */}
+      {!showForm && (
+        <button
+          onClick={() => navigate("/")}
+          style={{
+            position: "absolute",
+            top: 24,
+            left: 24,
+            padding: "8px 18px",
+            background: "linear-gradient(90deg, #6366f1 0%, #06b6d4 100%)",
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: 16,
+            border: "none",
+            borderRadius: 8,
+            cursor: "pointer",
+            boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
+          }}
+        >
+          Go to Home
+        </button>
+      )}
 
       {/* Info Box Full Screen */}
       {!showForm && (
@@ -553,40 +555,60 @@ export default function UserMembership() {
         >
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
+              display: "grid",
+              gridTemplateColumns: "auto 1fr auto",
               alignItems: "center",
-              marginBottom: 32,
+              gap: 12,
+              marginBottom: 20,
               width: "100%",
               maxWidth: 600,
             }}
           >
-            <h2
-              style={{
-                fontWeight: 700,
-                fontSize: 28,
-                color: "#1e293b",
-                textAlign: "center",
-                margin: 0,
-                flex: 1,
-              }}
-            >
-              ಸದಸ್ಯತ್ವ ಅರ್ಜಿ ನಮೂನೆ/Membership Application Form
-            </h2>
+            {/* Left: Go Home inside header when form is open */}
             <button
-              type="button"
-              onClick={() => setShowForm(false)}
+              onClick={() => navigate("/")}
               style={{
-                marginLeft: 16,
-                padding: "8px 18px",
+                padding: "8px 14px",
                 background: "#e5e7eb",
                 color: "#1e293b",
                 fontWeight: 600,
-                fontSize: 15,
+                fontSize: 14,
                 border: "none",
                 borderRadius: 8,
                 cursor: "pointer",
                 boxShadow: "0 2px 8px 0 rgba(99,102,241,0.06)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Go Home
+            </button>
+            {/* Center: Title */}
+            <h2
+              style={{
+                fontWeight: 700,
+                fontSize: 24,
+                color: "#1e293b",
+                textAlign: "center",
+                margin: 0,
+              }}
+            >
+              ಸದಸ್ಯತ್ವ ಅರ್ಜಿ ನಮೂನೆ/Membership Application Form
+            </h2>
+            {/* Right: Cancel */}
+            <button
+              type="button"
+              onClick={() => setShowForm(false)}
+              style={{
+                padding: "8px 14px",
+                background: "#e5e7eb",
+                color: "#1e293b",
+                fontWeight: 600,
+                fontSize: 14,
+                border: "none",
+                borderRadius: 8,
+                cursor: "pointer",
+                boxShadow: "0 2px 8px 0 rgba(99,102,241,0.06)",
+                whiteSpace: "nowrap",
               }}
             >
               Cancel
