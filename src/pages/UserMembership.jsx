@@ -450,11 +450,11 @@ export default function UserMembership() {
             className="umobile-paragraph"
             style={{
               maxWidth: 900,
-              fontSize: 18,
-              lineHeight: 1.7,
-              fontWeight: 500,
+              fontSize: 16,
+              lineHeight: 1.6,
+              fontWeight: 400,
               textAlign: "center",
-              marginBottom: 40,
+              marginBottom: 50,
             }}
           >
             ಕರ್ನಾಟಕ ರಾಜ್ಯದ ವಿವಿಧ ಜಿಲ್ಲೆ ಮತ್ತು ತಾಲ್ಲೂಕುಗಳಿಂದ ಕನಿಷ್ಠ 18 ವರ್ಷ
