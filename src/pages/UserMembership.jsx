@@ -914,7 +914,7 @@ export default function UserMembership() {
                     className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   >
                     <option value="">Select amount...</option>
-                    <option value="500">
+                    <option value="1">
                       ₹1 - test ಸದಸ್ಯತ್ವ/test Membership
                     </option>
                     <option value="500">
