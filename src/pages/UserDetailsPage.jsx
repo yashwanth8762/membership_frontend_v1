@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
-const API_BASE_URL = 'http://172.20.10.5:5000/';
+import { API_BASE_URL } from '../../config';
 
 export default function UserDetailsPage() {
   const { membershipId } = useParams();
@@ -16,10 +15,11 @@ export default function UserDetailsPage() {
         console.log(res.data); // Debug: log the response
         setData(res.data);
       } catch (err) {
+        console.error('Failed to fetch user details', err);
         setError('Failed to fetch user details');
       }
-    }
-    fetchData();
+    } 
+    fetchData(); 
   }, [membershipId]);
 
   if (error) return <div style={{ color: '#e11d48', textAlign: 'center', marginTop: 40 }}>{error}</div>;
