@@ -413,15 +413,15 @@ const MembershipCard = ({
               <div className="text-center flex flex-col items-center">
                 {/* Signature image above the line */}
                 <img
-                  src="assets/signature.jpeg"
+                  src="assets/signature_extracted.png"
                   alt="Signature of Secretary"
                   crossOrigin="anonymous"
                   style={{ height: 30, width: 'auto', objectFit: 'contain', marginBottom: -1 }}
                 />
-                <div
+                {/* <div
                   className="h-5 border-b mb-0"
                   style={{ borderColor: color.border, width: 180 }}
-                />
+                /> */}
                 <span
                   className="text-xs font-medium"
                   style={{
