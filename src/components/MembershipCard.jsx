@@ -212,7 +212,7 @@ const MembershipCard = ({
   const photo = getPhoto();
 
   const cardId = membershipNumber;
-  const qrValue = `${API_BASE_URL}/membership/user/${membershipData?.membershipId}`;
+  const qrValue = `${API_BASE_URL}membership/user/${membershipData?.membershipId}`;
 
   const handleColorChange = (idx) => {
     setColorIdx(idx);
