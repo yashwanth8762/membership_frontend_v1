@@ -425,21 +425,21 @@ export default function UserMembership() {
         }}
       >
           <button
-      className="umobile-steps-btn"
       onClick={() => window.open("/assets/membership_steps.pdf", "_blank")}
       style={{
-        position: "absolute",
-        top: 80,
-        right: 430,
-        padding: "8px 18px",
+        position: "fixed",
+        top: 12,
+        right: 12,
+        padding: "8px 12px",
         background: "linear-gradient(90deg, #06b6d4 0%, #6366f1 100%)",
         color: "#fff",
         fontWeight: 600,
-        fontSize: 16,
+        fontSize: 14,
         border: "none",
         borderRadius: 8,
         cursor: "pointer",
         boxShadow: "0 2px 8px 0 rgba(99,102,241,0.10)",
+        zIndex: 110,
       }}
     >
      {/* ಆನ್ ಲೈನ್ ಸದಸಯ ತ್ವ ಪಡೆಯುವ ವಿಧಾನ */}
