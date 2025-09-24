@@ -27,6 +27,7 @@ export default function UserMembership() {
 
   const getMembershipTypeInfo = (amount) => {
     const membershipTypes = {
+      1: { name: "Test Membership", color: "#3b82f6", bgColor: "#dbeafe" },
       500: { name: "General Membership", color: "#3b82f6", bgColor: "#dbeafe" },
       5000: { name: "Special Membership", color: "#10b981", bgColor: "#d1fae5" },
       10000: { name: "Premium Membership", color: "#d97706", bgColor: "#fef3c7" },
@@ -913,6 +914,9 @@ export default function UserMembership() {
                     className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   >
                     <option value="">Select amount...</option>
+                    <option value="500">
+                      ₹1 - test ಸದಸ್ಯತ್ವ/test Membership
+                    </option>
                     <option value="500">
                       ₹500 - ಸಾಮಾನ್ಯ ಸದಸ್ಯತ್ವ/General Membership
                     </option>
