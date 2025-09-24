@@ -90,7 +90,7 @@ const TermsConditions = () => {
             </ul>
             <h2 className="text-2xl font-semibold mb-4 mt-8">6. Changes to Terms &amp; Conditions</h2>
             <ul className="list-disc list-inside space-y-4 text-lg text-gray-700">
-              <li>
+              <li> 
                 The right to amend these T&amp;C at any time without prior notice by posting changes online is reserved.
               </li>
               <li>
