@@ -413,7 +413,7 @@ const MembershipCard = ({
               <div className="text-center flex flex-col items-center">
                 {/* Signature image above the line */}
                 <img
-                  src="assets/signature_extracted.png"
+                  src="assets/signature_updated.jpeg"
                   alt="Signature of Secretary"
                   crossOrigin="anonymous"
                   style={{ height: 30, width: 'auto', objectFit: 'contain', marginBottom: -1 }}
