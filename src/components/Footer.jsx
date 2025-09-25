@@ -301,6 +301,20 @@ const handleNavigation = useNavigate();
           <p className="text-sm text-gray-400">
             © 2025 Madara Mahasabha. All rights reserved.
           </p>
+          <p className="text-sm text-gray-400">|</p>
+          <p className="text-sm text-gray-400">
+            Designed and developed by
+            {' '}
+            <a
+              href="https://www.naviinfo.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white underline offset-2"
+              aria-label="Navi Infotech website"
+            >
+              Navi Infotech
+            </a>
+          </p>
         </div>
         {/* End Col */}
 
