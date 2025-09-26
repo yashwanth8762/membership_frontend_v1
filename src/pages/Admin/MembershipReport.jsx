@@ -105,17 +105,16 @@ export default function MembershipReport() {
     if (submission?.values && Array.isArray(submission.values)) {
       // Ensure MembershipCard receives media paths compatible with its own prefixing
       const fixedValues = submission.values.map((item) => {
-        if (
-          item.label === "ಛಾಯಾಚಿತ್ರ /Upload photo" &&
-          Array.isArray(item.media) &&
-          item.media.length > 0
-        ) {
+        const isPhotoField =
+          item?.label === "ಛಾಯಾಚಿತ್ರ /Upload photo" ||
+          item?._doc?.label === "ಛಾಯಾಚಿತ್ರ /Upload photo" ||
+          (typeof item?.label === 'string' && item.label.includes("Upload photo"));
+
+        if (isPhotoField && Array.isArray(item.media) && item.media.length > 0) {
           const fixedMedia = item.media.map((mediaItem) => {
             const m = { ...mediaItem };
-            const highRes = m?.image_url?.full?.high_res;
+            const highRes = m?.image_url?.full?.high_res || m?.image_url?.full?.highRes || m?.image_url?.high_res;
             if (typeof highRes === 'string') {
-              // If backend already returned absolute URL or one we previously prefixed,
-              // strip the API_BASE_URL so MembershipCard can safely prepend it once.
               const base = API_BASE_URL;
               const normalized = highRes.startsWith(base)
                 ? highRes.slice(base.length)
@@ -130,7 +129,9 @@ export default function MembershipReport() {
             }
             return m;
           });
-          return { ...item, media: fixedMedia };
+          // Ensure MembershipCard's getPhoto finds this by _doc.label
+          const ensuredDoc = { ...(item._doc || {}), label: "ಛಾಯಾಚಿತ್ರ /Upload photo" };
+          return { ...item, media: fixedMedia, _doc: ensuredDoc };
         }
         return item;
       });
