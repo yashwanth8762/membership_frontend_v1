@@ -243,26 +243,72 @@ export default function MembershipReport() {
 
   const handleExportAllXLSX = () => {
     if (!submissions.length) return;
-    const rows = submissions.map(record => {
-      const obj = {
-        "Membership ID": record.membershipId || "",
-        "District": record.district?.name || "",
-        "Taluk": record.taluk?.name || "",
-        "Submitted At": record.submittedAt ? new Date(record.submittedAt).toLocaleString() : ""
-      };
+
+    // Collect all dynamic labels from values to create consistent columns
+    const allValueLabels = new Set();
+    const allMediaLabels = new Set();
+    submissions.forEach(record => {
       if (Array.isArray(record.values)) {
         record.values.forEach(v => {
-          if (v.label && (v.label.toLowerCase().includes("image") || v.label.toLowerCase().includes("photo"))) {
-            obj[v.label] = v.media && v.media.length > 0
-              ? v.media.map(m => m.name?.original || m.name?.temp || "Image Provided").join(", ")
-              : "No Image";
-          } else {
-            obj[v.label] = v.value;
+          if (v?.label) {
+            allValueLabels.add(v.label);
+            if (Array.isArray(v.media) && v.media.length > 0) {
+              allMediaLabels.add(`${v.label} (media)`);
+            }
           }
         });
       }
-      return obj;
     });
+
+    const rows = submissions.map(record => {
+      const base = {
+        "Record ID": record._id || record.id || "",
+        "Membership ID": record.membershipId || "",
+        "Aadhaar": record.adhar_no || "",
+        "Email": record.email || "",
+        "Blood Group": record.bloodGroup || "",
+        "Payment Status": record.paymentResult?.status || "",
+        "Payment Date": record.paymentResult?.paymentDate ? new Date(record.paymentResult.paymentDate).toLocaleString() : "",
+        "District": record.district?.name || "",
+        "Taluk": record.taluk?.name || "",
+        "Submitted At": record.submittedAt ? new Date(record.submittedAt).toLocaleString() : "",
+      };
+
+      // Initialize all value columns to empty for consistent headers
+      const dynamic = {};
+      allValueLabels.forEach(label => { dynamic[label] = ""; });
+      allMediaLabels.forEach(label => { dynamic[label] = ""; });
+
+      if (Array.isArray(record.values)) {
+        record.values.forEach(v => {
+          if (!v?.label) return;
+          // Value column
+          if (v.value === null || v.value === undefined) {
+            dynamic[v.label] = "";
+          } else if (Array.isArray(v.value)) {
+            dynamic[v.label] = v.value.join(", ");
+          } else if (typeof v.value === 'object') {
+            try { dynamic[v.label] = JSON.stringify(v.value); } catch { dynamic[v.label] = String(v.value); }
+          } else {
+            dynamic[v.label] = v.value;
+          }
+
+          // Media column (names or URLs if available)
+          if (Array.isArray(v.media) && v.media.length > 0) {
+            const mediaCol = `${v.label} (media)`;
+            const list = v.media.map(m => {
+              const url = m?.doc_url || m?.video_url || m?.image_url?.full?.high_res || m?.image_url?.high_res || m?.image_url;
+              const name = m?.name?.original || m?.name?.temp || m?.name || url;
+              return name || url || "media";
+            });
+            dynamic[mediaCol] = list.join(", ");
+          }
+        });
+      }
+
+      return { ...base, ...dynamic };
+    });
+
     const ws = XLSX.utils.json_to_sheet(rows);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Members");
