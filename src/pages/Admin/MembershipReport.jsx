@@ -269,6 +269,7 @@ export default function MembershipReport() {
         "Blood Group": record.bloodGroup || "",
         "Payment Status": record.paymentResult?.status || "",
         "Payment Date": record.paymentResult?.paymentDate ? new Date(record.paymentResult.paymentDate).toLocaleString() : "",
+        "Payment Result (raw)": (() => { try { return record.paymentResult ? JSON.stringify(record.paymentResult) : ""; } catch { return ""; } })(),
         "District": record.district?.name || "",
         "Taluk": record.taluk?.name || "",
         "Submitted At": record.submittedAt ? new Date(record.submittedAt).toLocaleString() : "",
