@@ -38,6 +38,7 @@ import DonatePage from './pages/DonatePage.jsx';
 import MembershipReport from './pages/Admin/MembershipReport.jsx';
 import Success from './components/Success.jsx';
 import Failure from './components/Failure.jsx';
+import NewsScroller from './components/NewsScrooler.jsx';
 
 
 export default function App() {
@@ -122,6 +123,8 @@ export default function App() {
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/payment-success" element={<Success/>} />
           <Route path="/payment-failure" element={<Failure/>} />
+          {/* <Route path="/news" element={<NewsScroller/>} /> */}
+
         </>
       )}
     </Routes>

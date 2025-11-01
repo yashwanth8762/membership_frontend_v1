@@ -8,6 +8,7 @@ import ContactUs from "../components/ContactUs";
 import Organization from "../components/Organization";
 import Documents from "../components/Documents";
 import HeroVideo from "../components/HeroVideo";
+import NewsScroller from "../components/NewsScrooler";
 
 // Lazy load all main sections
 const HeroSection = React.lazy(() => import("../components/HeroSection"));
@@ -68,6 +69,9 @@ export default function Home() {
 
         <Section id="documents">
           <Documents />
+        </Section>
+        <Section id="news">
+          <NewsScroller />
         </Section>
         <Section id="upcoming-programs">
           <UpcomingActivities />
