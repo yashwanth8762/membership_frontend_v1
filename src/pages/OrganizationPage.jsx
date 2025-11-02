@@ -193,7 +193,7 @@ const OrganizationPage = () => {
                 {row.members.map((member, mIdx) => (
                   <li key={mIdx} className="text-gray-800">
                     <strong className="text-indigo-600">{member.name}</strong>, {member.designation}
-                    {member.mobile && `, [translate:ಮೊ.] ${member.mobile}`}
+                    {member.mobile && `,  ${member.mobile}`}
                     {member.location && `, ${member.location}`}
                   </li>
                 ))}
