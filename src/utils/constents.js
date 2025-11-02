@@ -222,6 +222,8 @@ In such a degraded situation, the Aryan Brahmins, using various strategies and c
   },
 };
 
+
+
 export const OrganizationContent = {
   note: {
     kn: "ಮಹಾಸಭಾ ಕೇಂದ್ರ ಕಛೇರಿ ಬೆಂಗಳೂರಿನಲ್ಲಿದೆ, ಜೊತೆಗೆ ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲೂಕು ಶಾಖೆಗಳಿರುತ್ತವೆ. ಸಭಾದ ಮತ್ತು ಶಾಖೆಗಳ ವಿಶಿಷ್ಟ ಆಡಳಿತವನ್ನು ಒಂದು ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯಿಂದ ನಡೆಸಲ್ಪಡಲಾಗುವುದು.",
@@ -341,12 +343,574 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
     total_kn: 0,
     total_en: 0,
   },
+  // main_table: {
+    members: [
+      {
+        SNo: 1,
+        district: { kn: "ಬೆಂಗಳೂರು ನಗರ ಜಿಲ್ಲೆ (ಬೆಂ. ದಕ್ಷಿಣ ನಗರ ಪಾಲಿಕೆ)", en: "Bangalore Urban District (South Bangalore Municipality)" },
+        seats: 5,
+        members: [
+          { name: "Shri A. Narayanaswamy", designation: "Former Union Minister", mobile: "9900495555", location: "Bengaluru North Municipal" },
+          { name: "Shri L. Hanumanthaiah", designation: "Former MP", mobile: "9980004666", location: "Bengaluru East Municipal" },
+          { name: "Shri A. Muniyappa", designation: "Former SC/ST Commission Chairman", mobile: "8884445838", location: "Bengaluru West Municipal" },
+          { name: "Shri Sarvodaya Narayanaswamy", designation: "Education Sector", mobile: "9448043051", location: "Bengaluru Central Municipal" },
+          { name: "Shri B.H. Anil Kumar", designation: "Retired IAS Officer", mobile: "8527607799", location: "" },
+        ],
+      },
+      {
+        SNo: 2,
+        district: { kn: "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ", en: "Bangalore Rural" },
+        seats: 1,
+        members: [
+          { name: "Shri Srinivas", designation: "Hon. MLA, Nelamangala", mobile: "9945144669", location: "" },
+        ],
+      },
+      {
+        SNo: 3,
+        district: { kn: "ಧಾರವಾಡ", en: "Dharwad" },
+        seats: 2,
+        members: [
+          { name: "Shri Alakod Hanumantappa", designation: "Former Minister", mobile: "9448149007", location: "" },
+          { name: "Shri Mohan Hiremani", designation: "Former City Corporation Member", mobile: "9448063664", location: "" },
+        ],
+      },
+      {
+        SNo: 4,
+        district: { kn: "ವಿಜಯಪುರ", en: "Vijayapura" },
+        seats: 2,
+        members: [
+          { name: "Shri Govind M. Karjol", designation: "Hon. MP, Chitradurga", mobile: "9008237703 / 9663679337", location: "" },
+          { name: "Shri Ramesh Jigajinagi", designation: "Hon. MP, Vijayapura", mobile: "9449031477", location: "" },
+        ],
+      },
+      {
+        SNo: 5,
+        district: { kn: "ಮೈಸೂರು", en: "Mysuru" },
+        seats: 2,
+        members: [
+          { name: "Dr. Thimmaiah", designation: "Hon. MLC, Mysuru", mobile: "9448603318", location: "" },
+          { name: "Shri C. Ramesh", designation: "Former MLC, Mysuru", mobile: "9845113207", location: "" },
+        ],
+      },
+      {
+        SNo: 6,
+        district: { kn: "ರಾಯಚೂರು", en: "Raichur" },
+        seats: 1,
+        members: [
+          { name: "Shri H.B. Murari", designation: "Community Leader, Raichur", mobile: "9449822800", location: "" },
+        ],
+      },
+      {
+        SNo: 7,
+        district: { kn: "ಬೆಳಗಾವಿ", en: "Belagavi" },
+        seats: 2,
+        members: [
+          { name: "Shri Duryodhan Aihole", designation: "Hon. MLA, Raibag, Belagavi District", mobile: "9449108286", location: "" },
+          { name: "Shri Anant Kumar Byakood", designation: "Social Worker, Belagavi", mobile: "9986779495", location: "" },
+        ],
+      },
+      {
+        SNo: 8,
+        district: { kn: "ಕಲಬುರಗಿ (ಒಂದು ಮಹಿಳೆ)", en: "Kalaburagi (one woman)" },
+        seats: 2,
+        members: [
+          { name: "Shri Vijay Kumar G. Ramakrishna", designation: "Community Leader", mobile: "9902571007", location: "" },
+          { name: "Smt. Chandrika Paramesh Korawar", designation: "Former Chairperson, KAVIKA", mobile: "9900653553", location: "" },
+        ],
+      },
+      {
+        SNo: 9,
+        district: { kn: "ಬಳ್ಳಾರಿ", en: "Ballari" },
+        seats: 1,
+        members: [
+          { name: "Shri Mundargi Nagaraju", designation: "Hon. Chairman, LIDKAR", mobile: "9066093999", location: "" },
+        ],
+      },
+      {
+        SNo: 10,
+        district: { kn: "ತುಮಕೂರು (ಒಂದು ಮಹಿಳೆ)", en: "Tumakuru (one woman)" },
+        seats: 2,
+        members: [
+          { name: "Shri Thimmarayappa K.M.", designation: "Former MLA", mobile: "9945137402", location: "" },
+          { name: "Shri Narasimh Murthy Tharachinakatte", designation: "Social Worker", mobile: "9945137402", location: "" },
+        ],
+      },
+      {
+        SNo: 11,
+        district: { kn: "ಚಿತ್ರದುರ್ಗ", en: "Chitradurga" },
+        seats: 2,
+        members: [
+          { name: "Shri H. Anjaneya", designation: "Former Minister", mobile: "9448455881", location: "" },
+          { name: "Shri Mohan", designation: "Community Organizer", mobile: "9945376376", location: "" },
+        ],
+      },
+      {
+        SNo: 12,
+        district: { kn: "ಹಾಸನ", en: "Hassan" },
+        seats: 1,
+        members: [
+          { name: "Shri M.R. Venkatesh", designation: "Former Chairman, Karnataka Safai Karmachari Commission", mobile: "9448155913", location: "" },
+        ],
+      },
+      {
+        SNo: 13,
+        district: { kn: "ಮಂಡ್ಯ", en: "Mandya" },
+        seats: 1,
+        members: [
+          { name: "Shri Chandrashekar", designation: "Advocate, Nagamangala", mobile: "9880012842", location: "" },
+        ],
+      },
+      {
+        SNo: 14,
+        district: { kn: "ಕೋಲಾರ", en: "Kolar" },
+        seats: 1,
+        members: [
+          { name: "Smt. Roopa Shashidhar", designation: "Hon. MLA, KGF", mobile: "9449999966", location: "" },
+        ],
+      },
+      {
+        SNo: 15,
+        district: { kn: "ಚಿಕ್ಕಮಗಳೂರು", en: "Chikkamagaluru" },
+        seats: 1,
+        members: [
+          { name: "Shri B.N. Chandrappa", designation: "Former MP, Lok Sabha", mobile: "9013869189", location: "" },
+        ],
+      },
+      {
+        SNo: 16,
+        district: { kn: "ಶಿವಮೊಗ್ಗ", en: "Shivamogga" },
+        seats: 1,
+        members: [
+          { name: "Dr. Srinivas Kariyanna", designation: "Medical Specialist", mobile: "9986551735", location: "" },
+        ],
+      },
+      {
+        SNo: 17,
+        district: { kn: "ಬೀದರ್", en: "Bidar" },
+        seats: 1,
+        members: [
+          { name: "Shri Vijay Kumar Kouthal", designation: "Social Worker", mobile: "9632713575", location: "" },
+        ],
+      },
+      {
+        SNo: 18,
+        district: { kn: "ಕೊಡಗು", en: "Kodagu" },
+        seats: 1,
+        members: [
+          { name: "Shri Kote Shivanna", designation: "Former Minister", mobile: "9845124030", location: "" },
+        ],
+      },
+      {
+        SNo: 19,
+        district: { kn: "ಉತ್ತರ ಕನ್ನಡ", en: "Uttara Kannada" },
+        seats: 1,
+        members: [
+          { name: "Shri Gurunath Danappanavar", designation: "Social Worker", mobile: "9886338432", location: "" },
+        ],
+      },
+      {
+        SNo: 20,
+        district: { kn: "ಮಂಗಳೂರು", en: "Mangaluru" },
+        seats: 1,
+        members: [
+          { name: "Shri Ashok Madar", designation: "Community Leader", mobile: "8792217377", location: "" },
+        ],
+      },
+      {
+        SNo: 21,
+        district: { kn: "ಚಾಮರಾಜನಗರ", en: "Chamarajanagar" },
+        seats: 1,
+        members: [
+          { name: "Shri Dharma Sena", designation: "Former MLA", mobile: "9448353111", location: "" },
+        ],
+      },
+      {
+        SNo: 22,
+        district: { kn: "ದಾವಣಗೆರೆ", en: "Davangere" },
+        seats: 1,
+        members: [
+          { name: "Shri Basavanthappa", designation: "Hon. MLA", mobile: "9448028114", location: "" },
+        ],
+      },
+      {
+        SNo: 23,
+        district: { kn: "ಹಾವೇರಿ", en: "Haveri" },
+        seats: 1,
+        members: [
+          { name: "Shri Puttappa Mariyammanawar", designation: "Social Worker", mobile: "9148569306 / 9886008171", location: "" },
+        ],
+      },
+      {
+        SNo: 24,
+        district: { kn: "ಬಾಗಲಕೋಟೆ", en: "Bagalkote" },
+        seats: 1,
+        members: [
+          { name: "Shri R.B. Thimmappur", designation: "Hon. Minister, Excise Department", mobile: "9448139107", location: "" },
+        ],
+      },
+      {
+        SNo: 25,
+        district: { kn: "ಗದಗ (ಮಹಿಳೆ)", en: "Gadag (woman)" },
+        seats: 1,
+        members: [
+          { name: "Smt. Sujata Doddamane", designation: "Social Worker", mobile: "9448422216", location: "" },
+        ],
+      },
+      {
+        SNo: 26,
+        district: { kn: "ಕೊಪ್ಪಳ", en: "Koppal" },
+        seats: 1,
+        members: [
+          { name: "Shri Goolappa", designation: "Social Worker", mobile: "9448262979", location: "" },
+        ],
+      },
+      {
+        SNo: 27,
+        district: { kn: "ಉಡುಪಿ", en: "Udupi" },
+        seats: 1,
+        members: [
+          { name: "Shri Rajesh", designation: "Social Worker", mobile: "9845909519", location: "" },
+        ],
+      },
+      {
+        SNo: 28,
+        district: { kn: "ಚಿಕ್ಕಬಳ್ಳಾಪುರ", en: "Chikkaballapur" },
+        seats: 2,
+        members: [
+          { name: "Shri K.H. Muniyappa", designation: "Hon. Minister, Food and Civil Supplies Department", mobile: "9611835999", location: "" },
+          { name: "Shri Thirumalappa", designation: "Social Worker, Chikkaballapur", mobile: "9880973077", location: "" },
+        ],
+      },
+      {
+        SNo: 29,
+        district: { kn: "ಯಾದಗಿರಿ", en: "Yadgir" },
+        seats: 1,
+        members: [
+          { name: "Shri Devendranath", designation: "Social Worker", mobile: "9448651227", location: "" },
+        ],
+      },
+      {
+        SNo: 30,
+        district: { kn: "ರಾಮನಗರ", en: "Ramanagara" },
+        seats: 1,
+        members: [
+          { name: "Shri Kiran Surya", designation: "Social Worker", mobile: "9740991218", location: "" },
+        ],
+      },
+      {
+        SNo: 31,
+        district: { kn: "ವಿಜಯನಗರ", en: "Vijayanagar" },
+        seats: 1,
+        members: [
+          { name: "Shri Ramanna", designation: "Social Worker, Hagaribommanahalli", mobile: "9482144869", location: "" },
+        ],
+      },
+      {
+        SNo: 32,
+        district: { kn: "ನಾಮ ನಿರ್ದೇಶನ ಸದಸ್ಯರು", en: "Nominated Members" },
+        seats: 1,
+        members: [
+          { name: "Shri Jagadish", designation: "High Court Advocate", mobile: "9448124825", location: "" },
+        ],
+      },
+      {
+        SNo: 33,
+        district: { kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು (ನಾಮನಿರ್ದೇಶನ)", en: "Legal Advisors (Nominated)" },
+        seats: 1,
+        members: [
+          { name: "Shri H. Venkatesh Dodderi", designation: "High Court Advocate", mobile: "9900456379", location: "" },
+        ],
+      },
+    ],
+  // },  
 
   first_otherhalf: {
     paragraph_kn: [
       "ಖಾಲಿ ಬೀಳುವ ಸದಸ್ಯ ಸ್ಥಾನಗಳಿಗೆ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರನ್ನು ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲೆ, ತಾಲ್ಲೂಕು ಇತರ ಶಾಖೆಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಬರುವವರನ್ನು ಮುಂದಿನ ಆಯಾ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ನೇಮಿಸಿಕೊಳ್ಳಲಾಗುವುದು.",
       " ಒಂದು ಸಾಲಿನಲ್ಲಿ ಚುನಾವಣೆಯಾದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ 3 ವರ್ಷದ ಅವಧಿಯದಾಗಿದ್ದು, ಮುಂದಿನ ಚುನಾವಣೆಯಾಗುವವರೆಗೂ ಅಧಿಕಾರದಲ್ಲಿರುತ್ತದೆ. ಕಾರಣಾಂತರಗಳಿಂದ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಸ್ಥಾನ ಅಥವಾ ಸ್ಥಾನಗಳು ಖಾಲಿ ಬಿದ್ದಾಗ ಸದರಿ ಸ್ಥಾನಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿಕೊಳ್ಳದಿದ್ದರೂ ಸಹ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ನಿರ್ಣಯಗಳು ಸಿಂಧುವಾಗತಕ್ಕವಾಗಿರುತ್ತದೆ.",
     ],
+
+// New detailed Central Executive Committee members info added here
+detailedMembers: [
+  {
+    SNo: 1,
+    district: { kn: "[translate:ಬೆಂಗಳೂರು ನಗರ ಜಿಲ್ಲೆ (ಬೆಂ. ದಕ್ಷಿಣ ನಗರ ಪಾಲಿಕೆ)]", en: "Bangalore Urban District (South Bangalore Municipality)" },
+    seats: 5,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಎ. ನಾರಾಯಣಸ್ವಾಮಿ]", designation: "[translate:ಮಾಜಿ ಕೇಂದ್ರ ಸಚಿವೆರು]", mobile: "9900495555", location: "[translate:ಬೆಂ. ಉತ್ತರ ನಗರ ಪಾಲಿಕೆ]" },
+      { name: "[translate:ಶ್ರೀ ಎಲ್. ಹನುಮಂತಯ್ಯ]", designation: "[translate:ಮಾಜಿ ಸಂಸದರು]", mobile: "9980004666", location: "[translate:ಬೆಂ. ಪೂರ್ವ ನಗರ ಪಾಲಿಕೆ]" },
+      { name: "[translate:ಶ್ರೀ ಎ. ಮುನಿಯಪ್ಪ]", designation: "[translate:ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, SC/ST ಆಯೋಗ]", mobile: "8884445838", location: "[translate:ಬೆಂ. ಪಶ್ಚಿಮ ನಗರ ಪಾಲಿಕೆ]" },
+      { name: "[translate:ಶ್ರೀ ಸರ್ವೋದಯ ನಾರಾಯಣಸ್ವಾಮಿ]", designation: "[translate:ಶಿಕ್ಷಣ ಕ್ಷೇತ್ರ]", mobile: "9448043051", location: "[translate:ಬೆಂ. ಕೇಂದ್ರ ನಗರ ಪಾಲಿಕೆ]" },
+      { name: "[translate:ಶ್ರೀ ಬಿ.ಹೆಚ್. ಅನಿಲ್ ಕುಮಾರ್]", designation: "[translate:IAS ನಿವೃತ್ತ ಅಧಿಕಾರಿಗಳು]", mobile: "8527607799", location: "" },
+    ],
+  },
+  {
+    SNo: 2,
+    district: { kn: "[translate:ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ]", en: "Bangalore Rural" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಶ್ರೀನಿವಾಸ್]", designation: "[translate:ಮಾನ್ಯ ಶಾಸಕರು]", mobile: "9945144669", location: "[translate:ನೆಲಮಂಗಲ]" },
+    ],
+  },
+  {
+    SNo: 3,
+    district: { kn: "[translate:ಧಾರವಾಡ]", en: "Dharwad" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಆಲ್ಕೋಡ್ ಹನುಮಂತಪ್ಪ]", designation: "[translate:ಮಾಜಿ ಸಚಿವರು]", mobile: "9448149007", location: "" },
+      { name: "[translate:ಶ್ರೀ ಮೋಹನ್ ಹಿರೇಮನಿ]", designation: "[translate:ಮಾಜಿ ಮಹಾನಗರ ಪಾಲಿಕೆ ಸದಸ್ಯರು]", mobile: "9448063664", location: "" },
+    ],
+  },
+  {
+    SNo: 4,
+    district: { kn: "[translate:ವಿಜಯಪುರ]", en: "Vijayapura" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ]", designation: "[translate:ಮಾನ್ಯ ಲೋಕಸಭಾ ಸದಸ್ಯರು]", mobile: "9008237703 / 9663679337", location: "[translate:ಚಿತ್ರದುರ್ಗ]" },
+      { name: "[translate:ರಮೇಶ್ ಜಿಗಜಿಣಗಿ]", designation: "[translate:ಮಾನ್ಯ ಲೋಕಸಭಾ ಸದಸ್ಯರು]", mobile: "9449031477", location: "[translate:ವಿಜಯಪುರ]" },
+    ],
+  },
+  {
+    SNo: 5,
+    district: { kn: "[translate:ಮೈಸೂರು]", en: "Mysore" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಡಾ. ತಿಮ್ಮಯ್ಯ]", designation: "[translate:ಮಾನ್ಯ ವಿಧಾನ ಪರಿಷತ್ ಸದಸ್ಯರು]", mobile: "9448603318", location: "[translate:ಮೈಸೂರು]" },
+      { name: "[translate:ಶ್ರೀ ಸಿ. ರಮೇಶ್]", designation: "[translate:ಮಾಜಿ MLC]", mobile: "9845113207", location: "[translate:ಮೈಸೂರು]" },
+    ],
+  },
+  {
+    SNo: 6,
+    district: { kn: "[translate:ರಾಯಚೂರು]", en: "Raichur" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಹೆಚ್.ಬಿ. ಮುರಾರಿ]", designation: "[translate:ಸಮುದಾಯ ಮುಖಂಡರು]", mobile: "9449822800", location: "[translate:ರಾಯಚೂರು]" },
+    ],
+  },
+  {
+    SNo: 7,
+    district: { kn: "[translate:ಬೆಳಗಾವಿ]", en: "Belgaum" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ದುರ್ಯೋದನ ಐಹೊಳೆ]", designation: "[translate:ಮಾನ್ಯ ಶಾಸಕರು]", mobile: "9449108286", location: "[translate:ರಾಯಭಾಗ, ಬೆಳಗಾವಿ ಜಿಲ್ಲಾ]" },
+      { name: "[translate:ಶ್ರೀ ಅನಂತ್ ಕುಮಾರ್ ಬ್ಯಾಕೂಡ್]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9986779495", location: "[translate:ಬೆಳಗಾವಿ]" },
+    ],
+  },
+  {
+    SNo: 8,
+    district: { kn: "[translate:ಕಲಬುರಗಿ (ಒಂದು ಮಹಿಳೆ)]", en: "Kalaburagi (one woman)" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ವಿಜಯಕುಮಾರ್ ಜಿ. ರಾಮಕೃಷ್ಣ]", designation: "[translate:ಸಮುದಾಯ ಮುಖಂಡರು]", mobile: "9902571007", location: "" },
+      { name: "[translate:ಶ್ರೀಮತಿ ಚಂದ್ರಿಕ ಪರಮೇಶ್ ಕೊರವಾರ್]", designation: "[translate:ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಕವಿಕಾ]", mobile: "9900653553", location: "" },
+    ],
+  },
+  {
+    SNo: 9,
+    district: { kn: "[translate:ಬಳ್ಳಾರಿ]", en: "Bellary" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಮುಂಡರಗಿ ನಾಗರಾಜು]", designation: "[translate:ಮಾನ್ಯ ಅಧ್ಯಕ್ಷರು, Lidkar]", mobile: "9066093999", location: "" },
+    ],
+  },
+  {
+    SNo: 10,
+    district: { kn: "[translate:ತುಮಕೂರು (ಒಂದು ಮಹಿಳೆ)]", en: "Tumkur (one woman)" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ತಿಮ್ಮರಾಯಪ್ಪ ಕೆ.ಎಂ.]", designation: "[translate:ಮಾಜಿ ಶಾಸಕರು]", mobile: "9945137402", location: "" },
+      { name: "[translate:ಶ್ರೀ ನರಸಿಂಹಮೂರ್ತಿ ತರಚಿನಕಟ್ಟೆ]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9945137402", location: "" },
+    ],
+  },
+  {
+    SNo: 11,
+    district: { kn: "[translate:ಚಿತ್ರದುರ್ಗ]", en: "Chitradurga" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಹೆಚ್. ಆಂಜನೇಯ]", designation: "[translate:ಮಾಜಿ ಸಚಿವರು]", mobile: "9448455881", location: "" },
+      { name: "[translate:ಶ್ರೀ ಮೋಹನ್]", designation: "[translate:ಸಮುದಾಯ ಸಂಘಟಕರು]", mobile: "9945376376", location: "" },
+    ],
+  },
+  {
+    SNo: 12,
+    district: { kn: "[translate:ಹಾಸನ]", en: "Hassan" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಎಂ. ಆರ್ ವೆಂಕಟೇಶ್]", designation: "[translate:ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಕರ್ನಾಟಕ ಸಫಾಯಿ ಕರ್ಮಚಾರಿ]", mobile: "9448155913", location: "" },
+    ],
+  },
+  {
+    SNo: 13,
+    district: { kn: "[translate:ಮಂಡ್ಯ]", en: "Mandya" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಚಂದ್ರಶೇಖರ್]", designation: "[translate:ವಕೀಲರು]", mobile: "9880012842", location: "[translate:ನಾಗಮಂಗಲ]" },
+    ],
+  },
+  {
+    SNo: 14,
+    district: { kn: "[translate:ಕೋಲಾರ]", en: "Kolar" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀಮತಿ ರೂಪ ಶಶಿಧರ್]", designation: "[translate:ಮಾನ್ಯ ಶಾಸಕರು, ಕೆ.ಜಿ.ಎಫ್]", mobile: "9449999966", location: "" },
+    ],
+  },
+  {
+    SNo: 15,
+    district: { kn: "[translate:ಚಿಕ್ಕಮಗಳೂರು]", en: "Chikkamagaluru" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಬಿ.ಎನ್. ಚಂದ್ರಪ್ಪ]", designation: "[translate:ಮಾಜಿ ಸಂಸದರು, ಲೋಕಸಭೆ]", mobile: "9013869189", location: "" },
+    ],
+  },
+  {
+    SNo: 16,
+    district: { kn: "[translate:ಶಿವಮೊಗ್ಗ]", en: "Shivamogga" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಡಾ. ಶ್ರೀನಿವಾಸ್ ಕರಿಯಣ್ಣ]", designation: "[translate:ತಜ್ಞ ವೈದ್ಯರು]", mobile: "9986551735", location: "" },
+    ],
+  },
+  {
+    SNo: 17,
+    district: { kn: "[translate:ಬೀದರ್]", en: "Bidar" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ವಿಜಯ್ ಕುಮಾರ್ ಕೌಠಾಳ್]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9632713575", location: "" },
+    ],
+  },
+  {
+    SNo: 18,
+    district: { kn: "[translate:ಕೊಡಗು]", en: "Kodagu" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಕೋಟೆ ಶಿವಣ್ಣ]", designation: "[translate:ಮಾಜಿ ಸಚಿವರು]", mobile: "9845124030", location: "" },
+    ],
+  },
+  {
+    SNo: 19,
+    district: { kn: "[translate:ಉತ್ತರ ಕನ್ನಡ]", en: "Uttara Kannada" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಗುರುನಾಥ್ ದಾನಪ್ಪನವರ್]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9886338432", location: "" },
+    ],
+  },
+  {
+    SNo: 20,
+    district: { kn: "[translate:ಮಂಗಳೂರು]", en: "Mangalore" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಅಶೋಕ್ ಮಾದರ್]", designation: "[translate:ಸಮುದಾಯದ ಮುಖಂಡ]", mobile: "8792217377", location: "" },
+    ],
+  },
+  {
+    SNo: 21,
+    district: { kn: "[translate:ಚಾಮರಾಜನಗರ]", en: "Chamarajanagar" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಧರ್ಮ ಸೇನ]", designation: "[translate:ಮಾಜಿ ವಿಧಾನ ಸಭಾ ಸದಸ್ಯರು]", mobile: "9448353111", location: "" },
+    ],
+  },
+  {
+    SNo: 22,
+    district: { kn: "[translate:ದಾವಣಗೆರೆ]", en: "Davangere" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಬಸವಂತಪ್ಪ]", designation: "[translate:ಮಾನ್ಯ ಶಾಸಕರು]", mobile: "9448028114", location: "" },
+    ],
+  },
+  {
+    SNo: 23,
+    district: { kn: "[translate:ಹಾವೇರಿ]", en: "Haveri" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಪುಟ್ಟಪ್ಪ ಮರಿಯಮ್ಮನವರ್]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9148569306 / 9886008171", location: "" },
+    ],
+  },
+  {
+    SNo: 24,
+    district: { kn: "[translate:ಬಾಗಲಕೋಟೆ]", en: "Bagalkote" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಆರ್.ಬಿ. ತಿಮ್ಮಾಪೂರ್]", designation: "[translate:ಮಾನ್ಯ ಸಚಿವರು, ಅಬಕಾರಿ ವಿಭಾಗ]", mobile: "9448139107", location: "" },
+    ],
+  },
+  {
+    SNo: 25,
+    district: { kn: "[translate:ಗದಗ (ಮಹಿಳೆ)]", en: "Gadag (woman)" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀಮತಿ ಸುಜಾತ ದೊಡ್ಡಮನೆ]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9448422216", location: "" },
+    ],
+  },
+  {
+    SNo: 26,
+    district: { kn: "[translate:ಕೊಪ್ಪಳ]", en: "Koppal" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಗೂಳಪ್ಪ]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9448262979", location: "" },
+    ],
+  },
+  {
+    SNo: 27,
+    district: { kn: "[translate:ಉಡುಪಿ]", en: "Udupi" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ರಾಜೇಶ್]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9845909519", location: "" },
+    ],
+  },
+  {
+    SNo: 28,
+    district: { kn: "[translate:ಚಿಕ್ಕಬಳ್ಳಾಪುರ]", en: "Chikkaballapur" },
+    seats: 2,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಕೆ.ಹೆಚ್. ಮುನಿಯಪ್ಪ]", designation: "[translate:ಮಾನ್ಯ ಸಚಿವರು, ಆಹಾರ, ನಾಗರಿಕ ಸರಬರಾಜು ಮತ್ತು ಗ್ರಾಹಕರ ವ್ಯವಹಾರಗಳ ಇಲಾಖೆ]", mobile: "9611835999", location: "" },
+      { name: "[translate:ಶ್ರೀ ತಿರುಮಲಪ್ಪ]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9880973077", location: "" },
+    ],
+  },
+  {
+    SNo: 29,
+    district: { kn: "[translate:ಯಾದಗಿರಿ]", en: "Yadgir" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ದೇವೇಂದ್ರನಾಥ್]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9448651227", location: "" },
+    ],
+  },
+  {
+    SNo: 30,
+    district: { kn: "[translate:ರಾಮನಗರ]", en: "Ramanagara" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಕಿರಣ್ ಸೂರ್ಯ]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು]", mobile: "9740991218", location: "" },
+    ],
+  },
+  {
+    SNo: 31,
+    district: { kn: "[translate:ವಿಜಯನಗರ]", en: "Vijayanagar" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ರಾಮಣ್ಣ]", designation: "[translate:ಸಮಾಜ ಸೇವಕರು ಹಗರಿ ಬೊಮ್ಮನಹಳ್ಳಿ]", mobile: "9482144869", location: "" },
+    ],
+  },
+  {
+    SNo: 32,
+    district: { kn: "[translate:ನಾಮ ನಿರ್ದೇಶನ ಸದಸ್ಯರು]", en: "Nominated Members" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಜಗದೀಶ್]", designation: "[translate:ಹೈಕೋರ್ಟ್ ವಕೀಲರು]", mobile: "9448124825", location: "" },
+    ],
+  },
+  {
+    SNo: 33,
+    district: { kn: "[translate:ಕಾನೂನು ಸಲಹೆಗಾರರು (ನಾಮನಿರ್ದೇಶನ)]", en: "Legal Advisors (Nominated)" },
+    seats: 1,
+    members: [
+      { name: "[translate:ಶ್ರೀ ಹೆಚ್. ವೆಂಕಟೇಶ್ ದೊಡ್ಡೇರಿ]", designation: "[translate:ಹೈಕೋರ್ಟ್ ವಕೀಲರು]", mobile: "9900456379", location: "" },
+    ],
+  },
+],
+
+
     paragraph_en: [
       "For any member position become vacant, the Executive Committee shall appoint replacements from among eligible persons belonging to the respective District, Taluk, or Branch jurisdiction during the next meeting of the Executive Committee. The  elected Executive Committee shall have a tenure of three years and will remain in authority until the next election is conducted.",
       "If, for any reason, a position or multiple positions in the Executive Committee fall vacant and are not filled, the decisions taken by the Committee shall still be valid and binding.",
@@ -437,111 +1001,6 @@ The administration of the Mahasabha and its branches will be managed by one  Cen
   },
 };
 
-export const CommitteeMembers = [
-  {
-    name: {
-      en: "Dr. K. H. Muniyappa,\n #100/13, 60 Feet Main Road, Siddi vinayaka Layout, Sanjay Nagar, Bengaluru",
-      kn: "ಡಾ. ಕೆ.ಹೆಚ್‌.ಮುನಿಯಪ್ಪ, \n# 100/13,60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
-    },
-    position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9611835999",
-  },
-  {
-    name: {
-      en: "Sri. A. Narayanaswamy,\n #691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru",
-      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ,\n # 691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ,2 ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌.ಲೇಔಟ್‌, ಬೆಂಗಳೂರು.",
-    },
-    position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9900495555",
-  },
-  {
-    name: {
-      en: "Sri. K. M. Timmarayappa,\n Kondatimmana Halli, Nidagal Hobli, Pavagada Taluk, Tumakuru District",
-      kn: "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ,\n ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲ್ಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ",
-    },
-    position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9945137402",
-  },
-  {
-    name: {
-      en: "Dr. L. Hanumanthaiah,\n #30, 207/A, ‘D’ Cross, 2nd Block, Basaveshwara Nagar, Bengaluru",
-      kn: "ಡಾ. ಎಲ್‌. ಹನುಮಂತಯ್ಯ,\n #30. 207/ಎ, ʼಡಿʼ ಕ್ರಾಸ್‌, 2ನೇ ಬ್ಲಾಕ್, ಬಸವೇಶ್ವರ ನಗರ, ಬೆಂಗಳೂರು.",
-    },
-    position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9980004666",
-  },
-  {
-    name: {
-      en: "Sri. A. Muniyappa,\n #2, ITI Township, Dooravani Nagar, Bengaluru – 16",
-      kn: "ಎ. ಮುನಿಯಪ್ಪ,\n #2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16",
-    },
-    position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "8884445838",
-  },
-  {
-    name: {
-      en: "Sri. Pilla Munishyamappa,\n #814, Mathrusree Nilaya, A Sector, Yelahanka, Bengaluru",
-      kn: "ಶ್ರೀ ಪಿಳ್ಳ ಮುನಿ ಶ್ಯಾಮಪ್ಪ,\n # 814, ಮಾತೃಶ್ರೀ ನಿಲಯ, ಎ ಸೆಕ್ಟರ್ ಯಲಹಂಕ, ಬೆಂಗಳೂರು",
-    },
-    position: {
-      en: "State Organizing Secretary",
-      kn: "ರಾಜ್ಯ ಸಂಘಟನಾ ಕಾರ್ಯದರ್ಶಿ",
-    },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9845678275",
-  },
-  {
-    name: {
-      en: "Dr. Sujatha,\n #AOF 38/5, 1st Floor, PWD Quarters, Nandini Layout, Bengaluru – 560096",
-      kn: "ಡಾ. ಸುಜಾತ,\n # ಎ.ಒ.ಎಫ್‌ 38/5, 1 ನೇ ಮಹಡಿ, ಪಿ.ಡಬ್ಲ್ಯೂಡಿ ಕ್ವಾಟ್ರರ್ಸ್ ನಂದಿನಿ ಲೇಔಟ್‌,  ಬೆಂಗಳೂರು - 560096",
-    },
-    position: { en: "Treasurer", kn: "ಖಜಾಂಚಿ" },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9611133917",
-  },
-  {
-    name: {
-      en: "Sri. H. Anjaneya,\n Avva #2733, 3rd Cross, HAL 3rd Stage, New Thippasandra, Bengaluru-560075",
-      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ,\n #2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
-    },
-    position: {
-      en: "Executive Committee Member",
-      kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
-    },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9980272727",
-  },
-  {
-    name: {
-      en: "Sri. Govinda M. Karajola,\n #199/A, 4th Phase, Legislators’ Bhavan, Bengaluru",
-      kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ,\n # 199/ಎ, 4 ನೇ ಹಂತ, ಶಾಸಕರ ಭವನ, ಬೆಂಗಳೂರು.",
-    },
-    position: {
-      en: "Executive Committee Member",
-      kn: "ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ ಸದಸ್ಯರು",
-    },
-    occupation: { en: "Social Service", kn: "ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9448102896",
-  },
-  {
-    name: {
-      en: "Sri. H. Venkatesh Dodderi,\n #1, 2nd Floor, Yamunabai Road, Madhava nagar, Bengaluru – 560001",
-      kn: "ಶ್ರೀ.ಹೆಚ್‌. ವೆಂಕಟೇಶ್‌ ದೊಡ್ಡೇರಿ,\n# 1, 2 ನೇ ಮಹಡಿ, ಯಮುನಾ ಬಾಯಿ ರಸ್ತೆ, ಮಾಧವ ನಗರ, ಬೆಂಗಳೂರು-560001",
-    },
-    position: {
-      en: "Legal advisor",
-      kn: "ಕಾನೂನು ಸಲಹೆಗಾರರು",
-    },
-    occupation: { en: "Advocate/Social service", kn: "ವಕೀಲರು/ಸಮಾಜ ಸೇವೆ" },
-    mobile: "9900456379",
-  },
-];
-
 export const AboutTrustPageContent = {
   paragraph: {
     en: "The Karnataka Madara Mahasabha was established in 2015 with the aim of addressing the backwardness of the Madara/Madiga Communities of Karnataka in the economic, social, political, and educational spheres. Its purpose is to take all necessary measures to enable this Community to progress and integrate into the mainstream of society. The Madara/ Madiga Community of Karnataka come under the purview of the Karnataka Madara Mahasabha.",
@@ -566,6 +1025,134 @@ export const AboutTrustPageContent = {
      <li>Central Office </li> <li> District Branches</li> <li> Taluk Branches</li></ol>`,
   },
 };
+export const CommitteeMembers = [
+  {
+    name: {
+      en: "Dr. K. H. Muniyappa,\n #100/13, 60 Feet Main Road, Siddi vinayaka Layout, Sanjay Nagar, Bengaluru",
+      kn: "ಡಾ. ಕೆ.ಹೆಚ್‌.ಮುನಿಯಪ್ಪ, \n# 100/13,60 ಅಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ಸಿದ್ದಿ ವಿನಾಯಕ ಲೇಔಟ್‌, ಸಂಜಯ್‌ ನಗರ, ಬೆಂಗಳೂರು.",
+    },
+    position: { en: "President", kn: "ಅಧ್ಯಕ್ಷರು" },
+    occupation: { en: "Honorable Minister of Food, Civil Supplies, and Consumer Affairs, Karnataka Government", kn: "ಮಾನ್ಯ  ಆಹಾರ,ನಾಗರಿಕ ಸರಬರಾಜು ಮತ್ತು ಗ್ರಾಹಕ ವ್ಯವಹಾರಗಳ ಇಲಾಖೆ, ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ" },
+    mobile: "9611835999",
+  },
+  {
+    name: {
+      en: "Sri. A. Narayanaswamy,\n #691/D, 19th Main Road, 22nd Cross, 2nd Phase, HSR Layout, Bengaluru",
+      kn: "ಶ್ರೀ. ಎ.ನಾರಾಯಣಸ್ವಾಮಿ,\n # 691/ಡಿ, 19 ನೇ ಮುಖ್ಯರಸ್ತೆ, 22 ನೇ ಅಡ್ಡ ರಸ್ತೆ,2 ನೇ ಹಂತ, ಹೆಚ್.ಎಸ್‌.ಆರ್‌.ಲೇಔಟ್‌, ಬೆಂಗಳೂರು.",
+    },
+    position: { en: "Vice President", kn: "ಉಪಾಧ್ಯಕ್ಷರು" },
+    occupation: { en: "Former Union Minister﻿", kn: "ಮಾಜಿ ಕೇಂದ್ರ ಸಚಿವರು" },
+    mobile: "9900495555",
+  },
+  {
+    name: {
+      en: "Mr. Govind M. Karajol, Member of Parliament, Chitradurga Lok Sabha Constituency, New Public Works Department Building, NH-4 Service Road, Chitradurga-577517",
+      kn: "ಶ್ರೀ. ಗೋವಿಂದ ಎಂ. ಕಾರಜೋಳ, ಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ ಲೋಕಸಭಾ ಕ್ಷೇತ್ರ, ಹೊಸ  ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ ಕಟ್ಟಡ,  ಎನ್‌.ಎಚ್‌.4 ಸರ್ವೀಸ್‌  ರಸ್ತೆ,  ಚಿತ್ರದುರ್ಗ-577517",
+    },
+    position: {
+      en: "Vice President",
+      kn: "ಉಪಾಧ್ಯಕ್ಷರು",
+    },
+    occupation: { en: "Honorable Member of Parliament, Chitradurga", kn: "ಮಾನ್ಯ ಲೋಕಸಭಾ ಸದಸ್ಯರು, ಚಿತ್ರದುರ್ಗ" },
+    mobile: "9663679337",
+  },
+  
+  {
+    name: {
+      en: "Mr. R.B. Timmapur, #88, 5th Cross, Dollars Colony, R.M.V 2nd Stage, Bangalore-94.",
+      kn: "ಶ್ರೀ. ಆರ್‌.ಬಿ.ತಿಮ್ಮಾಪೂರ್‌, #88, 5 ನೇ ಕ್ರಾಸ್‌,ಡಾಲರ್ಸ್‌ ಕಾಲೋನಿ, ಆರ್‌,ಎಮ್‌,ವಿ 2 ನೇ ಹಂತ, ಬೆಂಗಳೂರು-94.",
+    },
+    position: { en: "General Secretary", kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ" },
+    occupation: { en: "Honorable Excise Minister, Government of Karnataka", kn: "ಮಾನ್ಯ ಅಬಕಾರಿ ಸಚಿವರು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ" },
+    mobile: "9448139107",
+  },
+  {
+    name: {
+      en: "Sri. H. Anjaneya,\n Avva #2733, 3rd Cross, HAL 3rd Stage, New Thippasandra, Bengaluru-560075",
+      kn: "ಶ್ರೀ. ಹೆಚ್‌. ಆಂಜನೇಯ,\n #2/ಎ. 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಜಯಮಹಲ್ ಬಡಾವಣೆ, ಬೆಂಗಳೂರು.",
+    },
+    position: {
+      en: "General Secretary",
+      kn: "ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶ  ",
+    },
+    occupation: { en: "Former Minister ", kn: "ಮಾಜಿ ಸಚಿವರು " },
+    mobile: "9945137402",
+  },
+  {
+    name: {
+      en: "Mr. B.N. Chandrappa, Shri Rama Nilaya, Jogimatti Road, 5th Cross, Chitradurga",
+      kn: "ಶ್ರೀ.ಬಿ.ಎನ್.‌ಚಂದ್ರಪ್ಪ, ಶ್ರೀ ರಾಮ ನಿಲಯ, ಜೋಗಿಮಟ್ಟಿ ರಸ್ತೆ,5ನೇ ಕ್ರಾಸ್‌, ಚಿತ್ರದುರ್ಗ. ",
+    },
+    position: { en: "Treasurer﻿ ", kn: "ಖಜಾಂಚಿ" },
+    occupation: { en: "Former Member of Parliament ", kn: "ಮಾಜಿ ಸಂಸದರು" },
+    mobile: "9013869189",
+  },
+  {
+    name: {
+      en: "Mr. A. Muniyappa, #2, IT Township, Doorvani Nagar, Bengaluru-16",
+      kn: "ಶ್ರೀ.ಎ. ಮುನಿಯಪ್ಪ, #2, ಐಟಿ ಟೌನ್‌ಶಿಪ್‌, ದೂರವಾಣಿ ನಗರ, ಬೆಂಗಳೂರು-16",
+    },
+    position: {
+      en: "Joint Secretary Bengaluru City",
+      kn: "ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ ಬೆಂಗಳೂರು ನಗರ",
+    },
+    occupation: { en: "Former Chairman, Panchayat Raj and Panchayat Development Commission ", kn: " ಮಾಜಿ ಅಧ್ಯಕ್ಷರು, ಪ.ಜಾ ಮತ್ತು ಪ.ಪಂ ಆಯೋಗ" },
+    mobile: "8884445838",
+  },
+  {
+    name: {
+      en: "Mr. Duryodhan Aihole, Mahalinga Nilaya, Adarsha Nagar, Raybag, Belagavi-591317",
+      kn: "ಶ್ರೀ. ದುರ್ಯೋಧನ ಐಹೊಳೆ, ಮಹಲಿಂಗ ನಿಲಯ, ಆದರ್ಶ ನಗರ, ರಾಯಭಾಗ   ಬೆಳಗಾವಿ- 591317",
+    },
+    position: { en: "Joint Secretary (Belagavi Division)", kn: "ಜಂಟಿ  ಕಾರ್ಯದರ್ಶಿ (ಬೆಳಗಾವಿ ವಿಭಾಗ)" },
+    occupation: { en: "Honorable Member of the Legislative Assembly ", kn: "ಮಾನ್ಯ ವಿಧಾನಸಭಾ ಸದಸ್ಯರು " },
+    mobile: "9986779495",
+  },
+  
+  
+  {
+    name: {
+      en: "Dr. Thimmaiah #1, Bhramaraambha Nilaya, 6th Main Road, 46th Ward, 5th Block, Swami Vivekananda Road, Ramakrishna Nagar, Mysuru-570033",
+      kn: "ಡಾ.ತಿಮ್ಮಯ್ಯ #1, ಭ್ರಮರಾಂಭ ನಿಲಯ, 6 ನೇ ಮುಖ್ಯ ರಸ್ತೆ, 46ನೇ ವಾರ್ಡ್‌, 5 ನೇ ಬ್ಲಾಕ್‌, ಸ್ವಾಮಿ ವಿವೇಕಾನಂದ ರಸ್ತೆ, ರಾಮಕೃಷ ನಗರ, ಮೈಸೂರು-570033",
+    },
+    position: {
+      en: "Joint Secretary (Mysuru Division) ",
+      kn: "ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ (ಮೈಸೂರು ವಿಭಾಗ)",
+    },
+    occupation: { en: "Members, Legislative Council", kn: "ಶಾಸಕರು, ವಿಧಾನ ಪರಿಷತ್" },
+    mobile: "9448603318 ",
+  },
+
+
+  {
+    name: {
+      en: "Mr. K.M. Thimmarayappa, Kondatimmanahalli, Nidagal Hobli, Pavagada Taluk, Tumkur District",
+      kn: "ಶ್ರೀ.ಕೆ.ಎಂ.ತಿಮ್ಮರಾಯಪ್ಪ, ಕೊಂಡತಿಮ್ಮನಹಳ್ಳಿ, ನಿಡಗಲ್ ಹೋಬಳಿ, ಪಾವಗಡ ತಾಲ್ಲೂಕು, ತುಮಕೂರು ಜಿಲ್ಲೆ",
+    },
+    position: {
+      en: "Joint Secretary (Bengaluru Division) ",
+      kn: "ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ(ಬೆಂಗಳೂರು ವಿಭಾಗ)",
+    },
+    occupation: { en: "Former Legislators", kn: "ಮಾಜಿ ಶಾಸಕರು " },
+    mobile: "9980004666 ",
+  },
+
+
+  {
+    name: {
+      en: "Mr. Vijaykumar G. Ramakrishna Kalaburagi District",
+      kn: "ಶ್ರೀ.ವಿಜಯ್‌ಕುಮಾರ್‌.ಜಿ.ರಾಮಕೃಷ್ಣ ಕಲಬುರಗಿ ಜಿಲ್ಲೆ",
+    },
+    position: {
+      en: "Joint Secretary (Kalaburagi Division)﻿ ",
+      kn: "ಜಂಟಿ ಕಾರ್ಯದರ್ಶಿ (ಕಲಬುರಗಿ ವಿಭಾಗ)",
+    },
+    occupation: { en: "Community Leaders", kn: "ಸಮುದಾಯ ಮುಖಂಡರು" },
+    mobile: "9902571007 ",
+  }
+];
+
+
 
 export const organizationTalukMembers = {
   heading: {

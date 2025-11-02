@@ -167,76 +167,55 @@ const OrganizationPage = () => {
             </p>
 
             <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
-                <thead>
-                  <tr className="bg-blue-600 text-white">
-                    <th className="px-6 py-4 text-center">
-                      {isEnglish ? "S.No" : "ಕ್ರ.ಸಂ"}
-                    </th>
-                    <th className="px-6 py-4 text-center">
-                      {isEnglish ? "District/Category" : "ಜಿಲ್ಲೆ"}
-                    </th>
-                    <th className="px-6 py-4 text-center">
-                      {isEnglish ? "Seats" : "ಸದಸ್ಯರು"}
-                    </th>
-                  </tr>
-                </thead>
-                {/* <tbody>
-                  {OrganizationContent.table[isEnglish ? "en" : "kn"].map(
-                    (row, idx) => (
-                      <tr key={idx} className="hover:bg-gray-50 border-b">
-                        <td className="px-6 py-3 text-center">{idx + 1}</td>
-                        <td className="px-6 py-3 text-center">
-                          {row.district}
-                        </td>
-                        <td className="px-6 py-3 text-center">{row.members}</td>
-                      </tr>
-                    )
-                  )}
-                </tbody> */}
-                <tbody>
-                  {OrganizationContent.table[isEnglish ? "en" : "kn"].map(
-                    (row, idx) => {
-                      const isLast =
-                        idx ===
-                        OrganizationContent.table[isEnglish ? "en" : "kn"]
-                          .length -
-                          1;
-                      return (
-                        <tr
-                          key={idx}
-                          className={`hover:bg-gray-50 ${
-                            isLast ? "" : "border-b"
-                          }`}
-                        >
-                          <td
-                            className={`px-6 py-3 text-center ${
-                              isLast ? "font-bold text-lg" : ""
-                            }`}
-                          >
-                            {isLast ? "" : idx + 1}
-                          </td>
-                          <td
-                            className={`px-6 py-3 text-center ${
-                              isLast ? "font-bold text-lg" : ""
-                            }`}
-                          >
-                            {row.district}
-                          </td>
-                          <td
-                            className={`px-6 py-3 text-center ${
-                              isLast ? "font-bold text-lg" : ""
-                            }`}
-                          >
-                            {row.members}
-                          </td>
-                        </tr>
-                      );
-                    }
-                  )}
-                </tbody>
-              </table>
-            </div>
+  <table className="w-full bg-white rounded-lg shadow-lg border-collapse">
+    <thead>
+      <tr className="bg-gradient-to-r from-green-500 to-blue-500 text-white uppercase font-semibold shadow-lg">
+        <th className="px-6 py-4 text-center">S.No</th>
+        <th className="px-6 py-4 text-center">ಜಿಲ್ಲೆ / District</th>
+        <th className="px-6 py-4 text-center">ಸದಸ್ಯರು / Seats</th>
+        <th className="px-6 py-4 text-center">ಸದಸ್ಯರ ವಿವರಗಳು / Member Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {OrganizationContent.members.map((row, idx) => (
+        <tr
+          key={idx}
+          className={`hover:bg-gray-100 transition-colors duration-300 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50"} ${
+            idx === OrganizationContent.members.length - 1 ? "border-b-4 border-blue-300" : ""
+          }`}
+        >
+          <td className="px-6 py-3 text-center font-bold text-lg">{idx + 1}</td>
+          <td className="px-6 py-3 text-center font-medium">{row.district.kn}</td>
+          <td className="px-6 py-3 text-center font-medium">{row.seats}</td>
+          <td className="px-6 py-3 text-left">
+            {row.members && row.members.length > 0 ? (
+              <ul className="list-disc list-inside text-sm space-y-1">
+                {row.members.map((member, mIdx) => (
+                  <li key={mIdx} className="text-gray-800">
+                    <strong className="text-indigo-600">{member.name}</strong>, {member.designation}
+                    {member.mobile && `, [translate:ಮೊ.] ${member.mobile}`}
+                    {member.location && `, ${member.location}`}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              ""
+            )}
+          </td>
+        </tr>
+      ))}
+
+      {/* Attractive Total Row */}
+      <tr className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold text-xl border-t-4 border-yellow-300 shadow-inner">
+        <td className="px-6 py-4 text-center" colSpan={2}>Total</td>
+        <td className="px-6 py-4 text-center">45</td>
+        <td className="px-6 py-4" />
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            
             {/* <div className="mt-6 flex justify-between font-bold">
               <span>{isEnglish ? "Total: " : "ಒಟ್ಟು: "}</span>
               <p>

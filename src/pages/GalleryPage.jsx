@@ -818,8 +818,27 @@ const GalleryPage = () => {
   const toggleLanguage = () => {
     dispatch(setLanguage(!user.language));
   };
-  // Hardcoded cards data with bilingual headings & banners and images
+
+  // Updated cards array with News Paper Report as the first card
   const cards = [
+    {
+      heading: {
+        en: "News Paper Report – November 2025",
+        kn: "ಸುದ್ದಿ ಪತ್ರಿಕೆ ವರದಿ – ನವೆಂಬರ್ 2025"
+      },
+      banner: "/assets/nov2.jpeg",
+      images: [
+        { src: "/assets/nov1.jpeg", alt: "News Report Photo 1" },
+        { src: "/assets/nov2.jpeg", alt: "News Report Photo 2" },
+        { src: "/assets/nov3.jpeg", alt: "News Report Photo 3" },
+        { src: "/assets/nov4.jpeg", alt: "News Report Photo 4" },
+        { src: "/assets/nov5.jpeg", alt: "News Report Photo 5" },
+        { src: "/assets/nov6.jpeg", alt: "News Report Photo 6" },
+        { src: "/assets/nov7.jpeg", alt: "News Report Photo 7" },
+        { src: "/assets/nov8.jpeg", alt: "News Report Photo 8" },
+        { src: "/assets/nov9.jpeg", alt: "News Report Photo 9" }
+      ]
+    },
     {
       heading: {
         en: "Meeting of Madiga Leaders under the Jurisdiction of Bruhat Bangalore Mahanagara Palike, Date: 27.05.2025, 9 am, Gandhi Bhavan, Bangalore",
@@ -935,16 +954,13 @@ const GalleryPage = () => {
     {
       heading: {
         en: "Internal Reservation Protest, Date: 14/08/2025 to 19/08/2025, Freedom Park Bengaluru.",
-        kn: "ಒಳ ಮೀಸಲಾತಿ ಪ್ರತಿಭಟನೆ, ದಿನಾಂಕ: 14/08/2025 ರಿಂದ 19/08/2025, ಫ್ರೀಡಂ ಪಾರ್ಕ್ ಬೆಂಗಳೂರು.",
+        kn: "ಒಳ ಮೀಸಲಾತಿ ಪ್ರತಿಭಟನೆ, ದಿನಾಂಕ: 14/08/2025 ರಿಂದ 19/08/2025, ಫ್ರೀಡಂ ಪಾರ್ಕ್ ಬೆಂಗಳೂರ.",
       },
       banner: "/assets/vala/vala3.jpeg",
       images: [
         { src: "/assets/vala/vala1.jpeg", alt: "Image 1" },
         { src: "/assets/vala/vala2.jpeg", alt: "Image 1" },
         { src: "/assets/vala/vala3.jpeg", alt: "Image 1" },
-        // { src: "/assets/vala/vala4.jpeg", alt: "Image 1" },
-        // { src: "/assets/vala/vala5.jpeg", alt: "Image 1" },
-        // { src: "/assets/vala/vala6.jpeg", alt: "Image 1" },
       ],
     },
     {
@@ -985,7 +1001,7 @@ const GalleryPage = () => {
         { src: "/assets/dvg14.jpeg", alt: "Image 14" },
         { src: "/assets/dvg15.jpeg", alt: "Image 15" },
         { src: "/assets/dvg16.jpeg", alt: "Image 16" },
- ],
+      ],
     },
   ];
 
@@ -1044,9 +1060,8 @@ const GalleryPage = () => {
 
   return (
     <>
-      {/* Header component can be added here */}
+      {/* Header */}
       <div className="flex items-center justify-between mb-8 px-4 sm:px-6 lg:px-8">
-        {/* Back Button */}
         <button
           className="flex items-center gap-3 px-6 py-2 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition-all duration-300 cursor-pointer"
           onClick={() => {
@@ -1219,153 +1234,31 @@ const GalleryPage = () => {
                 onClick={goFullscreen}
                 title={isEnglish ? "Click to fullscreen" : "ಪೂರ್ಣ ಪರದೆಯಲ್ಲಿ ತೋರಿ"}
               >
-                {/* Your existing video iframes */}
-                
-                <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="/assets/vala/vala9.mp4"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 1"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div>
-    <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="/assets/vala/vala8.mp4"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 1"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div>
-    <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="/assets/vala/vala7.mp4"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 1"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div>
-    <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="/assets/vala/reel2.mp4"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 1"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div>
-    <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=735925022409049&show_text=0"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 1"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div>
-    {/* <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="https://www.facebook.com/KhMuniyappa/videos/1206990601450475/?rdid=8iLbIxG3rdvxm5dj#"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 3"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div>
-    <div style={{ width: "100%" }}>
-      <iframe
-        ref={iframeRef}
-        src="https://www.facebook.com/reel/1409591313460435"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowFullScreen
-        title="Facebook Video 4"
-        style={{
-          border: "none",
-          overflow: "hidden",
-          width: "100%",
-          height: "315px",
-          maxWidth: "560px",
-          display: "block",
-          margin: "0 auto",
-        }}
-      />
-    </div> */}
-    
-
-                {/* Add more video iframe blocks here if needed */}
-              </div>
-            )}
-
-            {activeTab === "youtube" && (
-              <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8 mt-6">
+                {/* November video as first video */}
                 <div style={{ width: "100%" }}>
                   <iframe
                     ref={iframeRef}
-                    src="https://www.youtube.com/embed/tZ--pSLGOhY"
+                    src="/assets/novvideo.mp4"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    title={isEnglish ? "November Event Video" : "ನವೆಂಬರ್ ಈವೆಂಟ್ ವೀಡಿಯೊ"}
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                      width: "100%",
+                      height: "315px",
+                      maxWidth: "560px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+                {/* Existing videos */}
+                <div style={{ width: "100%" }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="/assets/vala/vala9.mp4"
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
@@ -1381,7 +1274,106 @@ const GalleryPage = () => {
                     }}
                   />
                 </div>
+                <div style={{ width: "100%" }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="/assets/vala/vala8.mp4"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    title="Facebook Video 1"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                      width: "100%",
+                      height: "315px",
+                      maxWidth: "560px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+                <div style={{ width: "100%" }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="/assets/vala/vala7.mp4"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    title="Facebook Video 1"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                      width: "100%",
+                      height: "315px",
+                      maxWidth: "560px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+                <div style={{ width: "100%" }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="/assets/vala/reel2.mp4"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    title="Facebook Video 1"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                      width: "100%",
+                      height: "315px",
+                      maxWidth: "560px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+                <div style={{ width: "100%" }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=735925022409049&show_text=0"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    title="Facebook Video 1"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                      width: "100%",
+                      height: "315px",
+                      maxWidth: "560px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+              </div>
+            )}
 
+            {activeTab === "youtube" && (
+              <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8 mt-6">
+                <div style={{ width: "100%" }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="https://www.youtube.com/embed/tZ--pSLGOhY"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    title="Youtube Video 1"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                      width: "100%",
+                      height: "315px",
+                      maxWidth: "560px",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
                 <div style={{ width: "100%" }}>
                   <iframe
                     ref={iframeRef}
@@ -1389,7 +1381,7 @@ const GalleryPage = () => {
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
-                    title="Youtube Video 1"
+                    title="Youtube Video 2"
                     style={{
                       border: "none",
                       overflow: "hidden",
@@ -1401,7 +1393,6 @@ const GalleryPage = () => {
                     }}
                   />
                 </div>
-
                 <div style={{ width: "100%" }}>
                   <iframe
                     ref={iframeRef}
@@ -1409,7 +1400,7 @@ const GalleryPage = () => {
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
-                    title="Youtube Video 1"
+                    title="Youtube Video 3"
                     style={{
                       border: "none",
                       overflow: "hidden",
@@ -1421,7 +1412,6 @@ const GalleryPage = () => {
                     }}
                   />
                 </div>
-
                 <div style={{ width: "100%" }}>
                   <iframe
                     ref={iframeRef}
@@ -1429,7 +1419,7 @@ const GalleryPage = () => {
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
-                    title="Youtube Video 1"
+                    title="Youtube Video 4"
                     style={{
                       border: "none",
                       overflow: "hidden",
@@ -1441,7 +1431,6 @@ const GalleryPage = () => {
                     }}
                   />
                 </div>
-
                 <div style={{ width: "100%" }}>
                   <iframe
                     ref={iframeRef}
@@ -1449,7 +1438,7 @@ const GalleryPage = () => {
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
-                    title="Youtube Video 1"
+                    title="Youtube Video 5"
                     style={{
                       border: "none",
                       overflow: "hidden",
@@ -1461,7 +1450,6 @@ const GalleryPage = () => {
                     }}
                   />
                 </div>
-
                 <div style={{ width: "100%" }}>
                   <iframe
                     ref={iframeRef}
@@ -1469,7 +1457,7 @@ const GalleryPage = () => {
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
-                    title="Youtube Video 1"
+                    title="Youtube Video 6"
                     style={{
                       border: "none",
                       overflow: "hidden",
@@ -1500,7 +1488,6 @@ const GalleryPage = () => {
           >
             <X size={32} />
           </button>
-
           {/* Carousel Container */}
           <div
             className="relative w-full max-w-4xl h-full max-h-[85vh] flex items-center justify-center"
@@ -1513,14 +1500,12 @@ const GalleryPage = () => {
             >
               <ChevronLeft size={28} />
             </button>
-
             {/* Image Display */}
             <img
               src={currentImages[currentImageIndex].src}
               alt={currentImages[currentImageIndex].alt}
               className="max-w-full max-h-full object-contain rounded-lg"
             />
-
             {/* Next Button */}
             <button
               className="absolute right-0 sm:-right-12 top-1/2 -translate-y-1/2 p-2 bg-white/20 hover:bg-white/30 rounded-full text-white"
@@ -1538,3 +1523,4 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
+
