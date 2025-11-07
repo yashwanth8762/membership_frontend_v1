@@ -255,7 +255,7 @@ const MembershipCard = ({
             {/* Logo image on left */}
             <div className="flex-shrink-0 ">
   <img
-    src="assets/logo1.png"
+    src="assets/logo_updated.png"
     alt="Logo"
     crossOrigin="anonymous"
     style={{ height: 75, width: 160, objectFit: "contain" }} // increased size

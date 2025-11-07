@@ -497,9 +497,9 @@ export default function Header({ theme = "transparent" }) {
             {/* Logo 1 */}
             <a href="/" className="flex items-center group">
               <img
-                src="/assets/logo1.png"
+                src="/assets/logo_updated.png"
                 alt="Logo 1"
-                className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-15 w-auto transition-transform duration-300 group-hover:scale-105"
                 draggable="false"
               />
             </a>
@@ -519,9 +519,9 @@ export default function Header({ theme = "transparent" }) {
             <div className="hidden lg:flex flex-shrink-0">
               <a href="/" className="flex items-center group">
                 <img
-                  src="/assets/logo1.png"
+                  src="/assets/logo_updated.png"
                   alt="Logo 1"
-                  className="h-16 xl:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+                  className="h-20 xl:h-30 w-auto transition-transform duration-300 group-hover:scale-105"
                   draggable="false"
                 />
               </a>
@@ -700,7 +700,7 @@ export default function Header({ theme = "transparent" }) {
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
           <div className="flex items-center space-x-2">
-            <img src="/assets/logo1.png" alt="Logo" className="h-8 w-auto" draggable="false" />
+            <img src="/assets/logo.jgeg" alt="Logo" className="h-8 w-auto" draggable="false" />
           </div>
           <button
             onClick={() => setMenuOpen(false)}
