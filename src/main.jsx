@@ -10,6 +10,8 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrolltoTop.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 const reducers = combineReducers({
   user: userReducer,
@@ -42,6 +44,7 @@ root.render(
         <BrowserRouter>
         <ScrollToTop />
           <App />
+          <ToastContainer />
         </BrowserRouter>
       </PersistGate>
     </Provider>

@@ -3,6 +3,7 @@ import axios from "axios";
 import { API_BASE_URL } from "../../config";
 import MembershipCard from "../components/MembershipCard";
 import { useNavigate } from "react-router-dom";
+import { notifyError, notifyWarning } from "../utils/toastify";
 
 export default function UserMembership() {
   const [form, setForm] = useState(null);
@@ -145,6 +146,16 @@ export default function UserMembership() {
       return;
     }
     const selectedFile = files[0];
+    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    
+    if (selectedFile.size > maxSize) {
+      const errorMsg = `File size is too large. Please compress the image and upload a file less than 5MB. Current size: ${(selectedFile.size / (1024 * 1024)).toFixed(2)}MB`;
+      setError(errorMsg);
+      setSuccess("");
+      notifyWarning(errorMsg);
+      return;
+    }
+    
     const newFileObj = {
       file: selectedFile,
       status: "pending",
@@ -153,6 +164,7 @@ export default function UserMembership() {
       preview: URL.createObjectURL(selectedFile),
     };
     setMediaFiles((prev) => ({ ...prev, [label]: [newFileObj] }));
+    setError("");
   };
 
   const handleSaveMedia = async (label, index) => {
@@ -183,8 +195,19 @@ export default function UserMembership() {
       }
     } catch (err) {
       updateMediaStatus(label, index, "pending");
-      setError(`Failed to upload ${fileObj.name}: ${err.message}`);
-      setSuccess("");
+      
+      // Handle 413 Payload Too Large error
+      if (err.response?.status === 413) {
+        const errorMessage = `File size is too large. Please compress the image and upload a file less than 5MB.`;
+        setError(errorMessage);
+        setSuccess("");
+        notifyError(errorMessage);
+      } else {
+        const errorMsg = `Failed to upload ${fileObj.name}: ${err.response?.data?.message || err.message}`;
+        setError(errorMsg);
+        setSuccess("");
+        notifyError(errorMsg);
+      }
     }
   };
 
@@ -714,6 +737,19 @@ export default function UserMembership() {
 
                         {field.inputType === "media" && (
                           <div className="w-full">
+                            <div
+                              style={{
+                                fontSize: "0.875rem",
+                                color: "#64748b",
+                                marginBottom: "6px",
+                                padding: "8px 12px",
+                                background: "#f8fafc",
+                                borderRadius: "6px",
+                                border: "1px solid #e2e8f0",
+                              }}
+                            >
+                              <strong style={{ color: "#475569" }}>Note:</strong> Maximum file size is 5MB. Please compress the image before uploading if it exceeds this limit.
+                            </div>
                             <input
                               type="file"
                               accept="image/*"
