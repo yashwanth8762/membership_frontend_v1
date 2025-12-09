@@ -146,10 +146,10 @@ export default function UserMembership() {
       return;
     }
     const selectedFile = files[0];
-    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    const maxSize = 10 * 1024 * 1024; // 10MB in bytes
     
     if (selectedFile.size > maxSize) {
-      const errorMsg = `File size is too large. Please compress the image and upload a file less than 5MB. Current size: ${(selectedFile.size / (1024 * 1024)).toFixed(2)}MB`;
+      const errorMsg = `File size is too large. Please compress the image and upload a file less than 10MB. Current size: ${(selectedFile.size / (1024 * 1024)).toFixed(2)}MB`;
       setError(errorMsg);
       setSuccess("");
       notifyWarning(errorMsg);
@@ -198,7 +198,7 @@ export default function UserMembership() {
       
       // Handle 413 Payload Too Large error
       if (err.response?.status === 413) {
-        const errorMessage = `File size is too large. Please compress the image and upload a file less than 5MB.`;
+        const errorMessage = `File size is too large. Please compress the image and upload a file less than 10MB.`;
         setError(errorMessage);
         setSuccess("");
         notifyError(errorMessage);
@@ -748,7 +748,7 @@ export default function UserMembership() {
                                 border: "1px solid #e2e8f0",
                               }}
                             >
-                              <strong style={{ color: "#475569" }}>Note:</strong> Maximum file size is 5MB. Please compress the image before uploading if it exceeds this limit.
+                              <strong style={{ color: "#475569" }}>Note:</strong> Maximum file size is 10MB. Please compress the image before uploading if it exceeds this limit.
                             </div>
                             <input
                               type="file"
