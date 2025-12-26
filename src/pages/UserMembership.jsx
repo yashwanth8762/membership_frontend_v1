@@ -110,6 +110,7 @@ export default function UserMembership() {
         initialValues["Blood Group"] = "";
         initialValues["Email ID"] = "";
         initialValues["Adhar No"] = "";
+        initialValues["Referred By"] = "";
         initialValues["Membership Amount"] = "";
 
         setValues(initialValues);
@@ -307,11 +308,13 @@ export default function UserMembership() {
 
       const emailVal = values["Email ID"] || "";
       const adharVal = values["Adhar No"] || "";
+      const referredByVal = values["Referred By"] || "";
 
       submissionValues.push(
         { label: "Blood Group", value: values["Blood Group"] || "", media: [] },
         { label: "Email ID", value: emailVal, media: [] },
-        { label: "Adhar No", value: adharVal, media: [] }
+        { label: "Adhar No", value: adharVal, media: [] },
+        { label: "Referred By", value: referredByVal, media: [] }
       );
 
       setLoading(true);
@@ -322,6 +325,7 @@ export default function UserMembership() {
         adhar_no: adharVal,
         email: emailVal,
         bloodGroup: values["Blood Group"] || "",
+        referredBy: referredByVal,
         values: submissionValues,
       });
       window.location.href = res.data.checkoutPageUrl;
@@ -862,6 +866,26 @@ export default function UserMembership() {
                       onChange={(e) => handleChange("Adhar No", e.target.value)}
                       required
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+                  </div>
+                  {/* Referred By */}
+                  <div>
+                    <label
+                      style={{
+                        fontWeight: 500,
+                        color: "#334155",
+                        display: "block",
+                        marginBottom: 6,
+                      }}
+                    >
+                      Referred By
+                    </label>
+                    <input
+                      type="text"
+                      value={values["Referred By"] || ""}
+                      onChange={(e) => handleChange("Referred By", e.target.value)}
+                      className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      placeholder="Enter referrer name (optional)"
                     />
                   </div>
                 </div>

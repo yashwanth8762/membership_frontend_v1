@@ -209,6 +209,8 @@ const MembershipCard = ({
     getValue("ವಿದ್ಯಾರ್ಹತೆ/ ವೃತ್ತಿ / Qualification/ Profession") ||
     "ನೋಡಿ";
 
+  const referredBy = membershipData?.referredBy || "";
+
   const photo = getPhoto();
 
   const cardId = membershipNumber;
@@ -344,6 +346,12 @@ const MembershipCard = ({
                 <span className="font-semibold">ವಿದ್ಯಾರ್ಹತೆ: </span>
                 <span>{education}</span>
               </div>
+              {referredBy && (
+                <div className="mb-0.5 text-sm font-medium">
+                  <span className="font-semibold">ಉಲ್ಲೇಖಿಸಿದವರು: </span>
+                  <span>{referredBy}</span>
+                </div>
+              )}
             </div>
 
             {/* Right side - Photo */}
