@@ -1,4 +1,4 @@
-import{e as Nu,f as Rs,g as Gu}from"./index-DIZgLPCq.js";import{j as Vu}from"./jspdf.es.min-Bcb6s3HK.js";var Yt={exports:{}};const Xu=Nu(Vu);var lt={exports:{}};/*!
+import{e as Nu,f as Rs,g as Gu}from"./index-D1EchvKI.js";import{j as Vu}from"./jspdf.es.min-ChIeBxZ5.js";var Yt={exports:{}};const Xu=Nu(Vu);var lt={exports:{}};/*!
  * html2canvas 1.4.1 <https://html2canvas.hertzen.com>
  * Copyright (c) 2022 Niklas von Hertzen <https://hertzen.com>
  * Released under MIT License
