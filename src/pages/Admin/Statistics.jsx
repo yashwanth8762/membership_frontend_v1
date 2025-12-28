@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import * as XLSX from "xlsx";
 import AdminLayout from "./AdminLayout";
 import { API_BASE_URL } from "../../../config";
 import { notifyError, notifySuccess } from "../../utils/toastify";
@@ -28,151 +27,290 @@ export default function Statistics() {
     }
   };
 
-  const handleDownloadDistrictStats = () => {
+  const handleDownloadDistrictStats = async () => {
     if (!statistics || !statistics.districtStats) {
       notifyError("No district statistics available to download.");
       return;
     }
 
-    const rows = [];
-    statistics.districtStats.forEach((district) => {
-      // Add district row
-      rows.push({
-        "District Name (English)": district.districtName,
-        "District Name (Kannada)": district.districtKName,
-        "Total Memberships": district.totalMemberships,
-        "Taluk Name (English)": "",
-        "Taluk Name (Kannada)": "",
-        "Taluk Memberships": "",
+    try {
+      const { jsPDF } = await import("jspdf");
+      const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4",
       });
 
-      // Add taluk rows under this district
-      district.taluks.forEach((taluk) => {
-        rows.push({
-          "District Name (English)": "",
-          "District Name (Kannada)": "",
-          "Total Memberships": "",
-          "Taluk Name (English)": taluk.talukName,
-          "Taluk Name (Kannada)": taluk.talukKName,
-          "Taluk Memberships": taluk.count,
-        });
+      // Title
+      pdf.setFontSize(18);
+      pdf.text("District & Taluk Statistics", 105, 20, { align: "center" });
+      
+      pdf.setFontSize(10);
+      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 30, { align: "center" });
+
+      let yPos = 45;
+      const pageHeight = 280;
+      const lineHeight = 8;
+      const margin = 15;
+
+      pdf.setFontSize(12);
+      pdf.setFont(undefined, "bold");
+
+      statistics.districtStats.forEach((district, idx) => {
+        // Check if we need a new page
+        if (yPos > pageHeight - 30) {
+          pdf.addPage();
+          yPos = 20;
+        }
+
+        // District header
+        pdf.setFontSize(12);
+        pdf.setFont(undefined, "bold");
+        pdf.text(`District: ${district.districtName} (${district.districtKName})`, margin, yPos);
+        yPos += lineHeight;
+        pdf.text(`Total Memberships: ${district.totalMemberships}`, margin + 5, yPos);
+        yPos += lineHeight + 2;
+
+        // Taluk details
+        pdf.setFontSize(10);
+        pdf.setFont(undefined, "normal");
+        if (district.taluks.length === 0) {
+          pdf.text("No taluks in this district", margin + 10, yPos);
+          yPos += lineHeight;
+        } else {
+          district.taluks.forEach((taluk) => {
+            if (yPos > pageHeight - 20) {
+              pdf.addPage();
+              yPos = 20;
+            }
+            pdf.text(`  • ${taluk.talukName} (${taluk.talukKName}): ${taluk.count} memberships`, margin + 10, yPos);
+            yPos += lineHeight;
+          });
+        }
+        yPos += 5; // Space between districts
       });
 
-      // Add empty row for spacing
-      rows.push({
-        "District Name (English)": "",
-        "District Name (Kannada)": "",
-        "Total Memberships": "",
-        "Taluk Name (English)": "",
-        "Taluk Name (Kannada)": "",
-        "Taluk Memberships": "",
-      });
-    });
-
-    const ws = XLSX.utils.json_to_sheet(rows);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "District & Taluk Statistics");
-    XLSX.writeFile(wb, `district_taluk_statistics.xlsx`);
-    notifySuccess("Statistics downloaded successfully!");
+      pdf.save("district_taluk_statistics.pdf");
+      notifySuccess("District statistics PDF downloaded successfully!");
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      notifyError("Failed to generate PDF.");
+    }
   };
 
-  const handleDownloadTalukStats = () => {
+  const handleDownloadTalukStats = async () => {
     if (!statistics || !statistics.talukStats) {
       notifyError("No taluk statistics available to download.");
       return;
     }
 
-    const rows = statistics.talukStats.map((taluk) => ({
-      "Taluk Name (English)": taluk.talukName,
-      "Taluk Name (Kannada)": taluk.talukKName,
-      "District Name (English)": taluk.districtName,
-      "District Name (Kannada)": taluk.districtKName,
-      "Total Memberships": taluk.count,
-    }));
+    try {
+      const { jsPDF } = await import("jspdf");
+      const pdf = new jsPDF({
+        orientation: "landscape",
+        unit: "mm",
+        format: "a4",
+      });
 
-    const ws = XLSX.utils.json_to_sheet(rows);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Taluk Statistics");
-    XLSX.writeFile(wb, `taluk_statistics.xlsx`);
-    notifySuccess("Taluk statistics downloaded successfully!");
+      // Title
+      pdf.setFontSize(18);
+      pdf.text("Taluk Statistics", 148, 20, { align: "center" });
+      
+      pdf.setFontSize(10);
+      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 148, 30, { align: "center" });
+
+      // Table headers
+      let yPos = 45;
+      const pageHeight = 200;
+      const lineHeight = 8;
+      const margin = 15;
+      const colWidths = [40, 40, 35, 35, 25];
+      const colPositions = [margin, margin + 45, margin + 90, margin + 130, margin + 170];
+
+      pdf.setFontSize(10);
+      pdf.setFont(undefined, "bold");
+      pdf.text("Taluk (EN)", colPositions[0], yPos);
+      pdf.text("Taluk (KN)", colPositions[1], yPos);
+      pdf.text("District (EN)", colPositions[2], yPos);
+      pdf.text("District (KN)", colPositions[3], yPos);
+      pdf.text("Count", colPositions[4], yPos);
+      
+      yPos += lineHeight;
+      pdf.setDrawColor(200, 200, 200);
+      pdf.line(margin, yPos, 200, yPos);
+      yPos += 3;
+
+      // Table rows
+      pdf.setFont(undefined, "normal");
+      statistics.talukStats.forEach((taluk) => {
+        if (yPos > pageHeight) {
+          pdf.addPage();
+          yPos = 20;
+          // Redraw headers
+          pdf.setFont(undefined, "bold");
+          pdf.text("Taluk (EN)", colPositions[0], yPos);
+          pdf.text("Taluk (KN)", colPositions[1], yPos);
+          pdf.text("District (EN)", colPositions[2], yPos);
+          pdf.text("District (KN)", colPositions[3], yPos);
+          pdf.text("Count", colPositions[4], yPos);
+          yPos += lineHeight;
+          pdf.line(margin, yPos, 200, yPos);
+          yPos += 3;
+          pdf.setFont(undefined, "normal");
+        }
+
+        pdf.text(taluk.talukName || "", colPositions[0], yPos);
+        pdf.text(taluk.talukKName || "", colPositions[1], yPos);
+        pdf.text(taluk.districtName || "", colPositions[2], yPos);
+        pdf.text(taluk.districtKName || "", colPositions[3], yPos);
+        pdf.text(taluk.count.toString(), colPositions[4], yPos);
+        yPos += lineHeight;
+      });
+
+      pdf.save("taluk_statistics.pdf");
+      notifySuccess("Taluk statistics PDF downloaded successfully!");
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      notifyError("Failed to generate PDF.");
+    }
   };
 
-  const handleDownloadAllStats = () => {
+  const handleDownloadAllStats = async () => {
     if (!statistics) {
       notifyError("No statistics available to download.");
       return;
     }
 
-    const wb = XLSX.utils.book_new();
-
-    // Summary sheet
-    const summaryRows = [
-      { Metric: "Total Districts", Value: statistics.summary.totalDistricts },
-      { Metric: "Total Taluks", Value: statistics.summary.totalTaluks },
-      { Metric: "Total Memberships", Value: statistics.summary.totalMemberships },
-    ];
-    const summaryWs = XLSX.utils.json_to_sheet(summaryRows);
-    XLSX.utils.book_append_sheet(wb, summaryWs, "Summary");
-
-    // District statistics sheet
-    const districtRows = [];
-    statistics.districtStats.forEach((district) => {
-      districtRows.push({
-        "District Name (English)": district.districtName,
-        "District Name (Kannada)": district.districtKName,
-        "Total Memberships": district.totalMemberships,
-        "Number of Taluks": district.taluks.length,
+    try {
+      const { jsPDF } = await import("jspdf");
+      const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4",
       });
-    });
-    const districtWs = XLSX.utils.json_to_sheet(districtRows);
-    XLSX.utils.book_append_sheet(wb, districtWs, "District Statistics");
 
-    // Taluk statistics sheet
-    const talukRows = statistics.talukStats.map((taluk) => ({
-      "Taluk Name (English)": taluk.talukName,
-      "Taluk Name (Kannada)": taluk.talukKName,
-      "District Name (English)": taluk.districtName,
-      "District Name (Kannada)": taluk.districtKName,
-      "Total Memberships": taluk.count,
-    }));
-    const talukWs = XLSX.utils.json_to_sheet(talukRows);
-    XLSX.utils.book_append_sheet(wb, talukWs, "Taluk Statistics");
+      let yPos = 20;
+      const pageHeight = 280;
+      const lineHeight = 8;
+      const margin = 15;
 
-    // Detailed district-taluk breakdown
-    const detailedRows = [];
-    statistics.districtStats.forEach((district) => {
-      detailedRows.push({
-        "District Name (English)": district.districtName,
-        "District Name (Kannada)": district.districtKName,
-        "Total Memberships": district.totalMemberships,
-        "Taluk Name (English)": "",
-        "Taluk Name (Kannada)": "",
-        "Taluk Memberships": "",
-      });
-      district.taluks.forEach((taluk) => {
-        detailedRows.push({
-          "District Name (English)": "",
-          "District Name (Kannada)": "",
-          "Total Memberships": "",
-          "Taluk Name (English)": taluk.talukName,
-          "Taluk Name (Kannada)": taluk.talukKName,
-          "Taluk Memberships": taluk.count,
-        });
-      });
-      detailedRows.push({
-        "District Name (English)": "",
-        "District Name (Kannada)": "",
-        "Total Memberships": "",
-        "Taluk Name (English)": "",
-        "Taluk Name (Kannada)": "",
-        "Taluk Memberships": "",
-      });
-    });
-    const detailedWs = XLSX.utils.json_to_sheet(detailedRows);
-    XLSX.utils.book_append_sheet(wb, detailedWs, "Detailed Breakdown");
+      // Summary Section
+      pdf.setFontSize(18);
+      pdf.setFont(undefined, "bold");
+      pdf.text("Complete Statistics Report", 105, yPos, { align: "center" });
+      yPos += 10;
 
-    XLSX.writeFile(wb, `complete_statistics.xlsx`);
-    notifySuccess("Complete statistics downloaded successfully!");
+      pdf.setFontSize(10);
+      pdf.setFont(undefined, "normal");
+      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, yPos, { align: "center" });
+      yPos += 15;
+
+      pdf.setFontSize(14);
+      pdf.setFont(undefined, "bold");
+      pdf.text("Summary", margin, yPos);
+      yPos += lineHeight + 2;
+
+      pdf.setFontSize(11);
+      pdf.setFont(undefined, "normal");
+      pdf.text(`Total Districts: ${statistics.summary.totalDistricts}`, margin + 5, yPos);
+      yPos += lineHeight;
+      pdf.text(`Total Taluks: ${statistics.summary.totalTaluks}`, margin + 5, yPos);
+      yPos += lineHeight;
+      pdf.text(`Total Memberships: ${statistics.summary.totalMemberships}`, margin + 5, yPos);
+      yPos += 15;
+
+      // District Statistics Section
+      if (yPos > pageHeight - 50) {
+        pdf.addPage();
+        yPos = 20;
+      }
+
+      pdf.setFontSize(14);
+      pdf.setFont(undefined, "bold");
+      pdf.text("District Statistics", margin, yPos);
+      yPos += lineHeight + 2;
+
+      pdf.setFontSize(10);
+      pdf.setFont(undefined, "normal");
+      statistics.districtStats.forEach((district) => {
+        if (yPos > pageHeight - 20) {
+          pdf.addPage();
+          yPos = 20;
+        }
+        pdf.text(`${district.districtName} (${district.districtKName}): ${district.totalMemberships} memberships, ${district.taluks.length} taluks`, margin + 5, yPos);
+        yPos += lineHeight;
+      });
+      yPos += 10;
+
+      // Taluk Statistics Section
+      if (yPos > pageHeight - 50) {
+        pdf.addPage();
+        yPos = 20;
+      }
+
+      pdf.setFontSize(14);
+      pdf.setFont(undefined, "bold");
+      pdf.text("Taluk Statistics", margin, yPos);
+      yPos += lineHeight + 2;
+
+      pdf.setFontSize(10);
+      pdf.setFont(undefined, "normal");
+      statistics.talukStats.forEach((taluk) => {
+        if (yPos > pageHeight - 20) {
+          pdf.addPage();
+          yPos = 20;
+        }
+        pdf.text(`${taluk.talukName} (${taluk.talukKName}) - ${taluk.districtName}: ${taluk.count} memberships`, margin + 5, yPos);
+        yPos += lineHeight;
+      });
+      yPos += 10;
+
+      // Detailed Breakdown Section
+      if (yPos > pageHeight - 50) {
+        pdf.addPage();
+        yPos = 20;
+      }
+
+      pdf.setFontSize(14);
+      pdf.setFont(undefined, "bold");
+      pdf.text("Detailed District-Taluk Breakdown", margin, yPos);
+      yPos += lineHeight + 2;
+
+      pdf.setFontSize(10);
+      pdf.setFont(undefined, "normal");
+      statistics.districtStats.forEach((district) => {
+        if (yPos > pageHeight - 30) {
+          pdf.addPage();
+          yPos = 20;
+        }
+
+        pdf.setFont(undefined, "bold");
+        pdf.text(`${district.districtName} (${district.districtKName}) - Total: ${district.totalMemberships}`, margin + 5, yPos);
+        yPos += lineHeight;
+
+        pdf.setFont(undefined, "normal");
+        if (district.taluks.length === 0) {
+          pdf.text("  No taluks in this district", margin + 10, yPos);
+          yPos += lineHeight;
+        } else {
+          district.taluks.forEach((taluk) => {
+            if (yPos > pageHeight - 20) {
+              pdf.addPage();
+              yPos = 20;
+            }
+            pdf.text(`  • ${taluk.talukName} (${taluk.talukKName}): ${taluk.count} memberships`, margin + 10, yPos);
+            yPos += lineHeight;
+          });
+        }
+        yPos += 3;
+      });
+
+      pdf.save("complete_statistics.pdf");
+      notifySuccess("Complete statistics PDF downloaded successfully!");
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      notifyError("Failed to generate PDF.");
+    }
   };
 
   return (
@@ -186,21 +324,21 @@ export default function Statistics() {
               disabled={loading || !statistics}
               className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none transition"
             >
-              Download District Stats
+              Download District Stats PDF
             </button>
             <button
               onClick={handleDownloadTalukStats}
               disabled={loading || !statistics}
               className="bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none transition"
             >
-              Download Taluk Stats
+              Download Taluk Stats PDF
             </button>
             <button
               onClick={handleDownloadAllStats}
               disabled={loading || !statistics}
               className="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none transition"
             >
-              Download All Stats
+              Download Complete Report PDF
             </button>
           </div>
         </div>
