@@ -27,6 +27,33 @@ export default function Statistics() {
     }
   };
 
+  // Helper function to draw a table row
+  const drawTableRow = (pdf, x, y, width, height, data, isHeader = false, isBold = false) => {
+    const colWidth = width / data.length;
+    pdf.setFont(undefined, isBold ? "bold" : "normal");
+    pdf.setFontSize(isHeader ? 11 : 10);
+    
+    // Draw cell borders
+    pdf.setDrawColor(200, 200, 200);
+    let currentX = x;
+    data.forEach((text, idx) => {
+      // Draw cell border
+      pdf.rect(currentX, y, colWidth, height);
+      
+      // Draw text (centered for numbers, left-aligned for text)
+      const textX = currentX + (idx === data.length - 1 ? colWidth / 2 : 3);
+      const textY = y + height / 2 + 3;
+      pdf.text(String(text || ""), textX, textY, {
+        align: idx === data.length - 1 ? "center" : "left",
+        maxWidth: colWidth - 6
+      });
+      
+      currentX += colWidth;
+    });
+    
+    return y + height;
+  };
+
   const handleDownloadDistrictStats = async () => {
     if (!statistics || !statistics.districtStats) {
       notifyError("No district statistics available to download.");
@@ -43,48 +70,82 @@ export default function Statistics() {
 
       // Title
       pdf.setFontSize(18);
-      pdf.text("District & Taluk Statistics", 105, 20, { align: "center" });
+      pdf.setFont(undefined, "bold");
+      pdf.text("District & Taluk Statistics", 105, 15, { align: "center" });
       
       pdf.setFontSize(10);
-      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 30, { align: "center" });
+      pdf.setFont(undefined, "normal");
+      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 22, { align: "center" });
 
-      let yPos = 45;
+      let yPos = 35;
       const pageHeight = 280;
-      const lineHeight = 8;
+      const rowHeight = 8;
       const margin = 15;
+      const tableWidth = 180;
 
+      // Main District Summary Table
       pdf.setFontSize(12);
       pdf.setFont(undefined, "bold");
+      pdf.text("District Summary", margin, yPos);
+      yPos += 8;
 
-      statistics.districtStats.forEach((district, idx) => {
-        // Check if we need a new page
-        if (yPos > pageHeight - 30) {
+      // Table header
+      yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Row Labels", "COMPLETE"], true, true);
+      
+      // District rows
+      pdf.setFont(undefined, "normal");
+      statistics.districtStats.forEach((district) => {
+        if (yPos > pageHeight - 20) {
+          pdf.addPage();
+          yPos = 20;
+          // Redraw header
+          pdf.setFont(undefined, "bold");
+          yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Row Labels", "COMPLETE"], true, true);
+          pdf.setFont(undefined, "normal");
+        }
+        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [district.districtName, district.totalMemberships]);
+      });
+
+      // Grand Total row
+      const grandTotal = statistics.districtStats.reduce((sum, d) => sum + d.totalMemberships, 0);
+      pdf.setFont(undefined, "bold");
+      yPos += 2;
+      yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Grand Total", grandTotal], false, true);
+      yPos += 10;
+
+      // Detailed Breakdown Tables for each district
+      pdf.setFontSize(12);
+      pdf.setFont(undefined, "bold");
+      pdf.text("Detailed Breakdown by District", margin, yPos);
+      yPos += 10;
+
+      statistics.districtStats.forEach((district) => {
+        if (yPos > pageHeight - 40) {
           pdf.addPage();
           yPos = 20;
         }
 
-        // District header (English only to avoid encoding issues)
-        pdf.setFontSize(12);
+        // District header with background color effect (bold text)
+        pdf.setFontSize(11);
         pdf.setFont(undefined, "bold");
-        pdf.text(`District: ${district.districtName}`, margin, yPos);
-        yPos += lineHeight;
-        pdf.text(`Total Memberships: ${district.totalMemberships}`, margin + 5, yPos);
-        yPos += lineHeight + 2;
-
-        // Taluk details (English only)
-        pdf.setFontSize(10);
+        pdf.setFillColor(200, 230, 200);
+        pdf.rect(margin, yPos - 2, tableWidth, rowHeight + 2, "F");
+        pdf.setTextColor(0, 0, 0);
+        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, [district.districtName, district.totalMemberships], false, true);
+        
         pdf.setFont(undefined, "normal");
+        pdf.setFontSize(10);
+
+        // Taluk rows
         if (district.taluks.length === 0) {
-          pdf.text("No taluks in this district", margin + 10, yPos);
-          yPos += lineHeight;
+          yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, ["No taluks", ""]);
         } else {
           district.taluks.forEach((taluk) => {
             if (yPos > pageHeight - 20) {
               pdf.addPage();
               yPos = 20;
             }
-            pdf.text(`  • ${taluk.talukName}: ${taluk.count} memberships`, margin + 10, yPos);
-            yPos += lineHeight;
+            yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [taluk.talukName, taluk.count]);
           });
         }
         yPos += 5; // Space between districts
@@ -114,51 +175,52 @@ export default function Statistics() {
 
       // Title
       pdf.setFontSize(18);
-      pdf.text("Taluk Statistics", 148, 20, { align: "center" });
-      
-      pdf.setFontSize(10);
-      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 148, 30, { align: "center" });
-
-      // Table headers
-      let yPos = 45;
-      const pageHeight = 200;
-      const lineHeight = 8;
-      const margin = 15;
-      const colPositions = [margin, margin + 80, margin + 150];
-
-      pdf.setFontSize(10);
       pdf.setFont(undefined, "bold");
-      pdf.text("Taluk Name", colPositions[0], yPos);
-      pdf.text("District Name", colPositions[1], yPos);
-      pdf.text("Memberships", colPositions[2], yPos);
+      pdf.text("Taluk Statistics", 148, 15, { align: "center" });
       
-      yPos += lineHeight;
-      pdf.setDrawColor(200, 200, 200);
-      pdf.line(margin, yPos, 200, yPos);
-      yPos += 3;
-
-      // Table rows (English only)
+      pdf.setFontSize(10);
       pdf.setFont(undefined, "normal");
+      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 148, 22, { align: "center" });
+
+      let yPos = 30;
+      const pageHeight = 200;
+      const rowHeight = 8;
+      const margin = 15;
+      const tableWidth = 260;
+      const colWidth = tableWidth / 3;
+
+      // Table header
+      pdf.setFontSize(11);
+      pdf.setFont(undefined, "bold");
+      yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Taluk Name", "District Name", "Memberships"], true, true);
+
+      // Table rows
+      pdf.setFont(undefined, "normal");
+      pdf.setFontSize(10);
       statistics.talukStats.forEach((taluk) => {
         if (yPos > pageHeight) {
           pdf.addPage();
           yPos = 20;
           // Redraw headers
           pdf.setFont(undefined, "bold");
-          pdf.text("Taluk Name", colPositions[0], yPos);
-          pdf.text("District Name", colPositions[1], yPos);
-          pdf.text("Memberships", colPositions[2], yPos);
-          yPos += lineHeight;
-          pdf.line(margin, yPos, 200, yPos);
-          yPos += 3;
+          pdf.setFontSize(11);
+          yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Taluk Name", "District Name", "Memberships"], true, true);
           pdf.setFont(undefined, "normal");
+          pdf.setFontSize(10);
         }
 
-        pdf.text(taluk.talukName || "", colPositions[0], yPos);
-        pdf.text(taluk.districtName || "", colPositions[1], yPos);
-        pdf.text(taluk.count.toString(), colPositions[2], yPos);
-        yPos += lineHeight;
+        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [
+          taluk.talukName || "",
+          taluk.districtName || "",
+          taluk.count.toString()
+        ]);
       });
+
+      // Grand Total
+      const grandTotal = statistics.talukStats.reduce((sum, t) => sum + t.count, 0);
+      pdf.setFont(undefined, "bold");
+      yPos += 2;
+      yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Grand Total", "", grandTotal], false, true);
 
       pdf.save("taluk_statistics.pdf");
       notifySuccess("Taluk statistics PDF downloaded successfully!");
@@ -212,7 +274,7 @@ export default function Statistics() {
       pdf.text(`Total Memberships: ${statistics.summary.totalMemberships}`, margin + 5, yPos);
       yPos += 15;
 
-      // District Statistics Section
+      // District Statistics Section (Table format)
       if (yPos > pageHeight - 50) {
         pdf.addPage();
         yPos = 20;
@@ -221,21 +283,37 @@ export default function Statistics() {
       pdf.setFontSize(14);
       pdf.setFont(undefined, "bold");
       pdf.text("District Statistics", margin, yPos);
-      yPos += lineHeight + 2;
+      yPos += 8;
 
+      const tableWidth = 180;
+      const rowHeight = 8;
+      
+      // Table header
+      pdf.setFontSize(11);
+      yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["District Name", "Total Memberships", "Number of Taluks"], true, true);
+
+      // District rows
       pdf.setFontSize(10);
       pdf.setFont(undefined, "normal");
       statistics.districtStats.forEach((district) => {
         if (yPos > pageHeight - 20) {
           pdf.addPage();
           yPos = 20;
+          pdf.setFont(undefined, "bold");
+          pdf.setFontSize(11);
+          yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["District Name", "Total Memberships", "Number of Taluks"], true, true);
+          pdf.setFont(undefined, "normal");
+          pdf.setFontSize(10);
         }
-        pdf.text(`${district.districtName}: ${district.totalMemberships} memberships, ${district.taluks.length} taluks`, margin + 5, yPos);
-        yPos += lineHeight;
+        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [
+          district.districtName,
+          district.totalMemberships.toString(),
+          district.taluks.length.toString()
+        ]);
       });
       yPos += 10;
 
-      // Taluk Statistics Section
+      // Taluk Statistics Section (Table format)
       if (yPos > pageHeight - 50) {
         pdf.addPage();
         yPos = 20;
@@ -244,7 +322,12 @@ export default function Statistics() {
       pdf.setFontSize(14);
       pdf.setFont(undefined, "bold");
       pdf.text("Taluk Statistics", margin, yPos);
-      yPos += lineHeight + 2;
+      yPos += 8;
+
+      const talukTableWidth = 180;
+      pdf.setFontSize(11);
+      pdf.setFont(undefined, "bold");
+      yPos = drawTableRow(pdf, margin, yPos, talukTableWidth, rowHeight + 2, ["Taluk Name", "District Name", "Memberships"], true, true);
 
       pdf.setFontSize(10);
       pdf.setFont(undefined, "normal");
@@ -252,13 +335,21 @@ export default function Statistics() {
         if (yPos > pageHeight - 20) {
           pdf.addPage();
           yPos = 20;
+          pdf.setFont(undefined, "bold");
+          pdf.setFontSize(11);
+          yPos = drawTableRow(pdf, margin, yPos, talukTableWidth, rowHeight + 2, ["Taluk Name", "District Name", "Memberships"], true, true);
+          pdf.setFont(undefined, "normal");
+          pdf.setFontSize(10);
         }
-        pdf.text(`${taluk.talukName} - ${taluk.districtName}: ${taluk.count} memberships`, margin + 5, yPos);
-        yPos += lineHeight;
+        yPos = drawTableRow(pdf, margin, yPos, talukTableWidth, rowHeight, [
+          taluk.talukName || "",
+          taluk.districtName || "",
+          taluk.count.toString()
+        ]);
       });
       yPos += 10;
 
-      // Detailed Breakdown Section
+      // Detailed Breakdown Section (Table format)
       if (yPos > pageHeight - 50) {
         pdf.addPage();
         yPos = 20;
@@ -267,35 +358,38 @@ export default function Statistics() {
       pdf.setFontSize(14);
       pdf.setFont(undefined, "bold");
       pdf.text("Detailed District-Taluk Breakdown", margin, yPos);
-      yPos += lineHeight + 2;
+      yPos += 10;
 
-      pdf.setFontSize(10);
-      pdf.setFont(undefined, "normal");
+      const breakdownTableWidth = 180;
       statistics.districtStats.forEach((district) => {
-        if (yPos > pageHeight - 30) {
+        if (yPos > pageHeight - 40) {
           pdf.addPage();
           yPos = 20;
         }
 
+        // District header row with background
+        pdf.setFontSize(11);
         pdf.setFont(undefined, "bold");
-        pdf.text(`${district.districtName} - Total: ${district.totalMemberships}`, margin + 5, yPos);
-        yPos += lineHeight;
+        pdf.setFillColor(200, 230, 200);
+        pdf.rect(margin, yPos - 2, breakdownTableWidth, rowHeight + 2, "F");
+        pdf.setTextColor(0, 0, 0);
+        yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight + 2, [district.districtName, district.totalMemberships], false, true);
 
+        // Taluk rows
+        pdf.setFontSize(10);
         pdf.setFont(undefined, "normal");
         if (district.taluks.length === 0) {
-          pdf.text("  No taluks in this district", margin + 10, yPos);
-          yPos += lineHeight;
+          yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight, ["No taluks", ""]);
         } else {
           district.taluks.forEach((taluk) => {
             if (yPos > pageHeight - 20) {
               pdf.addPage();
               yPos = 20;
             }
-            pdf.text(`  • ${taluk.talukName}: ${taluk.count} memberships`, margin + 10, yPos);
-            yPos += lineHeight;
+            yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight, [taluk.talukName, taluk.count.toString()]);
           });
         }
-        yPos += 3;
+        yPos += 5; // Space between districts
       });
 
       pdf.save("complete_statistics.pdf");
