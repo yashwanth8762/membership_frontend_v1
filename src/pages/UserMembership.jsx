@@ -823,7 +823,7 @@ export default function UserMembership() {
                       type="text"
                       value={values["Blood Group"] || ""}
                       onChange={(e) => handleChange("Blood Group", e.target.value)}
-                      required
+                      
                       className="w-full p-2.5 rounded-lg border border-slate-300 text-base bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
                   </div>
