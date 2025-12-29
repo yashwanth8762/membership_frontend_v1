@@ -111,13 +111,43 @@ export default function Statistics() {
       pdf.setFont(undefined, "bold");
       yPos += 2;
       yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Grand Total", grandTotal], false, true);
-      yPos += 10;
 
-      // Detailed Breakdown Tables for each district
-      pdf.setFontSize(12);
+      pdf.save("district_statistics.pdf");
+      notifySuccess("District statistics PDF downloaded successfully!");
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      notifyError("Failed to generate PDF.");
+    }
+  };
+
+  const handleDownloadDetailedBreakdown = async () => {
+    if (!statistics || !statistics.districtStats) {
+      notifyError("No district statistics available to download.");
+      return;
+    }
+
+    try {
+      const { jsPDF } = await import("jspdf");
+      const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4",
+      });
+
+      // Title
+      pdf.setFontSize(18);
       pdf.setFont(undefined, "bold");
-      pdf.text("Detailed Breakdown by District", margin, yPos);
-      yPos += 10;
+      pdf.text("Detailed Breakdown by District", 105, 15, { align: "center" });
+      
+      pdf.setFontSize(10);
+      pdf.setFont(undefined, "normal");
+      pdf.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 22, { align: "center" });
+
+      let yPos = 35;
+      const pageHeight = 280;
+      const rowHeight = 8;
+      const margin = 15;
+      const tableWidth = 180;
 
       statistics.districtStats.forEach((district) => {
         if (yPos > pageHeight - 40) {
@@ -151,8 +181,8 @@ export default function Statistics() {
         yPos += 5; // Space between districts
       });
 
-      pdf.save("district_taluk_statistics.pdf");
-      notifySuccess("District statistics PDF downloaded successfully!");
+      pdf.save("detailed_breakdown_by_district.pdf");
+      notifySuccess("Detailed breakdown PDF downloaded successfully!");
     } catch (error) {
       console.error("Error generating PDF:", error);
       notifyError("Failed to generate PDF.");
@@ -405,13 +435,20 @@ export default function Statistics() {
       <div className="p-8 bg-white rounded-lg shadow-lg max-w-7xl mx-auto w-full">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-800">District & Taluk Statistics</h2>
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
             <button
               onClick={handleDownloadDistrictStats}
               disabled={loading || !statistics}
               className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none transition"
             >
               Download District Stats PDF
+            </button>
+            <button
+              onClick={handleDownloadDetailedBreakdown}
+              disabled={loading || !statistics}
+              className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none transition"
+            >
+              Download Detailed Breakdown PDF
             </button>
             <button
               onClick={handleDownloadTalukStats}
