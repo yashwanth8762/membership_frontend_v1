@@ -817,7 +817,7 @@ export default function UserMembership() {
                       }}
                     >
                       Blood Group
-                      <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span>
+                      {/* <span style={{ color: "#e11d48", marginLeft: 4 }}>*</span> */}
                     </label>
                     <input
                       type="text"
@@ -878,7 +878,8 @@ export default function UserMembership() {
                         marginBottom: 6,
                       }}
                     >
-                      Referred By
+                        Referred By (<span style={{ fontSize: 12, color: "#64748b" }}>Enter ID only</span>)
+
                     </label>
                     <input
                       type="text"
