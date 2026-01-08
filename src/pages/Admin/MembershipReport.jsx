@@ -18,6 +18,21 @@ export default function MembershipReport() {
   const [showCard, setShowCard] = useState(false);
   const [cardRecord, setCardRecord] = useState(null);
   const cardRef = useRef(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalItems, setTotalItems] = useState(0);
+  const pageSize = 50; // Fixed at 50 items per page
+
+  // Debounce search query to avoid too many API calls
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+    }, 500); // 500ms delay
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
 
   useEffect(() => {
     const fetchDistricts = async () => {
@@ -60,34 +75,75 @@ export default function MembershipReport() {
   }, [selectedDistrict]);
 
   useEffect(() => {
-    const fetchSubmissions = async (districtId, talukId) => {
-      if (!districtId || !talukId) {
-        setSubmissions([]);
-        return;
-      }
+    const fetchSubmissions = async (districtId, talukId, page, size, search) => {
       try {
         setLoading(true);
-        const res = await axios.get(`${API_BASE_URL}membership/submissions?district=${districtId}&taluk=${talukId}`);
-        setSubmissions(res.data || []);
         setError("");
-      } catch {
+        const params = new URLSearchParams({
+          page: page.toString(),
+          size: size.toString(),
+        });
+        if (districtId && districtId !== "30") {
+          params.append("district", districtId);
+        }
+        if (talukId && talukId !== "30") {
+          params.append("taluk", talukId);
+        }
+        if (search && search.trim() !== "") {
+          params.append("search", search.trim());
+        }
+        
+        // Add timeout to axios request (30 seconds)
+        const res = await axios.get(`${API_BASE_URL}membership/submissions?${params.toString()}`, {
+          timeout: 30000,
+        });
+        
+        setSubmissions(res.data.items || []);
+        setCurrentPage(res.data.currentPage || 1);
+        setTotalPages(res.data.totalPages || 1);
+        setTotalItems(res.data.totalItems || 0);
+        setError("");
+      } catch (err) {
         setSubmissions([]);
-        setError("Failed to load membership submissions.");
+        setTotalItems(0);
+        setTotalPages(1);
+        if (err.code === 'ECONNABORTED' || err.response?.status === 504) {
+          setError("Request timeout. Please try again or use search/filters to narrow down results.");
+        } else if (err.response?.status === 400) {
+          setError(err.response.data?.message || "Bad request. Please adjust filters.");
+        } else if (err.response?.status === 500) {
+          setError("Server error. Please try again or contact support.");
+        } else {
+          setError("Failed to load membership submissions.");
+        }
       } finally {
         setLoading(false);
       }
     };
-    fetchSubmissions(selectedDistrict, selectedTaluk);
-  }, [selectedDistrict, selectedTaluk]);
+    fetchSubmissions(selectedDistrict, selectedTaluk, currentPage, pageSize, debouncedSearchQuery);
+  }, [selectedDistrict, selectedTaluk, currentPage, debouncedSearchQuery]);
 
   const handleDistrictChange = (e) => {
     setSelectedDistrict(e.target.value);
     setSelectedTaluk("30");
+    setCurrentPage(1); // Reset to first page when district changes
   };
 
   const handleTalukChange = (e) => {
     setSelectedTaluk(e.target.value);
+    setCurrentPage(1); // Reset to first page when filter changes
   };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1); // Reset to first page when search changes
+  };
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
 
   const getCardHolderName = (values) => {
     if (!values) return "";
@@ -345,6 +401,18 @@ export default function MembershipReport() {
               </select>
             )}
           </div>
+          <div className="flex flex-col w-64">
+            <label htmlFor="search" className="mb-2 font-semibold text-gray-700">Search</label>
+            <input
+              id="search"
+              type="text"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Search by ID, Aadhaar, Email..."
+              className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+            />
+            <span className="text-xs text-gray-500 mt-1">Searches: Membership ID, Aadhaar, Email, Referred By</span>
+          </div>
         </div>
 
         {loading ? (
@@ -381,6 +449,66 @@ export default function MembershipReport() {
                 )}
               </tbody>
             </table>
+          </div>
+        )}
+
+        {/* Pagination Controls */}
+        {!loading && submissions.length > 0 && (
+          <div className="mt-6 flex items-center justify-between">
+            <div className="text-sm text-gray-700">
+              Showing {(currentPage - 1) * pageSize + 1} to {Math.min(currentPage * pageSize, totalItems)} of {totalItems} results
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={`px-4 py-2 rounded font-semibold text-sm shadow transition ${
+                  currentPage === 1
+                    ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
+                }`}
+              >
+                Previous
+              </button>
+              <div className="flex gap-1">
+                {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                  let pageNum;
+                  if (totalPages <= 5) {
+                    pageNum = i + 1;
+                  } else if (currentPage <= 3) {
+                    pageNum = i + 1;
+                  } else if (currentPage >= totalPages - 2) {
+                    pageNum = totalPages - 4 + i;
+                  } else {
+                    pageNum = currentPage - 2 + i;
+                  }
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => handlePageChange(pageNum)}
+                      className={`px-3 py-2 rounded font-semibold text-sm shadow transition ${
+                        currentPage === pageNum
+                          ? "bg-blue-600 text-white"
+                          : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+              </div>
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className={`px-4 py-2 rounded font-semibold text-sm shadow transition ${
+                  currentPage === totalPages
+                    ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
+                }`}
+              >
+                Next
+              </button>
+            </div>
           </div>
         )}
       </div>
