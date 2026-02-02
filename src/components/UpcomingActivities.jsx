@@ -157,6 +157,34 @@ const UpcomingActivities = () => {
             </div>
           );
         })()}
+        {(() => {
+          const pdfUrl = '/assets/notify.pdf';
+          const displayTitle = isEnglish ? 'State Rules Meeting - Academy Notification (PDF)' : 'ರಾಜ್ಯ ಕಾಯ್ದೆಗಳಿಗೆ ಸಭೆಗೆ - ಅಕಾಡೆಮಿ';
+          return (
+            <div className="w-[350px] mb-2 p-4 pb-8 mx-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-[500px] flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{displayTitle}</h3>
+                <div className="aspect-video w-full mb-4 overflow-hidden rounded-lg flex items-center justify-center bg-gray-100">
+                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96" fill="#ef4444" aria-hidden="true">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" opacity=".2"/>
+                      <path d="M14 2v6h6"/>
+                      <path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                      <path d="M8 13h3a2 2 0 1 1 0 4H8z"/>
+                      <path d="M13 17v-4h2a1 1 0 0 1 0 2h-2"/>
+                      <path d="M17 13h1a2 2 0 1 1 0 4h-1z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div className="space-y-2 text-gray-600 text-center">
+                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-sm">
+                    {isEnglish ? 'Open PDF' : 'ಪಿಡಿಎಫ್ ತೆರೆಯಿರಿ'}
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
         {activities.map((activity, index) => (
           <ActivityCard key={index} {...activity} isEnglish={isEnglish} />
         ))}

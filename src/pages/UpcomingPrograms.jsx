@@ -72,6 +72,28 @@ const UpcomingPrograms = () => {
                 </div>
               );
             })()}
+            {(() => {
+              const pdfUrl = '/assets/notify.pdf';
+              const displayTitle = isEnglish ? 'State Rules Meeting - Academy Notification (PDF)' : 'ರಾಜ್ಯ ಕಾಯ್ದೆಗಳಿಗೆ ಸಭೆಗೆ - ಅಕಾಡೆಮಿ';
+              return (
+                <div className="bg-gray-50 rounded-2xl shadow-md hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex flex-col overflow-hidden h-[430px] p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">{displayTitle}</h3>
+                  <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96" fill="#ef4444" aria-hidden="true">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" opacity=".2"/>
+                      <path d="M14 2v6h6"/>
+                      <path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                      <path d="M8 13h3a2 2 0 1 1 0 4H8z"/>
+                      <path d="M13 17v-4h2a1 1 0 0 1 0 2h-2"/>
+                      <path d="M17 13h1a2 2 0 1 1 0 4h-1z"/>
+                    </svg>
+                    <span className="text-blue-600 underline text-sm mt-2 inline-block text-center">
+                      {isEnglish ? 'Open PDF' : 'ಪಿಡಿಎಫ್ ತೆರೆಯಿರಿ'}
+                    </span>
+                  </a>
+                </div>
+              );
+            })()}
             {programs.map((program, idx) => {
               let imageSrc = null;
               let imageAlt = isEnglish ? program.title : program.k_title;
