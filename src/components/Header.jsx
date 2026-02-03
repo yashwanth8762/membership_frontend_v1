@@ -497,7 +497,7 @@ export default function Header({ theme = "transparent" }) {
             {/* Logo 1 */}
             <a href="/" className="flex items-center group">
               <img
-                src="/assets/logo_updated1.png"
+                src="/assets/logo3.png"
                 alt="Logo 1"
                 className="h-15 w-auto transition-transform duration-300 group-hover:scale-105"
                 draggable="false"
@@ -519,7 +519,7 @@ export default function Header({ theme = "transparent" }) {
             <div className="hidden lg:flex flex-shrink-0">
               <a href="/" className="flex items-center group">
                 <img
-                  src="/assets/logo_updated1.png"
+                  src="/assets/logo3.png"
                   alt="Logo 1"
                   className="h-20 xl:h-30 w-auto transition-transform duration-300 group-hover:scale-105"
                   draggable="false"
