@@ -24,6 +24,8 @@ export default function MembershipReport() {
   const [totalPages, setTotalPages] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
   const pageSize = 50; // Fixed at 50 items per page
+  const [sendingWhatsApp, setSendingWhatsApp] = useState(null);
+  const [whatsAppMessage, setWhatsAppMessage] = useState({ type: "", text: "" });
 
   // Debounce search query to avoid too many API calls
   useEffect(() => {
@@ -155,6 +157,33 @@ export default function MembershipReport() {
           v.label.trim().toLowerCase().includes("your name"))
     );
     return field ? field.value : "";
+  };
+
+  const handleSendCardWhatsApp = async (submission) => {
+    const membershipId = submission.membershipId;
+    if (!membershipId) {
+      setWhatsAppMessage({ type: "error", text: "No membership ID." });
+      return;
+    }
+    setSendingWhatsApp(membershipId);
+    setWhatsAppMessage({ type: "", text: "" });
+    try {
+      const res = await axios.post(`${API_BASE_URL}membership/send-card-whatsapp`, {
+        membershipId,
+      });
+      setWhatsAppMessage({
+        type: "success",
+        text: res.data?.message || "Card link sent via WhatsApp.",
+      });
+    } catch (err) {
+      const msg =
+        err.response?.data?.message ||
+        err.message ||
+        "Failed to send card via WhatsApp.";
+      setWhatsAppMessage({ type: "error", text: msg });
+    } finally {
+      setSendingWhatsApp(null);
+    }
   };
 
   const handleViewCard = async (submission) => {
@@ -415,6 +444,18 @@ export default function MembershipReport() {
           </div>
         </div>
 
+        {whatsAppMessage.text && (
+          <div
+            className={`mb-4 px-4 py-2 rounded font-medium text-sm ${
+              whatsAppMessage.type === "success"
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+            }`}
+          >
+            {whatsAppMessage.text}
+          </div>
+        )}
+
         {loading ? (
           <div className="text-center py-12 text-gray-600 font-semibold">Loading membership submissions...</div>
         ) : (
@@ -440,9 +481,23 @@ export default function MembershipReport() {
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{s.district?.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{s.taluk?.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <button onClick={() => handleViewCard(s)} className="inline-block bg-blue-600 hover:bg-blue-700 transition text-white px-4 py-2 rounded font-semibold text-xs shadow">
-                          View Card
-                        </button>
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={() => handleViewCard(s)}
+                            className="inline-block bg-blue-600 hover:bg-blue-700 transition text-white px-4 py-2 rounded font-semibold text-xs shadow"
+                          >
+                            View Card
+                          </button>
+                          <button
+                            onClick={() => handleSendCardWhatsApp(s)}
+                            disabled={sendingWhatsApp === (s.membershipId || s.id)}
+                            className="inline-block bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition text-white px-4 py-2 rounded font-semibold text-xs shadow"
+                          >
+                            {sendingWhatsApp === (s.membershipId || s.id)
+                              ? "Sending…"
+                              : "Send via WhatsApp"}
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))
