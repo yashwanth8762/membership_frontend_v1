@@ -26,6 +26,7 @@ export default function MembershipReport() {
   const pageSize = 50; // Fixed at 50 items per page
   const [sendingWhatsApp, setSendingWhatsApp] = useState(null);
   const [whatsAppMessage, setWhatsAppMessage] = useState({ type: "", text: "" });
+  const [exportLoading, setExportLoading] = useState(null); // "all" | "manual" | null
 
   // Debounce search query to avoid too many API calls
   useEffect(() => {
@@ -326,13 +327,10 @@ export default function MembershipReport() {
     document.body.removeChild(container);
   };
 
-  const handleExportAllXLSX = () => {
-    if (!submissions.length) return;
-
-    // Collect all dynamic labels from values to create consistent columns
+  const buildRowsFromItems = (items) => {
     const allValueLabels = new Set();
     const allMediaLabels = new Set();
-    submissions.forEach(record => {
+    items.forEach(record => {
       if (Array.isArray(record.values)) {
         record.values.forEach(v => {
           if (v?.label) {
@@ -345,7 +343,7 @@ export default function MembershipReport() {
       }
     });
 
-    const rows = submissions.map(record => {
+    return items.map(record => {
       const base = {
         "Record ID": record._id || record.id || "",
         "Membership ID": record.membershipId || "",
@@ -359,8 +357,6 @@ export default function MembershipReport() {
         "Taluk": record.taluk?.name || "",
         "Submitted At": record.submittedAt ? new Date(record.submittedAt).toLocaleString() : "",
       };
-
-      // Initialize all value columns to empty for consistent headers
       const dynamic = {};
       allValueLabels.forEach(label => { dynamic[label] = ""; });
       allMediaLabels.forEach(label => { dynamic[label] = ""; });
@@ -368,7 +364,6 @@ export default function MembershipReport() {
       if (Array.isArray(record.values)) {
         record.values.forEach(v => {
           if (!v?.label) return;
-          // Value column
           if (v.value === null || v.value === undefined) {
             dynamic[v.label] = "";
           } else if (Array.isArray(v.value)) {
@@ -378,8 +373,6 @@ export default function MembershipReport() {
           } else {
             dynamic[v.label] = v.value;
           }
-
-          // Media column (names or URLs if available)
           if (Array.isArray(v.media) && v.media.length > 0) {
             const mediaCol = `${v.label} (media)`;
             const list = v.media.map(m => {
@@ -391,24 +384,84 @@ export default function MembershipReport() {
           }
         });
       }
-
       return { ...base, ...dynamic };
     });
+  };
 
-    const ws = XLSX.utils.json_to_sheet(rows);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Members");
-    XLSX.writeFile(wb, `membership_report.xlsx`);
+  const handleExportAllXLSX = async () => {
+    setExportLoading("all");
+    setError("");
+    try {
+      const params = new URLSearchParams();
+      if (selectedDistrict && selectedDistrict !== "30") params.append("district", selectedDistrict);
+      if (selectedTaluk && selectedTaluk !== "30") params.append("taluk", selectedTaluk);
+      if (debouncedSearchQuery && debouncedSearchQuery.trim() !== "") params.append("search", debouncedSearchQuery.trim());
+      const res = await axios.get(`${API_BASE_URL}membership/submissions/export?${params.toString()}`, { timeout: 120000 });
+      const items = res.data?.items || [];
+      if (!items.length) {
+        setError("No records to export for current filters.");
+        return;
+      }
+      const rows = buildRowsFromItems(items);
+      const ws = XLSX.utils.json_to_sheet(rows);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, "Members");
+      XLSX.writeFile(wb, `membership_report_${items.length}_records.xlsx`);
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || "Failed to export Excel.");
+    } finally {
+      setExportLoading(null);
+    }
+  };
+
+  const handleExportManualXLSX = async () => {
+    setExportLoading("manual");
+    setError("");
+    try {
+      const params = new URLSearchParams();
+      params.append("manualOnly", "true");
+      if (selectedDistrict && selectedDistrict !== "30") params.append("district", selectedDistrict);
+      if (selectedTaluk && selectedTaluk !== "30") params.append("taluk", selectedTaluk);
+      if (debouncedSearchQuery && debouncedSearchQuery.trim() !== "") params.append("search", debouncedSearchQuery.trim());
+      const res = await axios.get(`${API_BASE_URL}membership/submissions/export?${params.toString()}`, { timeout: 120000 });
+      const items = res.data?.items || [];
+      if (!items.length) {
+        setError("No manually uploaded records to export for current filters.");
+        return;
+      }
+      const rows = buildRowsFromItems(items);
+      const ws = XLSX.utils.json_to_sheet(rows);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, "Members (Manual)");
+      XLSX.writeFile(wb, `membership_report_manual_${items.length}_records.xlsx`);
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || "Failed to export manual Excel.");
+    } finally {
+      setExportLoading(null);
+    }
   };
 
   return (
     <AdminLayout>
       <div className="p-8 bg-white rounded-lg shadow-lg max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4 text-gray-800 flex justify-between items-center">
+        <h2 className="text-3xl font-bold mb-4 text-gray-800 flex justify-between items-center flex-wrap gap-2">
           Membership Report
-          <button onClick={handleExportAllXLSX} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none">
-            Download Excel
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleExportAllXLSX}
+              disabled={!!exportLoading}
+              className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none"
+            >
+              {exportLoading === "all" ? "Preparing…" : "Download Excel (all)"}
+            </button>
+            <button
+              onClick={handleExportManualXLSX}
+              disabled={!!exportLoading}
+              className="bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded font-semibold text-base shadow focus:outline-none"
+            >
+              {exportLoading === "manual" ? "Preparing…" : "Download manually uploaded (Excel)"}
+            </button>
+          </div>
         </h2>
 
         {error && <div className="mb-6 p-4 bg-red-100 text-red-700 rounded shadow">{error}</div>}
