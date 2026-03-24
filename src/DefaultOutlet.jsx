@@ -10,3 +10,4 @@ const DefaultOutlet = () => {
 };
 
 export default DefaultOutlet;
+  
