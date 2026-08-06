@@ -10,7 +10,6 @@ export default function Referrals() {
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
-  const [expanded, setExpanded] = useState({});
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(searchQuery.trim()), 400);
@@ -41,9 +40,25 @@ export default function Referrals() {
   const referrals = data?.referrals || [];
   const summary = data?.summary || { totalReferrers: 0, totalReferredMembers: 0 };
 
-  const toggleExpand = (key) => {
-    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
+  // Flat list of all referred members with their referred-by name (shown by default)
+  const allRows = useMemo(() => {
+    const rows = [];
+    referrals.forEach((group) => {
+      (group.referredMembers || []).forEach((member) => {
+        rows.push({
+          referredBy: group.referrerName || group.referredBy,
+          referredByRaw: group.referredBy,
+          referrerMembershipId: group.referrerMembershipId || "",
+          ...member,
+        });
+      });
+    });
+    return rows.sort((a, b) => {
+      const byName = String(a.referredBy).localeCompare(String(b.referredBy));
+      if (byName !== 0) return byName;
+      return new Date(b.submittedAt || 0) - new Date(a.submittedAt || 0);
+    });
+  }, [referrals]);
 
   const formatDate = (value) => {
     if (!value) return "-";
@@ -59,7 +74,7 @@ export default function Referrals() {
   };
 
   const emptyMessage = useMemo(() => {
-    if (debouncedSearch) return "No referrals match your search.";
+    if (debouncedSearch) return "No referrals match that referred by name.";
     return "No referral data found yet.";
   }, [debouncedSearch]);
 
@@ -72,7 +87,7 @@ export default function Referrals() {
               Referral Report
             </h2>
             <p className="text-slate-500 mt-1 text-sm sm:text-base">
-              See each referrer and the members they referred.
+              All referrals with their Referred By name.
             </p>
           </div>
           <div className="flex gap-3">
@@ -100,7 +115,7 @@ export default function Referrals() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by referrer name, ID, or referred member..."
+            placeholder="Search by referred by name..."
             className="w-full max-w-xl p-3 rounded-xl border border-slate-300 bg-slate-50 text-base focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
@@ -115,111 +130,80 @@ export default function Referrals() {
           <div className="py-16 text-center text-slate-500 font-medium">
             Loading referrals...
           </div>
-        ) : referrals.length === 0 ? (
+        ) : allRows.length === 0 ? (
           <div className="py-16 text-center text-slate-500 font-medium">
             {emptyMessage}
           </div>
         ) : (
-          <div className="space-y-4">
-            {referrals.map((group) => {
-              const key = group.referredBy;
-              const isOpen = !!expanded[key];
-              return (
-                <div
-                  key={key}
-                  className="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden"
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleExpand(key)}
-                    className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left hover:bg-slate-50 transition"
+          <div className="rounded-2xl border border-slate-200 overflow-x-auto bg-white shadow-sm">
+            <table className="w-full text-sm">
+              <thead className="bg-slate-50 text-slate-600">
+                <tr>
+                  <th className="text-left font-semibold px-4 py-3">#</th>
+                  <th className="text-left font-semibold px-4 py-3">
+                    Referred By
+                  </th>
+                  <th className="text-left font-semibold px-4 py-3">
+                    Membership ID
+                  </th>
+                  <th className="text-left font-semibold px-4 py-3">
+                    Card Holder Name
+                  </th>
+                  <th className="text-left font-semibold px-4 py-3">Mobile</th>
+                  <th className="text-left font-semibold px-4 py-3">District</th>
+                  <th className="text-left font-semibold px-4 py-3">Taluk</th>
+                  <th className="text-left font-semibold px-4 py-3">Payment</th>
+                  <th className="text-left font-semibold px-4 py-3">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {allRows.map((row, idx) => (
+                  <tr
+                    key={row.id || `${row.referredByRaw}-${idx}`}
+                    className="border-t border-slate-100 hover:bg-slate-50/80"
                   >
-                    <div className="min-w-0">
-                      <div className="font-semibold text-slate-800 text-lg truncate">
-                        {group.referrerName}
+                    <td className="px-4 py-3 text-slate-500">{idx + 1}</td>
+                    <td className="px-4 py-3">
+                      <div className="font-semibold text-indigo-800">
+                        {row.referredBy}
                       </div>
-                      <div className="text-sm text-slate-500 mt-0.5">
-                        {group.referrerMembershipId
-                          ? `Membership ID: ${group.referrerMembershipId}`
-                          : `Referral value: ${group.referredBy}`}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 shrink-0">
-                      <span className="inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-800 font-bold text-sm px-3 py-1">
-                        {group.referralCount} referred
+                      {row.referrerMembershipId && (
+                        <div className="text-xs text-slate-500 mt-0.5">
+                          ID: {row.referrerMembershipId}
+                        </div>
+                      )}
+                    </td>
+                    <td className="px-4 py-3 font-medium text-slate-800">
+                      {row.membershipId || "-"}
+                    </td>
+                    <td className="px-4 py-3 text-slate-800">{row.name}</td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {row.mobile || "-"}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {row.district || "-"}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {row.taluk || "-"}
+                    </td>
+                    <td className="px-4 py-3">
+                      <span
+                        className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+                          row.paymentStatus === "COMPLETED"
+                            ? "bg-emerald-100 text-emerald-800"
+                            : "bg-amber-100 text-amber-800"
+                        }`}
+                      >
+                        {row.paymentStatus || "PENDING"}
                       </span>
-                      <span className="text-slate-400 text-xl">
-                        {isOpen ? "▾" : "▸"}
-                      </span>
-                    </div>
-                  </button>
-
-                  {isOpen && (
-                    <div className="border-t border-slate-200 overflow-x-auto">
-                      <table className="w-full text-sm">
-                        <thead className="bg-slate-50 text-slate-600">
-                          <tr>
-                            <th className="text-left font-semibold px-4 py-3">#</th>
-                            <th className="text-left font-semibold px-4 py-3">
-                              Membership ID
-                            </th>
-                            <th className="text-left font-semibold px-4 py-3">Name</th>
-                            <th className="text-left font-semibold px-4 py-3">Mobile</th>
-                            <th className="text-left font-semibold px-4 py-3">
-                              District
-                            </th>
-                            <th className="text-left font-semibold px-4 py-3">Taluk</th>
-                            <th className="text-left font-semibold px-4 py-3">
-                              Payment
-                            </th>
-                            <th className="text-left font-semibold px-4 py-3">Date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {group.referredMembers.map((member, idx) => (
-                            <tr
-                              key={member.id || `${key}-${idx}`}
-                              className="border-t border-slate-100 hover:bg-slate-50/80"
-                            >
-                              <td className="px-4 py-3 text-slate-500">{idx + 1}</td>
-                              <td className="px-4 py-3 font-medium text-slate-800">
-                                {member.membershipId || "-"}
-                              </td>
-                              <td className="px-4 py-3 text-slate-800">
-                                {member.name}
-                              </td>
-                              <td className="px-4 py-3 text-slate-700">
-                                {member.mobile || "-"}
-                              </td>
-                              <td className="px-4 py-3 text-slate-700">
-                                {member.district || "-"}
-                              </td>
-                              <td className="px-4 py-3 text-slate-700">
-                                {member.taluk || "-"}
-                              </td>
-                              <td className="px-4 py-3">
-                                <span
-                                  className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-                                    member.paymentStatus === "COMPLETED"
-                                      ? "bg-emerald-100 text-emerald-800"
-                                      : "bg-amber-100 text-amber-800"
-                                  }`}
-                                >
-                                  {member.paymentStatus || "PENDING"}
-                                </span>
-                              </td>
-                              <td className="px-4 py-3 text-slate-600">
-                                {formatDate(member.submittedAt)}
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                    </td>
+                    <td className="px-4 py-3 text-slate-600">
+                      {formatDate(row.submittedAt)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>
