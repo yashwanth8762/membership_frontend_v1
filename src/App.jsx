@@ -37,6 +37,7 @@ import TermsConditions from './pages/TermsConditions.jsx';
 import DonatePage from './pages/DonatePage.jsx';
 import MembershipReport from './pages/Admin/MembershipReport.jsx';
 import Statistics from './pages/Admin/Statistics.jsx';
+import Referrals from './pages/Admin/Referrals.jsx';
 import Success from './components/Success.jsx';
 import Failure from './components/Failure.jsx';
 import NewsScroller from './components/NewsScrooler.jsx';
@@ -81,6 +82,7 @@ export default function App() {
             <Route path="membership" element={<Membership />} />
             <Route path="report" element={<MembershipReport />} />
             <Route path="statistics" element={<Statistics />} />
+            <Route path="referrals" element={<Referrals />} />
 
             
             <Route path="activity" element={<DefaultOutlet />}>
