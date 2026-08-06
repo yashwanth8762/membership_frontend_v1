@@ -10,6 +10,7 @@ export default function MembershipReport() {
   const [taluks, setTaluks] = useState([]);
   const [selectedDistrict, setSelectedDistrict] = useState("30");
   const [selectedTaluk, setSelectedTaluk] = useState("30");
+  const [selectedAmount, setSelectedAmount] = useState("");
   const [submissions, setSubmissions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [loadingDistricts, setLoadingDistricts] = useState(false);
@@ -27,6 +28,16 @@ export default function MembershipReport() {
   const [sendingWhatsApp, setSendingWhatsApp] = useState(null);
   const [whatsAppMessage, setWhatsAppMessage] = useState({ type: "", text: "" });
   const [exportLoading, setExportLoading] = useState(null); // "all" | "manual" | null
+
+  const CARD_TYPE_OPTIONS = [
+    { value: "", label: "All card types" },
+    { value: "500", label: "₹500 - General Membership" },
+    { value: "5000", label: "₹5,000 - Special Membership" },
+    { value: "10000", label: "₹10,000 - Premium Membership" },
+    { value: "25000", label: "₹25,000 - Lifetime Membership" },
+    { value: "50000", label: "₹50,000 - Patron Membership" },
+    { value: "100000", label: "₹1,00,000 - Chief Patron Membership" },
+  ];
 
   // Debounce search query to avoid too many API calls
   useEffect(() => {
@@ -78,7 +89,7 @@ export default function MembershipReport() {
   }, [selectedDistrict]);
 
   useEffect(() => {
-    const fetchSubmissions = async (districtId, talukId, page, size, search) => {
+    const fetchSubmissions = async (districtId, talukId, page, size, search, amount) => {
       try {
         setLoading(true);
         setError("");
@@ -94,6 +105,9 @@ export default function MembershipReport() {
         }
         if (search && search.trim() !== "") {
           params.append("search", search.trim());
+        }
+        if (amount) {
+          params.append("amount", amount);
         }
         
         // Add timeout to axios request (30 seconds)
@@ -123,8 +137,8 @@ export default function MembershipReport() {
         setLoading(false);
       }
     };
-    fetchSubmissions(selectedDistrict, selectedTaluk, currentPage, pageSize, debouncedSearchQuery);
-  }, [selectedDistrict, selectedTaluk, currentPage, debouncedSearchQuery]);
+    fetchSubmissions(selectedDistrict, selectedTaluk, currentPage, pageSize, debouncedSearchQuery, selectedAmount);
+  }, [selectedDistrict, selectedTaluk, currentPage, debouncedSearchQuery, selectedAmount]);
 
   const handleDistrictChange = (e) => {
     setSelectedDistrict(e.target.value);
@@ -135,6 +149,11 @@ export default function MembershipReport() {
   const handleTalukChange = (e) => {
     setSelectedTaluk(e.target.value);
     setCurrentPage(1); // Reset to first page when filter changes
+  };
+
+  const handleAmountChange = (e) => {
+    setSelectedAmount(e.target.value);
+    setCurrentPage(1);
   };
 
   const handleSearchChange = (e) => {
@@ -396,6 +415,7 @@ export default function MembershipReport() {
       if (selectedDistrict && selectedDistrict !== "30") params.append("district", selectedDistrict);
       if (selectedTaluk && selectedTaluk !== "30") params.append("taluk", selectedTaluk);
       if (debouncedSearchQuery && debouncedSearchQuery.trim() !== "") params.append("search", debouncedSearchQuery.trim());
+      if (selectedAmount) params.append("amount", selectedAmount);
       const res = await axios.get(`${API_BASE_URL}membership/submissions/export?${params.toString()}`, { timeout: 120000 });
       const items = res.data?.items || [];
       if (!items.length) {
@@ -423,6 +443,7 @@ export default function MembershipReport() {
       if (selectedDistrict && selectedDistrict !== "30") params.append("district", selectedDistrict);
       if (selectedTaluk && selectedTaluk !== "30") params.append("taluk", selectedTaluk);
       if (debouncedSearchQuery && debouncedSearchQuery.trim() !== "") params.append("search", debouncedSearchQuery.trim());
+      if (selectedAmount) params.append("amount", selectedAmount);
       const res = await axios.get(`${API_BASE_URL}membership/submissions/export?${params.toString()}`, { timeout: 120000 });
       const items = res.data?.items || [];
       if (!items.length) {
@@ -484,16 +505,29 @@ export default function MembershipReport() {
             )}
           </div>
           <div className="flex flex-col w-64">
+            <label htmlFor="cardType" className="mb-2 font-semibold text-gray-700">Card type / Amount</label>
+            <select
+              id="cardType"
+              value={selectedAmount}
+              onChange={handleAmountChange}
+              className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+            >
+              {CARD_TYPE_OPTIONS.map((opt) => (
+                <option key={opt.value || "all"} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+          </div>
+          <div className="flex flex-col w-64">
             <label htmlFor="search" className="mb-2 font-semibold text-gray-700">Search</label>
             <input
               id="search"
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
-              placeholder="Search by ID, Aadhaar, Email..."
+              placeholder="Search by Aadhaar or phone..."
               className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
             />
-            <span className="text-xs text-gray-500 mt-1">Searches: Membership ID, Aadhaar, Email, Referred By</span>
+            <span className="text-xs text-gray-500 mt-1">Searches: Aadhaar, Phone, Membership ID, Email</span>
           </div>
         </div>
 

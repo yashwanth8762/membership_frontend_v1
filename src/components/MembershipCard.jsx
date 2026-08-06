@@ -200,6 +200,10 @@ const MembershipCard = ({
     getValue("Birth") ||
     "N/A";
   const address =
+    getValue("ವಿಳಾಸ / Address") ||
+    getValue("Address") ||
+    getValue("ಪ್ರಸ್ತುತ ವಿಳಾಸ / Current Address") ||
+    getValue("Current Address") ||
     getValue("Permanent adress") ||
     getValue("Permanent Address") ||
     getValue("ಖಾಯಂ ವಿಳಾಸ / Permanent adress") ||

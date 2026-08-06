@@ -5,6 +5,32 @@ import MembershipCard from "../components/MembershipCard";
 import { useNavigate } from "react-router-dom";
 import { notifyError, notifyWarning } from "../utils/toastify";
 
+// Hide Subcaste, Permanent Address, and Ward from the application form only.
+// Existing membership submissions that already stored these values are left unchanged.
+const isRemovedFormField = (label = "") =>
+  /subcast|ಉಪಜಾತಿ/i.test(label) ||
+  /permanent\s*add?ress|ಖಾಯಂ/i.test(label) ||
+  /ward|ವಾರ್ಡ್/i.test(label);
+
+const normalizeFormFields = (fields = []) => {
+  const cleaned = fields.filter((f) => !isRemovedFormField(f.label));
+  const hasSingleAddress = cleaned.some(
+    (f) =>
+      /ವಿಳಾಸ\s*\/\s*address/i.test(f.label) ||
+      /^address$/i.test((f.label || "").trim())
+  );
+  return cleaned
+    .filter(
+      (f) => !(hasSingleAddress && /current\s*address|ಪ್ರಸ್ತುತ/i.test(f.label))
+    )
+    .map((f) => {
+      if (/current\s*address|ಪ್ರಸ್ತುತ\s*ವಿಳಾಸ/i.test(f.label)) {
+        return { ...f, label: "ವಿಳಾಸ / Address", label_kn: f.label_kn || "ವಿಳಾಸ" };
+      }
+      return f;
+    });
+};
+
 export default function UserMembership() {
   const [form, setForm] = useState(null);
   const [values, setValues] = useState({});
@@ -96,6 +122,9 @@ export default function UserMembership() {
       try {
         const res = await axios.get(`${API_BASE_URL}membership/form`);
         const fetchedForm = res.data[0];
+        if (fetchedForm?.fields) {
+          fetchedForm.fields = normalizeFormFields(fetchedForm.fields);
+        }
         setForm(fetchedForm);
 
         const initialValues = {};
