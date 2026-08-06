@@ -4,12 +4,21 @@ import AdminLayout from "./AdminLayout";
 import { API_BASE_URL } from "../../../config";
 import { notifyError } from "../../utils/toastify";
 
+const PAGE_SIZE = 50;
+
 export default function Referrals() {
-  const [data, setData] = useState(null);
+  const [referrals, setReferrals] = useState([]);
+  const [summary, setSummary] = useState({ totalReferrers: 0, totalReferredMembers: 0 });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalItems, setTotalItems] = useState(0);
+  const [expanded, setExpanded] = useState({});
+  const [membersByReferrer, setMembersByReferrer] = useState({});
+  const [loadingMembers, setLoadingMembers] = useState({});
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(searchQuery.trim()), 400);
@@ -17,17 +26,35 @@ export default function Referrals() {
   }, [searchQuery]);
 
   useEffect(() => {
+    setCurrentPage(1);
+    setExpanded({});
+  }, [debouncedSearch]);
+
+  useEffect(() => {
     const fetchReferrals = async () => {
       try {
         setLoading(true);
         setError("");
-        const params = new URLSearchParams();
+        const params = new URLSearchParams({
+          page: String(currentPage),
+          size: String(PAGE_SIZE),
+        });
         if (debouncedSearch) params.set("search", debouncedSearch);
+
         const res = await axios.get(
-          `${API_BASE_URL}membership/referrals${params.toString() ? `?${params}` : ""}`
+          `${API_BASE_URL}membership/referrals?${params.toString()}`,
+          { timeout: 30000 }
         );
-        setData(res.data);
+
+        setReferrals(res.data.referrals || []);
+        setSummary(
+          res.data.summary || { totalReferrers: 0, totalReferredMembers: 0 }
+        );
+        setCurrentPage(res.data.pagination?.currentPage || 1);
+        setTotalPages(res.data.pagination?.totalPages || 1);
+        setTotalItems(res.data.pagination?.totalItems || 0);
       } catch (err) {
+        setReferrals([]);
         setError("Failed to load referral report.");
         notifyError("Failed to load referral report.");
       } finally {
@@ -35,30 +62,36 @@ export default function Referrals() {
       }
     };
     fetchReferrals();
-  }, [debouncedSearch]);
+  }, [debouncedSearch, currentPage]);
 
-  const referrals = data?.referrals || [];
-  const summary = data?.summary || { totalReferrers: 0, totalReferredMembers: 0 };
+  const fetchMembers = async (referredBy) => {
+    if (membersByReferrer[referredBy] || loadingMembers[referredBy]) return;
+    try {
+      setLoadingMembers((prev) => ({ ...prev, [referredBy]: true }));
+      const params = new URLSearchParams({ referredBy });
+      const res = await axios.get(
+        `${API_BASE_URL}membership/referrals/members?${params.toString()}`,
+        { timeout: 30000 }
+      );
+      setMembersByReferrer((prev) => ({
+        ...prev,
+        [referredBy]: res.data.members || [],
+      }));
+    } catch (err) {
+      notifyError("Failed to load referred members.");
+      setMembersByReferrer((prev) => ({ ...prev, [referredBy]: [] }));
+    } finally {
+      setLoadingMembers((prev) => ({ ...prev, [referredBy]: false }));
+    }
+  };
 
-  // Flat list of all referred members with their referred-by name (shown by default)
-  const allRows = useMemo(() => {
-    const rows = [];
-    referrals.forEach((group) => {
-      (group.referredMembers || []).forEach((member) => {
-        rows.push({
-          referredBy: group.referrerName || group.referredBy,
-          referredByRaw: group.referredBy,
-          referrerMembershipId: group.referrerMembershipId || "",
-          ...member,
-        });
-      });
+  const toggleExpand = (referredBy) => {
+    setExpanded((prev) => {
+      const nextOpen = !prev[referredBy];
+      if (nextOpen) fetchMembers(referredBy);
+      return { ...prev, [referredBy]: nextOpen };
     });
-    return rows.sort((a, b) => {
-      const byName = String(a.referredBy).localeCompare(String(b.referredBy));
-      if (byName !== 0) return byName;
-      return new Date(b.submittedAt || 0) - new Date(a.submittedAt || 0);
-    });
-  }, [referrals]);
+  };
 
   const formatDate = (value) => {
     if (!value) return "-";
@@ -78,6 +111,16 @@ export default function Referrals() {
     return "No referral data found yet.";
   }, [debouncedSearch]);
 
+  const handlePageChange = (newPage) => {
+    if (newPage < 1 || newPage > totalPages) return;
+    setCurrentPage(newPage);
+    setExpanded({});
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const fromItem = totalItems === 0 ? 0 : (currentPage - 1) * PAGE_SIZE + 1;
+  const toItem = Math.min(currentPage * PAGE_SIZE, totalItems);
+
   return (
     <AdminLayout>
       <div className="w-full max-w-6xl mx-auto">
@@ -87,7 +130,7 @@ export default function Referrals() {
               Referral Report
             </h2>
             <p className="text-slate-500 mt-1 text-sm sm:text-base">
-              All referrals with their Referred By name.
+              Expand a referred by name to see who they referred.
             </p>
           </div>
           <div className="flex gap-3">
@@ -130,81 +173,162 @@ export default function Referrals() {
           <div className="py-16 text-center text-slate-500 font-medium">
             Loading referrals...
           </div>
-        ) : allRows.length === 0 ? (
+        ) : referrals.length === 0 ? (
           <div className="py-16 text-center text-slate-500 font-medium">
             {emptyMessage}
           </div>
         ) : (
-          <div className="rounded-2xl border border-slate-200 overflow-x-auto bg-white shadow-sm">
-            <table className="w-full text-sm">
-              <thead className="bg-slate-50 text-slate-600">
-                <tr>
-                  <th className="text-left font-semibold px-4 py-3">#</th>
-                  <th className="text-left font-semibold px-4 py-3">
-                    Referred By
-                  </th>
-                  <th className="text-left font-semibold px-4 py-3">
-                    Membership ID
-                  </th>
-                  <th className="text-left font-semibold px-4 py-3">
-                    Card Holder Name
-                  </th>
-                  <th className="text-left font-semibold px-4 py-3">Mobile</th>
-                  <th className="text-left font-semibold px-4 py-3">District</th>
-                  <th className="text-left font-semibold px-4 py-3">Taluk</th>
-                  <th className="text-left font-semibold px-4 py-3">Payment</th>
-                  <th className="text-left font-semibold px-4 py-3">Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                {allRows.map((row, idx) => (
-                  <tr
-                    key={row.id || `${row.referredByRaw}-${idx}`}
-                    className="border-t border-slate-100 hover:bg-slate-50/80"
+          <>
+            <div className="space-y-3">
+              {referrals.map((group) => {
+                const key = group.referredBy;
+                const isOpen = !!expanded[key];
+                const members = membersByReferrer[key] || [];
+                const isLoadingMembers = !!loadingMembers[key];
+
+                return (
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden"
                   >
-                    <td className="px-4 py-3 text-slate-500">{idx + 1}</td>
-                    <td className="px-4 py-3">
-                      <div className="font-semibold text-indigo-800">
-                        {row.referredBy}
-                      </div>
-                      {row.referrerMembershipId && (
-                        <div className="text-xs text-slate-500 mt-0.5">
-                          ID: {row.referrerMembershipId}
+                    <button
+                      type="button"
+                      onClick={() => toggleExpand(key)}
+                      className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left hover:bg-slate-50 transition"
+                    >
+                      <div className="min-w-0">
+                        <div className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-0.5">
+                          Referred By
                         </div>
-                      )}
-                    </td>
-                    <td className="px-4 py-3 font-medium text-slate-800">
-                      {row.membershipId || "-"}
-                    </td>
-                    <td className="px-4 py-3 text-slate-800">{row.name}</td>
-                    <td className="px-4 py-3 text-slate-700">
-                      {row.mobile || "-"}
-                    </td>
-                    <td className="px-4 py-3 text-slate-700">
-                      {row.district || "-"}
-                    </td>
-                    <td className="px-4 py-3 text-slate-700">
-                      {row.taluk || "-"}
-                    </td>
-                    <td className="px-4 py-3">
-                      <span
-                        className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-                          row.paymentStatus === "COMPLETED"
-                            ? "bg-emerald-100 text-emerald-800"
-                            : "bg-amber-100 text-amber-800"
-                        }`}
-                      >
-                        {row.paymentStatus || "PENDING"}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 text-slate-600">
-                      {formatDate(row.submittedAt)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                        <div className="font-semibold text-slate-800 text-lg truncate">
+                          {group.referrerName || group.referredBy}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 shrink-0">
+                        <span className="inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-800 font-bold text-sm px-3 py-1">
+                          {group.referralCount} referred
+                        </span>
+                        <span className="text-slate-400 text-xl">
+                          {isOpen ? "▾" : "▸"}
+                        </span>
+                      </div>
+                    </button>
+
+                    {isOpen && (
+                      <div className="border-t border-slate-200 overflow-x-auto">
+                        {isLoadingMembers ? (
+                          <div className="px-5 py-8 text-center text-slate-500">
+                            Loading members...
+                          </div>
+                        ) : members.length === 0 ? (
+                          <div className="px-5 py-8 text-center text-slate-500">
+                            No members found for this referrer.
+                          </div>
+                        ) : (
+                          <table className="w-full text-sm">
+                            <thead className="bg-slate-50 text-slate-600">
+                              <tr>
+                                <th className="text-left font-semibold px-4 py-3">#</th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  Membership ID
+                                </th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  Name
+                                </th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  Mobile
+                                </th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  District
+                                </th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  Taluk
+                                </th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  Payment
+                                </th>
+                                <th className="text-left font-semibold px-4 py-3">
+                                  Date
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {members.map((member, idx) => (
+                                <tr
+                                  key={member.id || `${key}-${idx}`}
+                                  className="border-t border-slate-100 hover:bg-slate-50/80"
+                                >
+                                  <td className="px-4 py-3 text-slate-500">
+                                    {idx + 1}
+                                  </td>
+                                  <td className="px-4 py-3 font-medium text-slate-800">
+                                    {member.membershipId || "-"}
+                                  </td>
+                                  <td className="px-4 py-3 text-slate-800">
+                                    {member.name}
+                                  </td>
+                                  <td className="px-4 py-3 text-slate-700">
+                                    {member.mobile || "-"}
+                                  </td>
+                                  <td className="px-4 py-3 text-slate-700">
+                                    {member.district || "-"}
+                                  </td>
+                                  <td className="px-4 py-3 text-slate-700">
+                                    {member.taluk || "-"}
+                                  </td>
+                                  <td className="px-4 py-3">
+                                    <span
+                                      className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+                                        member.paymentStatus === "COMPLETED"
+                                          ? "bg-emerald-100 text-emerald-800"
+                                          : "bg-amber-100 text-amber-800"
+                                      }`}
+                                    >
+                                      {member.paymentStatus || "PENDING"}
+                                    </span>
+                                  </td>
+                                  <td className="px-4 py-3 text-slate-600">
+                                    {formatDate(member.submittedAt)}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="text-sm text-slate-600">
+                Showing {fromItem}-{toItem} of {totalItems} referrers
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage <= 1 || loading}
+                  className="px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-700 font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-50"
+                >
+                  Previous
+                </button>
+                <span className="text-sm font-medium text-slate-700 px-2">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage >= totalPages || loading}
+                  className="px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-700 font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-50"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </>
         )}
       </div>
     </AdminLayout>
