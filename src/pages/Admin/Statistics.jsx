@@ -40,10 +40,11 @@ export default function Statistics() {
       // Draw cell border
       pdf.rect(currentX, y, colWidth, height);
       
-      // Draw text (centered for numbers, left-aligned for text)
+      // Keep 0 visible (String(0 || "") was blanking zeros)
+      const cellText = text === null || text === undefined || text === "" ? "" : String(text);
       const textX = currentX + (idx === data.length - 1 ? colWidth / 2 : 3);
       const textY = y + height / 2 + 3;
-      pdf.text(String(text || ""), textX, textY, {
+      pdf.text(cellText, textX, textY, {
         align: idx === data.length - 1 ? "center" : "left",
         maxWidth: colWidth - 6
       });
@@ -103,7 +104,7 @@ export default function Statistics() {
           yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, ["Row Labels", "COMPLETE"], true, true);
           pdf.setFont(undefined, "normal");
         }
-        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [district.districtName, district.totalMemberships]);
+        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [district.districtName, district.totalMemberships ?? 0]);
       });
 
       // Grand Total row
@@ -161,7 +162,7 @@ export default function Statistics() {
         pdf.setFillColor(200, 230, 200);
         pdf.rect(margin, yPos - 2, tableWidth, rowHeight + 2, "F");
         pdf.setTextColor(0, 0, 0);
-        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, [district.districtName, district.totalMemberships], false, true);
+        yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight + 2, [district.districtName, district.totalMemberships ?? 0], false, true);
         
         pdf.setFont(undefined, "normal");
         pdf.setFontSize(10);
@@ -175,7 +176,7 @@ export default function Statistics() {
               pdf.addPage();
               yPos = 20;
             }
-            yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [taluk.talukName, taluk.count]);
+            yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [taluk.talukName, taluk.count ?? 0]);
           });
         }
         yPos += 5; // Space between districts
@@ -242,7 +243,7 @@ export default function Statistics() {
         yPos = drawTableRow(pdf, margin, yPos, tableWidth, rowHeight, [
           taluk.talukName || "",
           taluk.districtName || "",
-          taluk.count.toString()
+          String(taluk.count ?? 0)
         ]);
       });
 
@@ -374,7 +375,7 @@ export default function Statistics() {
         yPos = drawTableRow(pdf, margin, yPos, talukTableWidth, rowHeight, [
           taluk.talukName || "",
           taluk.districtName || "",
-          taluk.count.toString()
+          String(taluk.count ?? 0)
         ]);
       });
       yPos += 10;
@@ -403,7 +404,7 @@ export default function Statistics() {
         pdf.setFillColor(200, 230, 200);
         pdf.rect(margin, yPos - 2, breakdownTableWidth, rowHeight + 2, "F");
         pdf.setTextColor(0, 0, 0);
-        yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight + 2, [district.districtName, district.totalMemberships], false, true);
+        yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight + 2, [district.districtName, district.totalMemberships ?? 0], false, true);
 
         // Taluk rows
         pdf.setFontSize(10);
@@ -416,7 +417,7 @@ export default function Statistics() {
               pdf.addPage();
               yPos = 20;
             }
-            yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight, [taluk.talukName, taluk.count.toString()]);
+            yPos = drawTableRow(pdf, margin, yPos, breakdownTableWidth, rowHeight, [taluk.talukName, String(taluk.count ?? 0)]);
           });
         }
         yPos += 5; // Space between districts
@@ -591,7 +592,7 @@ export default function Statistics() {
                             {taluk.districtKName}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                            {taluk.count}
+                            {taluk.count ?? 0}
                           </td>
                         </tr>
                       ))
@@ -671,7 +672,7 @@ export default function Statistics() {
                                   {taluk.talukKName}
                                 </td>
                                 <td className="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-900">
-                                  {taluk.count}
+                                  {taluk.count ?? 0}
                                 </td>
                               </tr>
                             ))
